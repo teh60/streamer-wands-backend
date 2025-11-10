@@ -109,6 +109,7 @@ exports.validate = (data) => {
     const validatedSpells = inventory.filter(strFilter)
     const validatedItems = items.filter(strFilter)
 
+    const progressKeys = ["perks", "spells", "enemies", "pillars"]
     const validatedProgress = {}
     validatedProgress.perks = progress[0].filter(strFilter)
     validatedProgress.spells = Object.keys(progress[1]).filter(strFilter)

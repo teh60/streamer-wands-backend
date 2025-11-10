@@ -4,6 +4,7 @@ const progSchema = new mongoose.Schema({
     spells: [String],
     uses: [Number],
     enemies: [String],
+    pillars: [String],
     kills: [Number],
 })
 
