@@ -671,7 +671,6 @@ const infoStatsComp = Vue.component('info-stats-comp', {
         },
         orbs() {
             const orbs = this.info.orbs
-            orbs.push(133, 4)
             const all = [...Array(36).keys()].map(x => x - 12)
             all.splice(0, 0, "West")
             all.splice(13, 0, "Main")
@@ -782,9 +781,6 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                 if (orb == "Main") return `Found: ${found.filter((x) => x > 0).length} / 12`
             }
             orb = orb < 0 ? orb + 12 : orb % 12
-            // -12 to -1 is west orbs
-            // 0 to 11 is main orbs
-            // 12 - 23 is east orbs
             const descriptions = [
                 "Spell(s) Unlocked: Sea of Lava Within the floating island containing the Mountain Altar, above the mine entrance in the Forest.\n",
                 "Spell(s) Unlocked: Earthquake\nLocated: Atop the Pyramid\n",
