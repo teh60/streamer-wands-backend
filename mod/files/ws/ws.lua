@@ -1,4 +1,4 @@
-dofile("mods/streamer_wands/files/scripts/utils.lua")
+dofile_once("mods/streamer_wands/files/scripts/utils.lua")
 if not async then
     dofile("mods/streamer_wands/files/scripts/coroutines.lua")
 end

@@ -606,15 +606,29 @@ a:visited {
     border: var(--border-color);
 }
 
-.preview {
+.preview:not(.info-stats) {
     display: flex;
     max-width: 25rem;
+}
+
+.info-stats {
+    display: grid;
+    max-height: 20rem;
+    grid-template-areas:
+        "map info"
+        "chart info";
 }
 
 .preview-info {
     display: flex;
     flex-flow: column;
+    align-items: start;
     margin: 5px;
+    grid-area: info;
+}
+
+.preview-info>p {
+    white-space: pre-line;
 }
 
 .preview-icon {
@@ -623,6 +637,8 @@ a:visited {
     line-height: 50%;
     color: rgb(255, 0, 255);
     -webkit-text-stroke: white 1px;
+    display: flex;
+    justify-content: center;
 }
 
 .preview-link {
@@ -635,10 +651,106 @@ a:visited {
     height: 0px;
     top: 12px;
     left: 12px;
+    z-index: 2;
+    grid-area: map;
+    /* opacity: 20%; */
+}
+
+.preview-icon img {
+    height: 16px;
+    padding: unset;
+    margin: unset;
+    border: none;
+    opacity: 75%;
 }
 
 .preview img {
     max-height: 10rem;
+}
+
+.orbs-map {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: start;
+    overflow: hidden;
+    width: 326px;
+    margin: 17px;
+    box-sizing: border-box;
+    align-self: flex-end;
+    height: 232px;
+    grid-area: map;
+    border: var(--border-color);
+}
+
+.orbs-map img {
+    border: none;
+    padding: unset;
+    margin: unset;
+    position: relative;
+    bottom: 154.4px;
+    right: 59.8px;
+}
+
+.orbs-map img:nth-child(n+3) {
+    bottom: 155.8px;
+    z-index: 1;
+}
+
+.orbs-map img:nth-child(even) {
+    right: 61.3px;
+    z-index: 0;
+}
+
+.found {
+    font-weight: bold;
+    color: green;
+}
+
+.orbs {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(13, 1fr);
+    grid-auto-flow: row;
+    grid-area: chart;
+    width: 326px;
+    margin: 17px;
+    margin-top: 0;
+}
+
+.orb-image {
+    padding: unset !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbs img {
+    height: 16px;
+    border: none;
+    padding: unset;
+    margin: unset;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.orbs>div {
+    padding: 2px;
+    text-align: center;
+    border-right: var(--border-color);
+    border-bottom: var(--border-color);
+}
+
+.orbs .tooltip {
+    text-align: left;
+    max-width: 20rem;
+}
+
+.orbs>div:nth-child(13n+1) {
+    border-left: var(--border-color);
+}
+
+.orbs>div:nth-child(-n+13) {
+    border-top: var(--border-color);
 }
 
 .shifts p,
@@ -1299,6 +1411,11 @@ a:visited {
 
 .tooltip-title {
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+}
+
+.tooltip-count {
     margin-bottom: 0.5rem;
     white-space: nowrap;
 }

@@ -1,6 +1,6 @@
 const HOP = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key)
 const xyToIndex = (x, y, w) => x * 4 + (y * 4 * w)
-const indexToXY = (i, w) => [Math.floor(i % (w * 4) / 4), Math.floor(i / (w * 4))]
+const indexToXY = (i, w, ch) => [Math.floor(i % (w * ch) / ch), Math.floor(i / (w * ch))]
 const secondsToTimeArray = (sec) => {
     const out = []
     const time = {
@@ -16,6 +16,7 @@ const secondsToTimeArray = (sec) => {
     })
     return out
 }
+const mod = (n, m) => ((n % m) + m) % m
 
 
 const WandContainer = Vue.component('wand-comp', {
@@ -404,19 +405,20 @@ const ItemSlot = Vue.component('item-slot', {
                     // streamer-wands noita mod only outputs amount of each material as a
                     // raw pixel amount, not a percent full so convert per container type
                     if (id == 'item_powder_stash_3') {
-                        materials[mat] = +amt / 15
+                        materials[mat] = [+amt / 15]
                     } else if (path == 'data/ui_gfx/items/potion_alchemist.png') {
-                        materials[mat] = +amt / 5
+                        materials[mat] = [+amt / 5]
                     } else if (path == 'data/ui_gfx/items/potion_reinforced.png') {
-                        materials[mat] = +amt / 20
+                        materials[mat] = [+amt / 20]
                     } else {
-                        materials[mat] = +amt / 10
+                        materials[mat] = [+amt / 10]
                     }
+                    materials[mat].push(+amt)
                 })
                 // sort by largest first
                 m = Object.entries(materials)
-                    .sort(([, a], [, b]) => b - a)
-                    .map((x) => ({ name: x[0], amt: x[1] }))
+                    .sort(([, a], [, b]) => b[2] - a[2])
+                    .map((x) => ({ name: x[0], amt: x[1][0], pxCount: x[1][1] }))
             }
 
             return {
@@ -461,7 +463,7 @@ const ItemSlot = Vue.component('item-slot', {
                 // all noita materials never fill the top 3 pixels so define an offset
                 // data is an array of RGBA elements that starts at x=0,y=0
                 for (let i = 0; i < data.length; i += 4) {
-                    const [x, y] = indexToXY(i, 32)
+                    const [x, y] = indexToXY(i, 32, 4)
                     let r = data[i]
                     let g = data[i + 1]
                     let b = data[i + 2]
@@ -527,7 +529,7 @@ const ItemTooltip = Vue.component('item-tooltip', {
         <p class="tooltip-title">{{ info.name }}</p>
         <p class="tooltip-wiki">({{ item.id }})</p>
         <template v-if="item.mats"
-            <p v-for="(mat,i) in item.mats" :key="i" class="tooltip-description">{{ Math.ceil(mat.amt) }}% {{ mat.name }}</p>
+            <p v-for="(mat,i) in item.mats" :key="i" class="tooltip-description">{{ Math.ceil(mat.amt) }}% {{ mat.name }} ({{ mat.pxCount }} px)</p>
         </template>
         <div class="desc-container">
             <p class="tooltip-description" v-html="item.desc"></p>
@@ -546,6 +548,7 @@ const worldComp = Vue.component('world-comp', {
                 mods: false,
                 map: false,
                 userDisabled: false,
+                runStats: true,
             },
             // debugMods: "",
             // debugNG: "0",
@@ -595,7 +598,8 @@ const worldComp = Vue.component('world-comp', {
             <v-switch v-if="apothCheck" v-model="state.apothCS" :title="'Show Creature Shifts [' + info.apoth.csCount + ']'"></v-switch>
             <v-switch v-model="state.mods" :title="'Show Mods [' + info.mods.length + ']'"></v-switch>
             <v-switch v-model="state.userDisabled" title="Show Feature Status"></v-switch>
-            <v-switch v-model="state.map" title="Show Map and Game info (spoilers!!!)"></v-switch>
+            <v-switch v-model="state.map" title="Show Map and Position (spoilers!!!)"></v-switch>
+            <v-switch v-model="state.runStats" title="Show Info/Statistics"></v-switch>
         </div>
         <div class="world-body">
             <fungal-comp v-if="state.shifts" :shifts="info.shifts" :timer="info.timer" :number="info.count" :features="features"></fungal-comp>
@@ -619,6 +623,218 @@ const worldComp = Vue.component('world-comp', {
             </div>
             </div>
             <map-comp v-if="state.map" :player="player" :info="info" :features="features"></map-comp>
+            <info-stats-comp v-if="state.runStats" :info="info" :player="player"></info-stats-comp>
+        </div>
+    </div>`
+})
+
+const infoStatsComp = Vue.component('info-stats-comp', {
+    data() {
+        return {
+            mapData: {},
+            loaded: false,
+        }
+    },
+    mounted() {
+        fetch("https://noitamap.com/js/tilesources.json")
+            .then(res => (res.ok ? res.json() : Promise.reject(`HTTP ${res.status}: ${res.statusText}`)))
+            .then(data => {
+                this.mapData = data
+                this.loaded = true
+            })
+            .catch(err => console.log(`map data fetch failed with error: ${err}`))
+    },
+    computed: {
+        start() {
+            const date = new Date(this.info.start)
+            const rantArr = secondsToTimeArray(this.info.idletime)
+            const playArr = secondsToTimeArray(this.info.playtime)
+            const dateStr = date.toLocaleDateString()
+            const timeStr = date.toLocaleTimeString()
+            const rantStr = rantArr.join(" ")
+            const rantRatio = this.info.idletime / this.info.playtime * 100
+
+            return {
+                playtime: playArr.join(" "),
+                over100: rantArr.length == 4 && rantArr[0] > 100,
+                mainTime: `Run started on ${dateStr}\nat ${timeStr}\n`,
+                tipTime: `Ranted for ${rantStr}\n(${rantRatio.toFixed(2)}% of runtime)`,
+            }
+        },
+        stats() {
+            const stats = this.info.endStats
+            return {
+                wins: `\nTotal Wins: ${stats.workWins + stats.altarWins}\n- The Work (End): ${stats.workWins}\n- Mountain Altar: ${stats.altarWins}`,
+                deaths: `Deaths: ${stats.deaths}`,
+                streaks: `\nCurrent Streak: ${stats.currentStreak}\nHighest Streak: ${stats.highestStreak}`,
+            }
+        },
+        orbs() {
+            const orbs = this.info.orbs
+            orbs.push(133, 4)
+            const all = [...Array(36).keys()].map(x => x - 12)
+            all.splice(0, 0, "West")
+            all.splice(13, 0, "Main")
+            all.splice(26, 0, "East")
+            const orbIcons = [
+                "Sea of Lava",
+                "Earthquake",
+                "Summon Tentacle",
+                "Nuke",
+                "Necromancy",
+                "Holy Bomb",
+                "Spiral Shot",
+                "Thundercloud",
+                "Fireworks!",
+                "Summon Deercoy",
+                "Cement",
+            ].map((orbName) => {
+                const found = icons.spells.find((spell) => spell.name.match(new RegExp(orbName, "gi")))
+                return found.image
+            })
+            orbIcons.push(orbImages[2])
+
+            return {
+                // -12 to -1 is west orbs
+                // 0 to 11 is main orbs
+                // 12 - 23 is east orbs
+                found: orbs.map((orb) => {
+                    // game stores east orbs in 256 to 267
+                    if (orb > 255) {
+                        return orb - 244
+                    }
+                    // game stores west orbs in 128 to 139
+                    if (orb > 127) {
+                        return orb - 140
+                    }
+                    return orb
+                }),
+                all,
+                icons: orbIcons,
+            }
+        },
+        orbMap() {
+            const [imgWidth, imgHeight] = [54, 38].map((n) => n * 512)
+            const [x0, y0] = [-25, -6].map((n) => n * 512)
+            const game2img = (x, y) => [
+                -2 + (x - x0) * 322 / imgWidth,
+                -11 + (y - y0) * 228 / imgHeight
+            ]
+
+            const orbChunkCoords = [
+                [19, -3, 1],
+                [1, -3, 0],
+                [-20, 5, 2],
+                [6, 3, 3],
+                [19, 5, 4],
+                [-9, 7, 5],
+                [-8, 19, 6],
+                [8, 1, 7],
+                [-1, 31, 8],
+                [-18, 28, 9],
+                [20, 31, 10],
+                [-4, -3, 11],
+            ]
+            const links = [0, 1, 2, 3].map((n) => {
+                const src = this.mapData["regular-main-branch"][0].url.replace(/\.dzi/, '_files/')
+                const [x, y] = indexToXY(n, 2, 1)
+                return `${src}12/${x}_${y + 1}.webp?v=1712752623`
+            })
+
+            // from game coord input
+            const x = this.player.x || 0
+            const y = this.player.y || 0
+            // const [x, y] = [0, 0].map((n) => n * 512)
+
+            // shift to main PW, then clamp player coords to image collage border
+            const xMain = mod(x, 70 * 512)
+            const xClamp = Math.min(Math.max(xMain, -25.5 * 512), 29.5 * 512)
+            const yClamp = Math.min(Math.max(y, -4 * 512), 34 * 512)
+
+            const [xStar, yStar] = game2img(xClamp, yClamp)
+            const orbs = orbChunkCoords.map(([x, y, n]) => [...game2img(x * 512, y * 512), n])
+            return {
+                starX: xStar + 'px',
+                starY: yStar + 'px',
+                orbs: orbs.map(([x, y, n]) => {
+                    return {
+                        style: {
+                            left: `${x + 11.5}px`,
+                            top: `${y - 2}px`,
+                        },
+                        n,
+                    }
+                }),
+                links,
+            }
+        }
+    },
+    methods: {
+        orbText(orb) {
+            if (typeof orb == "string") return orb
+            return orb < 0 ? orb + 12 : orb % 12
+        },
+        orbTip(orb) {
+            if (typeof orb == "string") {
+                const found = this.orbs.found
+                if (orb == "West") return `Found: ${found.filter((x) => x < 0).length} / 12`
+                if (orb == "East") return `Found: ${found.filter((x) => x > 11).length} / 12`
+                if (orb == "Main") return `Found: ${found.filter((x) => x > 0).length} / 12`
+            }
+            orb = orb < 0 ? orb + 12 : orb % 12
+            // -12 to -1 is west orbs
+            // 0 to 11 is main orbs
+            // 12 - 23 is east orbs
+            const descriptions = [
+                "Spell(s) Unlocked: Sea of Lava Within the floating island containing the Mountain Altar, above the mine entrance in the Forest.\n",
+                "Spell(s) Unlocked: Earthquake\nLocated: Atop the Pyramid\n",
+                "Spell(s) Unlocked: Summon Tentacle and Summon Tentacle With Timer\nLocated: Under the Frozen Vault, which is located under the Snowy Wasteland to the left of Giant Tree.\n",
+                "Spell(s) Unlocked: Nuke\nLocated: Under the Lava Lake right from entrance. Can be reached if you dig through the extremely dense rock on the west side of the chasm down to Snowy Depths with Black Holes or by freezing the lava and drilling through.\n",
+                "Spell(s) Unlocked: Necromancy\nLocated: At the bottom of the Sandcave below the Pyramid.\n",
+                "Spell(s) Unlocked: Holy Bomb\nLocated: In Orb Room To the left of the Magical Temple.\n",
+                "Spell(s) Unlocked: Spiral Shot\nLocated: To the left at the bottom of the Lukki Lair west of the Underground Jungle or the top west of The Vault.\n",
+                "Spell(s) Unlocked: Thundercloud\nLocated: In Orb Room to the right of the abyss (climb the dense rock or cross the rope bridge) which is to the right of the lava lake to the right of the Mines.\n",
+                "Spell(s) Unlocked: Fireworks!\nLocated: In the center of The Work (Hell).\n",
+                "Spell(s) Unlocked: Summon Deercoy, Flock of Ducks, and Worm Launcher\nLocated: At the bottom of the Snowy Chasm under the Snowy Wasteland.\n",
+                "Spell(s) Unlocked: Cement (Spell)\nLocated: At the bottom of the Wizard's Den under the Desert Chasm and east of the Temple of the Art.\n",
+                "Greater Treasure Chest Extra Orb"
+            ]
+            return descriptions[orb]
+        }
+    },
+    props: ["info", "player"],
+    template: /* html */`
+    <div class="preview info-stats" v-if="loaded">
+        <div class="preview-icon-wrapper">
+            <p class="preview-icon" :style="{ left: orbMap.starX, top: orbMap.starY }"><b>&#9733;</b></p>
+        </div>
+        <div v-for="orb in orbMap.orbs" class="preview-icon-wrapper">
+            <div class="preview-icon" :style="orb.style">
+                <img v-if="orbs.found.includes(orb.n - 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
+                <img v-if="orbs.found.includes(orb.n)" :src="'data:image/png;base64,' + orbImages[0]"/>
+                <img v-if="orbs.found.includes(orb.n + 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
+            </div>
+        </div>
+
+        <div class="orbs-map">
+            <img v-for="link in orbMap.links" :src="link"/>
+        </div>
+        <div class="orbs">
+            <div><p>World</p></div>
+            <div v-for="icon in orbs.icons" class="orb-image">
+                <img :src="'data:image/png;base64,' + icon"/>
+            </div>
+            <template v-for="orb in orbs.all">
+                <info-tooltip :cls="{found:orbs.found.includes(orb)}" :main="orbText(orb)" :tip="orbTip(orb)" side="top" :gap="2"></info-tooltip>
+            </template>
+        </div>
+        <div class="preview-info">
+            <p>Playtime: {{ start.playtime }}</p>
+            <info-tooltip v-if="!start.over100" :main="start.mainTime" :tip="start.tipTime"></info-tooltip>
+            <p>{{ stats.wins }}</p>
+            <p>{{ stats.deaths }}</p>
+            <p>{{ stats.streaks }}</p>
+            <p>\nNote: Streaks are disabled\n with mods enabled</p>
         </div>
     </div>`
 })
@@ -766,22 +982,6 @@ const mapComp = Vue.component('map-comp', {
                 yStar: yStar + 'px',
             }
         },
-        start() {
-            const date = new Date(this.info.start)
-            const rantArr = secondsToTimeArray(this.info.idletime)
-            const playArr = secondsToTimeArray(this.info.playtime)
-            const dateStr = date.toLocaleDateString()
-            const timeStr = date.toLocaleTimeString()
-            const rantStr = rantArr.join(" ")
-            const rantRatio = this.info.idletime / this.info.playtime * 100
-
-            return {
-                playtime: playArr.join(" "),
-                over100: rantArr.length == 4 && rantArr[0] > 100,
-                mainTime: `Run started on ${dateStr}\nat ${timeStr}`,
-                tipTime: `Ranted for ${rantStr}\n(${rantRatio.toFixed(2)}% of runtime)`,
-            }
-        }
     },
     props: ['player', 'info', 'features'],
     inject: ['switches'],
@@ -799,7 +999,7 @@ const mapComp = Vue.component('map-comp', {
             <p v-if="!features.seed"><i>Seed Hidden</i></p>
             <p v-else-if="!seedInfo">No current run</p>
             <a v-else-if="seedInfo.url" :href="seedInfo.url" tabindex="1" target="_blank" rel="noopener noreferrer">
-                <map-tooltip :main="'Map ' + seedInfo.seed" :tip="tipSeed"></map-tooltip>
+                <info-tooltip :main="'Map ' + seedInfo.seed" :tip="tipSeed"></info-tooltip>
             </a>
             <p v-else>Map {{ seedInfo.seed }}</p>
             <template v-if="features.pos">
@@ -812,14 +1012,13 @@ const mapComp = Vue.component('map-comp', {
             </template>
             <p v-if="features.ngp">In {{ osd.pw }}{{ osd.hh }} NG{{ info.ngp > 0 ? ('+' + info.ngp) : "" }}</p>
             <p v-else><i>NG+ Tracker Hidden</i></p>
+            <br>
             <p>World Type: {{ osd.name }}</p>
-            <p>Playtime: {{ start.playtime }}</p>
-            <map-tooltip v-if="!start.over100" :main="start.mainTime" :tip="start.tipTime"></map-tooltip>
         </div>
     </div>`
 })
 
-const mapTooltip = Vue.component('map-tooltip', {
+const infoTooltip = Vue.component('info-tooltip', {
     data() {
         return {
             tooltip: null,
@@ -828,8 +1027,8 @@ const mapTooltip = Vue.component('map-tooltip', {
     mounted() {
         if (this.$refs.tooltip) {
             this.tooltip = Popper.createPopper(this.$refs.slot, this.$refs.tooltip, {
-                placement: 'right',
-                modifiers: [{ name: 'offset', options: { offset: [0, 5] } }],
+                placement: this.side,
+                modifiers: [{ name: 'offset', options: { offset: [0, this.gap] } }],
             })
         }
     },
@@ -846,10 +1045,22 @@ const mapTooltip = Vue.component('map-tooltip', {
             }
         },
     },
-    props: ["main", "tip"],
+    props: {
+        main: [String, Number],
+        tip: String,
+        side: { type: String, required: false, default: "right" },
+        gap: { type: Number, required: false, default: 5 },
+        cls: {
+            type: Object,
+            required: false,
+            default: function () {
+                return { found: false }
+            }
+        }
+    },
     template: /* html */`
     <div ref="slot" class="shifts-tip" @mouseenter="updateTip">
-        <p class="map-tip">{{ main }}</p>
+        <p class="map-tip" :class="cls">{{ main }}</p>
         <div ref="tooltip" class="tooltip fit">
             <p class="map-tip">{{ tip }}</p>
         </div>
@@ -1475,7 +1686,7 @@ const perkComp = Vue.component('perk-comp', {
                     frameCleanColor = rgbaChannels.map((ch) => data1[xyToIndex(5, 2, 16) + ch])
 
                     for (let i = 0; i < data1.length; i += 4) {
-                        const [x, y] = indexToXY(i, 16)
+                        const [x, y] = indexToXY(i, 16, 4)
                         // let resPix = false
                         if ((x > 3 && y > 2) && (x < 13 && y < 12)) {
                             // let iconPix = [iconArray[i], iconArray[i + 1], iconArray[i + 2]]
@@ -1622,9 +1833,23 @@ const containerComp = Vue.component('wands-container', {
             const progress = {
                 perks: [],
                 spells: [],
+                uses: [],
                 enemies: [],
+                kills: [],
                 ...this.progress,
             }
+            progress.enemies = progress.enemies.map((x, i) => {
+                return {
+                    progName: x,
+                    progCount: progress.kills[i]
+                }
+            })
+            progress.spells = progress.spells.map((x, i) => {
+                return {
+                    progName: x.slice(7).toUpperCase(),
+                    progCount: progress.uses[i]
+                }
+            })
             let enemies = icons.enemies.filter((x) => !x.beta)
             let out = {
                 icons: {
@@ -1634,8 +1859,8 @@ const containerComp = Vue.component('wands-container', {
                 },
                 prog: {
                     perks: progress.perks,
-                    spells: progress.spells.filter((x) => HOP(spellDataMain, x)),
-                    enemies: progress.enemies.filter((x) => enemies.map((y) => y.id).includes(x)),
+                    spells: progress.spells.filter((x) => HOP(spellDataMain, x.progName)),
+                    enemies: progress.enemies.filter((x) => enemies.map((y) => y.id).includes(x.progName)),
                 },
             }
             if (this.switches.betaContent.state) {
@@ -1645,9 +1870,9 @@ const containerComp = Vue.component('wands-container', {
                         perks: progress.perks.filter((x) =>
                             icons.perks.map((y) => y.id).includes(x),
                         ),
-                        spells: progress.spells.filter((x) => HOP(spellData, x)),
+                        spells: progress.spells.filter((x) => HOP(spellData, x.progName)),
                         enemies: progress.enemies.filter((x) =>
-                            icons.enemies.map((y) => y.id).includes(x),
+                            icons.enemies.map((y) => y.id).includes(x.progName),
                         ),
                     },
                 }
@@ -1659,9 +1884,9 @@ const containerComp = Vue.component('wands-container', {
                         perks: progress.perks.filter((x) =>
                             apothIcons.perks.map((y) => y.id).includes(x),
                         ),
-                        spells: progress.spells.filter((x) => HOP(spellDataApoth, x)),
+                        spells: progress.spells.filter((x) => HOP(spellDataApoth, x.progName)),
                         enemies: progress.enemies.filter((x) =>
-                            apothIcons.enemies.map((y) => y.id).includes(x),
+                            apothIcons.enemies.map((y) => y.id).includes(x.progName),
                         ),
                     },
                 }
@@ -1824,6 +2049,20 @@ const Progress = Vue.component('prog-comp', {
         perc() {
             return ((100 * this.tableProg.length) / this.tableIcons.length).toFixed(1)
         },
+        names() {
+            if (this.tName == "Perks") {
+                return this.tableProg
+            } else {
+                return this.tableProg.map((x) => x.progName)
+            }
+        },
+        counts() {
+            if (this.tName == "Perks") {
+                return false
+            } else {
+                return this.tableProg.reduce((obj, item) => Object.assign(obj, { [item.progName]: item.progCount }), {})
+            }
+        }
     },
     methods: {
         filterIcons() {
@@ -1994,7 +2233,8 @@ const Progress = Vue.component('prog-comp', {
                 :icon="icon"
                 :tName="tName"
                 :ref="icon.id"
-                :boolProg="(tableProg.includes(icon.id) || switches.showAll.state) ^ switches.flipHidden.state"
+                :boolProg="(names.includes(icon.id) || switches.showAll.state) ^ switches.flipHidden.state"
+                :count="counts ? counts[icon.id] : false"
             ></icon-comp>
         </div>
     </div>`,
@@ -2060,7 +2300,7 @@ const IconComp = Vue.component('icon-comp', {
             }
         },
     },
-    props: ['icon', 'tName', 'boolProg'],
+    props: ['icon', 'tName', 'boolProg', 'count'],
     inject: ['switches'],
     template: /*html*/`
     <div class="icon-slot" :class="[{ bgHide : !boolProg }, {spellTip : tName=='Spells'}]">
@@ -2071,8 +2311,8 @@ const IconComp = Vue.component('icon-comp', {
             </a>
             <img v-else ref="slot" :src="'data:image/png;base64,' + icon.image"/>
         </div>
-        <spell-tooltip v-if="tName=='Spells'" ref="tooltip" :spell="spell"></spell-tooltip>
-        <icon-tooltip v-else ref="tooltip" :icon="icon"></icon-tooltip>
+        <spell-tooltip v-if="tName=='Spells'" ref="tooltip" :spell="spell" :count="count"></spell-tooltip>
+        <icon-tooltip v-else ref="tooltip" :icon="icon" :count="count"></icon-tooltip>
     </div>`,
 })
 
@@ -2085,11 +2325,12 @@ const IconTooltip = Vue.component('icon-tooltip', {
             return null
         },
     },
-    props: ['icon'],
+    props: ['icon', 'count'],
     template: /*html*/`
     <div class="tooltip">
         <p class="tooltip-title">{{ icon.name }}</p>
         <p class="tooltip-wiki">({{ icon.id }})</p>
+        <p v-if="count" class="tooltip-count">Kill{{ icon.id == "player" ? "ed by" : "s" }}: {{ count }}</p>
         <div class="desc-container">
             <p v-if="icon.description" class="tooltip-description" v-html="desc"></p>
             <img :src="'data:image/png;base64,' + icon.image"/>
@@ -2296,7 +2537,10 @@ const SpellTooltip = Vue.component('spell-tooltip', {
             ],
         }
     },
-    props: ['spell'],
+    props: {
+        spell: Object,
+        count: { type: Number, required: false, default: -1 },
+    },
     computed: {
         name() {
             let name = this.spell.data.name
@@ -2371,6 +2615,7 @@ const SpellTooltip = Vue.component('spell-tooltip', {
     <div class="tooltip">
         <p class="tooltip-title">{{name}}</p>
         <p class="tooltip-description">{{spell.data.description}}</p>
+        <p v-if="count > -1" class="tooltip-count">Casts: {{ count }}</p>
         <template v-for="(stat, index) in stats">
             <p v-if="typeof meta[stat.key] != 'undefined'" :key="stat.key" :class="stat.classes">
             {{stat.label}} <span>{{meta[stat.key]}} </span> </p>
@@ -2406,6 +2651,9 @@ Vue.mixin({
             },
             get itemData() {
                 return itemData
+            },
+            get orbImages() {
+                return orbImages
             },
             get apothIcons() {
                 return apothIcons

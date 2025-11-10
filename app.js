@@ -53,6 +53,7 @@ const cacheBustFiles = [
     ['wandSprites', 'wandSprites.js'],
     ['icons', 'icons.js'],
     ['itemData', 'itemData.js'],
+    ['orbImages', 'orbs.js'],
     ['apothIcons', 'apothIcons.js'],
     ['main', 'main.js'],
 ]
