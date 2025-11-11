@@ -330,7 +330,10 @@ function get_inventory_items()
                 if mat > 0 then
                     local mat_id = CellFactory_GetName(i)
                     local mat_key = CellFactory_GetUIName(i)
-                    local mat_name = GameTextGetTranslatedOrNot(mat_key)
+                    local mat_name = mat_key
+                    if mat_key:sub(1, 1) == "$" then
+                        mat_name = GameTextGetTranslatedOrNot(mat_key)
+                    end
                     amt = amt .. string.format("@%s (%s)#%s", mat_name, mat_id, mat)
                 end
             end
