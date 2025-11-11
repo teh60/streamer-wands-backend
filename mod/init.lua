@@ -73,7 +73,6 @@ function OnModInit()
         local path = 'data/translations/common.csv'
         local text = _G['ModTextFileGetContent'](path)
         local item = text:match('menu_no,.-\n')
-        print("hey idiot", item)
         local entries = {}
         item:gsub('([^,]*),', function(x)
             if x == '' then x = entries[2] end
