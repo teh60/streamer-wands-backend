@@ -548,7 +548,7 @@ const worldComp = Vue.component('world-comp', {
                 mods: false,
                 map: false,
                 userDisabled: false,
-                runStats: true,
+                runStats: false,
             },
             // debugMods: "",
             // debugNG: "0",
@@ -1975,8 +1975,8 @@ const containerComp = Vue.component('wands-container', {
     },
     template: /*html*/`
     <div class="content">
-    <div class="top-wrapper">
-    <div v-if="modVersion != currentVersion" class="outdated">
+        <div class="top-wrapper">
+            <div v-if="modVersion != currentVersion" class="outdated">
                 <p>Streamer is running outdated version: {{ modVersion }}</p>
                 <p>Modules will probably break, please update to version: {{ currentVersion }} </p>
                 <p>Note: If you just installed the mod try refreshing the page after you load into Noita with the mod enabled</p>
