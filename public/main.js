@@ -2197,7 +2197,9 @@ const Progress = Vue.component('prog-comp', {
             if (this.tName == "Perks") {
                 return false
             } else {
-                return this.tableProg.reduce((obj, item) => Object.assign(obj, { [item.progName]: item.progCount }), {})
+                const obj = this.tableProg.reduce((obj, item) => Object.assign(obj, { [item.progName]: item.progCount }), {})
+                obj["turret_left"] += obj["turret_right"]
+                return obj
             }
         }
     },
