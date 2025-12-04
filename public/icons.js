@@ -4,7 +4,22 @@ const icons = {
             id: "player",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAlUlEQVR4nGNkIABm58/6D2OnTkxjRJdnJEZzz6Zuhpv3b2NVy0TIBSDN+AATPsknT+8QMp+BoAsijAPBmCwDZKRVwJgsF8yGBiAhbzDh0gyLMpgLIp1D/pPkAmIBEwOFgBGb4Nd7E/9zK+UzXpxtC3c2l6oWg6rDTPJS4pOndxga13SRlxIZCACC0Ui2ARS5gFjbQYoBvCox0Q+zXIcAAAAASUVORK5CYII=",
             name: "Min\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.35,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1.5
+                },
+                hp: 4.0,
+                faction: "player"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Min\u00e4"
         },
@@ -12,7 +27,23 @@ const icons = {
             id: "sheep",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA50lEQVR4nO1SMQrCQBCcC/mBCVhY5A8mfxF8hvgHOwXxJVr4AAshEfMDU6RL7Kw92cVNNmsn2LkQZm/3ZnbuLsA/fhN5nntC75+ePpvrcJaYJAmiaIS2vaOqKtBagupMckHHCy3ZbhbUIU5IyGmynagFyFEnVu66fqA3W7IQhUxI5NXxwT1CR0nTNJ6maxHthshFcUGaToHDEpj0gwKyX5ZlVxAhmzMZQDGeAfW7Xlf9K+h7ECfWBR8BQBzHzu8XH0/KInQc+Q80+uuWe7f1fEAcXGIanlk9Om14nWUZOxSknh06EPgmXgi0je3wlz7WAAAAAElFTkSuQmCC",
             name: "Lammas",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lammas"
         },
@@ -20,7 +51,23 @@ const icons = {
             id: "sheep_bat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABSUlEQVR4nI1SPUvEQBCdPa6WQC5oESFaCZYm+B8EG20ObCwEmysUsRP8qOws5AQ7C/0FKvgThES80kpTXHMkB0GuduWNzrJ3yWkeDG+ZzXvzdghRBU53bzSKakBNCuV8fL09djcNTVvozs7QcPDJXBcNiG2BmNQ2cGtO0/pLo0oGNAVIJqIsy3SeD43RmEHnbEPJu3FG873/xpcQoVotl6sqTUMEEMdxrFfX582HV0ePRigJGL0ul3691Gyw6C8RxEEQ8H3nZJNN13aWjRhGbNLr0vnTiPtghYOI0zQlYUAMIU6SFwrDFaKHQyI/qF5i8CsQtsFiIkrm2kT9nwFgBcaWJ6dWpZA9eJ6n9P0BL1EhflEU5DhOKYn9pLD5TLnfptHtHi3s35V/cxghCRglPfsbbB38cbFl+mYHURQpmWj3SpP+QtWE//ANEYvHjFPnd+MAAAAASUVORK5CYII=",
             name: "Lentolammas",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.3,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lentolammas"
         },
@@ -28,7 +75,23 @@ const icons = {
             id: "sheep_fly",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4nKVSS0rEQBB9kTlAwAm4mEU8gznMwFzCQbyDi4AL8QZ6Al3kCEIyOGTlzoZxISRCwNm4mZbXmWrKNqjEguJVF/VefRIAgLU7S8cYs3Zn6837OLK2+j8i9Z48SsTud88L40V0TvI/ds+DolDkT4eugzVEhN40jfNfRfLCuIKyLD1BE0MnJ9ITfLw+IctO3Ltt32CM+fKeTg/74vW1b3ogAclpmqKqVs59sSITSb4oti5PjBhwZJLZUZDGmEYyRd009+fALP0+gSYIapNVqqM58NI3IEZEHirsOjSFWwFAkiSRvTvrj8jxu65DHMe+mxaRlbLJA9rZHNubUxwvb/3xvcmnI9Ilp2vs45V7P18uhv8FLTJYMGCfR6UXB/Qu9QIAAAAASUVORK5CYII=",
             name: "Suhiseva lammas",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.2,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suhiseva lammas"
         },
@@ -36,7 +99,23 @@ const icons = {
             id: "scorpion",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAUklEQVR4nGNgGAWjYHiCi+vt/l84NOc/WZonVLuQrJEFmeNo8gvuivkbvzMk+nOC+fqBhxhxGYAhgawZRMMAiI/PIDg4GmkH9gaMBhkIwrg0AABBKyTdHCN1NwAAAABJRU5ErkJggg==",
             name: "Skorpioni",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Skorpioni"
         },
@@ -44,7 +123,22 @@ const icons = {
             id: "fish",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAZUlEQVR4nGNgGAXUB////wdju7KO//FzL/6H8WGYIIhH0oTNEHTAiM0F9uWd/wWe8KCIT7Pfw+A64yPD9fP7UfQw4XLJ7etrwRgGQJqvndvHSJIX/kO9QbIX8AFGRsKOGAUMpAEAPoBcohJf950AAAAASUVORK5CYII=",
             name: "Ev\u00e4k\u00e4s",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "helpless"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ev\u00e4k\u00e4s"
         },
@@ -52,7 +146,22 @@ const icons = {
             id: "fish_large",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAj0lEQVR4nGNgGAUUA0Z0gf///4Ppw/Pd/2u72IPZQrJVjIyMjCjyMMCEbsC7x21gFbaJOxmv7jkIFwNphGkGGQbHDFhcALJdeetXFHGpNUfgamGuweoCGJh7+SEYwwDIFc9CbP4TDIO3j1r/g/wM46O7BuQSZBdgAJhfQfjQPDe4358GW/8HYfRAHAUMlAMAZftRQkQGSLQAAAAASUVORK5CYII=",
             name: "Suurev\u00e4k\u00e4s",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "helpless"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suurev\u00e4k\u00e4s"
         },
@@ -60,7 +169,23 @@ const icons = {
             id: "duck",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuElEQVR4nGNgGAW0B8EVjv9BGJc8EyHNe6afw2sBCyEXuGQageknG5LgrpAJmMdItAEg8OrBO4bHvA/BbMvqe3DNKF6YN7EWw59rO/aDFYspCDGUXebF0IzhgnkTa/+/vX6aQVjTlAFEg8AJhp8M+AATjAHTANK8b8smuALOs+8YLD6wEzagdMYORpghIHDx7nMw1leWBPMPr7iI4XwQwBDszvD4j+wFkMF4/YANIEcZIYAzIRFrCAAgbUZJoDYjMwAAAABJRU5ErkJggg==",
             name: "Ankka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ankka"
         },
@@ -68,7 +193,29 @@ const icons = {
             id: "wolf",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkElEQVR4nGNgGAXUAwE+1v9hWF1D9z9MDFkemz5GXBLX73xi0FThA9M3b1xmBBkK4m/YcpQRWR0LLheBFMNoTRXsloAAEzHeW7p+Cpz99ff5/0R5ARcAeQkEQN4i2gXIAOIlPnigssBMhPkZGcACkAEPYAIRIEXIoQtiwwwmBJhw2YDNRUQBYhIPigvIswYBAPSBQmFkM62MAAAAAElFTkSuQmCC",
             name: "Susi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.6,
+                faction: "wolf",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Susi"
         },
@@ -76,7 +223,23 @@ const icons = {
             id: "deer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAn0lEQVR4nGNgGPRgb23Qf2xsGGAkZMCHD3P+n+3dhiLm3LwOro+JkAECAilgxVmrb8PF1DV0/xNtAAxMC1WFswO0lBjKg/z/k2QAMnDTZgZjosJgL1rAIfufoAv2EtAMAizYooYUwARjGBd7UWbAWaS4JsUwJmyK0RMOCOy6+he7AdgUE6sZbABMAQwjhzSIjS3kUQxAVtC5biPBdIEOAG7CPNDYPaEWAAAAAElFTkSuQmCC",
             name: "Nelikoipi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.8,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Nelikoipi"
         },
@@ -84,7 +247,23 @@ const icons = {
             id: "elk",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxUlEQVR4nGNkQAMfPsz5D2MLCKQwIss9PVsPlpM2bkQRx6oZnQ/TjM7GC3AZgAyYcGlEdw0+Q6jvAhAYeBdMKLL/j8zmVpbFqo4Rn+0LmhajiBX0HWQk2gUC0EQ0fds7uJi6hu5/og2AgUwvIThbU4WPIcDH+j9RBiyeYYlhm4MaCxgTZQADAwODsNovhhvfmMAYm/9BAKsgzPajFzjgYjNm7MeqFsU9yM4GabY2+IFiCFYDQHEMcioyQNYMsjkjwxFnCgQAcQxwOCSFDc8AAAAASUVORK5CYII=",
             name: "Poro",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "helpless",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Poro"
         },
@@ -92,7 +271,22 @@ const icons = {
             id: "eel",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABEUlEQVR4nGNgIAJ8zXD9j0uOiRgDTjw+wvC1U/s/WQbs9eb8b2GnBHEJ1BBkFzER4wJ0AxkUnxHngr0g22Vt4PwTh+4xoLuGCZfmF8cdEH6+LwXRjGQYzBBGfBrPX/sGptnWXUbR3MfxkCE1XAosz4jVRjQAUmioxYVCz1j2gGFmixbEAGTNs1c+Yzhz+QNYEtkAkBjIVnQxpu1zzf6jC5roCsCdD6NxARaQBhgAOS8jSgHuTGTNMIPRASOIaC5Q+w+ThGlG1gjCeRyfGX4F6aKIgfQwIpsGMgjdBphmUCyAkjQMHFOVRbgAH4AlJpBmcFRCUyF3+VWwXoIGoBsCAs5bv8P1EWUA3BBoMobZDuIAAAHGnjSopEKGAAAAAElFTkSuQmCC",
             name: "Nahkiainen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 20.0,
+                faction: "eel"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Nahkiainen"
         },
@@ -100,7 +294,29 @@ const icons = {
             id: "zombie_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyklEQVR4nGNgGAUUA0ZiFV48ueU/iP74+g6DnU8BXB8TKZpBgF9UheHQlgn/iTJgxfTY/6UZNnDFxSX5YBc0dU5mwGvAiumx/0EYXby3ZyLD5i1rGOrKc3EbsAJJ49mL9xliEisYlszvANsMAsb6iijqmfBphgGQISCbQYZEZC5GCXgmdBfANHbPOAJXCHIBCMBCH2ssrJge+1/TKBzsRHRDkA1DBxguABkC0gALfZjf8QKQ7chxjRx1IACLd3RxFABSBDMEpJBYQwDJ73CZ+E+3dQAAAABJRU5ErkJggg==",
             name: "Heikkohurtta",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 0.2,
+                faction: "zombie",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Heikkohurtta"
         },
@@ -108,7 +324,29 @@ const icons = {
             id: "zombie",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAwklEQVR4nGNgGAUUA0ZiFd5/ceA/iH7x/hKDpWYeXB8TKZpBQEJQj+H49Un/iTJg/u7g/7lNxnDFCSmxYBdUlHYz4DVg/u7g/yCMLr5gzmKGZasXMnR0l+I2YD6SxnPHHzAUpfUy9M0qBtsMAkaWCijqmfBphgGQISCbQYYkuq5FCXgmdBfANE6uOwtXCHIBCMBCHzkWGJBtB4U2esDBYgBZDK8LHHRzwbbDNMD8jhfAbIfx0W2DxTsuV8AVITuXWEMAolV4SiCTp7cAAAAASUVORK5CYII=",
             name: "Hurtta",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 0.5,
+                faction: "zombie",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hurtta"
         },
@@ -116,7 +354,33 @@ const icons = {
             id: "miner_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABL0lEQVR4nGNgoBAwElIwtS31P4ydXTWboHoUEOhh9h+Ef7yeBMYgNqoKBgYWBjzAxU4fhS8nI8pAkgHyLhpges/932BaL0yBgWEOEQZMRfI3CLQUz2bQ0pdjsPZTxVDLhEvzrXvPGF5+uAcXv3bxEUOy21RGvAZMRdKspiTFcGnVA7AhqbXOYBdgA0zYBEGaQYbAAMigeVN2wW1Hjg0m9ECDBRzIEBA4uuk2w2cOSCDCNK/fcYoRpwteIvkbBlT1pBjaZyX8X2xq+t/i6XfCXli8+gDDnkMXGU6evQV2+u1LCO/8yzXGbcBLqO0nzt8GO1FSXBDMBxkiM/sqw35zCB8ZYKSD2eW7sDkKDNQPPmcoRwpMFAAKHAtDVXjoovNxAbgXnr98D3YyLIrQ+bgAAAcNe/mYWy+pAAAAAElFTkSuQmCC",
             name: "Tappurahiisil\u00e4inen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.44,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    tnt: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAIAAABrW6giAAAABnRSTlMAAAAAAABupgeRAAAAO0lEQVR4nGNgYGBozPRrzPRjYGBgWOfiss7FBSLEdPX9e5AYA0P99E1M2oKCcD5IRltQEMphYGCAywAAGyUTS2M/FE4AAAAASUVORK5CYII=",
+                        explosion: 2.0,
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tappurahiisil\u00e4inen"
         },
@@ -124,7 +388,33 @@ const icons = {
             id: "miner",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVR4nGNgoBAwElKw5VTv/5cf7oHZyW5TGUkyYMup3v9PTvwAs58+f83w6vUbhplzlqDoYSHGmfsOHme4e+8hVjkmfBrn1q0E0072lgwmxvpgjA5YsGmc2pb6H0TLu2gwgLwAcr6YqAjYCwQNmArVfOveMwaOD2wMT5+zwuXev/+AYQAjLs1qSlJgWsJMlOH2pWdg+XlTdjESFQZqUM0wwPuDFUVzoIfZf6wGyLtogDHMEBAA2f6Z4zcDsub1O04x4nTBS2iiQQaqelIM7bMS/i82Nf1v8fQ7YS8sXn2AYc+hiwwnz94COx0WBiDwL9cYtwEvobafOH8b7ERJcUEwH2SIzOyrDPvNIXxkgBGNs8t3YXMUGKgffM5QjiUmwAAUOBaGqvDQRefjAnAvPH/5HuxkWBSh83EBAE7Wh+CrBsnhAAAAAElFTkSuQmCC",
             name: "Tappurahiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    tnt: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAIAAABrW6giAAAABnRSTlMAAAAAAABupgeRAAAAO0lEQVR4nGNgYGBozPRrzPRjYGBgWOfiss7FBSLEdPX9e5AYA0P99E1M2oKCcD5IRltQEMphYGCAywAAGyUTS2M/FE4AAAAASUVORK5CYII=",
+                        explosion: 2.0,
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tappurahiisi"
         },
@@ -132,7 +422,31 @@ const icons = {
             id: "miner_fire",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeUlEQVR4nGNkwANKS0v/CwsLg9kVFRWM2NQwEaMZxsemjoWBANi4cSOKId3d3YwkGeDv7w9nv337ljgv5MWE/j9y5AjDuXPnwHwY/fDhQ8IG5MWE/vdUk2KwtdJiePz4MdhWGL1q1SqMgGRE5mxvygcH1KX7Txj0FGXANJu2OsPz5y8Zunrn4o+F/p6q/6oRAWA2TPPT30wMNjbaDMLvPqBoaqjx+o9iQH9P1X9fP1eG9++egTWCAEgzCNy9+5xB3sUSRXNDyzZGlFiwsdEGc/bNXAdXCAoHkGHnzl1nMDLSZFixtOf/ty8XMbzAgsw5cf85Cg0C6+evZSwrTgY7WUONgeHGLTawYRHRJWBXMIGII0euMqioOcKdtf7AMUZhVkSYgQJQQ+0XnA/TDDegsKQNLgDTOGf3UbAhKa7WYNsfPX4LxuixgeIFkIa3vxFJHsSGGYgccFgNANn08OVbht2XbmC4Bh+ApwOQZh4hIbiTYWIgVyCLoQMApm2p65oywoQAAAAASUVORK5CYII=",
             name: "Tulihiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.4,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.2,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 2.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    cocktail: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAAX0lEQVR4nGNggIIcB4b/MDYTjBECYyALIgOwoIMDw/81DAwMB6BGMIIENEUYGKT1GBg49jEwmIAFDzD8Vz7OwKD4G6JV5CdU+11LBob7rAwMIjIMDBquSBaBJDSUIBwAHrsSPpAc+2sAAAAASUVORK5CYII="
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tulihiisi"
         },
@@ -140,7 +454,33 @@ const icons = {
             id: "miner_santa",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABVklEQVR4nGNgoBAw4pK45uX1H11Ma9s2DPVMuDSffvECRQzEX2hkhGEoC7rA/////zMyMoJtAmkwlZAAa8YFWNAFYJpBQHhGNMM9EA3lv/xwj4HB7RxOw1C8AMJbTvX+h4G3V6+CaQZCLrgGDTyQs/+AbGRgYLC00wTTW2esZcBrwDUkzWC/VxxnmMeQw3D80HWGd9euMWADTNgEcQWcsLY2OHwCPczgXmFEVgDyM4hWatgL5oMMOWglAmbPm7ILrnn9jlOMOF3w8sM9BvHubgbNrVsZfBYvBoup6kkxtM9K+L/Y1PS/xdPvuMMABtJdXRnUeXgYbn75wrDm2TPGpBy3/yBDQOBfrjEDQ9plBqwueAkNdZAmEA0yBARAzpeZfZVhv7kgsnIwwHDB9oT1GIpgQP3gc4ZyaFhggGo1tf8hUlLw0EXn4wJwL4D8C3IySCM2Pi4AAEUgmFZwV1ysAAAAAElFTkSuQmCC",
             name: "Jouluhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    present: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAALCAIAAADN+VtyAAAABnRSTlMAAAAAAABupgeRAAAAlElEQVR4nGNgYGD4vvHu9413GdDAk4pVyIwnFasQir5vvPukYtVt7Si4ou8b7zIia/2+eQOnbwADA4NMRxjjjuuvVUW5GBgYpI6+eHv87M8SbwYGhtuvv7FsvPzSX1ccJMHAIGxpfPD1NwYGho2XXzKhOwYGEBJvj5/FLoEmh5D4vnkDsiIWiFUMDAxFYLmNRloQGQBbcj/urLLmfAAAAABJRU5ErkJggg==",
+                        projectile: 0.0,
+                        explosion: 2.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Jouluhiisi"
         },
@@ -148,7 +488,32 @@ const icons = {
             id: "miner_chef",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABD0lEQVR4nGNgoBAwYhM8vHfjf3SxYyfOgOny6mYUPUzE2ALTjA0wYRO0dfbH6jJ020GABZfJH3nvwNnargIMLz/cI94FyKCleDbDukU74fyLxcX/W318/uM14PDejf+Rbbx28RFDsttUrN5iQeZsOdX7n/+zCpj95rQQA4PpPYbUWmcw/4TbDfzRuOVUL9hZIJvVmN1QQl/E9B3YwH+ijxm8bgozbFN/y1CZtoARwwsvP9xDcaqVhQmYPrrpNlgzCEz8eRm3F5Jx+FNd0pyhPA0ShaBA3LLpJqYXkEGghxlGSgSB9TtO4U8HFoaq/yXFBTE0gAx8/vI9NjNRwwCkGaYQ2TaQGEgOl8sIOp2mAABjL2qsJ4zK/wAAAABJRU5ErkJggg==",
             name: "Kokkihiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    sausage: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAA4AAAAECAYAAAC+0w63AAAAgElEQVR4nE2LQQqDUAxE54sgiFQQ7dIbCF7Ym/QQggvBnYu/qRKhlI+Lwi8jJDgQZjIvcX4Y8MuyWOQ5viGAruJOKdN8HodLlnmOj20zQNdhTyXrapk9f9JdBCOAHsCnaeyA4n7PyviTPsvSvUXiS+Qq66q6AB3eW96nyVjXtu4P8JJPRSFgwa4AAAAASUVORK5CYII=",
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kokkihiisi"
         },
@@ -156,7 +521,33 @@ const icons = {
             id: "goblin_bomb",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDElEQVR4nGNgGPKAkViFTfHB/6WkWcHslLYVuPUpKZj8987x/m9kYwmmQWJzqiLANDbAhE1wS2wPg6SBEJgGgWdPfxPvBSUFk/8CMqxgA55feMfw4clvhnsPzjBeML30X38KK8PFnN8MBqf1GLG6wFfD+L82x3+4ZhAdqCDC0GaSAdYMAiAaxMdqwNUfjAz/XCQYmPa8YJB+8wtMwwDIZmQarxc0fcThfG5ePYaqPZEM2/5Pg4t5MWbBvcGI7gWYS5CBSaQr2BAYQA4DBnQDih084P4DsWGG4gIsyJynImwMT/98hPP3g9gibPj0IwC6bdj42PTB/QJSrCYhCpe49eI1isLNN84SnexJAgA/qmt67XKYdwAAAABJRU5ErkJggg==",
             name: "S\u00e4hik\u00e4ismennink\u00e4inen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    glitter_bomb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAAW0lEQVR4nGNgQAJN8cH/51RF/EcWY0AWQJEEqUZRCQIXTC/9/3/y+n8QDRdsM8kAC8IwiA8SZwIRF3N+gxXBaBBgBGnf9n8aXMCLMYvB4LQeIyPMDpgESBDEAABvLjOIs6uq7QAAAABJRU5ErkJggg==",
+                        explosion: 1.0,
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/S\u00e4hik\u00e4ismennink\u00e4inen"
         },
@@ -164,7 +555,39 @@ const icons = {
             id: "shotgunner_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCklEQVR4nGNgoBAwogtcObHuP4z9/s0TBlufPAw1yIAJXQCkae6C1WC2oIgMw+Etk/6TZAAIGOqqwA0DGUKSAbY+eYyK8qJg9rotx8GG4AMsyJypbalg567ZsJMhJMAd7BKQIUQZMBWqGQTUlKTAhhADmGAMeydPMAaBW/eegQ0hBjCiR9/28loGGQkBsNgHhxgGFRVIgN65cwfOBgFXV1ewXkZk03AZAgLc/56B6a9MUgyZmZlwfYzIBoDCAeaNg/u2g73CxMIHDsy47GasCYoRmRPoYQZ2wfOX7xkkxQXB9Inzt0lLic+RNIEMIQSwpkQQWL/jFNgQmKtINgDZRUQbAPM7eljgcwUA52xqR9dR314AAAAASUVORK5CYII=",
             name: "Heikko haulikkohiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.36,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    buckshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAI0lEQVR4nGP8PF/9P4tDCMOfA2sYQADGBtFgPpiESiADmAYAFKQMVuWDPnQAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 2,
+                            height: 2,
+                            n: 4
+                        },
+                        projectile: 0.27,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Heikko haulikkohiisi"
         },
@@ -172,7 +595,39 @@ const icons = {
             id: "shotgunner",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABC0lEQVR4nGNgoBAwogtsOdX7H8Z++eEeQ7LbVAw1yIAJXQCkad2inWC2uIASw9xd2f9JMgAEVPWk4IaBDCHJgGS3qYxiCtxg9tFNt8GG4AMsyJypbalg515a9YBBLwziEpAhRBkwFaoZBNSUpMCGgAAvAytxXpB30QBjELh17xnYEGIAI3r0XS+dxyAjIQAW++AQw6CiogJm37lzB84GAVdXV7BeRmTTcBkCpplPgmmBv+YMmZmZcH2MyAaAwgHmjYd7boC98pnjNzgwK9MWYE1QjMicQA8zsAuev3zPICkuCKZPnL9NWkp8jqQJZAghgDUlgsD6HafAhsBcRbIByC4i2gCY39HDAp8rAHWVbC8aJm/LAAAAAElFTkSuQmCC",
             name: "Haulikkohiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.9,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    buckshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAI0lEQVR4nGP8PF/9P4tDCMOfA2sYQADGBtFgPpiESiADmAYAFKQMVuWDPnQAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 2,
+                            height: 2,
+                            n: 4
+                        },
+                        projectile: 0.27,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Haulikkohiisi"
         },
@@ -180,7 +635,39 @@ const icons = {
             id: "scavenger_smg",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNUlEQVR4nGNkwAF6d878D2MXu6cz4lLHREjzsd1HUfhEGQADDTN3o9BEG/DkwTOIxnRXFBobYEEX6Gt1/a8q8JRh3wNMA/EaEBwcDPanqoogw+07DxmcVKASpmwMDAxPGfqJccHTP28ZGBgEGVRV5MGG7DshgVXTrNlr/qelhoBjhhHZdogBDAyxPL/ANKtDEQM+ADKEBVnA8tsbhuNcIgyLv7CB2U58Oxh2HJZj2HVoFYOishLD/bv3GIQVRRhObDwATxeMMBdYG31ieHzgOVgQZAgIhJmxgmkesXQwPW/LFBTNKGGgqiIPF3RCYoPA808QGl0z3AUgsHllCjy1gQIQGRRV78aZlFmQNcFcgewaQgBuwKpTvxmqVTBtB4kTNMDC3wHsfN/wOShOhYkTBPgUEjIEAC1Lc+Pbq0U9AAAAAElFTkSuQmCC",
             name: "Rynkkyhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    machinegun_bullet_slower: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 0.15,
+                        explosion: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Rynkkyhiisi"
         },
@@ -188,7 +675,39 @@ const icons = {
             id: "scavenger_grenade",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABGUlEQVR4nGNkwAF6d878D2MXu6cz4lLHREjzsd1HUfhEGQADDTN3o9BEG/DkwTOIxnRXFBobYEEX6Gt1/a8q8JRh3wNMA/EaEBwcDPanqoogw+07DxmcVKASpmwMDAxPGfqJ8YK10ScwraoiDzYEhtHB4opoeKAyIttuxPQZLCinLApX/OjuawwDQPKxHUsZUVxgBNWMTePBPxwoNNYwuPka4nwYOzRThyG/8xSDirwCw52HDxgYoPSuc5cY8UajgSsvWDMITCw3g4t/+veJQUxWCMMFjDDG5pUp8IBBD7hVp34znNh4AGtyZkHWBAp9EIDRMHCieg7OvAA3AGRLtQp22/EBsAEW/g5g5/uGo9oEEycI8CkkZAgA9yh0wSCqHsYAAAAASUVORK5CYII=",
             name: "Kranuhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    grenade_scavenger: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAY0lEQVR4nGNgYGBgeBpr/P/JZMf/IDYIfLlSi8EHYWzyjCCGSEQYWOJt0RyG/2Z8DDD+n5fPwDSLuBSc/2H/ERR5JsZTn2AGgzULONrA+SDF6ACrPMgVIG/AJEB8dCcj85HlAYY0S5qxns5PAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 1.3,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kranuhiisi"
         },
@@ -196,7 +715,49 @@ const icons = {
             id: "scavenger_mine",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABOElEQVR4nGNkwANu3779H8ZWVVVlxKaGiRjNc+bMQeETZQAMmJiYoNBEG3DmzBmsNDpgwSbY5Ov7X+LKFQZkLUQZEBwcDPanrYYGw+FLlxhsoeIeLCwMDFeuEOcF/V+/GHb8+cNgq6cHNgSEL4gpM0iuXs1wQ03tf//Eef+xGhAMtf2rlhZcEmQIMh8GysvL/+MNAxAA2Xzw2zcGHTEOhhcMDAzbsyvA4i+e3WT48egKg7Oz8/+9e/cysqA735aFBewFkM01LCwMLSdOMJjIMTDsXzcdru4rCx8DSDNGGNhC/c197RqYDzIIFv+aFk4Mmw6eZgTRMM0gwIhswP7qarjfQAYhg7rNm7EmZRZkDjjq9PTgrkEBmzdj049qACzE0W3HFhMYBsCixrG1FcWpyFGGF+BTiM8QAJjChh+jAPa3AAAAAElFTkSuQmCC",
             name: "Miinankylv\u00e4j\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 0.6,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 1.5,
+                    electricity: 1.5,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    buckshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAI0lEQVR4nGP8PF/9P4tDCMOfA2sYQADGBtFgPpiESiADmAYAFKQMVuWDPnQAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 2,
+                            height: 2,
+                            n: 4
+                        },
+                        projectile: 0.27,
+                        explosion: 0.0
+                    },
+                    mine: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAYElEQVR4nGNgQAL9E+f9v6GmBsYgNrIcE4xRXl6OIoEuxgginJ2d/+uIcTBwyOkwSEipgyVePLvJ8OPRFYYrr34w7N27l5ERpAjEAEn62ZuimLrp4Gm4QWABOAMLgMkBAEaxKOUqKj3lAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.16,
+                            width: 10,
+                            height: 5,
+                            n: 1
+                        },
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Miinankylv\u00e4j\u00e4"
         },
@@ -204,7 +765,40 @@ const icons = {
             id: "scavenger_heal",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLklEQVR4nGNkwANu3779H8ZWVVVlxKaGiRjNc+bMQeETZQAMmJiYoNBEG3DmzBmsNDpgwSbY5Ov7X+LKFQZkLUQZEBwcDPanrYYGw+FLlxhsoeIeLCwMDFeuEOcF/V+/wLStnh7YEBiGgbitpSiByYhuu4qKCgP3tWsMdzI0wOJX5hxh0EmxgdOPrt1nkNNSZFjk3c2IMxC/ammBFYIAn5U0Co3XC/q/fjHsvnWI4c6dOwzmb5ThtoEAjP507CnuQLTV02PYcG0fw/1/zxgY7jAwmDOoMHgcgygpvrYP7ApFJim481HCAAT2V1fDAwg54EBgnx07mD5QuoYRpwsOg6JOTw/MhtFwAxhuovCxGgAKPGy2g8TRbcYwoLy8HOx8x9ZWFIUwcYIAn0J8hgAAey9+FBRSRqgAAAAASUVORK5CYII=",
             name: "Parantajahiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.7,
+                faction: "healer",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    healshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAuUlEQVR4nGNggAKNEs//utNM/jNgARpocshskBxBM5KvaP2HARAbZgiIffx9MhjDxEGGoIvDDIWZAxMHWw6SRAcgCRAGKYQBEBvmIGLEQQBkNtPve6IYPmJVes1wo2c7I7agwhaEMB9bCMyB8098SGG4nHWGEWwIyDtztK+CJVKuajPM1bkGF0+RtgSLz3l6nOHUIS4w28zuGwOy+NEF8mC2dcJDsDjIImRz4C5AdyE2MXSfYItUZH0ACBK/9KDSyx4AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        healing: -0.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Parantajahiisi"
         },
@@ -212,7 +806,39 @@ const icons = {
             id: "scavenger_glue",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhUlEQVR4nGP8//8/AyWABUQwMjJiSDx+efH/k8fPwGxLE0+wAmyWMYIE0Q04fmb7//reiShiu5bvYCTaALdIj//Vc4tRxOy5XPEbEF/S+v/Vw9tgwVlTChmSC8pRFDL/kWAQk1dlCHL3ZFi3cztDYUo0g766PCPcAM/QBLDxdeXhDBcvn2XQ1zWGawaFAUweBkCGLeiuYmRCFgTZDAIgzSBDmjpXgvkz5rf83756ASNMIwiAXILihccvL/7fum0zis0wADIsPaGa8cmrS/+DErMZTm87Ao8VJliogzTff3gXrFhGVgqsEeaCjMQaxhNnd/xPy+lnEOFWQTGcCUSANGzcdodBUV4ZLAiKf5AYzEuwcAA5H+YFFAOCErMxnA0yBGQjMgDFEiymUFLi6W1HGD1DVcChDPIGCIOAnjYkfSDHACwwUQxggEr4e7X8h3kDFpigMIEBdOejGFDekAi2BRRgMDFQ9MEMB7kC3flgAEueMMXoAJc4XC/MAFMvG6wKcYnDDAAARZ3D1p5i5qQAAAAASUVORK5CYII=",
             name: "Liimahiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 2.2,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    glue_shot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAn0lEQVR4nGNggIK4aLv/IAzjU0ucBSboYeUAE/u/aOkhRph475Q+qHARinherg9W9ejmsMAE1Yx5GCZN3sIAVQB2Acjwhzf3gVVDLCoCi4MMl1d3Aovn5UIMAxEww0FmMTBAzGGCWQcyHMlVZAM1Yx6GW2e/wPksUO+BfQGS2HHsAAPMyyAXw4KoOKcISZzhP9TlYIchi0NdjmYODSMZAECUbpH7uD0xAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.06,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.1,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Liimahiisi"
         },
@@ -220,7 +846,39 @@ const icons = {
             id: "scavenger_invis",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABSElEQVR4nGNkwANu3779H8ZWVVVlxKaGEZ/mOXPmgNmf37yBi0+bOxdFDxMuA0CaZ8yYwbDz3G+GY4/4GfgNc8A00S5Yvnz5/wsXLhB0ASM2zfUxc/5LK4ox8Gp9RRGPjIzEUM+CzAkODgYHGkjz0/uvGKQZxBgIASZ0AR1OTwZkQ2AYBppX/f+P1YBgqO0/pG+DNbzU9WVg8Utm2MBmBqanPlUAa7559xl+F8AMgSnUVRVGoUEAZJB+0qX/GGGgw+nJsOG1GYPKx0YGFZVJDDfv5jGoK0uB5WD05dtvGZZUSsMDkwXZAJC/GZ4yMNzhr2dguAMxRPyyNVgO5AWQK0CGX0TSw4hswKzaTfAAQg44ELirDQlcZNsxwuApkiaQa5AxukasXgAFHgMDJPowxTFtRzGgvLwc7Py0Zj8URTBxggCfQnyGAAANaYrLp31pwgAAAABJRU5ErkJggg==",
             name: "H\u00e4ivehiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.5,
+                faction: "healer",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    invisshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAuUlEQVR4nGNggALRiAv/tUuf/mfAAkTR5JDZIDmCZkSu+fofBkBsmCEg9uy7/8EYJg4yBF0cZijMHJg42HKQJDoASYAwSCEMgNgwBxEjDgIgs5lePX6N4SMxWVGG1ysMGLEFFbYghPk4RQnBn3OPgeFqtzQjC8igqJCv/5cFc4ElotZ+A0uA2PvOf2NgYICIg9ggi8VKn/5HFwdZDHJo1FoBBidDLgaQRRA1aC5AdyE2MXSfYItUZH0ApmnXfV/LX7gAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/H\u00e4ivehiisi"
         },
@@ -228,7 +886,39 @@ const icons = {
             id: "scavenger_shield",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUklEQVR4nGNgwANu3779H4QNq67/x6cOKwBpXL58+X+5hC3/J736Tpwhk159hysK8vEBa4449gZsAAiD+HgNkENSALK9q7Pzv5DPVLAhIBqbHiZsgvElrf8f/hZkkJWTY6iw/cKwq20lmMYGGJE5wcHBYFtM/VMZrl86y6CpZ4yiuGvVXQYeEXmGRwt84PpY0E3kUTQC0yDNIENgAMSX13NiON+myYjVC8FQ2yWYP4E1rrwhz3CJLYhh8w0BMA2yHQaQY4QJm79Ahrx9BtEAcjIyDQtoWIwxoTt/9lU5hjt37jBEih8GGyIspQyWg9Ew/+eJcTJiGKAJDbT9P53ghoRrPATjh5f2wb2KHA6MyAZ0LNoB9xtyAILAwp5qRlBawBsL15GiDj0KQeDdlmzGd2hiKAaAAg+b7TBxbABuQHl5Odj5FXEeKN6CiRME+BTiMwQA5IepHzv6pXIAAAAASUVORK5CYII=",
             name: "Kilpihiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.8,
+                faction: "healer",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    shieldshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAuUlEQVR4nGNggALRiAv/tUuf/mfAAkTR5JDZIDmCZkSu+fofBkBsmCEg9uy7/8EYJg4yBF0cZijMHJg42HKQJDoASYAwSCEMgNgwBxEjDgIgs5lePX6N4SMxWVGG1ysMGLEFFbYghPk4RQnBn3OPgeFqtzQjC8igqJCv/5cFc4ElotZ+A0uA2PvOf2NgYICIg9ggi8VKn/5HFwdZDHJo1FoBBidDLgaQRRA1aC5AdyE2MXSfYItUZH0ApmnXfV/LX7gAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kilpihiisi"
         },
@@ -236,7 +926,40 @@ const icons = {
             id: "scavenger_poison",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPUlEQVR4nGNgQAMV82f+B2FkPgMewMRAIWDCJjh1826sbKINyPZ1xcrGBlhwuQDk99tXj5LugjfvHpHkAiZkTl+r639/mZdwVyDTBA3YvDLlv6qKPMPtOw9RXEHIBYzBwcHgeLY2+sQAMmDy0wdYFe4q2sOI1QWfrT8y3OOCaAJpzpVWAGOP74wo2K3PBZ6gkNksr8+/ZxA1FGTYwfCfgUdPj2HypUtg+stTCP8LlM9w6RJD0J6i/yA+DID4jCAvgFwAMgSsEApgCkEWYAMw9UwgTpOPIYZGEOA4IQBWKPtTEUzDMDKAJySQTa/PHwQruFq+j0FdWYXh5t07DOoMEFrspzDDF74PDOcXn4UE5mKQF/T+M4KiDxR1sBgABSCIjwyKqnczggIOW0yADQAxYJp2cP4HuwbkEhiNLxoBcHqlRjAYaKUAAAAASUVORK5CYII=",
             name: "Myrkkyhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.8,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 0.4,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1,
+                    poison: 0.0
+                },
+                hp: 6.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    bullet_poison: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAYAAACuyE5IAAAALElEQVR4nGNkYGBg2Jy+/T+IRge+Mz0ZGc/3XwZLyhjIoEg+ufAETDMSMgEA7MUONO/fUTIAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 8,
+                            height: 3,
+                            n: 1
+                        },
+                        projectile: 0.33,
+                        explosion: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Myrkkyhiisi"
         },
@@ -244,7 +967,50 @@ const icons = {
             id: "scavenger_clusterbomb",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABTElEQVR4nGNgQAIV82f+B2FkPgMBwERIAckGTN28GyubaAOyfV2xsnEBFmwuAPn99tWjpLvgzbtHJLuACcboa3X97y/zEu4KZJqgAZtXpvxXVZFnuH3nIYorcLlgcUU0PHoZg4OD/1sbfWIAGQACIEOucZjBFSueOM1w8/UnBnVRPjgtpyzK8Ojua7A8S0KYIMPtO5/gGsAG3TkFZn+/wEhcLExZ+5JBRZ6T4c7DBwzJyhIMcspiYBtgNrlaKINpkO3Vq3cxgrwAosFeaA11+w9SCAMwp4Gciw2ge4EJXSMIHPzDAVb4QlAMTMMwNsAY52ABDlGQgrl3XzCoyCuAvQKjRaQEGDS+/IJrWHTgBNgLsR1LwV5ggpmuFyLHMLEcEfogkBMsznBqyyFGdFfANMMDEQRA0QeKgdwIMQYGBhBGgI3ff4BpkGHofgAASD6VF3rpVb4AAAAASUVORK5CYII=",
             name: "Isohiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.8,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 0.4,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 6.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    clusterbomb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACoAAAAHCAYAAAB+8d+zAAAAvElEQVR4nKVTOQ7CQBDLIh4FoqDhH9T0tFS09KnzD5oUKPwqyJEsOdbsDgg3e3gOe4/S/YnrvZ8xPm6XUuMyPuIcacD+eJ4Pp12z0ev5XtbTOBTP5bzFZfXBbbFAIwT7qCIoGGs2ZRxjp3FYNeJ+xkXiCPTA3iZKjooox2J6SjQUIeN4mi5SsRLqQIGac4cacHgNjXOOptTccvV041ejQd4gek/6XLqAq8EF6W2ppvQzfYOagdav/+XHI+EDh6iPkAGXAucAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 1000.0,
+                            width: 7,
+                            height: 7,
+                            n: 6
+                        },
+                        projectile: 0.0,
+                        explosion: 4.0
+                    },
+                    grenade_scavenger: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAY0lEQVR4nGNgYGBgeBpr/P/JZMf/IDYIfLlSi8EHYWzyjCCGSEQYWOJt0RyG/2Z8DDD+n5fPwDSLuBSc/2H/ERR5JsZTn2AGgzULONrA+SDF6ACrPMgVIG/AJEB8dCcj85HlAYY0S5qxns5PAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 1.3,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Isohiisi"
         },
@@ -252,7 +1018,39 @@ const icons = {
             id: "scavenger_leader",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABZ0lEQVR4nGM087H7L6uhwAACa3sWMTLgAcElcf8f33jAcGrLIbg6FhBHVkPhf2+aB4j/H5tBII0gGqQmrGgGiqEsIAJkavGsHWABZINA4jDXwTQj2w4CTCACJAhSDAJoBsFpbJpBgBGZgxweyC5A9zeGC2AgwpKdIcGUjQEZ4NMMAozBwcFg/4JAQpggw+07DxlUVeRRFPmGz8FpAAuIsDb6BOUKgjWDDCEWMMEYII2TV7xiyO88BWaLfhaD0yCwuCL6P1YDrKG2gzTCwKU1j1Do1lC3/8g0VhcQC2CGwFzECBOQUxaFK3p09zWYvvkaFjaoQF2UD6wepI4JWQKmEQQO/uEAK3whKAamYRgdsMBsAdGhmTrgsFCRV2C48/ABAwOU3nXuEmOcgwXc/yDbYzuWgqMWHI0GrrxwEyeWm4FjA5nfvFjgvzonB1bvsIBshQFY/OdGgBISJPpgYOP3H2AalCqRoxQAxjOh/2G4+EoAAAAASUVORK5CYII=",
             name: "Toimari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.8,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 0.4,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    grenade_leader: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAnklEQVR4nGNggIKnscb/QZgBDTyZ7PgfhMkVZ4IZDqL/m/HB2TDFAo42cDa6OAhjE0dWzwgyEGSwSEQYWOJt0RwwDRIDAZj4n5fPGD7sPwJmgwxhEZfCEMemHuwDxlOf4ApgBsMMYoACZENwAWzqWaQXnwX74s2KVWCLGBkYGEBiDItB3mQAexOmUSZ3P0gaLA4TAxmELI5NPRjQKpIB8oN/UI/SmiMAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.5,
+                        explosion: 0.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Toimari"
         },
@@ -260,7 +1058,31 @@ const icons = {
             id: "alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABM0lEQVR4nGNkIACWzs35D6LfffjBkFs8hxFdnomBSCAkwMEwuTcFbBgyYCFGM8j2JYuPgNnZcX7/py7axEiUC5ZCnQ/SrJQcBDHMVId0L5joqTHcm7sOzP6wdjeKHCM+22/ffcWgqiwG9gIMoAckIz6ngwDIEBB4/PQdw9yFezDUM+LSDLIVFPIwAOK/ffuJoaFtFSPOMFiKpBmkGB2AXIEOmNAFYJpBfkcWwwUYsdl+4dIDBllpIaw2g8SRvcECYyxZfBKuSEqeHyX0hYX5wPS2zRcZnj38iN0F81YuArvgyatnDG+u3mIQEREBi7958wbMBtPaamCxutwKzJSYFB7HCNKMDOpauhgnzZjHCNKMrhEn8HQw/X9qQzRKpsEmhuEFGEiPdIcrnLl8J1gemxgMAADTdJeKbCv2IAAAAABJRU5ErkJggg==",
             name: "Puistokemisti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    potion_aggressive: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAAeElEQVR4nGP8//8/AwjkOjJCGAwMDJP3/2cEM0CSMHzAAUQh+Eww1Y6OjP/XMDAwHEQyASwJktAUYWCQcGJgOIOkAKKzgYHhlzFE9Q8nBoYb1kg6MYAyhGJ0OMAAt0P5OAODqTgDg4YSVBLkKseDCEc0QGl7+/+MAKooMqa7qG0/AAAAAElFTkSuQmCC"
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Puistokemisti"
         },
@@ -268,7 +1090,39 @@ const icons = {
             id: "sniper",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABI0lEQVR4nGNgYGBgqDx59T+IRmcTA1hgDHe/qP8qDqoM51pbSdHPwAQi2s21GUH0nQO3GUCGgAwjyQAYAGmGGUKWAXcO3EahSTJAxUEVjHkluBhYXd2JNoAROeQ/HV0FFnx54ylDemg4hmJXV1dGrC74dHQVimZxDWmGmatXMty5cwesCUbjdEF2Xz3YBQob1zDISAiAJT44xDCoqKiA2SADYGwYAIllZmYywtMBCLzrWsXAUBYGNkTgwBKGOwwxYPGtf7gYtuBzAcwVfNZhYDbIOyCvvBJWYOCTkmXYkhuPVTMIMMIYsMTz/OlDBklpeTB96exRnBqxpoPnSJpAhhADwAaAbCfWRpwuQNe8c9MyogwDG/Dx8WmGQA8zeAZC5+MDAHnpecCf9sOGAAAAAElFTkSuQmCC",
             name: "Snipuhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 1.8,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    sniperbullet: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 1.0,
+                        explosion: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Snipuhiisi"
         },
@@ -276,7 +1130,39 @@ const icons = {
             id: "shaman",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFUlEQVR4nGNgGGjAiC5gF+7+H5l/aOVODDXIgAmfZk1bFQwxnAZo2Bj8f/X0JQMIwzQj08gApBbFAA0bg/9i0uIoiq4fvgOnkV0B0wyjmfA5D2YIOvj99DUDzEIWEAHjgGiYF7ABL3uN/zLifxmEtUQZ3n54xsBjr/EfwwX4DLn3l4OByWlOz9zjQs9B9LaDNxgxDEDWDItCkBjIzzeOXADz9XbflYSpYULXBAPIoQ/SCNPMJT/dzJK9AEzDDQABXM5Gj8ZvDzNPPZvgDabhgXjjyAVGWLTAbGJgYMBIQKBAfLQ8nkFfnYPh4oEfJV72GiUoCpATCAhgS4XKitL/QQaBaBAfns5hmkGxAAo8dD5W/1EDAADouX0OS/QAzAAAAABJRU5ErkJggg==",
             name: "M\u00e4rki\u00e4inen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_cursed: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA30lEQVR4nGOczcgAA4FWIvLrQIxjbx4GMTAwrIfLQOUZGBgcoOwDWOQJAaz6GaEOmGglIp8nraoN5jy9fRXkiEkMDAz5SJrXWYnIgznH3jwEUeiODESTR5HDpZ9xNiPE5zDLYQDqCJAiBphmNAciOwJkhoO0qnYeVH7SsTcPYb4MxKefCdly/qNbwRgEQGLQKHGAaUaTY4AFKVQebDlUPg/mW0L6mUiJxI/W3nBDyAHY9DOBghkUJDAFIIwWBQdAwYWsBikIQcEMZoOCHWYoNApgXLz6GQdDIkQ2gO7ZEADrDappcTsWIAAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.6,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00e4rki\u00e4inen"
         },
@@ -284,7 +1170,28 @@ const icons = {
             id: "coward",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABX0lEQVR4nGNgoBAwogtEJqf8Rxc7feYMg4CICJh9Zu8eFD1M6Io/f/oEx8hAQkiIOBdgc8ntBw8YVBUUGJbPnYOhnokBBxCTV8RwBTbAgsxxCwj4//XLFwbv0HCoiD7D3csXGT68ecPwmZAX3KCauXl4GISFRcAuEBcXY3j58hVYfmJdNVhtRJzv/xWLNsP1McIY1i4uYAM0tXXAfF0zc4YbN28ysP25zyAkzg238dHN9ww62gYMNeXNjBheQAYgm3+9ucnwi4GB4csHEMnAwCPABsavX77FHYi6ZuZg+uubcwxy6oJwTSAMAqraMgwT+6Yx4jTgxs2bYP/fuPmV4d3LrwzcIkZg/PWrIFgMHTDBGEf37GG8cOIEo4a6OsP7D+8ZJBQUwBpBAfnq4X1wGjiycwfj2zfvCSdlXTNzeOiDACwGiALoeQFb3sDqBWIUYwMo0fj4yRMGkD/RxfABAKxaiqqNvkgTAAAAAElFTkSuQmCC",
             name: "Raukka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.8,
+                    melee: 1,
+                    slice: 0.5,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "healer",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Raukka"
         },
@@ -292,7 +1199,40 @@ const icons = {
             id: "flamer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABY0lEQVR4nGNkQAPBvo7/127ezwhiT+0q/Q8Tzy7rBouhA0ZsgiBDnGxNMMSxGcKEzQCQC/YdPgNmW9p5MIDYIBobYMIqysDAAHPB8UM7UGh0wILMOZST8//a588MWry8DHZl3YzIYYALMMEYbZMn/j+irsqQsXAh4wouDnA4wLyBDzAiG/Dk8WOG29euMwTYaYHFQAbAYgSvATPi4/9fEhcFC2iLMDKcPn8NRdGC5VtxGsICIkB+voSkWc3KjUFdWYXh5t07YFrNyg0cFlW5+SguBvFZQBy7KVMYQQF4mYGTwdRQi+EjDtvWbtsKD1SQ4SiBuIKLg0H30XcG5quvGG4d28WwefE0FIUgoCjEwfDiygFML8DAvLf3wS7Is4sDx/vpY7vgYZAQ6f2f//sTcIIysnCGe4URrhua9pEDEGQYCODKByCA4gKQZpgmZDF8AMUAmAZYtIGcjVc3tryAL86xAQAa/4/9KvPyOgAAAABJRU5ErkJggg==",
             name: "Liekkari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 2.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    flamethrower: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.5,
+                        fire: 0.45
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Liekkari"
         },
@@ -300,7 +1240,40 @@ const icons = {
             id: "icer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVR4nGNkwAO6pqz8D2OX5YQzYlPDhC7gG5L0H1lzmL8DWPzB45dww5ABIzZBmCG2Du5g/uEDO8FsbK5gwmbA5jXzGGGaYS6A0eiABZkz49L8/9ef3mTQlFZnyNALZwR5Y9XGA2A5GI3TBavmL/gvdJaRYaJnB+Pn1Q/A3gA5nRBgRDbg4b37DOeuXGYwdA6H+x3kHYIG5G+v+C9zjB0s8F9ci+H82RMoipbP78dpCAuIAPn5M8MDuOZAO30GDV1dhhuXL4PpQDt9SJQmJqC4GMRnAnEy9BIZeUMVwBKGxhY4nXvpzNn/MIwRiJ9XP2Dgs/vG8FT5PMP6QxcZ2qcuAYuDXAEDfOIyDDtO3MH0Agwc7L8EdkFhkwM42tYfOgEPg8jEwv8PvnKC04OCrDjcK4xw3dDkixyAMO/gygcggOICkGb0MECPEbwGwDTAog3kbLy6seUFfHGODQAAzgCY3W8GanEAAAAASUVORK5CYII=",
             name: "J\u00e4\u00e4hdytyslaite",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 2.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    icethrower: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABmElEQVR4nO1XPU7DMBSOpQ4dQEIZQSJscIKyQSUOwFJOEa4AA1yhPUVZegAkygYnoFuDBGOFVIYOSEZf8IvcVyd5DqZi6CdVjly/973/OCraYC1Ix5nG2k3iYu8hm+Xr4DRRtKd8lUIhFNlKQiM1PIR184XkdOnmsLlaUsXD6Vz3kq38GWv89KZvj/e8DL4qkXEZ3TNcBcaZDpUU8MXtVjVfAM6z0WTJLyeHQXc61xcH20pJHeif7K/sXz6+Nq4iu4WrDCXcZZ/iquWJJy5Kwk1nV8QHuDgRaHo+2mk75aWJ4HyiDilrOewPoubViaD1tS6cqwI5JeHjySD7oeP6+V2g4ecsBakqEVRQOMtlJIngEI+sUODVhi6zA9YUCNb9+aGiJIAHY5afo+6gAPrYS/pzjCYaSUEH4Qcf4ItP13NAj3hkcRKfEeKDoQki5wIwY+uSgiDxccErnQD7XaNYysd5Xz4WSyOs9r1ogK6dLb7yWKr/ePNJf8lly9fJlt2CJHJl/1OCgLobFuf6s6vkBtEK+LeI6zvkG44rBTlXtzt/AAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 1.0,
+                        ice: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/J\u00e4\u00e4hdytyslaite"
         },
@@ -308,7 +1281,41 @@ const icons = {
             id: "bigzombie",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPUlEQVR4nGNgoBAw4pM8eeb+f2S+uYkihnomYjWDwOT52zHEGPAZAMJsfPxgDGOjG8KE2wgGhlOXb2BlIwNGZM6kJdvApp+7e43BWE4bLGamqwGmbZ0MGHonrmDITfRkxOqCSUu2/TfX0GQAYSNlLYazj66i2HR43wUwjdML5hqaDOhskCEgp0/fuhZMo9sOAizITkf2L8gVYEPuXmXQkFKGy6EbwgJjgGxB9zdIDKYZm+0oXjBS1mL4z/ofrhnkigX1JWBNN57dZeiYvR5rGmCBMUAhD6NBLgEZBIp7ZFdgA4zo/ocZkukdDGafvHGd4dv3n2A2yCUwwypSA8GuQ4kFkEYQBikCpXuQN0Di3CwcKJpBAOYlsCmwdA/ShOxXR0MDsBhIHlkOZjscgBQgJ5CExp7/yAahZyzkAAUAP9Cruch9dHIAAAAASUVORK5CYII=",
             name: "M\u00e4t\u00e4nev\u00e4 ruumis",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 4.0,
+                faction: "zombie",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25,
+                    fireball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        fire: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00e4t\u00e4nev\u00e4 ruumis"
         },
@@ -316,7 +1323,41 @@ const icons = {
             id: "bigzombietorso",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLUlEQVR4nGNgoAdg4+P/j0uOEV1g0pJtYMXn7l5jWNbbDBb79ekjhjoYYELXbK6hyQDCRspaDFHFtQRdwYTMAWlEZ4MMAWnG5QpGdNth4NTlGwz/WSGWgryjIaXMUJEaiGEICzJn+ta1DMZy2mC2ma4GXAykmagwMFLWAtsK0wxyxYL6ErCtN57dZeiYvf4/Xhecu3sNToNcAjLo5Jn7//G5ghHmf3QJkCGZ3sFg9skb1xm+ff/JAHMJzDBQmDAhawIFIkgjLNDMTRQZQd4AiXOzcKBoBgGQlxhBtufFeDGCnAo2xESREdmvjoYGYDGQPLIcRoycPHP//+T52+EaExp7/iMbBLMA2XY4B6QRWQFIEluIYwPgMIBFGzIA+ZdoA0AAFFgwV8ACixhXAAAIB6JOYmI3QwAAAABJRU5ErkJggg==",
             name: "M\u00e4t\u00e4nev\u00e4 kroppa",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 6.0,
+                faction: "zombie",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25,
+                    fireball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        fire: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00e4t\u00e4nev\u00e4 kroppa"
         },
@@ -324,7 +1365,29 @@ const icons = {
             id: "bigzombiehead",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmElEQVR4nGNgGPKAEZfEyTP3/yPzzU0UsaplIkYzCEyevx1DDCc4eeb+fxBm4+MHYxgbmyFMxBh46vINnHIs+DQc3ncBTNs6GTD0TlzBkJvoyUiUC84+uorChxmEzQss2AxYUF/CyNDY8x9mmLGcNpwmygAQMFLWYjh79yqDhpQy3NAFDGSAjtnriY8+BmqBSUu2DYCt5AIADLdCjkUHWAQAAAAASUVORK5CYII=",
             name: "M\u00e4t\u00e4nev\u00e4 p\u00e4\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 4.0,
+                faction: "zombie",
+                attacks: {
+                    melee: {
+                        min: 0.5,
+                        max: 0.6
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00e4t\u00e4nev\u00e4 p\u00e4\u00e4"
         },
@@ -332,7 +1395,39 @@ const icons = {
             id: "slimeshooter_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuElEQVR4nGNgGGjAiEvi5K7a/zC2uVszTnWM2AR7J0b+t9FUwRDHZhATNs0w9pHrd3DKYXVBLxabQYYgi4H4xfnL4fpYkBXDFMJsBvEXrj3DwBDMAKbjg00gfFxeOILk5Nq69WD6zsXHKDR6ALNgcwGI3r+6FMyG0Sr6shD5YFSLmLC5AFkBjD27JgLFEqwGYIsq9HABAeRAZGLAAWAGgTTCQh7GRgZMuAzAZhsymygASzjYEtDgAQCP2lytdUGkLQAAAABJRU5ErkJggg==",
             name: "Heikko limanuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.3,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    radioactive_blob_trail: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABHklEQVR4nGNkoDIomhz0vy93HSPDIAHI7gGxhWR/gMVrArYxEqsHRMP0SUjxMKSYrWJE0QxThKzw3WMOBlwBUYSkHl1PVIgAg4nkPEZ8jkHXo2XOAnYUoYBA9gQI4NOD7nGY2y48/oJVLz63GcjywPUxIWsCeQzZUSANIHDmeRJKACGrh2EQH6QeZgnIgjmnwuD6sAUash4YQLcLWT2MDVIPct+1k3/AnkG2B918mL0w/8DcBgIgvS0bvDDUo+tBBy+efWHAGlMgw2AaiMl2LVDLYZ4hJuXA9MA8AwO49CF7EOY2kD6QfdjciS2LwdwG04PsTliOQE7RyG6D6cUbcPQELdAAwVfmIANkj4EArMzBpRa9fMOXvdHLZ3x2AQDTNdoQ8TF3aQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 13,
+                            height: 5,
+                            n: 6
+                        },
+                        projectile: 0.25,
+                        explosion: 0.3
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Heikko limanuljaska"
         },
@@ -340,7 +1435,39 @@ const icons = {
             id: "slimeshooter",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAs0lEQVR4nGNgGGjAiEti1enY/zB2mOlinOoYsQmmTHb472YhiyGOzSAmbJph7F0nHuOUw+qCFCw2gwxBFgPx5+QegOtjQVYMUwizGcTftvoemA2ivUKV4HysXtiF5OQFtcfB9KtLL1Fo9ABmweYCEO22G8JetjsM4gK9exguxOmCXUgKYOwJvfYolmA1AFtUYbMVZyCiGwTyK0wjWBOWaGRCF0AHyLYhs4kCsISDLQENHgAAgq1aVTjYns0AAAAASUVORK5CYII=",
             name: "Limanuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.75,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    radioactive_blob_trail: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABHklEQVR4nGNkoDIomhz0vy93HSPDIAHI7gGxhWR/gMVrArYxEqsHRMP0SUjxMKSYrWJE0QxThKzw3WMOBlwBUYSkHl1PVIgAg4nkPEZ8jkHXo2XOAnYUoYBA9gQI4NOD7nGY2y48/oJVLz63GcjywPUxIWsCeQzZUSANIHDmeRJKACGrh2EQH6QeZgnIgjmnwuD6sAUash4YQLcLWT2MDVIPct+1k3/AnkG2B918mL0w/8DcBgIgvS0bvDDUo+tBBy+efWHAGlMgw2AaiMl2LVDLYZ4hJuXA9MA8AwO49CF7EOY2kD6QfdjciS2LwdwG04PsTliOQE7RyG6D6cUbcPQELdAAwVfmIANkj4EArMzBpRa9fMOXvdHLZ3x2AQDTNdoQ8TF3aQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 13,
+                            height: 5,
+                            n: 6
+                        },
+                        projectile: 0.25,
+                        explosion: 0.3
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Limanuljaska"
         },
@@ -348,7 +1475,39 @@ const icons = {
             id: "acidshooter_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9klEQVR4nGNgoBAwYhM8uav2PzZxc7dmDPWMxGoGgSPX7zDYaKqgGMSIrhmmCKYBG0A2hAUm2Dsx8j9MEqYxyLcUTDdOqGCoL+gAs9dt7sb0wkmos9E1wgDIAF1lYbg4yBCYK5jQnYauGQYu330LZ4PUwCxjQg+kV3fWgzEy+PP1OwofWZ4R5n9kv8MCEQTEVAIxNMLUFecvZ4QHIiz0QTRyTIA0IRuMbgkTzCTkcEA2FCYGE4exYXIs6GGArACbYeiACZkDcgnMC8ia0DWD1J2/9ATVAJgAupeQNSOLL5l7GGs+YohJtoXnBVjqRBZDZhMExCgGAM7HlhKwSRXqAAAAAElFTkSuQmCC",
             name: "Heikko happonuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.4,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    acidshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuElEQVR4nGNgoCKIrff537LB6z82OZD4medJYIyshglZEUwBLguQDcFmOS5zkOVAwMNcAmwWigNAAjtOvoAbgM3ym+eZGLCpQbcA3WHqhv8wxGGOYIIJgAwHAZgF6AAmjw/kZ4ihmAFzJD6zmbBZgssRMDUgeWxqQGIgeWyOxWU2IzIHFpSLG7egiKPLY1ODHg2gYEd3CCwqQOIweUacXiUDoDsC5EiYGLKDYGyQPFUdQKzDYI4DMQAqD5A/VGe4wQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.24,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Heikko happonuljaska"
         },
@@ -356,7 +1515,39 @@ const icons = {
             id: "acidshooter",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA30lEQVR4nGNgoBAwYhP0P1j0H5v4Rvs+DPWMxGoGgS9HrzDwWOugGMSIrhmmCKYBG0A2hAUm6Nzm9h8mCdM4MaYVTOcvqUZhY3jBH+psdI0wANOEbAjMFUzoTkPXjA2A1MAsY0IPpOr7y8EYGTy//AyFjyzPCPM/st9hgQgCrYqRGBph6vZW7WKEGwDTiM0QZDFkNjwM9lbtgkcnLo0wcRgbJseCHgbICrAZhg6YkDkgl4AUwhSj08jqYAELNwA5pJG9hKwZWfza8itY8xGDVqQOPC/AAhdZDJlNEBCjGABZ1Y9nF5upMgAAAABJRU5ErkJggg==",
             name: "Happonuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    acidshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuElEQVR4nGNgoCKIrff537LB6z82OZD4medJYIyshglZEUwBLguQDcFmOS5zkOVAwMNcAmwWigNAAjtOvoAbgM3ym+eZGLCpQbcA3WHqhv8wxGGOYIIJgAwHAZgF6AAmjw/kZ4ihmAFzJD6zmbBZgssRMDUgeWxqQGIgeWyOxWU2IzIHFpSLG7egiKPLY1ODHg2gYEd3CCwqQOIweUacXiUDoDsC5EiYGLKDYGyQPFUdQKzDYI4DMQAqD5A/VGe4wQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.24,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Happonuljaska"
         },
@@ -364,7 +1555,39 @@ const icons = {
             id: "lasershooter",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2klEQVR4nGNgoBAwYhMsPjT5PzbxXrtcDPWMuDTfOHQcq40adpYoBjGia4Zp7IktxGpAyeJ+FEOYYBLeLVFwZ+PSDJNDdh0jurPxaUYGcx6eALuCCd1/xAKYK5iwCeLyOzbAREgjDCB77cajc6gGwAwBeQFZEhc48v8X3LtMIGJrzTJGZEmQIdgMQhaHuZoFRQHUFSBDbBjZsBoCkkMGLMgcsEtaGP7DDEE2GARgzgZFn1GEJTjq4QY8v3IfrgGkADlhYRM/t+I41nzEADMZBGCKkcWQ2QQBMYoBrKJ6X5FZ2X0AAAAASUVORK5CYII=",
             name: "Mulkkio",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 6.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    laserbeam: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAYAAADq6085AAAAF0lEQVR4nGO49e3v/7CrX/6j09jEQHIA8QwpfXNhHOcAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 6,
+                            height: 1,
+                            n: 2
+                        },
+                        projectile: 0.35,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Mulkkio"
         },
@@ -372,7 +1595,28 @@ const icons = {
             id: "giantshooter_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVR4nIWTMUsDQRCFb48rLK3tLEQRbA79BRo40EKwtrETUlmJVSpJFYSIgoUW1hGRCAG1slTSCGKwSGedMt3JN/iW8Txw4G53595782aWC0klBk+tMqmJ8WSa7O+0QzUf/iP+En8Y2nrSvou8jNd577BUlfnZGVtHL+8GWFxbthzko4NTyxWNvCzWWyaSQgZAQILcv340MI9yCNW1GtioIoTjTjNWUvSez+x70cjjPOQw1eHz4ysZvl1GkI86shylqnx1cROHhJDC7/lOexJFJOMFKF/Zs4QqaKAaJGRcUkhtxVsYT6bJoNOMlQCK5IcnshyYwOjHCj3iQsqaS13gGA6YzFfzvbGqIgRcckPgF5bmoljGQSRA1akT3W7fSJ4sd2Fze7VUUv16Fwqdq/nUK3JFPH5wqiSyrlEYc7C1u/EHIMsK34Ly7M2BflNWxMghxqqzyMrf374GhL4Bt/oQwRvWYl0AAAAASUVORK5CYII=",
             name: "Heikko \u00e4itinuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 2.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Heikko \u00e4itinuljaska"
         },
@@ -380,7 +1624,28 @@ const icons = {
             id: "giantshooter",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVR4nIWTr0sEQRTHZ5YFu00MGmyK4aqghgXT/gEmi6Bc1yKXLghaPVFYgxgEi+G4IGxQwXrBH+3CGcR2/dLK5+F3GNYFH+zNzJv3/fHecN7V4vq1U7mGGE2mrrt54ut5/x8wjrI/tPXmaBBwKT+dx8NKKkuzM7aOXz6sYHFt2XKAT/fPLZflRbWz2jWSBDAFBCDAT5elFfMpB1FTq56NFAEcXLSDkqL31rP7LG+FechhosPn+7d7+CpCURxNYDlKpHx3dh+GBJEi3nNPeyKFxGsGW/O7ZjW+1GxilwiprfAKo8nUlf12UKIQAhTj4QksESMY/6rRY90FRE1BW2CoSWM1lxfBPqsUAeCSF6J+YWUukKUcBKKoPnXi6nhgoBgsd359u1UpqX5jFwqd6/kkZuSJ+OLBSUlgPaNqzMHGXvanQJYVcQvKszcH+puyQkYOMladBVb++XboIfoBfxkRO2sbt9EAAAAASUVORK5CYII=",
             name: "\u00c4itinuljaska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/\u00c4itinuljaska"
         },
@@ -388,7 +1653,29 @@ const icons = {
             id: "miniblob",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAQklEQVR4nGNgGAWjYBSAACO2YChtifiPzO+uWYFVHQgw4dKckMSD00C8Bjx9+AaMW+sfgGlkg7ABFryyDAxgg/ABANe8FiQITb50AAAAAElFTkSuQmCC",
             name: "M\u00f6ykky",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.35,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.05,
+                        max: 0.1
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00f6ykky"
         },
@@ -396,7 +1683,29 @@ const icons = {
             id: "blob",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAeElEQVR4nGNgGAUUA0Z8kqUtEf9h7O6aFVjVMhLSiAywGcJErOaEJB6sckwMRIIF875gtYCJkO0gm/EBJnSBpw/fYLUZZhi6PAs229EVScuLwA178/Ijbhd016xgRFcAMxCGQcDNzxQzoKNSXVAEsSmCqcFqwIABAGYPPbP24dTpAAAAAElFTkSuQmCC",
             name: "Kiukkum\u00f6ykky",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 1.5,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.3,
+                        max: 0.5
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kiukkum\u00f6ykky"
         },
@@ -404,7 +1713,31 @@ const icons = {
             id: "ant",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABBUlEQVR4nGNgoBAw/v//n6CiRHU3uKL5N3cxgjUygikGBpAB+HCCmut/bOIwwEKKc5FdAnIEUV6wEtf6ry4gg+J8ZC8wEWPzlxYHhlsB4uguIGyAFdT2Z2eu41TDiMsLDcYxYIldT84xwLwAAyCv4PVCIpJTj728xnjzwxOcLmBB1wAC8jxiYPrhl1dgGuQCkK0gdcgBCXZBA9Sp2ABIMUgepgldM9wL8lAbYQBmMwg0nF0CNgSvFxjQAMjPyIaiGwLioxgAshGkAUSDNIMCDqzQOOY/TDGyprmu/SDDwHwWUDTBbAUBNxkjrDYjG4ACLMU0/4NwvVE0ONPAaHQ8x6UPRRwGAIAJu+G3Flu8AAAAAElFTkSuQmCC",
             name: "Murkku",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "ant",
+                attacks: {
+                    melee: {
+                        min: 0.6,
+                        max: 1.0
+                    },
+                    acidburst: {
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Murkku"
         },
@@ -412,7 +1745,28 @@ const icons = {
             id: "rat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4nGNgGAWjYDAARlwSDZkx/2HsT8+eM/Rt3ItVLRM2wSJ/ZxTNMLEAcz2wOIzGakCRv/N/PilJDENBYutPXATLg2gUL2xLTISbuOfdI7BimM3IhsHETt68z2Curgj2FgtIs9f8+XD/gWyAKYRpQjYQBECacQJrDSW4a5DZyHxkcQCuQz9giKChzQAAAABJRU5ErkJggg==",
             name: "Rotta",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.2,
+                faction: "rat",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Rotta"
         },
@@ -420,7 +1774,29 @@ const icons = {
             id: "bat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAzElEQVR4nGNgoCYI5w7/T6oaRnSJlV9XwsWmu88Gi8koyID5Tx48YThwZA8DsjommGYJERkUg9A1w9gONi4o6pjQnQgyCCQJswlkKwzA2MiGMOHyN0wRTKPPDA+GjB0pGOqYYP558eYJnEbWDAIwjZyMjGD2kycQtSheWAkVANEgBSCMDECaSQLV2vX/QQAUmDA2CIDYyOpY8BlSo9PAICMjA2eDAJh/FS0MsIHWq40oboYZlLkzFUWciYFIgK6RaAMycWgkCsBS4+AGAKxkbVVMRQOdAAAAAElFTkSuQmCC",
             name: "Lepakko",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.5,
+                faction: "bat",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lepakko"
         },
@@ -428,7 +1804,39 @@ const icons = {
             id: "bigbat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABG0lEQVR4nI2TP07DMBTGny0GEGuHDh7Y4QgdOiDBDXIBqoYzgESQyhlaCS4QdUVquQfdO/gKiDHoc/MZ+yWhfJIV5/m93/vjxBTnRSMiUn/VRhItb16DXev+Y5b5GQKo6eQ67t2F6wD83mcQOx65fwfTnlZn+4KZCeuYDFvQgADxvwDnuhWhFTM0MAQvPqvM9nhVBVC5vTtkN4f4AMCi0j10KtI5gy2bQdlSz1roX3ovt7KebyQCvPfBCH03vdc/OGCbGgEhiM8UShuq5YANnR4unxo9af0tMCuCX3bPBjE2c2ipnAdLjSu5VgiQE1D4wv3q9q3jrJNQFoFY2ok2tMXW8NS+sQVkx6H+25gRZ+me1UaAJqf2vnbo/wP6AcnARlk10wAAAABJRU5ErkJggg==",
             name: "Suurlepakko",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 3.5,
+                faction: "bat",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.5,
+                    bat: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAQCAYAAADpunr5AAACGUlEQVR4nO1YsU7DMBC1vSEYGRgiwQ6fwMCABAN7+gEgYGJgBAkY+g0g8QWZGQCJgYFfQGJg6JCBgRUxBl3Qwenis89NClHVJ1l2Hb/zy7tz0taaKcbl1nUFfbaS1Z/LUWkO7/es6RF6JaZLAzkX0bck2Gk1MJ/Pq431TcP3R2hi/MUJclx0jKBZIxkIY5yP4fHpoWEajmMxuEbg7Vxtm4O7Xc3WnejHGNBu9m/r5uO6kLFSgFgS4Pp/G0iBvDlr63FZ/mrqSv/R8nEFPNQeSiC9vzoBMLG0+L0wFgCPtZQEEMLnUgzMPXFTDJR0AVezTqtf4oOPsQSih41HUGoAKgKz//be3MRnIK0WiuKjsG0MpHzc93Tt3HxWVd1g/Dp68VFNin6qwaeF8kMJdNKNxALEwKuUGyghJ3pSDeT8wcLgZx540LIsm4h+TBz01LvYCXZYNUDEXhOAVhpPIl6TDBw+X1hYUwjV3sZAKSby8GSnPPpCBUB5eE/gjzaBjgtPDUA35qaC2HErMGagZLR0osf5+hjST/3ieqDAtAl0vhuJBcDroQrGNQgUHjOiIDHpmPJC+/Ii4Pv5DPPNh/RLXG0C6frGS1gTYBykVGBBTJQMDAFPATcTergmxZCSI+lvU4DIdV1XsEZ4KobEQM360PtFk0CKrn75SnHcJIVg0lIN7Au60N8qgSerZ5Wvn0GHlL8tJhNgBhPDF+9UTWwaw0PKAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 16,
+                            height: 16,
+                            n: 6
+                        },
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suurlepakko"
         },
@@ -436,7 +1844,41 @@ const icons = {
             id: "firebug",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAv0lEQVR4nGNgGFTgYPz0/yCMLoZPDxO6gGKYBYpBR6+ewWsICzZBkCFg2xmm/wcZAMJEucB+YSbj/VUnMAzC5xVGbIIwxSADQAaCXPBb+Bpcvn7ncUa8BoBAqL7qfx0JEYYrL94wgOjQ5YwMqyMhjgCxtYSOMeI0oNHdEqwSpBkEQAagA5grmHBpRtYIU4xOYxhw7Z0VXDPIdpgLkF2DLIbVBeiKVl+8zQgKDxAN4zPgA9feWf2HuQSkEZkepgAA1eFp1EiPk2IAAAAASUVORK5CYII=",
             name: "Pikkutulik\u00e4rp\u00e4nen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 0.2,
+                faction: "fly",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25,
+                    fireball_firebug: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAY0lEQVR4nGNgYGBgeBpr/P/JZMf/IDYIfLlSi8EHYWzyjCCGSEQYWOJt0RyG/2Z8DDD+n5fPwDSLuBSc/2H/ERR5JsZTn2AGgzULONrA+SDF6ACrPMgVIG/AJEB8dCcj85HlAYY0S5qxns5PAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        fire: 0.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pikkutulik\u00e4rp\u00e4nen"
         },
@@ -444,7 +1886,41 @@ const icons = {
             id: "bigfirebug",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7klEQVR4nGM8GD/9PwMSsF+YyciABtpMkv9ba5tglWMBEYphFnCBgwwQA7EpxgaYQArvrzoBFwAZBsLoLsNpAAPUNmRDYAYRYwgTjAEzBN01hAxhRBdA1gALmyX1UxhAgXjgxSIUtfU7jzMyImtEDkx0L0250MegIyFC2AvogYmuOXQ5wtEgNiMDDi+g23jlxRusLmDEEAGZrK/6H10zDKy+eJux0d3yP8j/IJoJl2aYJmTN6AaCaCZkiWvvrOCakV0AshWEkfkwmgmbF2CmgzBIEchVMA0wNgygGKAldIwROZSxAWSX4AXoNtEMAAAfY4RMpQIl3gAAAABJRU5ErkJggg==",
             name: "Suurtulik\u00e4rp\u00e4nen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "fly",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25,
+                    fireball_bigfirebug: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAY0lEQVR4nGNgYGBgeBpr/P/JZMf/IDYIfLlSi8EHYWzyjCCGSEQYWOJt0RyG/2Z8DDD+n5fPwDSLuBSc/2H/ERR5JsZTn2AGgzULONrA+SDF6ACrPMgVIG/AJEB8dCcj85HlAYY0S5qxns5PAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.2,
+                        explosion: 0.0,
+                        fire: 0.3
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suurtulik\u00e4rp\u00e4nen"
         },
@@ -452,7 +1928,32 @@ const icons = {
             id: "bloom",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIElEQVR4nGNgQAKbnI3+M6CBmxER//GpYULmvP8shKIAm2aQGhQD9nuYYdiKbgvIIGyuOxns9J8JxkB2BbLtH36/QnEhsuZvX79AvABigAQ0ZP+hKMSnGSMMvn39AqZhhmADIDmYPEw9k+OOU4wgBhc3D15DkMVg6kB6mdAFsQFkr4DUgSyDAUYYA1tswBTCDEfmw1zOiKwBZAiy6dg0wpyO4QJ8LoEBZI0wwIJNUftce+yG7IBQEemaYPkVM68zgk1EFijvNv8vIMQBVvjh3Q+Gh3c+Mcir8IH5IPGLp16B1aG4ACYAMgikCKYRBjpLT4INRnYMjM8EYsA4MINAGpD5IC/BDIS5EqYO7hSY0yuTDzIiewmkGeRsEIB5BdkSADNcwhN5uxeFAAAAAElFTkSuQmCC",
             name: "Puska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "flower",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dummy: {
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Puska"
         },
@@ -460,7 +1961,35 @@ const icons = {
             id: "shooterflower",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/klEQVR4nGNgwALeTQv5f7dY5z+MD2KDxLCpxav526W5/0EYnyFM6JphbJhGdDa6IUy4JEDg99VLYIzNlVhdAALv795gkIwvRNEIYoPEQHLogAlmIrIkNluRxUBqYa5gwlDJwMDAqq1HlBiGAe+hrsDnAnRvMGETJMYFMD1MIOLa5Z9YbcMnBtPDBCJ8d91mRDbkzZm9GAYgi4HUgvSADejYrvkf3RAQjawBxEaWg2kG6WV69+I3mAESuFrIwrDa5S+KIciaQXIgNTDNIL1gk2ACIBokiA8ISbCC6QrP63C9DGXzVf7DMIhf0qKKkaxhYuhqUSSQNSDzccmB9AIAobHSoOqf6GAAAAAASUVORK5CYII=",
             name: "Plasmakukka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "flower",
+                attacks: {
+                    orb_tiny: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAZ0lEQVR4nGP8KJi1mHNKbAwDAwPD95zFIIqBc0osmP6es3gJAwNDDBIfTPO9mwqmPwllMzD+Wnr8P2uUBcPvZSfAgjCALAZigwCIjy7OhCyBTTMhwPhRMOs/uhPx8EFeAnkB7GWQFwABljTYUFSPrgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.12,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Plasmakukka"
         },
@@ -468,7 +1997,29 @@ const icons = {
             id: "fly",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHUlEQVR4nGNggILH29L/g/CMUKX/ID6MJhrsztQCawAZAhNDN0RLQvQ/CKNofLwt/T9MM7ohyAaga0Qx7DEWQ2A0zBBkA5DZLCBC1msmI8ygG5sPg2mQGMiQu29+gBVmijMyMIiLgTXe//qb4RrUAEZ84bFi2xMw30CAg2H6y/8IgxgYwPxrL14zgl2ADIpUBP/fOPaGgVjAiMyZrC/2H+Q8RW5WuNiFDz/grkAGIHV9d94zMiHbDKJBmkGSMEUgEOElw5B78RVW7zJhE4QZ4ukqyTD34Se4RpAhIHGY7SgGKCLZjA5cp18DxwiIDdII04zhAkWoITCDkDWC2EQFIgNSAGF1Dr4wwOUFkgAoNl54ehKdEzFiAeZ0Yg0BAHWNqurmRw83AAAAAElFTkSuQmCC",
             name: "Amppari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.5,
+                faction: "fly",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Amppari"
         },
@@ -476,7 +2027,29 @@ const icons = {
             id: "frog",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAY0lEQVR4nGNgGAWjgB4gbor9f2QaHTAR0nxhASecxgYYCdmMDhblHGQkaEAcmuZoHUkw7e6wAkM9Xi+8ufITnzR+A0Ca8yMUSDfAK8MC7HwRHXaGiSsegJ2/9MpzsPNhcsgAAMxNJHhQzS+mAAAAAElFTkSuQmCC",
             name: "Konna",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.3,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.4
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Konna"
         },
@@ -484,7 +2057,34 @@ const icons = {
             id: "frog_big",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVR4nGNgGAXDHcRNsf8PwiB2VL3LfxBGV8OETzOIfnPlJ5z94eUXDHUs6AIgW1hEf8P5IjrsEIWivxlERCFsZMCIT3O0jiSK4qVXnjP8ec3KsKxxDyNWL7Dg0QwTQ1aDYkAUUgBh04xLDsUFIOeBwMQVDxiePcUMMGwAxQBQKIMMAQXc6sNvsBqCLgY3ABQwAuI8eA0BsUFiXhkW8PQAAOugTt05YEfYAAAAAElFTkSuQmCC",
             name: "J\u00e4ttikonna",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 0.2,
+                    fire: 0.5,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 2.2,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.4,
+                    tongue: {
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        melee: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/J\u00e4ttikonna"
         },
@@ -492,7 +2092,29 @@ const icons = {
             id: "fungus",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAu0lEQVR4nGNgGPKAEZdE9dTD/2Hs1mxbnOqYCGnGxsfrgvykBWDFPMbKWDWgu4YJXTNIIy7NX87exXANEzZF+ABIPiawHW4II4iACQgLSoJtBymC0TCAzn/7/jnDkvWVjHD/IBuCDEAKkcVAfBAAaYa7ABkgOw8bgGmEAUZcCh/duY5hkJyKJiNR6YCBgYHhyb0bKGxkPjJgwWU7yLZju9bj9Q4IYDgJpBmXbTJKGli9gQJgtiLbjk0MBgCK1mJ/iKiU+gAAAABJRU5ErkJggg==",
             name: "Laahustussieni",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 40.0,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 10.6,
+                faction: "player",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Laahustussieni"
         },
@@ -500,7 +2122,29 @@ const icons = {
             id: "fungus_big",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAwklEQVR4nGNgoBAw4pN8smzZf2T+yw9vCRvwBE0TNoBsECMpGrG5ghGbRpAicQFhDD42LzBhMxWbbdjUvLl2hYEFJgGjYTajiyNrcp8yE+51FkJ+xKYJwwvYAEjTezVBMFbITWHABVhw2bJnz5L/srLqKIpv3jwNDnB1dVNGggnp5s3T/0VEpBEuevMURSNBA96+fYYSvcLCUqSFgTCaBpjz8RqArAgUBshyyN7BC0CGwDSD2CCvwDAuV+A1DF0zuiEAe82QtE6iFyYAAAAASUVORK5CYII=",
             name: "Nuijamalikka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 2.0,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 7.6,
+                faction: "fungus",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.4
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Nuijamalikka"
         },
@@ -508,7 +2152,40 @@ const icons = {
             id: "fungus_giga",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/0lEQVR4nGNkQAJ+27f/19ARBbPVeYSQpRhufnkHFgPRXbImjDBxJmRFPEJCKBpBimEAphkdMKELwGxCF0MWjzp58j9WA2SkmDFsR9YIYyOrY4IxkE3F5lRcckzInCfP/hKlCaQOZiEjLPSRAxLZiegApPnLO4SBLCDi/ZNPDIIyfGABkOQTBoifkQ2CuQ5ZM0gfI4xjO3sl2BUwg/ABkEYQOJwazgg3AB2ADIQZBtJQwH6aITiuB0M9Cy4DCthPb2Z4zeCrpKzGcI/9FgOIxgZYcBmgpKzmC6JFJDTAfEPrNKyuZcJlAEwjOptoAwhpJGjAmxc3sLKJNoAY20EKAUJibhrc8lzXAAAAAElFTkSuQmCC",
             name: "Huhtasieni",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.0,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1.4,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 16.6,
+                faction: "fungus",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 1.4,
+                    pollen_ball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAvklEQVR4nGNkQAO79k93R+a7OWbuROYzois+eezeRF09bTD/8qWrDOZWSvnImhiRFX/7wjnRwsIczH/z7jGDiJAsw4kTJxm4eL7DNTGhKwYpBGEYsLAwZwDJwZzKCHNGaloSunfgGkWEZBlmz5oHdh7YBpibYQqQFcIATA0LTADmZmQ+CIggiYEA2AZQaOBTBBKHqQGHErqnYZpg7Du3nsFDCmwDiAESAAUhsukgNrJiuA0wQFLEIWtC5qMnDQD20n0o54jcnwAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 12,
+                            height: 12,
+                            n: 1
+                        },
+                        projectile: 1.2,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Huhtasieni"
         },
@@ -516,7 +2193,31 @@ const icons = {
             id: "lurker",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVR4nGNkwAGiM6v6YOyl09uKcKljxKX5yvEdVjC+jqXHMZghMINhfEZCmpENAdEwOZihjMQagA2ADGFioBCwINuM7ERkICIpx/Dm+SOsBjDCNKNrBGkCAVwaYWHARIqf0TWjeAEdINuMzzVMDBQCRkIBiAvAw4ABmqpAGJZYSAFMpGog2QCQq9BdhhwLWJMyMh89EyGLUQUAAGmwXl7Wu8VVAAAAAElFTkSuQmCC",
             name: "Varjokupla",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 0.0,
+                    slice: 0.0,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 6.75,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    lurkershot: {
+                        projectile: 0.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Varjokupla"
         },
@@ -524,7 +2225,38 @@ const icons = {
             id: "maggot",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVR4nGMMy53+nwEKbpzdBaYvHVvPyEAkYEHWrGHsBmZrGLuBDV01OZOgQUzompEByHXILsQGGPWsAv9j0wwzGAZweYsFl8norhKRVPq/b20vI1YvENIcoHiOQURKhQEbYEJ3PjbNG+4bgdlOwcXg8FjWl/ofhPF6AaZ5zlE+BgaGOwwwANIYVTQb7hUWBizgzTOoBkUGhjfP7zFUhIjA5ZA1Y4TBjbO7QIEF53esecMQaPqK4ebDa3Cx+nxrlGhlgtuGBYA0n7zwDMwGGQLCMD6KC948u4NwNhqI83cBa4JhEB+nFxiQAMjvMJvRNRFlAAisPy0GNwQG0AMRHgswG2HsT++eg9kLd0LEHty4jz1jKWhYwEMVlC9AGF0ORCOrQwYAaWqNULYT71sAAAAASUVORK5CYII=",
             name: "Toukka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.9,
+                    explosion: 0.3,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.5,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    slimetrail: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAi0lEQVR4nGNkgIL67eL/YexGz5eMMDayHLI4LvXo4iwwQQ8LH5g4A8P2Lf9BkjDFcDkkcVzq0cWZkAUtBObA5WDiHhY+WMXR1SMDZHGmM0dewjknPqTA2aSKe1czwC0Gie84sQUcREzotsMk0MWwieNSjwzAEiDbQbSJjTiKYpj41laIOnRxXOqRxQEDh2wVxvq4PwAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Toukka"
         },
@@ -532,7 +2264,29 @@ const icons = {
             id: "skullrat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVR4nGNgGAW0Bf////+vrmX1H5kPA3g17lpc/N/Xyvf/w+uHwIpbglrBGmCaQYbCDGFE1gjSBKLNJSzA/JMvTsDZIGAW+I7BNaYHzN69pITBLbaXkRGX5uq1VXCNrcFtYMNgYNPRTQyPbhxmkNe0Y2SCORlZc2yrLYOGtjWYDaKRDQMBP2s/sGYQmwlETJ5+C6wZZktOcjfDjatHwWwQDbINBHIz1TDCiwkWQCBbQQqQnQryJ8xAkAWn1guB1YC8AAtEJlhA3TyzkUHdxB+sAcQH2QpyGcx2WKDCAhHkNZAhjKDA23xsM9g/INfAXIDsJXQ+yAXgKGRERAJYMywmYN5CpmHpAaQGRIPSCEiOBTlAYC6pWVeNkj7QbTMPsvgPiwUAonu2HZhabUsAAAAASUVORK5CYII=",
             name: "Kallorotta",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.7,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kallorotta"
         },
@@ -540,7 +2294,39 @@ const icons = {
             id: "skullfly",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABg0lEQVR4nHVTsUoDQRCdO+4LrGwFsQsWd6hoK2KTgFpoY2WVQBq1MqkksUslaJVKi1iokCsUTWtIJIhilwi2qfyFkzd37zKe5EHydm/nvd3ZmXUkQRRFUX3nTCq3JwIGqncVp7ZdjxiDuWTgcgBRf9xLGYAYhktbP/qNZk9XR6mpw50RNJdbl5vTN12AoP3STnd6vj6W88uhlIsLGvf92ZGN/YbjFdYKGrCbK8n84qb0xxc6t2IAIpGhMuJiNMRjwGEJwli8PLuSTVVF5WLHiONUHPzhaBTZowdBkAYPBgPlr49H2Tuo6rjVrIkLMYELI6yYgNgCRi4nrABPAncC4+zOhGePjh/nyLXVnORvT8Q1VEJQ29H7Q0TkV/PK9hvg+/4fxrq6jZJALtBgmhGRGvi+rxOwNZlmRGY6Li4ElwNGqfgOAHQfofmKaKfa7y4aCGIwy8SLRKvSyJb79X5mYoDguAvjXVAJvDqagK0RK8aHpa0cdkMNCLsiyPlfByWgkX3iv7qvRyV6mgo/AAAAAElFTkSuQmCC",
             name: "Kallok\u00e4rp\u00e4nen",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 4.2,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    },
+                    darkflame: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADAAAAALCAYAAAA5vw7pAAAAwklEQVR4nGNgIBEYadj+J0aMXLPIER9aDkQDTLRwIC45dDEjJD6xboCpg9FM+CRBNLoYMZaT6nhkgM0+XG4AASZSQx/ZU+iGE5M0SPGcEQ59yPKM5CafwQJYYIxMySAUienP12EoRlZDqjwh8zMJmI1LDUoewAbO3TjMiM0BxDoeph+f2eh6sNmFy34mbAZgCwGQGEycXAcSq386VB4kB5PH5T6wJK58gGw4uhp8ctSQZyDRDDggVJoQkiNHL6lqkAUAuFW6fzGMIiYAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 8,
+                            height: 11,
+                            n: 6
+                        },
+                        projectile: 0.8,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kallok\u00e4rp\u00e4nen"
         },
@@ -548,7 +2334,33 @@ const icons = {
             id: "tentacler_small",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA5UlEQVR4nGNgoBAw4pJY3rrzv7iCEMPLB+/A/Mhqd6xqmfBpBgEYvW/p6f9EGbAcSTMIGEn2M3haLgS7BJshTOgCz+++ASsGYZBmZgkuMIYZArIAWT0LMqcvaSlYEqR4+/F4hinT96EYrmwQD7YApwEwANIMAjmZTmDbYWDLegbiAvH53TdgDDLo74tvYDEYjQ4Y0QVg3kAGSTFbwYaBDC2aF82I0wXLW3f+BymQVBZBMWDeEm+4ZvRAZEJ3OgzADAJhZEPRA5EJ2ekw58EUISuGsUFqsHmTAVc4wJxMUBMxhg1OAAC81YAdCzznBAAAAABJRU5ErkJggg==",
             name: "Pikkuturso",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1,
+                    freeze: 0.4
+                },
+                hp: 0.75,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    freeze_circle: {
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pikkuturso"
         },
@@ -556,7 +2368,43 @@ const icons = {
             id: "tentacler",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/klEQVR4nGNkwAGWt+78jy4WWe3OiC7GSEgTDDy/+4ZBUlkEwyAmmEYQFlcQYgBhEIDRMM2pJfvBNLpFTOgaYeDlg3comnF5kQmXk2GakQGyQTA5Fmy24tKEzRUs2DSi24zPhSzEOHli/RYwnZPphKGOCV0zSBOys2GaQWDK9H3wQIWpYYFpTorZyjBviTfD3xff4BpA7PxGHxT+vCUQGgYY+5KW/gclEFhCgbkExobZBNHsjaKmaF40IxN6KgPRyGxk25DFcYYBAxYAMmT78Xi4OhAG2Q42ANk0mCSyYega0QHYFFA44LQeKTxgAGY73AswV1x/dBGrAbg0gyQBHpW1S3NCAgIAAAAASUVORK5CYII=",
             name: "Turso",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.7,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1,
+                    freeze: 0.4
+                },
+                hp: 5.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    smalltentacle: {
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        melee: 1.0
+                    },
+                    freeze_circle: {
+                        projectile: 0.0,
+                        explosion: 0.0
+                    },
+                    smalltentacle_melee: {
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        melee: 1.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Turso"
         },
@@ -564,7 +2412,39 @@ const icons = {
             id: "ghoul",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAtUlEQVR4nGNgoBAw4pMsbYn4D6KfPnzDsGz2HqxqGfFpRAa4DGEipDkhiQdMS8uLMFx9lvKfoAHINoLAgnlfUNh4DShFsh1kI0jjxVN3wfzumhWMMINwGoAOQIYgA1AYRKW6oHiDEVuIwzQiBxxII7ZAZMFmKzan4opGJmQOTCPMBbg04XSBNA7b8QEmdAGQIeiBR5IBDEheIcsAUHwjhzxJBqDb/OblR6JdgmGbm58pQdtBCgFOclwkbiB+KAAAAABJRU5ErkJggg==",
             name: "Sylkyri",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    acidshot_slow: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAZ0lEQVR4nGNggIIzz5P+w9gg0LLB6z+yWGy9D5wPkwNhJpjAjpMv4IaA+DfPg6XgmrGxQXpYQIyagG2MEIkXYAmYZhPJeYwwxeqG/8AaGBiYoPIvGDzMJRjgCvABmIsWN24Bq0d2BQCFOD+e1wFWLQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.24,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Sylkyri"
         },
@@ -572,7 +2452,32 @@ const icons = {
             id: "giant",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABgklEQVR4nH2TPUgDQRCF5y4BK8vDHzAIIcUVsUiliFVahVR2oo3WoiBoI1pom8rG0i42FlbCgRBEsbBJIIUciAGNxF4s/OFbnXM3dzhw3M3uvDfz3u55MhCr2/WvXjGS/YUpabQ+5XznWophRT7m7iXXLEkwXpDjw3VP6/1BMG8KAb9GIwYMCEJI+k+PTkNfMgJA5+TdWYMQkrhzlzRyCGrLG2aRDjyQ8AZAMA0xuTbsTOHbXdgIl4YMSMHzBzP/TuHrJotoXCz7BkSOfnLtiCxIpqu19ATFsJJlR+KJykJKpoT4VyuhUwCgo01i+5PyINcspbq3H9pOjke2ub5utG4vzeXQjkxBjMbVxGBArONVSgJBARqVRMccPBEm1YZ5saLXjX9AUUEa8uL4Apjue1tvcnVxmqzn9SMYmzDnmoCigjkZzXfLswasOfX9565nJNhXk9HsiwQJ3Y/qgcl1dMU5EmBUEhFJSPXsFUydTvz3L6xs2lzGD5V0E505urUev74BwJf6R9sskLAAAAAASUVORK5CYII=",
             name: "Hiidenkivi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: -1.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 6.0,
+                faction: "giant",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    pebble: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAYAAABGbhwYAAAAz0lEQVR4nGNgQAMB8UX/Uysn/EcXZ0JXJColB2ZX7qn8j1Wh7xxfsKLXzx7BJc+/rP6PohCku8lXj+GF8l4GmIlv9oozrLr8D2wLXCFMkPmwKliRiPNLMH198U+G+i5OMJsR5HBk6zRj2RnCdJkY6jZfAmsE8UEawCbCrIMpAgGQU/7a3gbbBrYaZhpI8ZUHV9BDBey5u9fPMTBtWNjHCFMMsgpkJQjArAYZcPnUAUZGmE5dM4f/yppGYAmQ7yXuOsNNQ1EIUwyiQRpgCmCSAGDvZk1J1dtRAAAAAElFTkSuQmCC",
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hiidenkivi"
         },
@@ -580,7 +2485,29 @@ const icons = {
             id: "pebble_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA4klEQVR4nGNgGN4gIL7of2rlhP/41DDh0ywqJQdmV+6p/E+SAb5zfMGaXz97BBc7/7L6P1EGVO6p/N/kq8fwQnkvA8wFb/aKM6y6/A/sKoIGvIEqZj6sCuaLOL8E09cX/2So7+LE74LUygn/Qc4GKYZpDtNlArsGBLC5ggndRJizNWPZwZpBAOSlv7a3wa7D64LX0EADGXLlwRUMxSD5u9fP4TZgw8I+RpghoDCo23wJzAbRID7I4MunDjAi62HEsIaBgUHXzOG/sqYRWAPI/xJ3neG2E2UAzBAQDTIIm8bBAwA2N2nppcoxawAAAABJRU5ErkJggg==",
             name: "Lohkare",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 0.0,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: -1.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.1,
+                faction: "giant",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.0
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lohkare"
         },
@@ -588,7 +2515,29 @@ const icons = {
             id: "longleg",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVR4nGNgGN7AxtDtPwjjU8OET7MYgyYDCOMzhAmf5tJ9X8B8fIYw4XNetxMPmIYZRJQBNoZu/z+++o6iEWYQSS54xXAdrhHEBhmKzRss2GznF+ME82+/Ogdnk+wCYgETMYqOnN/FCHIJNm8wEW0VsS6wNHbBysbGxwqQnYjuXELJmiwAAD2UNmIbWjHMAAAAAElFTkSuQmCC",
             name: "H\u00e4mis",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 0.11,
+                faction: "spider",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/H\u00e4mis"
         },
@@ -596,7 +2545,22 @@ const icons = {
             id: "lukki_tiny",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA3klEQVR4nGNgGAUUA0ZcErUHyv6rCLEz3Hn3kwFEx+s1Y1XLhE0wttX7/4OjV8FskGaYgUQZENvq/V/BWpsBhPdsPgcXBxkEkkNXz4KsEVkC5AKYISD64Mw9DPbpLgwMDFtRDGCEaX545TmDvI4kA4wGaQIZgs6HgcXVW8F6WWCaDy0/BxawizQC80EApAnERjYM2cUgQxhBGmCa0V0DMwTkfBBAVgfSB1LDhE0zTAzERnY2cjiB1CC7CCwJMhWdjQxAYuiBDY9GZNNQTEYCMFuRDYEbAPMzsmKspqABAFh7jXl2O4MuAAAAAElFTkSuQmCC",
             name: "Pikkuh\u00e4m\u00e4h\u00e4kki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.2,
+                    explosion: 0.8,
+                    melee: 2.0,
+                    slice: 2.0,
+                    fire: 1.2,
+                    electricity: 0.6,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 3.5,
+                faction: "slimes"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pikkuh\u00e4m\u00e4h\u00e4kki"
         },
@@ -604,7 +2568,22 @@ const icons = {
             id: "lukki",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4nKVTMUvDUBC+VyIObt06xaGbRaSrUB2CINHNRaG6WegPcLB0Ku1/qOAk6OImGZQMUXANHeoWsC51c3MoBJ58Ry9cmjr1G947Xu/77rvrxVhraRU4OIwxucdudGWr5XWOk58ZTd4/6K4T5JOICMUNH0oAZNwiIFgmBG5JJzX7vkXS6zBkghDDp5gFveM65xRaAPDD5u4WXbtrlEYJ+cOQqOVxVRAF89iKE0eTkZx+JuTsn5A7HbET4HYc0F7Ly9pCbrNPcGJ4BueDIytVpNev8TcFB78slkaP5L9ssAgAoYvtHnMdPCA5pJhvt1bhCjdnO5ltcQTA1aRWkVmYbIiaDKCqvvEOMnLgVvJKON4eYiNk2Afa0yqTUf3yfsTvz4NDLiRtAkb2oHFat1pEiy2L8S8UFqkxF5GWZGgaMmC4LiySq8iIpaq+hSycnACwuPMYHEhiW4pk+O9r1Cu7uL6ay32sgj8aL/IWw7JlYQAAAABJRU5ErkJggg==",
             name: "H\u00e4m\u00e4h\u00e4kki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.2,
+                    explosion: 0.8,
+                    melee: 2.0,
+                    slice: 2.0,
+                    fire: 1.2,
+                    electricity: 0.6,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 6.5,
+                faction: "slimes"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/H\u00e4m\u00e4h\u00e4kki"
         },
@@ -612,7 +2591,22 @@ const icons = {
             id: "lukki_longleg",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVR4nIVTsUoDQRCdPQ7s7VKdxXUeItcKkiIoIulsLMROwQ+wUFKJ+g0WFiJoYyeHCCmiYBtEtLOIjXZ2FoKw8i689WUNOnC5vZl5b97MTpxF1ult+3xyInw/v3/a4O7JTncrZ2PM/QVWEvjHkaU8rO0ve02mHR9Ww8Nmq/bn7RJfniQJwVNz0yMV8XQv+3Z9sGTVwofdHHVDvNUuQ8GEYEjDA+Mb/q/ehaXNFcuKRk1KY0GHn5OHjqdcJCLINqCCABDHMQcFkKQT16R4mBpfn9lzifaMPl8e30JyDIZpHMrd/GrpIRsBDAv9bpzdhx6phAVowIxcY1Y0LG3O1kMzy2sgehxI/1oAbYPU6TXq9HUGIIJCXCkKbL3mgTTVvpREF4rtLO5cWVb8gLFMjlU4CzVdLt0PFr097w9vQYdCNQTocpGQYJwDAUz/JDwjGWC+4Y+V/jLu+X8+xL8B6PPvB5ZJ55gAAAAASUVORK5CYII=",
             name: "Lukki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.2,
+                    explosion: 0.8,
+                    melee: 2.0,
+                    slice: 2.0,
+                    fire: 1.2,
+                    electricity: 0.6,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 8.0,
+                faction: "spider"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lukki"
         },
@@ -620,7 +2614,22 @@ const icons = {
             id: "lukki_creepy_long",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA70lEQVR4nGNkIBPsWmH8H0SzwBhuEWcZidE4q9UQRT0jusTzlwwM9ZPOYxjWmGf4X1IcU54JxkirPs8IkgQpSg3VAxsGAzA+NsMZ0W0CKZaRZGZ48vwvw+zVlxiRDQPx0dUzYvMnsqaHz38xyEuyYdWM14CHz3+hiIEMAbkM5EWYl0E0CzabQQoZGNjAtqNrhoUDKPZAMcGILRZA/kf3ArYwABnCCGMgpwNsAYnMRwmDXQQ0o4uDAEo6cENLgTC/whTDAMwwWCBiBY15hv9hYYELgORB6nBK4tOMTR08KYOAgjIKFyfAqQ6WM4kBMLUAmr+O6exFpJQAAAAASUVORK5CYII=",
             name: "Kasvoton Lukki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.0,
+                    melee: 2.0,
+                    slice: 0.0,
+                    fire: 0.6,
+                    electricity: 0.6,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 6.0,
+                faction: "spider"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kasvoton Lukki"
         },
@@ -628,7 +2637,22 @@ const icons = {
             id: "lukki_dark",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABB0lEQVR4nGMsTWr8f+3RZYbnL58woIOG2laGhuZqnGKS4jIMTAwUAiaY7SCTMVyAx3YQAOljgjkFpgAZvHrzAoydTT1xu4ABahKyyTCN6IZl5SdjNwAGQIZg88ry7fPhbJhrYOpY0EP/8I4jDLhApGci2LBpE+fCXcy4adXe/zDbYc6GKcQHxEQkIAYY6Vr8R3YSNn8SZQAIoAccNgByHQjsPb0dHHuMMANggUPI6SAACgMQmDlrOqoLiHUFzPnwaGwApTAs0YfN6ciawQaA/AGOf2i0gBTAFCM7GeQ1mDiyZYzeLiFgL8DSAygsQAGEDtDzAYzPpCWnCxaA5QeYZkJeAgUgSA8AQcuK6UT8F0QAAAAASUVORK5CYII=",
             name: "Kammolukki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: -0.2,
+                    explosion: -0.2,
+                    melee: 0.2,
+                    slice: 1.0,
+                    fire: 0.4,
+                    electricity: 0.0,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 24.0,
+                faction: "spider"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kammolukki"
         },
@@ -636,7 +2660,22 @@ const icons = {
             id: "worm_tiny",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA10lEQVR4nGNgGAUowClm1n8QbeFS+h+Zjw3A5BhBxP///8Gcx6ebGSr2OjC8uHqDQUJbA0x/e3GbgUtClWHfkjRGkMEn9nQzwjSD5BhhJoIkPz67wZAfcJXB2kSW4eiZxwyHeBcwLKu0A2sAKUYGILX8UhqoLtDS9mNY1fKJIX9dNMPEoKUMqdPMUBTDaBAAuQruBWR/J5itRXHBvb2b4YphAOQarC54jCMM0F0AoiWNfMFyTCCNjFCQMEkC7GeQBIgGyYECDaQYBGDOh/FBcgzUjl6GEQgAvwqHGhMPWUYAAAAASUVORK5CYII=",
             name: "Pikkumato",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.4,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "worm"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pikkumato"
         },
@@ -644,7 +2683,22 @@ const icons = {
             id: "worm",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABTUlEQVR4nGNgGGjACCL+//8P4/9/fLqZIazqM8Px3V1gORCwdC37zyWhCmbvXZzKiCzGgmTYf0vXMoaPz24wSBr5MkR3HAab+uLqDRTDYACkWUJbA8UAkKL/165uYoC44jZcAmSbkrMvmL20wpbROXb2f5BmZC/8B2lyTzgNFuSXgkiCAMhFyGIgm7+9uA13ARPMdlnTWkaQIpALVrXxgjWCcH7AVYZVLZ8YEszWgvkgzSAA0nxv72a4ASAX/Acp0NL2g7sEBKxNZBlSp5mBaWQXnV/cDaaZsLlg5wJTjACDAZAakCEwmgU5+mAuQAZHzzxmmBi0FEwzMGjDDQEF6r29aOkAFNrHd3dBY+EzUYHIiC0W0GMCBAhFIwMIaGn7wdNBxV4HsBgoIcFSHzKAGYKSEkGB5xw7m+HbC1BStoVqssWalEHeeIFu6oAAAHOXvExR51pMAAAAAElFTkSuQmCC",
             name: "Mato",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.4,
+                    holy: 1
+                },
+                hp: 20.0,
+                faction: "worm"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Mato"
         },
@@ -652,7 +2706,22 @@ const icons = {
             id: "worm_big",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdUlEQVR4nGNkQANOMbP+g+hvL24zcEmoMiCzsYkx/v/////j080MCZMkwBLPz21m4JfSgCtEBiBN6IAJRMia1jIsyHsBV/Dx2Q0MxRODlsINnZ11CsxWcvZlYHx0qul/WNVnsCZJI1+wRhB7VcsnsOKwGj6wi2AA3WWMIALkDRCN7JUwuQ4GaxNZsAEgkB9wFcw/euYxw4JTwXDDGEEucE84DTcR2RUwANMMAyBDVj2qAKtjAjkfBK5d3cSwc4EpPAxwaQYBsMvkOiCBuKqNF8zQ0vZjQHYJsuLUaWYM+euiwXxhbVUwBomDLGIBuQBkOywMwqowowpblMIAC8gFINuRwwDZCyCAnIAwDAhDCgNILKAqAAXY7CwQ6xSY//bqbbg4v1Qw9jBAjveJG7TBitENBcUCCDDBwgA5FkDOBYU+LDEhGwJLB/C8gJ4OQLaTnBI1tXz/w8IA2RswxaB8AItGkM2gvADiS2hrIHIjLDBBtpOSGwGgV+YGa8JcowAAAABJRU5ErkJggg==",
             name: "J\u00e4ttimato",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.4,
+                    holy: 1
+                },
+                hp: 140.0,
+                faction: "worm"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/J\u00e4ttimato"
         },
@@ -660,7 +2729,22 @@ const icons = {
             id: "worm_skull",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAw0lEQVR4nGPM9Ej/f+bhVYY3H18y4AIi/OIY8iCx09ePMDIqSqn+Bwl46DmhKAAZCgL4DAYBFpjm6TtmMoLYIBftuLSPgVjACNIA0gyikSVAhoTrBDJktmXBxaZXTWNYeWU9qgEMOGxF14zNEFA4MMIMQLaZGAALWEZstr/7+opBiFuMNC8woNkOM4QQYGKgEDBS1QvkBCILTIDUaARpBhnCgishrby0noGhigGvF8DRCMoLFCVlSjMT2OnkZmcTeW0GAIFCnBeXW+rrAAAAAElFTkSuQmCC",
             name: "Kalmamato",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 25.0,
+                faction: "ghost"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kalmamato"
         },
@@ -668,7 +2752,22 @@ const icons = {
             id: "worm_end",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIUlEQVR4nKWTIW8CQRCFZy8oVEX/AKaiiJoeCQpZWd3UVKDrUK2kCodGYJpqJLKqCVdTAaKGP4BA1dJ8G95l2B6E0JdcZu925r2Zd7vBthh3rjfE6frHbs7qB+N9K7fXWWFvX4uQieDh/TNofX7R/BM9CcVERGt2JPJe13IzW04+zGZFSR6UcHd1GUcAXo3Exm17hwyS1fc87gXa8Mls8A6YNS0W+k/DGGtSpJjZPPYVixyxTGoyhkcJXk2KKXkmdQpkjE+gUMQpSSSwfyJjBGZhBKIQf5eZPb88RlN5WKcIOoFVJlYVeIFoom2PLy/4IBN9F1VAjLqgD6cepNJELobU/R1AyXfCmm/KOfouFINR2RWQ4WUHMtNv+pheZyI3+BdHIrm8n79XswAAAABJRU5ErkJggg==",
             name: "Helvetinmato",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.4,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.4,
+                    holy: 1.2
+                },
+                hp: 25.0,
+                faction: "worm"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Helvetinmato"
         },
@@ -676,7 +2775,39 @@ const icons = {
             id: "drone_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuklEQVR4nGNgGDTg//9//0GYVLWMMAEwh5EJzCfWEBDNAhMAaS4vL//f0dEOZ6Nr6uzsZARprKioBKsBsRnRTQVJ3rlzh2FWRjVD156VcLkyl3CGtBmtDCoqKgwwS+BeQAb3W1f8X8F0nwEXiPinyKBYHQHXx4gsGRwc/B9kA8gFIGBiYgKXO3PmDJiGya9duxa7C4KDgwnGBEwzSiDCAMgGWIAxoAFsAYtVAS6FhORRALoiojQxjEwAAEIBZCLCD4dJAAAAAElFTkSuQmCC",
             name: "Lennokki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 0.4,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    },
+                    machinegun_bullet_slower: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 0.15,
+                        explosion: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Lennokki"
         },
@@ -684,7 +2815,38 @@ const icons = {
             id: "drone_lasership",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAzElEQVR4nMVTwQ3DIAy0UQbhwQiMkOyQUdggGYUdWCEj8Mgmro7WkotSNRWP+nOc4ZyzISwiNBJuSE1E3Ce2bZMYIx3H0TjWCHCsl2Xhrw5yzg1rrU0IDvG+71RKkVst1FpvtTBdJUMItws5S6y9nx2UUkR7ty6AOkh7VofpNIFhWZFGL+7dTiqG5XVdG0IEN+DA8zzJe9+ElkPr7L3imuwhLYK4wpwz6xBZbUOooUVSSm/2X7x9mO0GXuGn6Ws7wHmen2Jm4r//TMMFHtdRfpw/FYhNAAAAAElFTkSuQmCC",
             name: "J\u00e4ttilaser-lennokki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 5.5,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    megalaser_blue: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABeUlEQVR4nOWWsW3DMBBFSc7gEVwaSJEmRQBrDO+R9LF7Zw+PIQMq1KgIkNIjaAcFn7kTvhiSpuQmsA+QRJH3+O9IkZQ1EbPv5+3zy2uFctc29XDcnmN+MY7f/wNnA+BDE9utf5tOl8FQooeEEDgUPUtWd21jMhwCrALWM3imEp2jZ8Pkdmu7iXV6ugzfsSRpUDY6KMTgkeLwlezldWSVwa1rm32Y5Fw9G0lu9fY0BT+/PNiHSYYc6pQVJsVpchqkZ8l6CnZMcomeQ00uOepkBR/9hIXzox+KBWW0geMueRl4Tb5Ea+K7VM/xQo0lF2sDo+tHA8kMjCZSKceB5gZUA71Fz8nsmVKDL89iSuxKW5GmBlrYZ7TNf6L3bA6LUY+CEoMvGK6jBf7HEm1FmuIz0Zqr53gbLgXBCDcGGmO1TgNVTs45HAV9hutlF71Jz6Eks3hVULdfredAQ1HetjVQspoC8Zp80TEx+i7Vsw9x0D/Er5oJhO/lZ/sHOQvPJfjJaW4AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/J\u00e4ttilaser-lennokki"
         },
@@ -692,7 +2854,39 @@ const icons = {
             id: "drone_shield",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/UlEQVR4nGNgoDX43fj/P0kaYqu6/oMAiI1Og+Twag7MqYYrAGlCth3GRlYDAkzInE+fv8AVMDIyMrLWMzLC5EBskBxIDTJgRLYdWfLd65cMFhryYPaJGw8ZhETF4XJ8vDwM66e0gvWywAS/PbrO4OvtA1ckICAIZ5ubWzB8+PAeYvC7dwwnjx+Dy7HAGEoqqgw3b94EKz558gTDJP4OBpY6iNyfJgaGvI8VYLa6ujpYLYYX3P2C/nt6+4ANASkC2YQMhISEUFywc9M6VC9wyWkybD52Ecy+dewi/jCQ02TACpzj8/+jRxMyAMmB1FA1HWAAilIiNkByXqA7AADs8Jt3f/vziwAAAABJRU5ErkJggg==",
             name: "Turvalennokki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.3,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 8.4,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    },
+                    shieldshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAuUlEQVR4nGNggALRiAv/tUuf/mfAAkTR5JDZIDmCZkSu+fofBkBsmCEg9uy7/8EYJg4yBF0cZijMHJg42HKQJDoASYAwSCEMgNgwBxEjDgIgs5lePX6N4SMxWVGG1ysMGLEFFbYghPk4RQnBn3OPgeFqtzQjC8igqJCv/5cFc4ElotZ+A0uA2PvOf2NgYICIg9ggi8VKn/5HFwdZDHJo1FoBBidDLgaQRRA1aC5AdyE2MXSfYItUZH0ApmnXfV/LX7gAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Turvalennokki"
         },
@@ -700,7 +2894,39 @@ const icons = {
             id: "basebot_sentry",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABR0lEQVR4nGNgoBbYeDLzPzY2SSA0o+o/NjY+wIgu4BKQgKJxz4YFjEQbYBZY8v+DlD9WhTb6cij8eWnyYL1MxGgGgSMXH6Hwk2Y9BLuUBURYOAX8/4emQeDZRoZ7z96hiD16iq4KagCyJpAr3p2Zz8BgksggJIWqWFCKgYFXFOKVz68fMTBsWIAwgOnjHQYePgEGvqdzGeQkGRgYns6Fa7zwHOLT95L/GN7jC0QLp4D/IEPWyj5gSPltxTCH9RhD8GMFhkfSyWB5fTQXrK62ZYS7QMQ86f87zUQGLX05hkKQbdvqGVIkrBgYGJ6h2Ah2OhJggsUAemjLeTUyvH+B0AyyHRmAbIcH4r1n7xiUpIQYPqDZAkpEIMNBgfsQySGn1vfAvQ5nwFKgoIQU2GZYCgSFC7LNJ/ZtwJ0yQYagJ2WYIegGUQ0AAD0Gf1Dfkd2dAAAAAElFTkSuQmCC",
             name: "Tarkkailija",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 14.5,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    sentryshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACwAAAAWCAYAAAC7ZX7KAAAAmklEQVR4nO1XWw6AIAxbPI1X8/4HqPGDH6Jsg9WkCU38QNkoxT0wGwDXieeJvv8N6BaPEnqbF90IOtu0CG3yjHIjWyTFSImwcsweCUv6d21YCjes+HU/zCgxskW1wpUR720AwWD+HDPSUx/9VuiPShjEk6MAaoQ3FH+Jg50lyiGX1uQKh2Rplmt+GnZ7aaQGXvKKZEFCZc4ncQOd8i38Oc1P5QAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 22,
+                            height: 22,
+                            n: 2
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tarkkailija"
         },
@@ -708,7 +2934,41 @@ const icons = {
             id: "basebot_hidden",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFElEQVR4nGNgoAYoWbDvPzY2SSDW3Reu0dfagX6GMKIL5Np6/3/z4AlDhLQOhmJFSyMw/eTjWwaveW2MGAb4Wjv8V2DiZnD5LYDTRnRDWNCd/ODfV4Y1/ExgsQ9fPsM18jx6D6ZZrn1CMZAJxth89ACGdzTlVBgEeHjBbJCXQLhUywHMh9EsyBpAtoAUKWpBnNl97QCDpJA4RPIjquEgL6C4INfWGx7q94+fg9vy/N1LnOGB4oI3D54wiCjIMDD8RrUBEQ58KOIYBix/fJExVkvu/xqGT2BnP396mWHxzs2MhNIEEzIHpgHkbBgbBLAFMIYL0A1BBmAX/CXCBbhAyl9pMM2qJc+wePdWhkhpXXhKpBgAAJz2bnXj6n9sAAAAAElFTkSuQmCC",
             name: "Vakoilija",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: -1.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 14.5,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    hiddenshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgAKVrHuB7obc60Dsnee/Bt2ZprQeJgeTZ2BgcIByD6DLEwK49DNCJSe6G3LnOelwgWX3XfkGcsSkO9OU8pE0r3M35AbL7zz/FUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4eCkw5UHlZ+08/xXsC+RLcemnwnZ8iALHjAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4nHdiS9wQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+ACKj8JJih0CiAcfHqZwSRA5oI0QygezYEACJU2MllwCTkAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        fire: 0.3,
+                        slice: 0.3,
+                        radioactive: 0.3
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Vakoilija"
         },
@@ -716,7 +2976,39 @@ const icons = {
             id: "basebot_neutralizer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABEUlEQVR4nGNgoAbYvq/kPzY2MYAFREyY9hIu0NJxE0xbu/n+/2udAmZbaiuiaPr48gnDvGwvRhCbESboHhL7f+eaxWC+rFPkf2n7CBRNuAxhRDbgy6cPDEwiCgy/1V2wOhebISwwDkgzCPx784CB/9caFDGYV2Dg2opuBq2IUjCbCSZ4dNdmuGtgQE5dk4GHT4CB+egcDM0gGiUMkP0OcypIkZCkJMO7588ZYABmM0yeCcaxjcqFR9/xq/fhimGaP+qGoNgMoqUdIxFh8ODFGwYFCRGG30gBhBwOyC6AeQOkhhFZEhQTIBrmbFi0wtIEtlhgQhaAaUDWjCuAYS5kRJfABywaN/7XEmGF82GpcYgDAIjmho7pOv1TAAAAAElFTkSuQmCC",
             name: "Pys\u00e4ytt\u00e4j\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 14.5,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    neutralizershot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAAAoElEQVR4nOVWwQ2AIAxEd3CC7unDPW8Ch9AXhCBtQFpTw70IaS/nVdoG7OcVlABFroglEtOxpXMeEO85EZTllbGqqH299l0r8tyHO70uQMiRKlNCrITGvwOGg3O3y3VLga38YoyVQLzgLXPWETLL9vIJoOmgB5GoxJoLnKPEYPpSDymMHkoq8cgcJcsZPHWj1hh1/1gW3K9b8LywwvnKfwOWG/OJoQDolQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 20,
+                            height: 20,
+                            n: 2
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pys\u00e4ytt\u00e4j\u00e4"
         },
@@ -724,7 +3016,42 @@ const icons = {
             id: "basebot_soldier",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABMElEQVR4nGNgYGBg+N/x8D+IRmeTBJIK4/5jYxMCjMgc30hvFI2bl29lJNoAr1TX/3yWbFgVKXCrgGkhKUG42Ltn7xk6wicyMmHTfHXTbRT2g693MAwFGVaxMv8/k72XHYqzQRq0/VQx2DBweNppMIYBFhjj0/FfDI9fPySo2TbLFM7WDlCBGPD16U8GPn5eBgVOVYavu6H+5kTVTDAQ7b3s/oMM+cvzi0GCR5LhxZfnDMxf2Bi4XREBCfI3zPkgl4ACkgU5AI1UIc4Dg3UMDK+/vEWxDaQB5gUQGwSYQJpB/geBc7cRgaMRpIQRjTCNMM2gaGTB5z+Qdz4dZ2C4xHANLoaeVlhAoS0rKg8OdRD9jhtiOrEAHIi4kjB6Gjm47RDupA0yBN0gmCHoBlEVAACqZofgIlwu0gAAAABJRU5ErkJggg==",
             name: "Teloittaja",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 20.5,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    soldiershot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAECAYAAADbPvzIAAAArElEQVR4nGNkwAO8797/b6AkD2a3MDAy1DD8B7NbGZkYidGDrI+QHhCNrA8G8OkjRi9cs/ruw/9VlGQY7tx7wgCiQRpAjsMGQA5es+cohjhMHwhg0wvzKMguUvTAHAtzJ7reFjzuZEHWgOw5ZMNhlsP4F+49ZLjpagu3EKQHWyiC1CPrwxYguNRj04crYGrwuJNgskF2OEjDVmVFovSQog+XXpA+EI0rmRLjRgDx7W1KiCPfLAAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 14,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.6,
+                        explosion: 0.5,
+                        fire: 0.4,
+                        slice: 0.4,
+                        radioactive: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Teloittaja"
         },
@@ -732,7 +3059,40 @@ const icons = {
             id: "healerdrone_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVR4nGNgGAWMMMbm+94Mr48k/he1mQ8Xw8X3VdwKN4AJWRLZZBgflziGAW+/X2F48PApXALExiWGDFhgDA3X0ww3dpsyzC4WANtg6/EepxhWF5ALWGCMD5e8GD6/+sOQ2vsBHGinlwr+xyXGwIAlEFcvPIZi8oVzpxhuX/4DppEBujomGANkC7JiGB9mO8xQZP4oYAADABtHbB24HWwlAAAAAElFTkSuQmCC",
             name: "Korjauslennokki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 0.55,
+                faction: "healer",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    },
+                    healshot_slow: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAuUlEQVR4nGNggAKNEs//utNM/jNgARpocshskBxBM5KvaP2HARAbZgiIffx9MhjDxEGGoIvDDIWZAxMHWw6SRAcgCRAGKYQBEBvmIGLEQQBkNtPve6IYPmJVes1wo2c7I7agwhaEMB9bCMyB8098SGG4nHWGEWwIyDtztK+CJVKuajPM1bkGF0+RtgSLz3l6nOHUIS4w28zuGwOy+NEF8mC2dcJDsDjIImRz4C5AdyE2MXSfYItUZH0ACBK/9KDSyx4AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        healing: -0.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Korjauslennokki"
         },
@@ -740,7 +3100,39 @@ const icons = {
             id: "roboguard",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAy0lEQVR4nL2TzQ2EIBCFB0MhHOjEFuzAJqACacI7RWgnc7ATN4/NbEYSVswmOwniz7xvHjAS/RhmnufTe395ycy0rqvpAQytDwBjPAJM01RGCOEC+gawtf2UUpmP47gr/gZQFVJdQF1LYGbatu1SFZuI5zsnAy5YhnOOcs7UI9L7YpZlOeFAi/Z9L0c4jmNJBFz2Crm4l6O24kAnaJBAWmFFpB1AJC4ww6UWxRg/TWZrB5KgIboz676wmqgrQSzJXW1d2+yN5r/wN8ALjI51yy3Eco8AAAAASUVORK5CYII=",
             name: "Robottikytt\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    machinegun_bullet_slow: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 0.15,
+                        explosion: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Robottikytt\u00e4"
         },
@@ -748,7 +3140,40 @@ const icons = {
             id: "roboguard_big",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+ElEQVR4nJ1SOwqDQBR8K6nTC1uLZYo1J0gZPUZAy/Sp0qdU8BqmzAmCRcqQWrDPBQyzsPJ8cUEc0HXdnXnzPkREdE7TgVZi4z7qPLci766jWOvJJfy7NY3yCsSCADzSkvY7oueLSFfZ6FIKBT5rIG+vhV15AJlugNepqpS0j8jfS2lX4NP348Oh+MbVQQLCHDwNJS9DBAQeKQpDSzoaYwPc21a5YMFcRKSRJYklOjI/Rx2Q3qSNHNLBHFCbg08g1nosJs8f1pGGPW+K5Q6OxgwgO5EoDAeXllrSBbQZIqgHMDuVtSD7xCS8k7gKa1z8OUCP3cDM7SV+6A6CkeaHJQQAAAAASUVORK5CYII=",
             name: "Kyrmyniska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 16.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    machinegun_bullet_roboguard_big: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAECAYAAADbPvzIAAAArElEQVR4nGNkwAO8797/b6AkD2a3MDAy1DD8B7NbGZkYidGDrI+QHhCNrA8G8OkjRi9cs/ruw/9VlGQY7tx7wgCiQRpAjsMGQA5es+cohjhMHwhg0wvzKMguUvTAHAtzJ7reFjzuZEHWgOw5ZMNhlsP4F+49ZLjpagu3EKQHWyiC1CPrwxYguNRj04crYGrwuJNgskF2OEjDVmVFovSQog+XXpA+EI0rmRLjRgDx7W1KiCPfLAAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 14,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.45,
+                        explosion: 0.0,
+                        fire: 0.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kyrmyniska"
         },
@@ -756,7 +3181,29 @@ const icons = {
             id: "assassin",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAu0lEQVR4nGNkwAMmNpf9h7Gv3LjNoKOhypBf28WIrIYJnwHImif1mIFpdMBISDPMFSDNs5eux1DPhE9zanQg3Asg58NA97Mr/wkaMBHN/7gAIy6bYTaiOx1ke6mUDpzPgkszPluRARO6ZphtIENgGBYW6LajGJCKpBkZwOIdJK928BRuF/j4+OJ0JshgEPaPTMKwgBGZs3H5vP9btmyGRxksHLC5jKi4xydGUlL2weM9DADyBj4+/TQTCwDVp2e3fvOXbgAAAABJRU5ErkJggg==",
             name: "Salamurhaajarobotti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 8.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.9
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Salamurhaajarobotti"
         },
@@ -764,7 +3211,33 @@ const icons = {
             id: "spearbot",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxUlEQVR4nK1QwQ3EIAyD6kaho7AD/y4BE8AS3YgN4NFN7hSkIMMFXrWECME2Dkq9hVLKd9Vf3REOLs7z1DMRzzuTAUyk/bqutjiFZKLnBotTSkPPe68w7d8IiOd51A6Y5JAIOWflnOtnqmdTNvmsXkETqgnWWnHkLegTd/d6JzTGtLrWqu77FrnHyoDEJOR6lURLzRhjJ6OJlERL0VGAYzDQZBiBXiYBEVhMO9fSP3QDjh1CaCRMgP+BKbvBLMaaE/Drc4ofgLqXU0R+FmwAAAAASUVORK5CYII=",
             name: "Peitsivartija",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 0.5,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 0.5
+                },
+                hp: 9.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    laser_spear: {
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        holy: 1.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Peitsivartija"
         },
@@ -772,7 +3245,50 @@ const icons = {
             id: "tank",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1UlEQVR4nGNgoAb4////f4oMCIgvItsAJopsZmBgYEytnPBfR10Rr6L8BH9GZD5Iz+z2ArAYCyHNIKBr5gD2orKmEYoYiM8Ic8GVm/cxNMIMB8nBbMTpgtfPHjE4OtrDNe/ff5CBASp3Yu8GuI3oLmABmY5sE8ggUSk5FJdYOAeAXXD51AG4Cy6fOgDms8A03r1+DqwRphnGJ+gCBiIAyDYojeEClFCGsWGYgQjAgsxBdybcBjwAnhJBmmFOJQUQlRJhAD1Fgg1ATmWgkMfHTskqxDAEAPBqfRiSVJJpAAAAAElFTkSuQmCC",
             name: "KK-Tankki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.1,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.1,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 4.5,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    machinegun_bullet_tank: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 0.15,
+                        explosion: 0.4
+                    },
+                    grenade_scavenger: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAY0lEQVR4nGNgYGBgeBpr/P/JZMf/IDYIfLlSi8EHYWzyjCCGSEQYWOJt0RyG/2Z8DDD+n5fPwDSLuBSc/2H/ERR5JsZTn2AGgzULONrA+SDF6ACrPMgVIG/AJEB8dCcj85HlAYY0S5qxns5PAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 4,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 1.3,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/KK-Tankki"
         },
@@ -780,7 +3296,39 @@ const icons = {
             id: "tank_rocket",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAxklEQVR4nGNgoAb4////f4oM6Iq1INsAJopsZmBgYFxf6v5fWsOQoMKnN84zgNSZJXcwnppbAXYxiM1EjGZkALIQ2essMJNBNDogZPiRGy8Y4C64/eIjWAMMg/iEgI2GBAPcBTB/gjSqSvAT5R2QC1hgGkEckEaYZggf1VvYvMnEQCII7N7JCGNvOv0AwvYzVYCHLIgNw8QYyILMAWkCBQySDQQNYILZBKLhTiIBEJ0SQQCU8jAMgLkA5HRQyONj12REYBgCAK4+YtmKtl+wAAAAAElFTkSuQmCC",
             name: "IT-Tankki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.1,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.1,
+                    electricity: 1.4,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    rocket_tank: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACEAAAAHCAYAAACGESREAAAAmklEQVR4nGM8b2z8n4GBgYFTS4tBY/FiRoYBAIwwRxDjEFIcTIq5YIn29na4BhBQUFCAszV6ehhulJQwREZGYjh4vZYWTrWkmIth8HkvLxRXGm7bBhcDaYAZjGwgLrXIIYfPXCbDs2cZd4SEMIAwyGcPHjxAUfz92jUUQz3WrGEAYZAhhNQiy+FTS3Ka4CQyAZOSflCCbKByBwCYC22+lKhg1gAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 11,
+                            height: 7,
+                            n: 3
+                        },
+                        projectile: 1.0,
+                        explosion: 0.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/IT-Tankki"
         },
@@ -788,7 +3336,50 @@ const icons = {
             id: "tank_super",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA6klEQVR4nGNgoAb4////f4oMCC0KINsAJopsZmBgYMydkPpfS1EHr6JM/3ywuskFsxkxXKBFQDMIGDrowr0IMghZjuXa/SsMIENANDqAGW4TYIEzrFhgil48es3gZO8Il9h3cD+DliKEfWTDCbghMIMk5ETBelhgLgABEBskCJJEBjDNd87dBcut7tvAiBIL1+5fAUuCAEwziA8SB2GQC0Dg/IHLjCALUAKRgQiArBHZdqyhbOig+x+GiTGcBd0gFSNlZJsJGgD3AkgzyKnE2IoMiEqJMABKkRgGwPwKcjosJnCx0wpTMAwBAJ3Wc0sL3jRwAAAAAElFTkSuQmCC",
             name: "Laser-tankki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.6,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.1,
+                    electricity: 1.6,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 9.5,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    machinegun_bullet_tank_super: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAECAYAAADbPvzIAAAArElEQVR4nGNkwAM23/f+r6FgAGarMLQw3GGoAbNVGVsZidGDrI+QHhCNrA8G8OkjRi9cc/9h9f8qMioMd57cYQDRIA0gx2EDIAdvObIGQxymD8zGohfmUZBdpOiBORbmTnS9KnjcyYKsAdlzyIbDLIfxbzy4wFBoexNuIUgPtlAEqUfWhy1AcKnHpg9XwNzB406CyQbZ4SANvopbidJDij5cekH6QDSuZEqMGwFvBWxQsE+hdQAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 14,
+                            height: 4,
+                            n: 4
+                        },
+                        projectile: 0.35,
+                        explosion: 0.0
+                    },
+                    grenade_leader: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABgAAAAGCAYAAADZq14TAAAAnklEQVR4nGNggIKnscb/QZgBDTyZ7PgfhMkVZ4IZDqL/m/HB2TDFAo42cDa6OAhjE0dWzwgyEGSwSEQYWOJt0RwwDRIDAZj4n5fPGD7sPwJmgwxhEZfCEMemHuwDxlOf4ApgBsMMYoACZENwAWzqWaQXnwX74s2KVWCLGBkYGEBiDItB3mQAexOmUSZ3P0gaLA4TAxmELI5NPRjQKpIB8oN/UI/SmiMAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.04,
+                            width: 6,
+                            height: 6,
+                            n: 4
+                        },
+                        projectile: 0.5,
+                        explosion: 0.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Laser-tankki"
         },
@@ -796,7 +3387,39 @@ const icons = {
             id: "turret_left",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyUlEQVR4nGNgoBAwZmR1/kcWmDGtnJEUA1juP3xGqSMYGPQMPf4j06QAJhAhKaXOgExTFAbYAHK4gNSD+DCaEcQAhYOivBQDLgALp+fPboJdCaNBepgIacYHQHpZ0DVji5WdWyfCvSAppf7/0vkdjCAaJM6CrpiQa2CGwWhGXNEHssXdOx9sCz4DGUGKQLYiOx3GJ6QZBJjQNYMALGBBhhMyAAzQvYCcMgkZwgRSgJ4CQXyQOCgcQHGOzxBwUgYpQgbIfJAh+JwPAPmbb3QKyEp7AAAAAElFTkSuQmCC",
             name: "Torjuntalaite",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.6,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.1,
+                    electricity: 1.2,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    laser_turret: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAYAAADq6085AAAAF0lEQVR4nGO49e3v/7CrX/6j09jEQHIA8QwpfXNhHOcAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 6,
+                            height: 1,
+                            n: 2
+                        },
+                        projectile: 1.0,
+                        explosion: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Torjuntalaite"
         },
@@ -804,7 +3427,39 @@ const icons = {
             id: "turret_right",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyUlEQVR4nGNgoBAwZmR1/kcWmDGtnJEUA1juP3xGqSMYGPQMPf4j06QAJhAhKaXOgExTFAbYAHK4gNSD+DCaEcQAhYOivBQDLgALp+fPboJdCaNBepgIacYHQHpZ0DVji5WdWyfCvSAppf7/0vkdjCAaJM6CrpiQa2CGwWhGXNEHssXdOx9sCz4DGUGKQLYiOx3GJ6QZBJjQNYMALGBBhhMyAAzQvYCcMgkZwgRSgJ4CQXyQOCgcQHGOzxBwUgYpQgbIfJAh+JwPAPmbb3QKyEp7AAAAAElFTkSuQmCC",
             name: "Torjuntalaite",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.6,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.1,
+                    electricity: 1.2,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    laser_turret: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAYAAADq6085AAAAF0lEQVR4nGO49e3v/7CrX/6j09jEQHIA8QwpfXNhHOcAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 6,
+                            height: 1,
+                            n: 2
+                        },
+                        projectile: 1.0,
+                        explosion: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Torjuntalaite"
         },
@@ -812,7 +3467,28 @@ const icons = {
             id: "monk",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUElEQVR4nKVSsU7DMBA9RykdgoRQh44EyT9AZybimQW1yp7MHaoihS+opUpIhNVfkIUfCBMZmBAfEFXhAxiQ2gExHLoLRnUGhnCSdeez37vn8wlEhP+Y3wektaaqoq7rfgRkZVkyidcHTJWteX3kSyk5Vkqh36d60zS/sU9BmqZIyTAM+SCOY/a011pDlmUgpRSU+/H8dYTxKTDG8GGnQX8pEGflMx73aaIxBvDyCdew5aLe/iE9hZZSylHUtcf5p7iGQ1jDFoAmMUkSjKIIKbaL9t2cXRd3B7jEgGPRHeXZ7AaD4MjJ7XYf7ItixcqifEgOSYnXlXdS3DtAC34/v2XyvatM5sxBlA9xVC0AoAVZJUQymQ/grWrvTeYDHmNmWWKAL/kXx6Nq4ci31Sm32byCf/XA94iMjJrIPRCibfp0mjkNsWQEHo9PGVwUK+fN3yWprAkYuPXwAAAAAElFTkSuQmCC",
             name: "Munkki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 7.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Munkki"
         },
@@ -820,7 +3496,38 @@ const icons = {
             id: "missilecrab",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1ElEQVR4nO2S0Q2DMBBDU5RB+GAENiCbsARMwCrsANmAEfhgE6p3kqOD8lP1t5YicsZ3diAh/PEzXk/kNE0nz33fQ9M0hVc9jmPpq56a27YNLMQ0CaqXZTEDEO8DENDssa5r2dd1fXkX7wNwmef5Ej2ldDHYtq3UlY/jQQrFJ4GWB73RT+v7/pQI/jgOc/dpvBZNxIUCkgYwDIMdw8f2R6SWtoKgYOWc7fcw2bvyTjoNQwtnH1GN2qeULBH7nLP40HXd6Y0sgY8ncFGe+LsZmo+L9C3eRZOOkS/b3FQAAAAASUVORK5CYII=",
             name: "Hein\u00e4sirkka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.6,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1
+                },
+                hp: 12.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    rocket_tiny_roll: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABsAAAAECAYAAAB/VEQbAAAAaklEQVR4nGM8b2z8n4GBgYFTS4tBY/FiRgYywXmoOYZnz+I0AyzR3t4OVqigoIAiqdHTw3CjpARM7wgJYSCkhgHq6PVaWijqYGpYkDU+ePAAwzAY8FizBmIQFgthAJeD4D4jJhiJCSJiAABZoSnI4Hr+NgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 9,
+                            height: 4,
+                            n: 3
+                        },
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hein\u00e4sirkka"
         },
@@ -828,7 +3535,38 @@ const icons = {
             id: "necrobot",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA30lEQVR4nGNgwALy6nr/MxAJmAhpIsUwBr+YjP/YaHyAEZuN2sZWKGJXzx5jAIml+1tiqGeEaXpw7zaDgpIqWCEymNNbD2enFDdiGMKIzDG1c8Pq5FOyogxmj1+D2acP7ULRw4LMsXRwx+oCmGaQC04f2oXpBUrCACcAxQAxscCCSwIUoMQARnxegDkdRE9qKmbEmxJx+R8EsIlhTcraUNtgAJQ2QABZDB2AnTVz43FwYIFCGcQGaYAlLJghsDBB9woTtswCcol3aDycRnYNunombHGOzt+0ZAaKrciGAABmW3eHAOoPaAAAAABJRU5ErkJggg==",
             name: "Tuonelankone",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1.2
+                },
+                hp: 16.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dotshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAOCAYAAACM7Fo2AAACtUlEQVR4nM2WP2zTQBTGz1GWIMEAiAWpS6oKhu7JYDGZKRZ4CRJMqBMdGJBQQ6SCkCXTCqkDA0yIiUhliZE90Ql5SDeGLgg5HToiwoKER6Pv6F2eozv7QiPaW57vj7/3u8/nu7PYHMXznbHdact6Eo/YcHOvyU6peL4TKXjcReaok2S5IplF+sdr6/cLL6+sX0MYU5M83wkVOrfnBfN8J1Do9El/pOGJqEme76QKneW5DII5mmQ5TJpdObQct3OTYI5GJ6Qmeb7TU0BvUXM0OgFMml05Ch5uEszR6KTUJM93MgVPgxs0u3IUyXK70z7Ew7ejr2xliSdgok7GhRU63CSYo4HuwaTZlaPQkf0VPGmFDjcJ5mh4Mphk7Xx5mssORbLjcjh88Yk/XF49zxPA5R8Hv3ib9+QmwkGVThKP9vEu7afjoGl32heqdBhjqwY81w14rlbx8F9smmykS1aAwXi0J2w6zkTH8MufKZ66SbIkHrGNNw/58yOvz3aGgYwob1+/k8lOCn3WeOomyYZ/Tym+UaMdDotIjvpwEdCGPDilohIe9KeL4OHHuNiosczEciPJLIyJJ4Pxszvb7N7LW+z9448yPt/dYJ1Ld5v0iNfoFDboksnLjVqjw4/6eDKISnhcesRrdAobtI6nhgcMgjhepnGN7O6AOXexwZPQKMwx0cHkkZR+cRGFOQvgcefgaVTwNGoVySyRbOnGFfb7Z8a2H7zidUTUcUcygJZ3oBNOvm/AExnoLJvy1CqS5XIz29xrQhz/Nf5ZRNTpLbpEJzSA3jLQCQiPq+FxDXRSAx5+UZQrxO62ciTB0oJ7EEs+7Mt+02J3W6FCp3CLPvr8nUOIAmhMht6m7W4rUOj0/4EnVegUbtElPNPG/1nsbqsXTwY9mIWI+qmATHmyeDLIYBYi6qLzD69gXR7M6zxfAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.12,
+                            width: 9,
+                            height: 14,
+                            n: 8
+                        },
+                        projectile: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tuonelankone"
         },
@@ -836,7 +3574,38 @@ const icons = {
             id: "necrobot_super",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABA0lEQVR4nGNkwALy6nr/P7h3m0FBSZVhUlMxIwOxIK+u9z8hNkHgF5PxHxuNCzAi2wJz7sSIkP8aBgYoCm9cuMAAEnOvqEHxEiO6zc5/3oAVogOYASCAbAgLjAELsOd2bv8Znh1C0XxKVpTBjZmdgeHydQazx6+xewEGsDkfnwuY0BXmr1jDCFKMC6CHAV4AChdCscCCzQswl4DCBZs4snpGbKYihwPM7yAaXTPWMJiIIxCxiWEYkFfX+58jshhsGwycffQY7hJsAO6knR0tYD+CQhnEBmkAaTaWk4UbAmKDALJXwC6ABRC6k6P9fOE0smuQ1YMNwJbu0fmLjp1ECUCYIQBkj4m2JWa9xwAAAABJRU5ErkJggg==",
             name: "Marraskone",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 0.1,
+                    fire: 0.0,
+                    electricity: 2.0,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.1,
+                    holy: 1.2
+                },
+                hp: 28.0,
+                faction: "robot",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dotshot_strong: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAOCAYAAACM7Fo2AAACsUlEQVR4nM2WsWsUQRjFZ4/DcIViYadd0hiwORxYcCtBSOHC/QEHsYkonBi741AIKEfKFQInbmPAP2BhUwQEqwiBFRsh1V6wsLQQLJbIwcqby4zfHjM7c+Ywmebb2dl777fvZmfGY3O0KPDHHc5VP8kytnlwuMzOqUWBn2p4wkV6NIlZqTHzyPi4t75e+XFvdRVlTEOKAj/R6HTmBYsCf6jRGZDx1MCT0pCiwM81OitzBYRwDGYlQpqdObSd3hchIRyDTkJDigK/r4HepuEYdIYIaXbmaHhESAjHoJPTkKLALzQ8LRHQ7MzRmJUdzo9x8f3oiN2YGjDZJ88lFh0REsIxQPcR0uzM0eiocQtPbtERISEcA0+BkLxvz56UckBndtqOnx98Ehe3ly4JA6T8+eS3uPcquIPy1aaTZNkhfkvH6XPQ7HB+xabDGLvlwHPTgee6jUd8YspsCqgzq8DgeXGfPOei4/jPXyiepotZkmXs3cMNcb229ZLtb71QFW1nd1eZnRX6ovE0Xcw2p7uUWKhxHwnLSrb6ZBHQjjzYpdIaHozni+AR27hcqDHN5HQjZh6emcSj8f3XO+zNvbvs0YePqu497bHmxuNlusUbdCoLdM3Lq4XaoCO2+kk8Smt4QrrFG3QqC7SJp4ELPARx/JjWHlndAXOttSRMaJXhuOjg5WFK/3FZZTgL4Ann4GlZeFoNi5knzdauXmY/ihP24G0s+qjo44zkAK3OQGd8+YEDT+qgs+LK07CYlVII6wzE8V3jm0VFn56ia3QSB+htB50h4QkNPKGDTu7AIw6KaoZ0ebuECaYW0oPY++yLGndtXd5ONDqVU/T+z18CQjZA42XoabrL20ONzuAfeHKNTuUUXcMjQvrvrcvb/Uk86iMsVPTPBeQvTzGJRwXCQkVfDv4B0Y1jJtF6+FMAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.12,
+                            width: 9,
+                            height: 14,
+                            n: 8
+                        },
+                        projectile: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Marraskone"
         },
@@ -844,7 +3613,29 @@ const icons = {
             id: "fireskull",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA3ElEQVR4nGNgwAF+XI76zzAowA8klxDlqh9QRcR6gQmXIV+PXSTKdkZstoM0wwC3lT6KBg7dZSh6GNANeDtT+//ftzv+wwCIDcIgcZA8Xq/9uByFohkZIBuCMwy+IjkdHTAJuTMIhPRiijNgAc/2pzIkqHKD8eUACYZ/73aC2VeT4vFaAgYwPz/dl/L/kr84Bv2oQAl/9L6dqQ1WiGwQCIBoEJ8oA/6+3QG3NV6FC247thjAiFOQQmkvEYYfqpYMbyduZhDO9wXTIDEQEE6/ijsdYHMJcjogSiOpAACiDt6F+sgRsAAAAABJRU5ErkJggg==",
             name: "Liekki\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.4,
+                faction: "fire",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Liekki\u00f6"
         },
@@ -852,7 +3643,41 @@ const icons = {
             id: "iceskull",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA20lEQVR4nGNgGLQgasW5CSBMSB0TNo0g2kxPCMyfcO0BXoNY0DWDNC79/+8/WEBTDkydlxViMLv2gOHUpXcMyyKMCvC6IF9TLh+s6csXMIYBO1mhfJircBrwYP1hONuKlw+MQYbA2CAXEAyD80i2gkDP1jtYLcAKJlx7MOHc50//Qfj//39gzMHAAGeDxAm6ICdl/sRDj9/BXXLs8yd4eIDk8Bpw6tI7BoVAW4ZVjRvBhlhHTAbTMEOxAUZ0AVhUrmrciKH42Mr8AoJeWBZhVABzCQjAaGyahwkAAImags+9RVNwAAAAAElFTkSuQmCC",
             name: "J\u00e4\u00e4ti\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.5,
+                faction: "ice",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    dash: 0.25,
+                    ice: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAFCAYAAADxCTo8AAABHElEQVR4nGNkoBC4LT3xf1e0BSOl5lBiL4gtxc0GFl8QYMRISC2Ihqk3kBRgKDBXYkSRRFbw7OsvBnQPIqtDV1tjr8FgJyOAUz2yWi8VMbDlyGqR9SA7EgSwqUX3EMwN556+Q9GDzw1G0kJw9UwgYle0BSOy5SCFIHDoyQcUj4PUwTDMQJihIAMnnLz3H1egwdTCALrZyHpA6kDu2HbnFdixyOYiuwXZvTA3gABIT8KGc2A9yO5F9hsyuPD8AwMLjLMgwIgRpBlkOdwABuwAZgnMscgxgO5QmFqYY2EAPfXA1MHUgswFqW85eANrYMEiDhnA3ALzD0w9TC3MTHS1IEC3vJ0A9Si2PIwMkB0OArA8jK4GvXzAl42IMRsAVMjILrl3XxAAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 11,
+                            height: 5,
+                            n: 6
+                        },
+                        projectile: 0.0,
+                        explosion: 0.3,
+                        ice: 0.3
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/J\u00e4\u00e4ti\u00f6"
         },
@@ -860,7 +3685,33 @@ const icons = {
             id: "thunderskull",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/ElEQVR4nJVTOw7CMAx1KpgQiIFjcA7UkQ0OwM7AFVgrtUNhpgfgFDAxlju0fBfKAEg1ciBV+nEKT0rjOPbzq5MAAIDtXxBqUIwp5dgVJBwxW9DZ3fFfX8MkO0xSt9cUMNN8iIhCCFGZgIhI8qIHolqTjYgukZEBdYg+CSyISI+3igTnF3qmAv1WXr1FH5KtGjMPjtlmR1hy6PZe62nlUa42t0xuG4QcYZJm9mgRu9zpSFDDiv9NiTrYZAIFTNdXtolKQakH8JUVPwEmg64XbBMZMF4eZFPVmoWjyVJnPvRPsiINpczMooHuAxFRsprZi/TrGzD5c6h73vr+G9sCIfB6d3PbAAAAAElFTkSuQmCC",
             name: "S\u00e4hki\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.5,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.7
+                },
+                hp: 4.5,
+                faction: "ice",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    lightning_thunderskull: {
+                        projectile: 0.0,
+                        explosion: 0.6,
+                        electricity: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/S\u00e4hki\u00f6"
         },
@@ -868,7 +3719,40 @@ const icons = {
             id: "firemage_weak",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR4nGNgwAG+dDr9ZyACMBFSQMggJko04zTgS6fTf2Y3WQYQJtnQ7SEV/7+fj/9vbGz8//eLOWAan3pGGKPZ2hqs0ETSlsFligpcwZ/nhxk4DRcyEvRC7dGjcEV7cu7AFaBrRvcCEzIHZMiZ54fhhoBsB3mJpECsRTLkQKsk1sBFdgUTugHystpgSZghMBoEeMr3MVbUqIJpnAYQAidenEDhs6ArkBBTZGBgeA9mzzi/msFEQgLuKpDcybNbUAKVCZljbuzzH10BCDx8fJURhLHJkewFvAYcmCMMZyOnC6INQE80G+/eJWgIADm7Z1s2j/NIAAAAAElFTkSuQmCC",
             name: "Stendari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.4,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.2,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    fireball_ghostly: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        fire: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Stendari"
         },
@@ -876,7 +3760,40 @@ const icons = {
             id: "firemage",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR4nGNgwAHsH93/z0AEYCKkgJBBTJRoxmmA/aP7/0NlXzCAMMmGbg+p+D/l//H/xsbG/x/8fw6m8alnhDGara3BCk0kbRk0V+fDFWxheMCQw2jJSNALtUePwhVdD50IV4CuGd0LTMgckCFnnh+GGwKyHeQlkgKxFskQ5dCNWAMX2RVM6AbIy2qDJWGGwGgQOCinyHjbZy+YxmkAIXDixQkUPgu6AgkxRQYGhvdg9ozzqxlMJCTgrgLJnTy7BSVQmZA55sY+/9EVgMDDx1cZQRibHMlewGtA7JlqOBs5XRBtAHqi2Xj3LkFDAL9RafrBEkksAAAAAElFTkSuQmCC",
             name: "Eldari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.4,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    fireball_ghostly: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        fire: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Eldari"
         },
@@ -884,7 +3801,40 @@ const icons = {
             id: "icemage",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0ElEQVR4nGNgGPKAEZfE1TNP/iPztU1ksKplgjHMPAL/u8X0/oexQXRcuj8DMk3QBWYegf8FRGwYbp6fwLBt4XEGbC5YeOP//3gNRkYMFyADdcMCBq94SzAbRuMCjOgCMFeAAMglIMN2LSmG2w5TB3MFE7oBLx+fYfjw5gjcJYQACy4JkCEgl8AMg9kqry37/+HVx/jDAB2ANDHgAEzoCpFNv3V8EZgGiYHk0OXxeoEBDaBrxOoC9LgnBqAYgJxcT+1YjzOZ4zQAHTy4e5GgIQAMq05hj553VwAAAABJRU5ErkJggg==",
             name: "Pakkasukko",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.9,
+                    explosion: 0.3,
+                    melee: 1,
+                    slice: 0.2,
+                    fire: 1.5,
+                    electricity: 1,
+                    ice: -1.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    iceball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABX0lEQVR4nO1XQQ4BQRDcERIXJ17gG06OHkBCsu48iDvJSniAo5NveAEnFwkJKdHS2sxOm10bB5VMljHdNdPd1TtM9EchiCfnK56dXvk5t15e7s/5uGJoznzqFA7hiDvJG/GDh1A0X56cNt8SQVzJ/voCfA/ZnGse/hI2JJfLNgQ+vrw4W91jKgfnoniqsoKNzUbvWR5Ow6uIS7hf969fHMKrVrYLLR9g40Sg6XOzXbXac1V8wpeuJYtzOT8fR8ESHjSMmY10SuvjUBn54IMOruGTa22JoILCWmmjSYREKSoYqDYkAoNUhkNoA+UCDxYpAm1AFhMFScvH1bFd1QyN3eb0VBDOAOBJL+qQZMBW3bJka8nSQtKQPHqp5AIoiWlJQeXKduEKPvZva8VaPsmLJPEW5ioGGx/F0vzizSfOyMXtfbauW5DPDkmAUly/8ZbmA+f62lXyj+gN8nJh+x9yA+rYZA+EmOQ5AAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        ice: 0.35
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pakkasukko"
         },
@@ -892,7 +3842,40 @@ const icons = {
             id: "thundermage",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7klEQVR4nGNgGDTg8eff/3HJTb309T9JhjxGMgzExmc4BkDWALIZXTNO19gnTUSxFaaZaOeDQMzs/f9BGKTJ2NgYbACIZsADmJA5j49fAtN+imwMGw6cALOT5h9iINoAGKhccQTOztbjZsQXW4wMWMJC1lIPzLY0N2M4fvIUw5JUR0ZkzbK8rIw4XfBg9yy4V0CakcGm+7/ANHLAMqEbICGmCHEq1BAQLS+r/R/mnRCHQBRvMSFrNjf2+X/y7BYMbz18fJURZAg2eayBCAOXFi5GMQSb4SwwBshfoOiT5WXFZyYGgLsA5C/k0CUWAACeDY7TAiIlMgAAAABJRU5ErkJggg==",
             name: "Ukko",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.5,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: -1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 0.5
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    thunderball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAG4AAAAWCAYAAAAhKqlXAAACG0lEQVR4nO2YMU4EMQxFs1SILbkKyw2QuAsde47QcRckbsByFcpFdEEuPDJeZxLHTjYg3Ew0mXn5sZ3EMyFkLB6OKThbD+a5bco5jRTVa6x4OKZa9uggTBn03hOIhklrgtmTPX3gSgKl/ppJxYEB7xlot+dbHVkaUMOdMRvjhJpOrNbJs2Ti7Jq87cI6kf1uu/GT05c7e1BcNADk/vlj2d5oWzNIbpUCr5UTCwUA9uMYnubNlXxa45PsioOMv7u9XIDQfry5UglBjiQEeDR4pUDSFbjfbTe5FQnvo07Uj/et2y9qpFzKbuWnlBY2tKWxm6DwIl7XBGrue3DB+Lu4MyCX7xTUSmPSPkmvdeUhj7KlwJW0ig9QIHVGi0hsozO5cImr2UojY1J2q9Y1tvYzJ8flyWs66yTnUsEt550kmDOtXDDpGgxGVzGa1sm554BNmWAqcaUtQ3KCJTu4I7wO/MSc68Xlu4NXFapdxWirJTdMGouSp/fPH32Wch3Evb59nRzyVi4YZizXa+UDF5mg/eXheuGgszVsKUDUz2qdtCTNtbVZnMtQ77I9snNirTDRcumVt9fulZj8WMI+6pNqrnSIclCt8FJF6B20oBi/lqu5bxmj5KtmsBbkObkR3HMHzps7/EdwqWKLnVaR1/MWrvtYvbJi5OrRfGNZzPqJ0Kylptz1zFrP8nqWxPituqaaUPxrTvq3YLJzJsQ3BANcPL7rTTEAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.06,
+                            width: 22,
+                            height: 22,
+                            n: 5
+                        },
+                        projectile: 0.0,
+                        explosion: 1.8,
+                        electricity: 1.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ukko"
         },
@@ -900,7 +3883,40 @@ const icons = {
             id: "thundermage_big",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABBklEQVR4nGNgoAWImb3/Pz75qZe+/idKU8zs/f9Bih9//g2mQWIgNrIaRkIm+ymyofA33f/FkK3HzYjVAJitluZmWDWDgCwvK4oeRgwVUJdg04zNACYGEgEoDJDDhAUmYRjS/F/b3Qan07H5H8UF59fUMl7deQSusHLFETCNrBlbbDGh2wIKwOMnT4HZIBrZEJDtsADGGYiGIc3/+fj4GGQt9TD9f/wSw8F5+YwgVyxJdWTEaoC8rPZ/Bdc0OB9mEMh7706uYHj4+CqKHhZ0zegGXlq4mEFQTR/DNTAADwNkzZ8+fYIrAGl+f+siTkswAhHdiYQA2ACYqfg0gwIWJm9u7AN3BQAzN4CMu28YCgAAAABJRU5ErkJggg==",
             name: "Suur-Ukko",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.0,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: -1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 0.5
+                },
+                hp: 20.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    thunderball_line: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAG4AAAAWCAYAAAAhKqlXAAACG0lEQVR4nO2YMU4EMQxFs1SILbkKyw2QuAsde47QcRckbsByFcpFdEEuPDJeZxLHTjYg3Ew0mXn5sZ3EMyFkLB6OKThbD+a5bco5jRTVa6x4OKZa9uggTBn03hOIhklrgtmTPX3gSgKl/ppJxYEB7xlot+dbHVkaUMOdMRvjhJpOrNbJs2Ti7Jq87cI6kf1uu/GT05c7e1BcNADk/vlj2d5oWzNIbpUCr5UTCwUA9uMYnubNlXxa45PsioOMv7u9XIDQfry5UglBjiQEeDR4pUDSFbjfbTe5FQnvo07Uj/et2y9qpFzKbuWnlBY2tKWxm6DwIl7XBGrue3DB+Lu4MyCX7xTUSmPSPkmvdeUhj7KlwJW0ig9QIHVGi0hsozO5cImr2UojY1J2q9Y1tvYzJ8flyWs66yTnUsEt550kmDOtXDDpGgxGVzGa1sm554BNmWAqcaUtQ3KCJTu4I7wO/MSc68Xlu4NXFapdxWirJTdMGouSp/fPH32Wch3Evb59nRzyVi4YZizXa+UDF5mg/eXheuGgszVsKUDUz2qdtCTNtbVZnMtQ77I9snNirTDRcumVt9fulZj8WMI+6pNqrnSIclCt8FJF6B20oBi/lqu5bxmj5KtmsBbkObkR3HMHzps7/EdwqWKLnVaR1/MWrvtYvbJi5OrRfGNZzPqJ0Kylptz1zFrP8nqWxPituqaaUPxrTvq3YLJzJsQ3BANcPL7rTTEAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.06,
+                            width: 22,
+                            height: 22,
+                            n: 5
+                        },
+                        projectile: 0.0,
+                        explosion: 1.8,
+                        electricity: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suur-Ukko"
         },
@@ -908,7 +3924,31 @@ const icons = {
             id: "barfer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABWklEQVR4nGNkwAKqVq38D2O3hYUzMuABTCAipqbmPwija8bGRweMyByYIXJ6unCx1tAwhurVq3C6hAmZs6SlhRGmGaQRBECaCXoBGWydOg1FI4yvb2+P1SuMyJx1MwL+i0nrMWT3HATzdW1twd4BGeKdnYXVGyzInFVPOBgYntximFpiD+aDDAIZANL86NJl/F6IqImAO3HKyVtgDDIIZLsX51WGZ4+OYTWABZmTY67G8OrpJbhrYIbklc5mmNSdChL+b+GTDpaHeYcJWXN6x3yGM0KRYPzq0SsGXADkHVj6YIIJgmz2z++BK8ix4sNpACi6McIAGYD8C3IFNgBzOoYXgjI2MG6cWAJXeO/SeqwGoAOUeHWKcwL7S0xODMwPk/nB0DLhJDgA61YfYdi3aB/+dADTiKy5psAcrBkXgBsASoUMDD8YQCkRBGDRCQKwAM2xCvgP8iqyCQA2W4/d+uUjnQAAAABJRU5ErkJggg==",
             name: "Turvonnu velho",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 0.0,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    radioactive_liquid: {
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Turvonnu velho"
         },
@@ -916,7 +3956,39 @@ const icons = {
             id: "wizard_dark",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABBUlEQVR4nGNgwALK7KL+MxAJmHBJIBsSqGn7nyQDbr9+DDfESEr1/8OPL0hzgaqoLJjec+c0To14DdhDhEacBqwNzP4/OTkPwxBcAcuELnCQ4SzDyitLGUCGgICLiimDPL8EcS7IC7SA2wIzBOSSkpAwhgdMl7C6hgXdxHCdaIYXV25gtc1aW/a/2D8FFDEWdM1l67oYrIVtwXx/dAOg4ji98OLKDbAiWDpAB0ffHmbwt7dk6Dq0jBGrAcgA2c/IAN17LMic4PVTGUH+BBkrzcCP1QB0gBGI0qIQjRKCPBi2Hb36mPHo1an4DQBpJORsnAaAUiHYEB0NDI3hgvYMqxiuYJgAAPaYXZLHLThgAAAAAElFTkSuQmCC",
             name: "Sokaisunmestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_dark: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABEUlEQVR4nNVUoQ7CMBR8XZBMLEGBwC7BL9sf8BsoJN+CRPEb+4OReRIsAtQSBPiRVzhy65pQBAmcabd3vd7re60RQpEu2yzJ7by+7KQ6bAzHmcff1Rd5r8mq2LbzdtZZWJq9rKtFR1R5OoJbmr0dXR4nC/iSfqdnXHPT8dCOx/OtZ9KXBMA8mPMlzCZD9AYqxuZGk+uTEluTGqudEiAJAMmgVGyOE7b/EhFJJVgvQhm65sTOsRAczlbjI+L7ToI1XROhepF8Gc0p7mz8KSLtCRyrirEwjhocNDDiDfE5BmA9azFC9AbasGWR2z58iMS9S4Kmzorc9o5vM8XrhmqPJY8yMde9JCF6//HMiEf0Vx7qOxjO+m2Lh1BrAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 10,
+                            height: 10,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Sokaisunmestari"
         },
@@ -924,7 +3996,39 @@ const icons = {
             id: "wizard_tele",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCklEQVR4nGNgwALK42z/MxAJmHBJIBsS6KCJ00AWbIK3Hr1hUJMTIcolTNgEQZpBoGPhIRQaG2DEJmikIfnf1UwFRaxz0WFGolywbkbA/0ndqQy7T91B8RIu7zChCyy+9pyhd/dOBnRDcAEmZE5gnjncFmRDiotDGU7+fAdXh+waFnQTi13dGV49vYTVNm1r2f9qrDwoYizomtM75jP4KCuA+b6hqAbAxHF64dXTS2BFoEDDBrbcfcDgG+qIEiNMWFUyMKD4Gd0SnF4IytjACPIniC3KwIfLbNwGgDXKQDQKivNg2Hb16GPGoKOP8RsA0kjI2TgNAKVCEC0mrYehMc9RleHAyqsYJgAAfVRkuhwyURYAAAAASUVORK5CYII=",
             name: "Siirt\u00e4j\u00e4mestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_tele: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgAKVrHuB7obc60Dsnee/Bt2ZprQeJgeTZ2BgcIByD6DLEwK49DNCJSe6G3LnOelwgWX3XfkGcsSkO9OU8pE0r3M35AbL7zz/FUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4eCkw5UHlZ+08/xXsC+RLcemnwnZ8iALHjAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4nHdiS9wQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+ACKj8JJih0CiAcfHqZwSRA5oI0QygezYEACJU2MllwCTkAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Siirt\u00e4j\u00e4mestari"
         },
@@ -932,7 +4036,39 @@ const icons = {
             id: "wizard_poly",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVR4nGNgwALyLQr+g+jFIUv+I/OxASZsGk1kTFAUofNxGmCCpBBmO4zG5RImZE7smhhGZA0gELM6miiXoABXZZf/IINAAJlmwAJY0AXOTTj0X9ZRhSEqKI6BIRTigiWhS7HpxW7AqT19DKf2MDAsW7cIbsiZJ2dwOp8JmTPDJwDuzLXVWWBDFp1fwFAzs4zhyvNZcHXI3mFBNzG4dRrD4/13sNoWoKH1X17ADbcXglunMaSGuzAE61SB+aCwQJGHiuM04PH+O2BFuPy89kobw+yVexhE9aUYsYYBMkD2MzJA9x4LMseowI4R5E8QW11YBKsB6AAjEGEaFQWFMGzbcOMa44YCO/wGgDQScjZOA0CpEETDQh9ZY3hoC0PnUVTbQRIA8Qh5O93MBw4AAAAASUVORK5CYII=",
             name: "Muodonmuutosmestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_poly: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Muodonmuutosmestari"
         },
@@ -940,7 +4076,39 @@ const icons = {
             id: "wizard_swapper",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFklEQVR4nGP8//8/AyWACZ9krE/s/1ifWLwGMKK7IGbCURCFzVmMSwqs8bsgBotmbJpwGgAFjPfml8I1gwyFGvIfxIZhGGBB8bPYB7BCrTXLGcJDIhliGLrhhiDJMyx+JYDdgGMHN8PplUiGMO6ZwfDfJYOBGC/8hzHm9LSDDQF5p62/hYH9QA9WdSzoJqaUVDJcO30Fq21dE5v/S4mqMjAguYYFXXNCTDiDZGQvmN+OZgBI/D8+L1w7fQWsCORnbOD58mKGdm8ZEJMRqwHIAM3PcIDuPSZkzrGDmxlBtjx7fRurZhhYWmgDZ2MEooKkJJiWERfHsK0svxbudJwGgDQScjZOA6zsfcGBrGWqg6ExLCwFqwkAehdtP7eC16QAAAAASUVORK5CYII=",
             name: "Vaihdosmestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 4.0,
+                faction: "mage_swapper",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_swapper: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgAKVrHuB7obc60Dsnee/Bt2ZprQeJgeTZ2BgcIByD6DLEwK49DNCJSe6G3LnOelwgWX3XfkGcsSkO9OU8pE0r3M35AbL7zz/FUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4eCkw5UHlZ+08/xXsC+RLcemnwnZ8iALHjAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4nHdiS9wQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+ACKj8JJih0CiAcfHqZwSRA5oI0QygezYEACJU2MllwCTkAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Vaihdosmestari"
         },
@@ -948,7 +4116,39 @@ const icons = {
             id: "wizard_neutral",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABL0lEQVR4nGNgIADcI0L+Y2PDACMujYHJ8WDF375+RRHfuWINih4mBiLAjuWrwRgbYEEX6MhN+//w+QuGF8SYjO6Cjty0/xWTZzHuuHYLw+m4ACMyJzPE7z+7lT2DmpwcQ3ddLYOang6GBvQwYERX4OUXDQ48n7gAsCFyKspg8R9fvzGc3LufEa8XvKCaQWDLog0MpU3NDI/u3GUIj0tgYP7NjhFDWAPRJy6A4dajR1j9q65l+F9AUgBFjAVd88S6NgYtSz0wHxQWyAAmjtMLtx49Ait69gC7C64dv8Tg6unDsH7uQkaCCenl7ZdYxdG9x4LMmVBUzAjyJ4gtLCKOy2zcBiBrFBAQxrDt5rXzjDeLzuM3AKSRkLNxGlDQ1wt2Piz0kTWaBbgyHDu0A8MEABZVa5aFiy/hAAAAAElFTkSuQmCC",
             name: "Maadoittajamestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_neutral: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgAKVrHuB7obc60Dsnee/Bt2ZprQeJgeTZ2BgcIByD6DLEwK49DNCJSe6G3LnOelwgWX3XfkGcsSkO9OU8pE0r3M35AbL7zz/FUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4eCkw5UHlZ+08/xXsC+RLcemnwnZ8iALHjAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4nHdiS9wQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+ACKj8JJih0CiAcfHqZwSRA5oI0QygezYEACJU2MllwCTkAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Maadoittajamestari"
         },
@@ -956,7 +4156,40 @@ const icons = {
             id: "wizard_returner",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPUlEQVR4nGNgoBAw4pLIevr/P4gOEIfw3VgYsaplwSZosPXd/1WBxQyi0moMZ0XkGe5e3M2w68///9gMYcHlApBmPhF5hp8B5gzKeLzAgk2QfcNJhidPb4HZfBsYGD69eciw4SV2A5iwOb95ugeY/frpLbBmEH3swnusBjCiC1j4ZoMDr2n9FIbazB1gMZA3LngL4QxwFM3IGBRwHPJiYFrV3A9sMAg4lSX+xxkGTeunMJTtxO5cfmmt/8LafChiLOiaQ+W1GYyjzSEC7vNQFMPFcRlQtvM9WNGDC9cZFAw0MRSfXXqSYfXDqyiJigmrWxkYGB4ffItVHN17LMgcUEiD/Alii8mI4TIbtwEQjSpgWlhMFsO2j0+vMV7wFsJvAEgjIWfjNACUCn8wMDB0uQtiaOSuW8DAgGY7SAIAd5x0bgxcTFUAAAAASUVORK5CYII=",
             name: "Palauttajamestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.5,
+                    melee: 0.5,
+                    slice: 0.5,
+                    fire: 0.5,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 7.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    fireball_ghostly: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.08,
+                            width: 25,
+                            height: 9,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 2.0,
+                        fire: 0.25
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Palauttajamestari"
         },
@@ -964,7 +4197,39 @@ const icons = {
             id: "wizard_hearty",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABE0lEQVR4nGNgGGjAiE9yv63tfxBt4OvLcGHzZgbHw4cZiTJgP1Tj4Xfv4GK1V64wHLCzwzCEkZCtMAAyzFZICEzXXb0K18eEzQUgRciaQQCkGWQoiEYGTOiaS27fR+E7HDqEYiiytzAMeD8n6P+eEwUMG99+hCv80N2N0/kYYVBr5gD2f9EqHwYXiwkM/sL8cDl0jRguqIVqBoG+sC0MMJfkbk1kuP+XFSOQYYAFmQOymWHPMWwWMRhLyPxHdhGGAUVQZ/eoKoL5Bi6oCmHiOL3AsOcYWBF6KMMAKHYMFvtjJCSs6WDR689YDcHmPbgXBFPWMYL8CWLrCYhgNwALQAlEmEYZPgEM286+eMIomPIEwwQAO2F4lAfQUaYAAAAASUVORK5CYII=",
             name: "Haavoittajamestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: -0.5,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: -0.5,
+                    ice: -0.5,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 12.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_hearty: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Haavoittajamestari"
         },
@@ -972,7 +4237,39 @@ const icons = {
             id: "wizard_homing",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABYUlEQVR4nGNgQAPTtJ3+gzCI3aRi8T9Xyuo/NjkYYELXDKKzru5jBNGvv0Gk////Dxe//v4HXB2GAejg5c//DJOeHmWw59GAGwICyIawIGt48/Mbgwg7FwPI2SDNIPBn7wMUGiQuzs4IVgsCjOi2gvwNMgQEDrz4DqaXrlzGEB0eBdaoKcgB1lx35wQjVgOS1+z+b6InzDDDNJghXUYRbggIOEhwomjGaoBR4Waw21MzpVEMAWmGBS4yYMKmGQRmT3/KkHF6LcPMJ/cZHI9PZejSDYCrQ44FFnQTQTafufSWARsQtc/+n/v0LIoYC7rmutS5DI1vrkME1vegKAaLQwMYqxfOXHoLVgSLInRQL6LJwLi+ByUsmLCqZGBA8TO6JTi9MDfElXGTfTY4gLhxmYwGMAKRW1IdTAtJKmLY9vrgVMa5B6fiNwCkkZCzcRoASoUgGpQS0TU6h2gyzF2BaQIAHySjDfSLWT0AAAAASUVORK5CYII=",
             name: "Kohdennusmestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 12.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_homing: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA+ElEQVR4nMVTwQ2CQBBcCEXwMMEHCRRgARTgBwrBWiT+7AE/FkABFnCX+PASH5Zh5rJLFnJC9OMmF/YyN3vDzl50PpFEXWZFj8Q42xDRZUQYJ6KK8yGAr0WQH7GAY5kV7SbN/eb5ukNER0QHRe7LrPAb4yw+c5H1DJ9gn/gJE8fLEZy3xlkoJSHrM8bZXolAjWqT5i3DnRJRL/FjtF2A7e7ql4hgSyohzzCSljIul/tc/naNH39j4uO2H4v8EiF+jIGD53IAS80BWjygnfoMY9h6ixjHzAhXLKA1fgKfeOBCQyiD1LBnPgJDiBoTQRpb4ssrQPzlGb4Bl5+tL9hyAYsAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kohdennusmestari"
         },
@@ -980,7 +4277,39 @@ const icons = {
             id: "wizard_weaken",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/klEQVR4nGNkwAHU1FT/g+h1yxaC+TomVozY1DHh01xfVggXu3Lm2H+iDZBX0mQwMTEFs4Oi4lFodMBIyAX6BgZwcWzeYMKlmWywdM60/yD/ggwCYWQ+UQZExiT+B2FkQ2AGYVPPhK4Zxm6dMBsehaCwWLBmB1YLWdAFqgtSGS5euIAiBg7INTsYjE0s/n/+9BYsduvWbUYMA6oLUhniM4oYYIpgLoABmDhOL1y8cAGrIhjg5RMGGwqzHcMAYgC695iQOdEpWYwgW0CYWIARiEIiYmBaTUMTw7azZ04wRqecwG+AiAim7egG4TQAllhg6R9ZY0KIB8PuHZswTAAA84hy/0OU+uEAAAAASUVORK5CYII=",
             name: "Turvattomuusmestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 12.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_weaken: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAz0lEQVR4nMWTzQ2DMAyFE5bxCLlmhbIBC6SzNAtkA7pCrozgbSpbz1EaQRE9tJYChC/Pv+AdbFmWGxGt8szMcynlacy4cy5iW0d+Zkd6D/ggohRCULptmySRSyn3TrwSkXJmlttbkiig8ZEd6b1VbsHNkMSMrYqHBJsT+IghhASemVmr7IPv6ac+eIxRl5i8w0iiiQemErmAa3DwZNWe6acrc6y1Niff2J5+kjZLS+yArGEEVdrVn+laqIfBsznFCFrcT3ov179+hIODn/+GL5+K2IA/ZsFUAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Turvattomuusmestari"
         },
@@ -988,7 +4317,39 @@ const icons = {
             id: "wizard_twitchy",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABH0lEQVR4nGNkwAGqG7P/o4u11k9lxKUeQzMIHzly5L+kihwKjaqSgQGriSCF2/cuZ5i3eDOG3PM7j1D0MGEzYO7iHgZiARM2wR17z4Hp1QuWoYij80GABV0gb1bMf0/LQIakwEIUjaEJUQwgbxEMAw1nU3BA9U+oABuSFOvL8OzZUwYpKWnCsaDhbPofGe+4vBYc+tsvr/2vYq77H1sUs6AbArJ5+/H1WC0AGebhbIQ7EPuhzuZ9zg/G6ADkHZBXcBqw/fh6uJ+xAVC6sAlyQgkLJqwqGRgYVm47hFUc3XssyJxJaUsYQf4EsbmFMb2ADWAEIkwjCw8HwzY020DJeFLaEvwGgDQScjZOA0CpEESDUiK6Rq9kfYZJJy9jmAAABmB8M0AjN50AAAAASUVORK5CYII=",
             name: "S\u00e4tkymestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_twitchy: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAz0lEQVR4nMWTzQ2DMAyFE5bxCLlmhbIBC6SzNAtkA7pCrozgbSpbz1EaQRE9tJYChC/Pv+AdbFmWGxGt8szMcynlacy4cy5iW0d+Zkd6D/ggohRCULptmySRSyn3TrwSkXJmlttbkiig8ZEd6b1VbsHNkMSMrYqHBJsT+IghhASemVmr7IPv6ac+eIxRl5i8w0iiiQemErmAa3DwZNWe6acrc6y1Niff2J5+kjZLS+yArGEEVdrVn+laqIfBsznFCFrcT3ov179+hIODn/+GL5+K2IA/ZsFUAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/S\u00e4tkymestari"
         },
@@ -996,7 +4357,31 @@ const icons = {
             id: "enlightened_alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/klEQVR4nGNgoBAwogvMzp/1H5mfOjGNkWgDZiNpxqVxeevO/5HV7nA5JnTNPZu6GZ48vYPTRpBmkCEoBsxG0gwD9SFlKF5BB31JS/+juKAHSfOKs+txakS2HQRYkP1tpxzIoCmnD2ZLKoswLDd0RvEvTPPzu28YiuZFg8UZYQacunoHRTM6AGmCAZhmsBeeQAPMTFuF4fqji2DNMMUgGoZBACSPrBnsBRlpFTADZBDIEJBimCHoirEBFhgDZhDIFgYGfYaPn0A0YcCELgByBS/vV6I0YzWAAQlEOodgpAVQ+gBhmBw8EHEB5ASFzFYTVALT8DAg1hB0gNcLxAAAbSB4mvNgNSMAAAAASUVORK5CYII=",
             name: "Valaistunut alkemisti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.4,
+                    electricity: 0.6,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 0.2
+                },
+                hp: 8.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    enlightened_laser_dark_wand: {
+                        projectile: 5.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Valaistunut alkemisti"
         },
@@ -1004,7 +4389,28 @@ const icons = {
             id: "failed_alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4nGNgoBAwInOWzS3+H5XciyIGArPzZ/1H5qdOTIOrYcFnOkxjz6ZuFPH6kDKweOOaLkYmZAmQ7SBX4NMMAyDNIJrp0pl1/0EYxIHR6E5GBhHGgXDNYC/omQQxwjSfXPyGgYFBnYFYzSDAiM3GJ0/vMMhIq8D5MG/cvH8bI4CZsGlGZ4NsBmFsgAlZMQire/5FUQAz5Nb7e7gNePL0DlgBsiJuvZtw/8LEI51DMAKXCZQoQAqcdNwYfKPkGTYvewj2P4iGeQ8kjgswgeK9sjOKYd+VXWABEBtkO0wTyEsgw2B8dFcwInNAUXnl4lGwBhBYvncNOGHB+CBDsCV1uGYYhqVGZIBNDB6IIE3t5cvAAiAaOUmjG4IujpEbQc4FOR2bbciaYV4BADcXur41PJERAAAAAElFTkSuQmCC",
             name: "Kadotettu alkemisti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1.2,
+                    fire: 0.2,
+                    electricity: 0.6,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 8.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kadotettu alkemisti"
         },
@@ -1012,7 +4418,28 @@ const icons = {
             id: "failed_alchemist_b",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR4nGNgoBAw4pOcnT/rP4z95OkdhsY1XXjVY2iuDyn7r66oCsYgMRCfKBfMhtrcs6kbLnbz/m2sapkYcACQk4kBTLgkZKRVUPiRziH/iTJgNlLARRgHotBEu+AJkvPxacYwYHb+rP8gzSDnw2gQgNHYvMGEy+RnHxA0yDAnHTfCLnjy9A5cI4yvKaePIobTgNn5s/6DUhpIAywMQBqvP7rIMHsPJAUu37uGEd0bLMi2gQBIAwiADELmw+RBhmB1AXI6h2mWVBaBs0HyyFGMNQzAXtnTxQiyFaT5+d03YBrdlXgNgAGYZhC9vHUn2GZsuREAhd166pO+IrcAAAAASUVORK5CYII=",
             name: "Ep\u00e4alkemisti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ep\u00e4alkemisti"
         },
@@ -1020,7 +4447,28 @@ const icons = {
             id: "wraith",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABMElEQVR4nGNgoBAw4pPs8vX9L6WvzyAtLw/mP334kCGmpQVFDxOxmkEAxF5SU/OfoAuWp6b+/ysuDtYweckSBjUZGRT5W0+eMKw7eJARpwG2enr/m3JzMcR3HjjA4O7ggOIVRmxO3/zwIYOooCBcDJ8LWNANkJWQYGB4+JAhNyYGpwt0Hj4EGcCAYcDy1FR4AIGciS0MQIaAXAADLNjCwEJIiGHmpk0M6X5+GC4BGXz08mXMaFyOZLuRqircEJAGZM0gMVkhIbgYIyzgwH7HAqadPInCzzI3B9ORs2djD0QYePziBcPrz5/hGkD8C58/M5y7fZuh+8ABeOyxwHWgAZCLQBoYbt8G858yMDD4qqrCbSZoAAiANIBsBhlmhEMNOBBx+Z8YgDMzYQPozgcJAgBq3n4ILeqxfwAAAABJRU5ErkJggg==",
             name: "Hyypi\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 0.1,
+                    melee: 1,
+                    slice: 0.1,
+                    fire: 0.5,
+                    electricity: 0.5,
+                    ice: 0.1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 14.75,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hyypi\u00f6"
         },
@@ -1028,7 +4476,28 @@ const icons = {
             id: "wraith_storm",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4nGNgoBAwElIw/eD5/8LCwmD227dvGTLtDRmJNmA6VPPaZYsZHp47wSBvZMHg4O6FYggjMZqDo2Lh4iA+siFM2DRLWbtjaAaxQQDEP7BzG1wtE7pmt/a5/2FskLNhmkFsmCEwcawGSCgowdkgP8NsBbFhroGJYxjghmQ7KMRBGpCdjhwGMMCCy/bmqgqG2rYOuCHIsbAsN54BIxbc2uf+RzZgz5QOMA0yBDkdgDQfvnSJkaAB6AbBgEtOBZheFOnIiOEFZPDiwT2Gd08fwTWA+E/OHmW4dvQAw5kpjagucMNh+5m1ixm4JGTB7G8vHjOYBEMCEmY7COB0AQjANIBs17J2wKoGHI3YbMcFkG2HG4APgGzHZwEAH+CFJWexEP4AAAAASUVORK5CYII=",
             name: "Ukkoshyypi\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.3,
+                    melee: 1,
+                    slice: 0.3,
+                    fire: 0.7,
+                    electricity: 0.0,
+                    ice: 0.4,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.3
+                },
+                hp: 18.75,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ukkoshyypi\u00f6"
         },
@@ -1036,7 +4505,28 @@ const icons = {
             id: "wraith_glowing",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA0UlEQVR4nGNgoDUou/X+//afP8EYxEaXZyKk2VGeC84HsdENYSJWMy5DmLBp1nNywqoZG2BCF6iYOhXDn9hcgdMAOXl5grbuf/gNuwHTtmz5j00RPsCES2JHRjBWQ0Bix0PsMQ2YhmR7RlERVkNgmg9fusQIE2OEBRwuv8/o60PhwwzP8vEB62XB5YVHDx8yPHz0CK4BxD919izD4cOHGZZ3dsJdwILLAJCLYBpA4OXr1wwhQUFwmwkaAAIgDSCb8UUtOBCJiXu8BhAL0J0PEgQApoxmlgbFC/IAAAAASUVORK5CYII=",
             name: "Hohtava hyypi\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 0.1,
+                    melee: 1,
+                    slice: 0.1,
+                    fire: 0.5,
+                    electricity: 0.5,
+                    ice: 0.1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.1
+                },
+                hp: 14.75,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hohtava hyypi\u00f6"
         },
@@ -1044,7 +4534,21 @@ const icons = {
             id: "statue",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAlklEQVR4nM2SzQkEIQyFM7JN2IEX7cFerMhuPNlDvNhBysiSAQcW/Bly2gciGPPeRxTgr8XMjIhcSmF1c0pp22xWhdYa5JyPQWZVqLWeMQHgsyt67/UEMUZwzukMEPEeXO9dT0BED8HuJcwsPYRwWWuP6VMDIvrZT7pWBGMOQ3L2imBcFAJZ8h9WzVODIfUMRIIv6W9MvpBiSQaXNWX9AAAAAElFTkSuQmCC",
             name: "Patsas",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 0.2
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Patsas"
         },
@@ -1052,7 +4556,28 @@ const icons = {
             id: "statue_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLklEQVR4nH1SsWrDMBSUhaYEZzKUkECJ11K6dyxdAiWQOR+Qb+oHhIyFdujiuUuXltI1pdBiCp5sktXhhE88S2oOjJ+ku3tP7ylRHZardZtlGZeqqioXYx9rniN+2NwniI0k+UJp9lf+Op5MpGNEkinAuvz5Vm+vL0ECzfLxBwFEvyoJmlCj5R0JaQKcjSeBEc1NcPJP9tv5Qn1+vAdnRgrG0/NoRlmhf6ZPlYqMxfOjjZu67mWnoY6VDTKE7AXidDRSg2EaXNXQjWKQZnmuDvvGxvz7j4wVGbkJEsQEsuKjWJoUT9vEXaHp3PxRYuaxxxM0sejcaMLGEdJElt9rIjflM5bgKG2DRULXAzQLwCjZPODi8sqO82u3s/3w4ZyA65u7FmISUY18G352bB4B2c21b4iBC/QAAAAASUVORK5CYII=",
             name: "Hohtonaamio",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.2,
+                    melee: 0.5,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 6.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hohtonaamio"
         },
@@ -1060,7 +4585,22 @@ const icons = {
             id: "snowcrystal",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB40lEQVR4nMWST0jUQRTHv/PDm6E/SAuW/LMuROrBZGOJ4MdeiugYrCwKSSIEK+xeBKEQD3rw1CGDIimUDuHBY6dw0WXBgyi6gnpx/5iykBmusHVIY+T7cAbdyGvv8mbevM+b77w3wP821dER0pnMktJa2+Db1yP6X/mx+CiUUrKJj7zXjuvWGMjCnXfCCN19ANett54xABcKr6dm4JwPEG72tyIYDKH6Sq1A+9/2EIk+xZ+TY/CsUl3VubXcTDibzWPqw4QEm5t8GH6RRF9/AlfrfLh2/QbeTEAPJMZUZQHktzdx+GMfCwtJ7Hwt4t3kNDzPQ1trAPNzs6KgdHiAwk7RMk65/Mtubt66DX+gXdYGTqfT2NzKSoxnzKEqGlnH39JgC/DdRraB6SvNKCDr5HO79uBn+QiBgF8SKNvAXDO2upyyF8iTc7twegfHbdXjk99Yz6xJw5oafXj00EPsWVTWjJ2N8oICFQze0ysri/KRzBhNH+SW7IbsqWzuy2cU8lswEyDrsEo4fF9mG4uPKiaUSt8FpHFs3FMZp+O69QKTIVtlemC+J5dDg0UpyGKUyzefedX9JI6e3oRMQCYY6YpqSqHn3/6r5RXGvFefUsLQO97jAWmGUcKEy2D6jy+fC8PgKQN14eem7542AAAAAElFTkSuQmCC",
             name: "Haamukivi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.5,
+                    melee: 0.3,
+                    slice: 0.4,
+                    fire: 1.2,
+                    electricity: 1.0,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 1.2,
+                    holy: 1
+                },
+                hp: 20.0,
+                faction: "ghost"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Haamukivi"
         },
@@ -1068,7 +4608,22 @@ const icons = {
             id: "hpcrystal",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA6UlEQVR4nGNgIAI4bU37X3A96f+xn5v+o8sx4tMI0nTpHguDntIfuFiYUgCDFbsfXB8LuibtTo//4jpyYE3omrEBJmya8YFV9zYwIHuFiRTNOF2gjaaZkPORXcEEIsixGWQIPBBfXnmEInmJgXgDWUDEp7tMDHzK/+CCtzc+AfNhBqF7BeQ9GGACEY9nbcOaHmAuA2lAxshyTDDFIFfAAMh2ZD42g6+W7wBbygQTBLkCXROIjx4+IADTjGIAAxFeQWdjGIDuFWQ+SCOy02EAq42yaV4YuQ6X61CAvr4ZXCPIEGwGIasBCQAALzd86qZvagwAAAAASUVORK5CYII=",
             name: "Elvytyskristalli",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.5,
+                    melee: 0.8,
+                    slice: 0.0,
+                    fire: 0.2,
+                    electricity: 0.0,
+                    ice: 1.0,
+                    radioactive: 1,
+                    drill: 1.2,
+                    holy: 1
+                },
+                hp: 20.0,
+                faction: "ghost"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Elvytyskristalli"
         },
@@ -1076,7 +4631,22 @@ const icons = {
             id: "ghost",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAq0lEQVR4nGNUlFL9z0Ai8NBzYpi+YyYjiM3EQAbYcWkfQ6ZHOthiRnJcgOwSJmIVH9i0G6s4Iy4XwDQ4+LniNZiRVC+gG8xEjmZkwERIAzZNMNtBgchCiguwhQcLyBRY3BKjAR0wwhighAEyBJ+BMICshgldMyyJwhTCFCNrhGnGGgaZWFwCY4MMR7cMIxaQJUEYxMbnHSZ0G/EBXF6F5ywQDUqZuPjIamEAAJ7bbvGbGZjjAAAAAElFTkSuQmCC",
             name: "Houre",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.0,
+                    melee: 0.0,
+                    slice: 0.0,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.0,
+                    holy: 0.0
+                },
+                hp: 20.0,
+                faction: "ghost"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Houre"
         },
@@ -1084,7 +4654,38 @@ const icons = {
             id: "wand_ghost",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmUlEQVR4nGNgoDX4///ff7I16xdKkaa54NKhbYQ0EzS0AGpI/Xbx/8gaQHTfkS//QV7CaUjBpUPbDn9/dwmmGUTDMEwzDGMYUgDVTLYLDn9/d4kYv2IVL4DaTnKAMTAwMMEYa29feYIuebH/GSPI2UQZEKyqI4NNQZENDyMDqWmAFMCEzMEWDugAr0XoUUkRgBkCcxVVDMUGAFoSiTrh8ELJAAAAAElFTkSuQmCC",
             name: "Taikasauva",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 1.0,
+                    melee: 1.0,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 1.5,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_pink: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Taikasauva"
         },
@@ -1092,7 +4693,28 @@ const icons = {
             id: "ethereal_being",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABAElEQVR4nI1SIQ7CQBDcu+BIUKjq1iFwBBQJWDC8gifQB9An8AoMGiwEj2gCkiD6CchsmHIcd8CI3na7M7s7VyMikqQZjrs8sdlsGcp0Otaz05/JcjHXOC9WcjqsNTY+OQSX7ALiJkmzj87sGprIhw0VIUbXf2A5og+MTFHsHAImtSz+BV+E7wYexExy3XYndXOGJvoiJMeMJRoMUJwXrw9uF5DRwM1xAPPrP4gQawF7u5w1iFWAzN1Dt2VjXd2T3oSMtn4CpqHQN5ViNLU3GOnUKoA1mq22JmI/DQAzeRvH/U559e7d4USqa1lfKXf/ZiAE6hWqa6lJPL6Q3sh4eQC13XuneeHuwQAAAABJRU5ErkJggg==",
             name: "Olematon",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1.2
+                },
+                hp: 15.5,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Olematon"
         },
@@ -1100,7 +4722,28 @@ const icons = {
             id: "playerghost",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAdUlEQVR4nGNgwAMyPdL/K0qpwjGIj089WZqZGIgABzbtxinHRIwBDn6ulBmADzAx0MKATI/0/zsu7SPfAGwAZCC2mGDCZbuHnhNWgwgaQCpgoroB03fMZMTmfJAYSI4oF0zHopAkQEomwhsGxMYEVtuRaXwaAKgSOrV9xTTyAAAAAElFTkSuQmCC",
             name: "Kummitus",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 1.0,
+                    ice: 1.0,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 10.0,
+                faction: "apparition",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kummitus"
         },
@@ -1108,7 +4751,38 @@ const icons = {
             id: "phantom_a",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqUlEQVR4nJVTwQmAMBDrFedxCF/dRJxIXMOXIIgzuJBSMZCevWoDpRZzueSq4ghD6M+4j8skOC/H5kLb3e/5GRzPxZEQF4QYWgichjvnCJYQHAg6swCIFjiGsINSkSXU5JS/hNiB5+FhaezzmuzMEY4A/HGQXOP4HGocoKnAAa6nJn/iINAVlop1A6+zW0LIzfmzEVxhiLr45aBk3cJLoPZr/D1EDFD/ZBeSAJOx/DZIiQAAAABJRU5ErkJggg==",
             name: "Spiraalikalma",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.4,
+                    melee: 1,
+                    slice: 1.0,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.6,
+                        max: 0.8
+                    },
+                    orbspawner: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgAKVrHuB7obc60Dsnee/Bt2ZprQeJgeTZ2BgcIByD6DLEwK49DNCJSe6G3LnOelwgWX3XfkGcsSkO9OU8pE0r3M35AbL7zz/FUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4eCkw5UHlZ+08/xXsC+RLcemnwnZ8iALHjAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4nHdiS9wQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+ACKj8JJih0CiAcfHqZwSRA5oI0QygezYEACJU2MllwCTkAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.09,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Spiraalikalma"
         },
@@ -1116,7 +4790,38 @@ const icons = {
             id: "phantom_b",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR4nGNkgIJMj/T/DCSA6TtmMoJoRpjmHZf2kaKfwUPPCWwIE8w0kAAIo4MDm3aj0DB19HHBAaityHzaugAbIBQGLAwEgIOfK5xG1ggDTAxEAmya4QZkQsMAlzdwaQYbkElAMwiA5HGlVCZinI4PMKHbRCpgwheFyK7A5Q14OiDZaijASAforoEFMK6YAAAFm2SdfobEfQAAAABJRU5ErkJggg==",
             name: "Kiukkukalma",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 0.4,
+                    melee: 1,
+                    slice: 1.0,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.6,
+                        max: 0.8
+                    },
+                    orbspawner_green: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABfklEQVR4nOWWsW3DMBBFSc7g0kUKAUnhIhtEA3iHVJkjzhypsoMHUDZQkUICVKRwqSGMT/CEL+ZIU3IT2AdIosh7/HekSMoaxV4/zcvz02ONctv1zdeb+db8NI7f/wNnI+BdEqu2la8bToOhRD8SQuBQ9CxZ03a9yXAIsI5Yz+CZSnSJno2Tq7bVTut0OA0/WpI0KDsZFGLwSHH4Sg7hdWKFwa3t+kOc5FI9qyS32T8cZ+Dxd4/HGCcZc6gTNjApTpKTID1LNlKwU5Jr9BxqcslRJxv4yCccOD/6sVhURhs47pKXgdfkK2jNfNfqOV6oWnJaGxhZPxJIZmAkkVo4DjQ3oBLoNXouzJ4pNfjyLKbELrQVaUqghX2qbf4TvWVzWIxyFJQYfMFwHS3wP5ZoK9IMPjOtpXqOt+FSEEzgpkA1VuokUOHCOYejYMxwY9hFr9JzKIVZvCgo26/Uc6CxKG/bEihZQ4F4Tb7omJh81+rZuzjo7+JXzUTCt/KzfQZjZaslShCTcgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kiukkukalma"
         },
@@ -1124,7 +4829,28 @@ const icons = {
             id: "confusespirit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkElEQVR4nGNgoBAwogs8PtgBohpxqK+Xta9AEWAiVvOGHcewyjHhchpIA1QTitjjgx2N+AxoZCARMOGSCPCwIkqMCZ/pyBqwaSZowAa0MMAGWND49bBwgGlGNoRkLyBrQtIMsgS7AbKQRFJPrGYMA5ABFueCNeNNiQwEALpmDAPwJGWMPAAD6LGArhmrs6kKAKmbLT6spWzmAAAAAElFTkSuQmCC",
             name: "Utu-Aave",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 0.8,
+                    melee: 1,
+                    slice: 0.4,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Utu-Aave"
         },
@@ -1132,7 +4858,28 @@ const icons = {
             id: "berserkspirit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkklEQVR4nGNgoBAwogvstjUHUY041NeDCNfDJ+ECTCRoBssha8YwABmsvHkbq9huW/NGfAY04jIEm4EgwIJVlIGBIVxdFS8flwtIBkz4JHE5G58X6mHhANOMbAg2bzARsgGmCUlzPU4DXCFxXE+sZrwuCMd0LkYqJMoLDJguxG0AnqRcj00zCKDHArpmrM6mKgAAy3kvOBeDVvEAAAAASUVORK5CYII=",
             name: "Viha-Aave",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 0.8,
+                    melee: 1,
+                    slice: 0.4,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Viha-Aave"
         },
@@ -1140,7 +4887,28 @@ const icons = {
             id: "weakspirit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAjklEQVR4nGNgoBAwogu4b/gPohpxqK8HETsDENqYSNAMlkPWjGEAOri0czkG233D/0Z8BjRi0wwCeu6RGGIgwIIhgqSBGDEmBgoBEz5JbE4m5IV6WDjANCMbQpYX9KCakDTX4zRgJySO64nVjNcFepjOxUiFRHmBAdOFuA3Ak5TrsWkGAfRYQNeM1dlUBQBL9S3c8t5z0wAAAABJRU5ErkJggg==",
             name: "Kaamo-Aave",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 0.8,
+                    melee: 1,
+                    slice: 0.4,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kaamo-Aave"
         },
@@ -1148,7 +4916,28 @@ const icons = {
             id: "slimespirit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAl0lEQVR4nGNgoBAwogvsjbgLohpxqK8HEc4rlOECTCRoBssha8YwABnM2N+Nlb834m4jPgMaYYozHEvhmtD5+AwAA5hiEI2NT5QXMtAUY9OM1wAQwOZkdMCCJZrg4YBuCElegAHkcEBOC1gNcIbEcT2xmjEMQAZYnIuRConyAgMSQNeMYQCepFyPTTMIoMcCumaszqYqAACulzuknu5KwQAAAABJRU5ErkJggg==",
             name: "Neva-Aave",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 0.8,
+                    melee: 1,
+                    slice: 0.4,
+                    fire: 0.0,
+                    electricity: 1.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Neva-Aave"
         },
@@ -1156,7 +4945,37 @@ const icons = {
             id: "necromancer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4nGOoi2v+z0AkKPXNwVDLCBLkFBRnaFpUywgSQDbw+/uXYLp78xRGZANgfLgBDAwMDCBDCAF0A0GAiRiNMIBNLSO6s+/cPgaXVFG1wtAAkpcWUYa7ggVd8vqLBygaQIaAnA6yHSaPrIYFWTHIZBB++uYunA/SDOJLQ/kw8fP3r0PCgAEtgGD+BCkCsUGaQTaCaBAf3VuM9d7J/78xccJtxeZvbOGw7Ph2cBgwff7yBS4Bsmnz4WUM0qLSkMASlcbgw1yK4oLPX74wMPOJMuy5shcsqCmhgBGYIOCi4wx3KYoLeHl4GP5+eg1WAAL2VqFgdkZQKZgPokGGqqgZwQMS7oIoS8//qkJSYA7MMFCYYEs0sBhBdgGLBBsfXAFIMyRMvjAw/vvOcPvdMwxDQOpf/PrEALIYZAg4GpEDEiQJEwO5DNkCmPzzz2/hfHBCAtmMbgNMI1gOaj5Ms6GwIphfZB/+HwBXL8AZgDQGcgAAAABJRU5ErkJggg==",
             name: "Hahmonvaihtaja",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 5.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.8,
+                        max: 1.4
+                    },
+                    polyorb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAAKCAYAAAAjBNk8AAABc0lEQVR4nO2WO0tDQRCFd0OKYGNjuE2sRbCwsfFaCKLpBCv/ifiXrAJ2IQgp1MbGQhBr0wRtbIJd5CyOnDvZV8xVU3ggsMx+O3tmH3djDWlnc296sL7r2lfPt+bu8dpy/z9nZjjLwOhlYm7GfddRFl3Taa9UBvwU51MoHys2by63aB0NBAEhIBCENmJcoE6W4mTCGBdSKB8LMc3pOnK5kL8U18QqY4LXt3Fl0uHlwOwfH5pRa+J2QoxoDRfgUorl48VhTurgExPjUnWkOHt+dDa9eOhFCzndOvkyweZSHIvHCJcr9icLwsKV0hxLxqQ47S+Hc1f4N1QWXW/x8yq0eX8li2O40dp2xlCgNojY0/u9a4MT5XI+CRf7BkL41kA+f7wZPG9uHXVxDbwkONprq8UMhBj6wAjHCUr6hTgt5qKrZ0wln8+fzjdPHXVx7grLq8K7ira8QiK0fYvT+XzWv8OFpDntL5Qvt466OLvsf1TNknMfJBMngL3OPfsAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.082,
+                            width: 10,
+                            height: 10,
+                            n: 8
+                        }
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hahmonvaihtaja"
         },
@@ -1164,7 +4983,39 @@ const icons = {
             id: "gazer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABOUlEQVR4nH1TMU7DQBBcWycBchELpbJR5DIhHTUdH+Ab1FS8gMp1al7AC/gCZdJbOlcUobDAEpLRHJrT3sZiJOt8e7s7s7t3mYjI/XY7rcpSuuNRsP4H+AD0zxhsHeik7R/DkCRbFoU4y8DMwLv3wQlA8KP8JL7tMIjTAYRm4j+C76pVytZ3klupOkAzri9T+QASOs0+y9Z30p5WGuFsYywb/pdjJSKfswlyLZeSn8ZK/PchfLuL62DDir1F9tpcTbo5b30nL8Ui9gWTAG7qOqwPX/u0hLVpTtiPixhMVa33IQkVAeifg9xnOUh9vkkS4fCkmepeAFCZ6/p0zTjU6pBIj5X3x5FtV/4F8vaF8Z6lDWN5nBzW7LZpJi2LB7CBRTcN5Vqf+Jj4WGyyuYdGv6iADjRaWLve/wLh/MDEBiKx0QAAAABJRU5ErkJggg==",
             name: "Helvetinkatse",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.8,
+                    melee: 1.0,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.8,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.5
+                },
+                hp: 9.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    lavashot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAzElEQVR4nGNkoCK4psP1X8FBloFryk1GdLlvOer/me2Mwey/h87C1bAgK/q5Kuo/iGYPW4ZhALoh6GpAluMyB1kOBEBmfGNg+A9yBBOy4SCXIRuAbvmDA48ZsKlBtwBbqKADsCNy1P/DHQAyHBY82ABMHh9QrgtAMQPmSHxmM2GzBJcjYGpA8tjUgMRA8tgci8tsRmQOLCi1rnzDmgaQgxpdDXo0gIId3SGwqACJw+QZcXqVDIDuCJAjYWLIDoKxQfJUdQCxDoM5DsQAAMJ3iqjUfOWjAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 1.5,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Helvetinkatse"
         },
@@ -1172,7 +5023,40 @@ const icons = {
             id: "skygazer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABSklEQVR4nH1ToU4DQRCdXtahKkh6FYRcqEKRWlJV0yoMX9BQyf1Cf+EqqatE1WFQ5wkKdYQQxJUEgaqqKHnbe9vpHO0km5vdffP2vdm9hohIfzTaSBXtTkcORVkUAcM8YvGxQkuOYuZOb2gA4ne5lGYcBwLMbe60nGNARHqW1lQ564kFBGdfWZjf3l3XCUp1ui4O4NmWJDlt/dsXpyUyNBh5c73rg41GdzjcaG84DY2btO/9/OHkKXR9vBpI9+ZiX0Fqvc1E5utH+fj5lufzV3nLc78MApCNF4N9gsR48/Nym6M4NDPP5LLX8yT9zytPDmXRpJzKy+K95g0qqA4DOQjZdNpy9ElpyCk5We3UeZuVPQxefUQ2FMI3PdvHpW8HN4d9fP0t6OdKANbYeQbsWkxEIBcRJNTKaE0X4xse0qEfx8uNC5HKkcX/AcvbzNpZKbHjAAAAAElFTkSuQmCC",
             name: "Taivaankatse",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.4,
+                    explosion: 0.8,
+                    melee: 1.2,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.8,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.5
+                },
+                hp: 10.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    polyshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuUlEQVR4nGNgoCI4EnL3/6uZr/9jkwOJf7/2CYyR1TAhK4IpwGUBsiHYLMdlDrIcCPDasoPNQnEASODz4Z9wA7BZfmv3JwZsatAtQHeYmisfhjjMEUwwAZDhIACzAB3A5PEB4yZRFDNgjsRnNhM2S3A5AqYGJI9NDUgMJI/NsbjMZkTmwILSZo0yiji6PDY16NEACnZ0h8CiAiQOk2fE6VUyALojQI6EiSE7CMYGyVPVAcQ6DOY4EAMAwrSs0MdiqEQAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0,
+                        holy: 1.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Taivaankatse"
         },
@@ -1180,7 +5064,38 @@ const icons = {
             id: "spitmonster",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQ0lEQVR4nJVSPUsDQRCdHaIxBLVRRC1EsbrWIoj/wNZG0oTDxl+Q2jq9YCNyjQTE1n8gh38glSgWCkEblaCxMPJGXhg359eDvd2dN+/d7OyGNKkNRESOOhcBM/fd3rPMVSeltf0mzfa4eDAXCFxQCAEAEU1ijBikTlzdWjeid5oPTfYqD7JcX5Td7N24qfKEzeDUl/wdIIbxQUNt/9R/tfyzm04oUYhSm22RluS2vz6+le7LjK0bh33JJLeYyLzFKqWxzyOkSW3gTeJqEIt5Nha9UF8qCC/G2fdP1iTbKX8xZm/w87C5lFgPisBrxBF8JR7hJ4O/QOPA5eN94d0jRs7zWiREqdxzPr+7Gor8WimOCRr5+MbCykiO4rM6PWuDSTDkzJgHcskpXpMn4k5DjFjM8Yf2kHy5/4XiXWPE3f0NrPwDJ1O7qnXl6qoAAAAASUVORK5CYII=",
             name: "Helvetin sylkij\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.8,
+                    melee: 1.0,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.8,
+                    ice: 1.2,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 6.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_pink_fast: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.5
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Helvetin sylkij\u00e4"
         },
@@ -1188,7 +5103,38 @@ const icons = {
             id: "crystal_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVR4nGNgIAAWudf+xyfPhE8y3zDsPyFDmAhpJuQSJkKatz04jtcQJnyaX357R9AQJlxeuPL2Hgr/7KubWNUxEaMZnyFMxGrGZQgTA4WACV3g1vtHeDWgu5AJmyJchmDzHhMum9ANwRU2TOgCjz+/YoSxjz67BKZff/8Al9/76AxcHgRQOMhAllcMnmDUBOWwasbrBWSX4NJMFEB2CTYAAL7eT8NNSQh/AAAAAElFTkSuQmCC",
             name: "Kirottu kristalli",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.8,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 8.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_pink: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kirottu kristalli"
         },
@@ -1196,7 +5142,28 @@ const icons = {
             id: "bloodcrystal_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArUlEQVR4nIWSMQqDQBBFZ+cIAUVIkRukk7S24nW8TA4S0tqGdN4gRUAMBG9g+MjCEHf//GoW5r11nBUhaarTuvTXlfUog8+HUm7PuzCJMjiGSZTB43d2Jcpg1I/Pm0qUwcilOFKJMjiOwCTBg3GGAIEk1khXt5tASOw2/oNLdJhegQlss90KarCKgyex41gYdbCNbJwUvHsHQ+ZLcvBOkJIwOClISXKwG/wTb80/vZSPh0AFdpMAAAAASUVORK5CYII=",
             name: "Verikristalli",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1.0,
+                    melee: 0.5,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.1,
+                    ice: 2.0,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1.2
+                },
+                hp: 4.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Verikristalli"
         },
@@ -1204,7 +5171,39 @@ const icons = {
             id: "skycrystal_physics",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVR4nGNgIADiF7/6j0+eCZ+kZdn2/4QMYSKkmZBLmAhpPrV7LV5DmPBp/vDiAUFDmHB54eGFfSj8W5fPYlXHRIxmfIYwEasZlyFMDBQCJnSB78+v4tWA7kImbIpwGYLNe0y4bEI3BFfYMKELvL+8jRHGfnF+M5j++OIeXP7Zrm64PAigcJCBoK4XPMFwSmpj1YzXC8guwaWZKIDsEmwAAM4pUXbNRPa/AAAAAElFTkSuQmCC",
             name: "Taivaskristalli",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.8,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.5
+                },
+                hp: 16.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    laser_bouncy: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAABCAYAAADq6085AAAAF0lEQVR4nGO49e3v/7CrX/6j09jEQHIA8QwpfXNhHOcAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 6,
+                            height: 1,
+                            n: 2
+                        },
+                        projectile: 0.35,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Taivaskristalli"
         },
@@ -1212,7 +5211,28 @@ const icons = {
             id: "chest_mimic",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyklEQVR4nGNgGAUMP14t+f///38GcjBILwvIkNLkmP/kWN7S4ckANuD+k2dk+4Dl54vJDIoyKmRpBullBPnj+8lWhpTJEgxzcl+AJUBsbABZHsTmNK9mYPx4yfx/8wQVhurAcwyt642IshmmtrbgDgPj+82a4ABkkudj+PfwEwqNDpDl4WHAwMDAENzKzcDA8JeBgQGVXlv9lQEhz4AmzwCWZwFJGmmp43DsOTCJSz649SbEC7gCjRAABSSjk4XJf9wuwA/OXaOCCwCShoWGJmH6CwAAAABJRU5ErkJggg==",
             name: "Matkija",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.6,
+                        max: 1.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Matkija"
         },
@@ -1220,7 +5240,28 @@ const icons = {
             id: "chest_leggy",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABMklEQVR4nGP48WrJ/////zOQg0F6WRgYGBhKk2P+M5ABWjo8GcAG3H/yjIFcwPLzxWQGRRkVsjSD9DKC/PH9ZCtDymQJhjm5L8ASIDY2gCwPYnOaVzMwfrxk/r95ggpDdeA5htb1RkTZDFNbW3CHgfH9Zk1wADLJ8zH8e/gJhUYHyPLwMGBgYGAIbuVmYGD4y8DAgEqvrf7KgJBnQJNnAMuzgCSNtNRxOPYcmMQlH9x6E+IFXIFGCIACktHJwuQ/bhfgB+euUcMFoDQNA2/evIGzb69e9Z9HRIRB0tGJUUREhOHy6lX/v7x5wwAS0w0NY4SpY8JmMkizqJIyA0gDDMA0I4uBADga0W0F4df37oJpGIBpBhl8fPo0sLMtM7MY4S4AORGmAZtt9y9fQjEYhEF6ADHAwox8t/NaAAAAAElFTkSuQmCC",
             name: "Jalkamatkatavara",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1.0,
+                    explosion: 0.5,
+                    melee: 2.0,
+                    slice: 1,
+                    fire: 1.2,
+                    electricity: 1.2,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 2.0
+                },
+                hp: 6.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.6,
+                        max: 1.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Jalkamatkatavara"
         },
@@ -1228,7 +5269,33 @@ const icons = {
             id: "miner_hell",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABN0lEQVR4nGNgoBAwElJwIivz/5eHD8Bsl63bGUky4ERW5v+5F64wnPv+Acw34hRgmH3sMIoeJkIuAGkuLq0Esx1zMknzQqCH2f9HL7+jiJ09f5mwC6a2pf4H4XIlYzAf5gIYjdcFU9tS/4PoW/eeMfg+/8ew8v0XvGHAgkuzmpIUw2aGZwzazMIMDG8g8uiacXpBTUkKbAgMcGnxoWgGhQ1WA4yfsIAxzBAQuPrmLcO3a58YkDWv33GKEasXQACcaGRkGJCBtogwwwS/gP/Cz58yPHv6nWE9IS8sXn2AYc+hiwwnz94COx3kChhgV1RGUcuEzIEl2RPnb4OdKCkuCOaDDAHZfoiVA8MyDC/UPLuDzVFgoPL5A0MBlpgAA1DgWBiqwkMXnY8LwL3w/OV7sJNhUYTOxwUAUB2J7m3VxBwAAAAASUVORK5CYII=",
             name: "Hornantappurahiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 0.6,
+                    melee: 1,
+                    slice: 1.0,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 2.0
+                },
+                hp: 3.0,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    },
+                    tnt_hell: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAIAAABrW6giAAAABnRSTlMAAAAAAABupgeRAAAAO0lEQVR4nGNgYGBozPRrzPRjYGBgWOfiss7FBSLEdPX9e5AYA0P99E1M2oKCcD5IRltQEMphYGCAywAAGyUTS2M/FE4AAAAASUVORK5CYII=",
+                        explosion: 2.5,
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hornantappurahiisi"
         },
@@ -1236,7 +5303,39 @@ const icons = {
             id: "shotgunner_hell",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJUlEQVR4nGNgoBAwYhNc4GHzH0S/+P6doeLgWUaSDOiwN/5/4M13htc/fjCYSIkzKDL9wmsIEzZBeSF+MH3m2UuG+//Y8HqBCV0AZBvIVlEODgZiAAsyZ2pbKtjvt+49Y3BgeMFw/x8/w8N3H4kzYCpUMwioKUkx3GJgYAC5QZ1BiGHH1WuEvcB96DoYw1wAMoQYwIgeda+/v2eQkRAAi31wiGFQUVEBs+/cuQNng4CrqytYLyOyabgMAYELyxaBaYOoOIbMzEy4PkZkA0DhAPPGVztNsFduHr8PjtaZh48zEoyFPYcugunnL98zSB76BaZPXL3NSFI6eA7SdB6iSVJcEJ9e7AbAwPodp8CGBHqYwaOXJAOQXUS0AWC/iwvCbUXnYwMA8sV2qNQi67MAAAAASUVORK5CYII=",
             name: "Hornahiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 0.6,
+                    melee: 1,
+                    slice: 1.0,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 2.0
+                },
+                hp: 2.9,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 1.4,
+                        max: 1.7
+                    },
+                    buckshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAAI0lEQVR4nGP8PF/9P4tDCMOfA2sYQADGBtFgPpiESiADmAYAFKQMVuWDPnQAAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.02,
+                            width: 2,
+                            height: 2,
+                            n: 4
+                        },
+                        projectile: 0.27,
+                        explosion: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hornahiisi"
         },
@@ -1244,7 +5343,39 @@ const icons = {
             id: "sniper_hell",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABMElEQVR4nGNgYGBg2GWv8x9Eo7OJASxgTX+Y4RpBbLLALnud/49vXPufpaUAponVx4hswIbXX+AS0649gMvhA0xwA/4wMwSI8jCQClhgjO/BAQwbGRgYXt14yqBw9TTRBjCCbYcG4Eb/YLDgyxtPGdJDwzEUu7q6MmL1wkb/YBTN4hrSDDNXr2S4c+cOWBOMxumC7L56sAsUNq5hkJEQAEt8cIhhUFFRAbNBBsDYMAASy8zMZISHAQjoMzAyXHzxAWyIwIElDHcYYsDid5fMYMg8ehG3C2Cu8N+4FswGeQfkFe6ThxhEeTgZenBoBgFGGMPdLwrsjedPHzJISsuD6UtnjzISnQ4YoJphmkCGEAPABoBsJ9ZGnC5A17xz0zLik/LHx6cZAj3M4BkInY8PAAA6vIHCvBw6lQAAAABJRU5ErkJggg==",
             name: "Hornasnipuhiisi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.6,
+                    explosion: 0.6,
+                    melee: 1,
+                    slice: 1.0,
+                    fire: 0.0,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 2.0
+                },
+                hp: 4.8,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 1.4,
+                        max: 1.7
+                    },
+                    sniperbullet_hell: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAAEElEQVR4nGP4fr/6PwyA2AB8aQ6Z/vCjzgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.2,
+                            width: 4,
+                            height: 1,
+                            n: 1
+                        },
+                        projectile: 1.4,
+                        explosion: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Hornasnipuhiisi"
         },
@@ -1252,7 +5383,28 @@ const icons = {
             id: "dark_alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABZUlEQVR4nGNkIBJcn571X8NREcy+sf8+g2bmNEYGUsD/G93/4eBG93+YOBMDhYAFRDRlhMJNBIG6GasZ0Z2NzUVgA5oyQv+H6osySKs8YeCVtYXLgwwBa1YvwdSNJMYC07xjPyfDn6cHGVikuRlqC8zAhhDjBcZPu/3+gzQb3vnPIM3ExMCpqcmw+uc1Bl1ZYbACFC/AbL7ZgxoGf55+ZZBm4gELfL9+nSFUU4th+YnTDKbfuRi+H3wHFudsMEa1WaMUHE5MT+/IgAWe/vsHlwQZEvCTB+wiQoDp8uO3DJGV9gyrvzxGMQQdgBIP2Ok3eyBsmEsYGBgYVlWF/w+tamdoD4tmCOWRxbB5A/sXBp8YJoYJa9nhUQx3AQMDA0NY20rG1W2VDJWrlmK4BJ9mDLCqKvz//y/3/rd5Wf6/HRb2f1m8z39QLKEnNLwApBiUykCGkKwZBtKDnP+DkjFZmpENIUYhAEw4qGavsSAvAAAAAElFTkSuQmCC",
             name: "Pahan muisto",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 1.2,
+                        max: 1.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pahan muisto"
         },
@@ -1260,7 +5412,28 @@ const icons = {
             id: "shaman_wind",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJElEQVR4nGNgwAFi6tP/Z9xf+f/Vny//UxeV/8eljgWXZp4EJ4Zfdw8yTHrzmqE1qhYk/H92XCcjQQNikDTLqrMzKPMyM0w6vwCnIUy4NIsIINSpqSIMQfcOEy7NnOJsKC7DZQgTsua/h89h1YzPEBZkzYJaX3BqxmYIKEwYQVGFT7MyrxpWg27d/suQZ5jAwLjg49n/h07PRQk0ZIDLRY9v/mRgU7ZnYFpZ3MJgZ5rMcG7zfQZiwPeXv+CavyzYx8C0fc56xqMbVzEsq11F0BCQ5jcf/sM1L2mcyQhOSNDE8R9kSFRzGIORryJRmlFS4mw8huDSDAIYIQeKX1AUxWfEMuhmSIHFcGnGCUCGgGLHMyXwf9KeLHCuBKUXghqxGUJIMwCXfM4xFvIoqgAAAABJRU5ErkJggg==",
             name: "Valhe",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 3.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 1.2,
+                        max: 1.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Valhe"
         },
@@ -1268,7 +5441,49 @@ const icons = {
             id: "necromancer_shop",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLUlEQVR4nGNgoDb40p7znxT1TMicdcbm/5FpEFi+fPn/f1AIYqMbwIjP5s0K1gzhEeEMjAhlDCtWrGCIjIxECCADkM0gg2AugNksLy8PxjA2Az7wBcklMOcjawbRODXHtGthSMJcgQyR5VmQOQ8vf4KzV4cngRUaGRoxGP1jZXCtLGLY3d4HpnHGgrwuH9zW7dcvM/wJcGUoLy8Hi4E0e2rqYgQgCzYXpOibM8y5eJJhbUQKmA/SCAIgQ0GGMzEyMeL0/3JowHmz82LxPSQtIKcHJmTbQQpATgW5YPOPjwwnazrAbBgAsUHyWEFMuxbcZHwugMmjuAAkgBwDID8iu2CuRwCYxup3mL/wpYHZ7n5w25FdCbZs5YqV4PS+qOIKhmZfDn54GGC1nYGBAQAXPBIrlN0jBgAAAABJRU5ErkJggg==",
             name: "Stevari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 0.5,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.3
+                },
+                hp: 24.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_pink_big_explosive: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABnUlEQVR4nN2WoW7DMBRFHSukKg3ZHwyErKhsAUWFo/uYtR8zOlhUkLGijgzsD0pKq5KC6nrvRTeWnTgZmfKkqk78ju+7jh0nM4E4Pb0+z5frCu3LYVc/fL1/hvJCHF//By7zgDc1Nlst3L3r/mjI6DYiBA5Nx1LUl8POdHAosPJYx+A/ZnSIXu6bm60WJRNq1OX8ztI2Mikl5yKu+2M5X66/IxxWyUYuG1YZFH8yZuObHKqXB8wV+ctjC7x9/Bg1zrDPuQGFFcYVH+DUnBZZeBNaYuUgh02O0bO46DJHgxTI0SUsnA7YEvPa6APHQ/I2cJr8E61W7lg9yxs1ZC7UB0b3jxbSMTFqpFKOC+2aUC30L3pWnp5JDeTyU4yJ9fQlaWqhiWMG+9wSnXJYvP71KEgJ5ILhe9jgsYj0JWlKTktrqJ7l13AqCEa4ptAQq/e0UOXknMNRcO7gzsiRc220nkVLnmKvIHL46XGhvii1m0IpairEafJPtFq5Y/WyvoNeQ80NPOhdQREudtCrCRgaetAbX2/yn2pZTHgqH9t3gwezFsSPOK8AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 0.8,
+                        explosion: 1.0
+                    },
+                    orb_pink: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 0.8
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Stevari"
         },
@@ -1276,7 +5491,49 @@ const icons = {
             id: "necromancer_super",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABkElEQVR4nLVSPUjDUBC+aEWXVp1cLKkgWGiVIHSo2Dq4iHVzCVahOFjURVzaUXDJ6KKiU8GfZNeOBQXFSSmoUEEwg4uLhYLg9uR7co9ndBDBD0Iu9+77vrt7MYQQ9C9wXVfo+DPZ1eJfC4gAWATvYG2Ig6PqlbiondN940kdep5H5XJZfSNeXnfE+OSE/M7n0obBZC6CSDZlKlK9XpdCvu9TLBYjMzGlzoqrBZICrKp3kB7uIcuyyLZt5e44Ds10RWi+si9zuwdnZCyOpMRj/ygl4gOSDNW97QqFa8eyCMUswkIMGLQhYDIAMtyB5NqKHAGAM3C3tSMfhqG3H+loyiS3qoPbPiws0el7S+6l6m9SSJ8dzlD3LEsWBQES8hBvzXZT02//7IDJPBdcfgKLLjgJqp+80e2lTyGdLOfTFgcn7IHPgGw+Kp3N61e5UKNUKsl/AM48Y9CRoTur68xOFwVEcJ25zrD6bRHzg1xmrl8kx0x1hhzeageDzzf08tD45g6n3o2odM5l7C9X2DcUpw+O0hntRbzrbQAAAABJRU5ErkJggg==",
             name: "Skoude",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.4,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.1,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.0
+                },
+                hp: 36.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_pink_big_super: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABnUlEQVR4nN2WoW7DMBRFHSukKg3ZHwyErKhsAUWFo/uYtR8zOlhUkLGijgzsD0pKq5KC6nrvRTeWnTgZmfKkqk78ju+7jh0nM4E4Pb0+z5frCu3LYVc/fL1/hvJCHF//By7zgDc1Nlst3L3r/mjI6DYiBA5Nx1LUl8POdHAosPJYx+A/ZnSIXu6bm60WJRNq1OX8ztI2Mikl5yKu+2M5X66/IxxWyUYuG1YZFH8yZuObHKqXB8wV+ctjC7x9/Bg1zrDPuQGFFcYVH+DUnBZZeBNaYuUgh02O0bO46DJHgxTI0SUsnA7YEvPa6APHQ/I2cJr8E61W7lg9yxs1ZC7UB0b3jxbSMTFqpFKOC+2aUC30L3pWnp5JDeTyU4yJ9fQlaWqhiWMG+9wSnXJYvP71KEgJ5ILhe9jgsYj0JWlKTktrqJ7l13AqCEa4ptAQq/e0UOXknMNRcO7gzsiRc220nkVLnmKvIHL46XGhvii1m0IpairEafJPtFq5Y/WyvoNeQ80NPOhdQREudtCrCRgaetAbX2/yn2pZTHgqH9t3gwezFsSPOK8AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 1.0,
+                        explosion: 1.5
+                    },
+                    orb_pink_super: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAA4UlEQVR4nGNkgIKPglmBrD4G60Ds31suBPG/n7YeJgeTZ2BgcIByD6DLEwK49DNCJSey+hjksXjogmX/7LgMcsQk/vfT8pE0r2P1MQDL/95yAUShOBLqAbg8uhwu/Ywwn8MshwGoI4KgXLBmNAfCDYGa4cDioZsHlZ/0e8sFsC+RLcemnwnZctYoCzAGAZAYNEocYJrR5BhgQQqVB1sOlc+D+ZaQfiZS4vH3shNwQ8gB2PQzgYIZFCQwBSCMFgUHQMGFrAYpCA+AxSDyk2CGQqMAxsWrnxFEDmgiRDOA7tkQAB512MlkBjcTAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 8,
+                            height: 8,
+                            n: 4
+                        },
+                        projectile: 1.9
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Skoude"
         },
@@ -1284,7 +5541,22 @@ const icons = {
             id: "boss_dragon",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABaUlEQVR4nKVTPUsDQRTcXQVBqxAEm7NQLISIJ/anjWAlSAQtbNMeaVJaK9jdbzCFoNgKWuh1FsKJNiIKSSVosIpiISfzyCzvDhTBgWW/3syb3X1ru6213AzQT2/M9WfFLI68SQ9gDMxedSz6gzDM9bp9bTfz9+yJGl5oLJr3ghokYh9wp/sXZjSckuDH+MsHcgxCtDLpG4gUB89tZ5lYQ6a5dKaQ7fmo5q1rdxCHCJxbnuuy1zNL1apkgTJwGz2Y6WTIEyHIOWIg4DCpHyaGfXrWlTGOph2Nx+syB5EJ5BKNQiMI5IbhRDsiNPElORFHtnBoJaKxu1cvkHAMijnzR5AM4BL59K6cPTlvyxj2gZ2thV+F3cd9KpbZH2/GsrHaWvYiyIZng3W2wis0giAHEQQSsakvsFwHeGLAsrZB/Kmky2u6HuQv0CY3JzbufLkCZREKoTaGSSag3FeB8pkGxQXozySl/N/v/A3NHtgsGl4bagAAAABJRU5ErkJggg==",
             name: "Suomuhauki",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.5,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.5,
+                    electricity: 0.3,
+                    ice: 0.5,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 120.0,
+                faction: "boss_dragon"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Suomuhauki"
         },
@@ -1292,7 +5564,22 @@ const icons = {
             id: "boss_limbs",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPElEQVR4nGM8cm3D/5nrZzOAgIK1NphWEWJnQAZ7Np9jcPE1gvPvvPsJV8cY2+r9H6TxwdGrKIagA5A8shzMEsbaA2X/YQIgm5ANcRezYlARN4Rrmnp5KqYBsVAXIAN0jeigdEYW2BKQIUzIzidGM7KXQGHBRIrNMNCdMQ1uCBPIGeiuAIE7L89j8JHFQHpAMcOCbjpIUVVzE5jdVlsHdxGyGHIgMuFzKkhzWE4gihjIIGRvssASBUwSZAPMFpiTQfSqKesxohPkbUZYOoAJPLzyHG4AskuQwc6ncxjcpVMQXlARYgdjUMDI60iCJWDJG0QjByAoDYBcDTIEaxgoWGsz7Hx1DCM8YAbBEh3IEJBXsKZEZC/BDEXn44wF5JwIUghKNCCNGOkEGvjgpIxsOnKsZOtmY3gPWS2IAwDEC6S5Vb3AjwAAAABJRU5ErkJggg==",
             name: "Kolmisilm\u00e4n koipi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.8,
+                    explosion: 0.3,
+                    melee: 0.8,
+                    slice: 1,
+                    fire: 1.2,
+                    electricity: 0.9,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.0,
+                    holy: 1
+                },
+                hp: 30.0,
+                faction: "boss_limbs"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kolmisilm\u00e4n koipi"
         },
@@ -1300,7 +5587,22 @@ const icons = {
             id: "boss_meat",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABLElEQVR4nGNcamHxnwEKdDQ1wfSV69cZrv/5A2ZrsrAw4AIgNYw1JiZwA2DgxZs3YFpCRARuCEgxSBxZDARYYBpAEjCNyJrBYkhycDUiImBDWMAmQRUgazpy/z7D21+/IIrfvoUbLMzGBqbvfP7MwKCoiHABCKBowgFA8jBDQOpZQH4DmwaVJAYgG8J0/cULnAortLXBGB9gevv9O07NHVevgjE+Q5gYKASMDsLC8HSAHgYwm0GuQAewMGAMlpH5D/MGsYGIbAATOc6GaU5VVWVg0ZSQYADFBMgVIAlCrgB5C5RnQPll3ZMnkJQY6uoKloRlIpAYLGPBxJEzGjKfCaQBJAADMM166elgPoxGZ0/evx+SG1MUFP7D8gAIhOrqwg2EORUEYNkbPcMBAGICpY6JT7VTAAAAAElFTkSuQmCC",
             name: "Kolmisilm\u00e4n syd\u00e4n",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.4,
+                    explosion: 0.5,
+                    melee: 0.6,
+                    slice: 1.1,
+                    fire: 1.2,
+                    electricity: 0.0,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.9,
+                    holy: 1
+                },
+                hp: 40.0,
+                faction: "slimes"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kolmisilm\u00e4n syd\u00e4n"
         },
@@ -1308,7 +5610,39 @@ const icons = {
             id: "boss_alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2klEQVR4nGNgGDJgwop1/0EYXZyRGI0g+t2HD2C+kIAAQ0FEECNRBkxA0tyUkYRVLVNsctl/cjWDXRCLZMDiuV2M6JpBTkYHKF6IRXOBsasFA0zzi6dPGSSkpVE0wwyEGcKETzMIwGiQRpBXYIEJDwMGJM0gyUnVFXBNMPDr9RewHMhr6OHBAmOAFIAUgsC1SxdRDFAUUWJYXNvFCAsb5DBggjHun77B8PTBE4wAe3blEoO0ggyGOIYBr1/cQ9GETMMAss0oBiBrDkvIwaoZpwuQNZMDUKKRHAAAZKx4+dkwV5AAAAAASUVORK5CYII=",
             name: "Ylialkemisti",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 0.0,
+                    fire: 0.4,
+                    electricity: 0.6,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 0.5
+                },
+                hp: 40.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    wand_orb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABEUlEQVR4nNVUoQ7CMBR8XZBMLEGBwC7BL9sf8BsoJN+CRPEb+4OReRIsAtQSBPiRVzhy65pQBAmcabd3vd7re60RQpEu2yzJ7by+7KQ6bAzHmcff1Rd5r8mq2LbzdtZZWJq9rKtFR1R5OoJbmr0dXR4nC/iSfqdnXHPT8dCOx/OtZ9KXBMA8mPMlzCZD9AYqxuZGk+uTEluTGqudEiAJAMmgVGyOE7b/EhFJJVgvQhm65sTOsRAczlbjI+L7ToI1XROhepF8Gc0p7mz8KSLtCRyrirEwjhocNDDiDfE5BmA9azFC9AbasGWR2z58iMS9S4Kmzorc9o5vM8XrhmqPJY8yMde9JCF6//HMiEf0Vx7qOxjO+m2Lh1BrAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 10,
+                            height: 10,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Ylialkemisti"
         },
@@ -1316,7 +5650,39 @@ const icons = {
             id: "parallel_alchemist",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2klEQVR4nGNgGDJgc/fy/yCMLs5IjEYQ/eHdBzBfQEiAwbc0kpEoAzYjaY5tz8SqlqkqMvY/uZrBLqhCMqBt+WJGdM0gJ6MDFC9UobnA0siLAab56YunDNIS0iiaYQbCDGHCpxkEYDRII8grsMCEhwEDkmaQZMm0argmGPj8+wVYDuQ19PBggTFACkAKQeDC9UsoBigp8jO0LW9khIUNchgwwRjXHxxjePL0HkaAnX95hUFGWglDHMOAO29fo2hCpmEA2WYUA5A15wfHYtWM0wXImskBKNFIDgAAVEJ498/330gAAAAASUVORK5CYII=",
             name: "Alkemistin Varjo",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.4,
+                    electricity: 0.6,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1
+                },
+                hp: 40.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    wand_orb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABEUlEQVR4nNVUoQ7CMBR8XZBMLEGBwC7BL9sf8BsoJN+CRPEb+4OReRIsAtQSBPiRVzhy65pQBAmcabd3vd7re60RQpEu2yzJ7by+7KQ6bAzHmcff1Rd5r8mq2LbzdtZZWJq9rKtFR1R5OoJbmr0dXR4nC/iSfqdnXHPT8dCOx/OtZ9KXBMA8mPMlzCZD9AYqxuZGk+uTEluTGqudEiAJAMmgVGyOE7b/EhFJJVgvQhm65sTOsRAczlbjI+L7ToI1XROhepF8Gc0p7mz8KSLtCRyrirEwjhocNDDiDfE5BmA9azFC9AbasGWR2z58iMS9S4Kmzorc9o5vM8XrhmqPJY8yMde9JCF6//HMiEf0Vx7qOxjO+m2Lh1BrAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 10,
+                            height: 10,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.1
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Alkemistin Varjo"
         },
@@ -1324,7 +5690,36 @@ const icons = {
             id: "boss_ghost",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuElEQVR4nK1TUQqDUAzrK7uDm6dw3nD73WmG315Bdwqnp3BEKGSlTx9sgQda0zTGmvpnt0qA6T3JvCzb9bmqpL7UEU1Ouca2uX41Da8xFErsAM25STmO8kOzvAfPUVaGbT8NhwEO1zSnbFngeBHmqvwIRboAEmYgKNSi5I2L3sRfAQWfg4fnaKS8B89RUzXbCMzu/WTeAeOkx+2+RrZLVvm/GQwFzQA4/IqbQLSFRyK2XFryA0WwwD8dKISEcIhP4QAAAABJRU5ErkJggg==",
             name: "Unohdettu",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.5,
+                    melee: 1,
+                    slice: 0.1,
+                    fire: 0.5,
+                    electricity: 1,
+                    ice: 0.0,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 0.5
+                },
+                hp: 40.5,
+                faction: "ghost_boss",
+                attacks: {
+                    boss_ghost_polyp: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAAQCAYAAACBSfjBAAABgUlEQVR4nOWYX2oCMRDGN4v3EG/QegWfxdP42tK+7mlKn3MF6w2kJ6l8hVlinCTfzMqKOLCwyeY3/5hMjF1HSPz6/mPW3ZKdYnNOHb3XmLY+kjpq6+TbZrcNHhuMbus3eh3jMMYlJZHkLQ7m4+Hj05QElrfElOoYKxByOP5cAHjHXD5GdWjGDiRfk9p6zy5hean4lv949u9vY/xBy+765fUqGMxhnMKaPBsfSkp+T6eLueVq9a+kVH3Pyvdaz8lhCOZa229OvtazWPulnmnxv0dG06bYCjLvEV0mLF9KAMPXeinLI2apJmv86bPAJPa17H22SuQwiUkwVj4Vi32tF3l5+CJF5OHHUxgTDJwr2Oy2Ae9eXqrBwmvJ8/JShV7edIi0TrB78FJB97If2C0mRztzisUH4LXEe+z3JTjNNt4B5j+UNZmDl20/hW8lr+X/VRwlpyz30cHAlxKQz1tvH1N4xn+sMfmkKbXcJ4fK3bWlw8reQofl7u1WOgcbH+TvrDNBY+TFQQrIBwAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.12,
+                            width: 16,
+                            height: 16,
+                            n: 5
+                        },
+                        projectile: 0.0,
+                        explosion: 3.0,
+                        holy: 3.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Unohdettu"
         },
@@ -1332,7 +5727,21 @@ const icons = {
             id: "boss_ghost_polyp",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA50lEQVR4nGNgIALs3bj5Py45JmIUEW3oXiyC6GIgPrIYE7LkuQvnUTSA2CAxdL6zvy8jTIwR3cbuxqb/RgaGcANhACQG4pfW16HoYcTmP5AhhjauDKKiAmD+69cfGM4f2Q02BNl2sBf2YvEjsmYQALFBYsgughvg7O/LCLIRORxgmmsq6hmkJCTghsAsQLaMCcQA+QtkCLZYSEpIx7AVpA6kHmQ5I7rfQTS6F9DDATkwGUkJRPQYwGnAXrT4BwFY1GLEAgMOzci2gdggjegJDWvAYBPHJ8YCY6A7DQawxT02MbwAX04FADB+pMqTGoo5AAAAAElFTkSuQmCC",
             name: "H\u00e4ive",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 1.5
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/H\u00e4ive"
         },
@@ -1340,7 +5749,39 @@ const icons = {
             id: "islandspirit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsUlEQVR4nGNgoBAwInMK7/7/D2P3KzOiyKVv/gmWm+nLjiKOVTM6H6YZnY0XFOIwAB0wYdOI7hqSbKbYBSAw8C7wmHTqPzKbS4sNp0WMuGy/vvU0itiOPDNGol3QD01EZbGmcLF97zHDBacL0L0BAveuXAXTt2YlMhJ0QfayFxi2KelogzE6wGoACCiLyDG8fvYIjHH5HwRYcNl+4tIRFHFchsANQHY2SLOFng2GIdgAAM7aauj8lIRwAAAAAElFTkSuQmCC",
             name: "Tapion vasalli",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 0.0,
+                    fire: 0.4,
+                    electricity: 0.6,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 0.0
+                },
+                hp: 40.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABeUlEQVR4nOWWsW3DMBBFSc7gEVwaSJEmRQBrDO+R9LF7Zw+PIQMq1KgIkNIjaAcFn7kTvhiSpuQmsA+QRJH3+O9IkZQ1EbPv5+3zy2uFctc29XDcnmN+MY7f/wNnA+BDE9utf5tOl8FQooeEEDgUPUtWd21jMhwCrALWM3imEp2jZ8Pkdmu7iXV6ugzfsSRpUDY6KMTgkeLwlezldWSVwa1rm32Y5Fw9G0lu9fY0BT+/PNiHSYYc6pQVJsVpchqkZ8l6CnZMcomeQ00uOepkBR/9hIXzox+KBWW0geMueRl4Tb5Ea+K7VM/xQo0lF2sDo+tHA8kMjCZSKceB5gZUA71Fz8nsmVKDL89iSuxKW5GmBlrYZ7TNf6L3bA6LUY+CEoMvGK6jBf7HEm1FmuIz0Zqr53gbLgXBCDcGGmO1TgNVTs45HAV9hutlF71Jz6Eks3hVULdfredAQ1HetjVQspoC8Zp80TEx+i7Vsw9x0D/Er5oJhO/lZ/sHOQvPJfjJaW4AAAAASUVORK5CYII=",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 0.3,
+                        explosion: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Tapion vasalli"
         },
@@ -1348,7 +5789,22 @@ const icons = {
             id: "boss_pit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA7UlEQVR4nKVTwQrCMAzNShXHNoSdBh706kXPevTs2c/16N0fEBFEHTjRbW54UVJJGVk7Bz4obdK814Q0zmy5egMAdHsubvAqC7jFJ3V2PR+S8xE43KCv7oo8A9EJI0V+XGO4HHbQBkV612fpPL8GqiHKPNUB1UCbkKS025IIVJq0BczDUc23SfY1nzDVTeSFP9XLJiqobg4icZuLCF4zBnCyTVRnkBh63YRqFgL+hDA519kWmvzVbggeRJdcxCbqDMcTNQscppbx13UGYTT4GYg29yFP4mQhcOctNf08AvHUV+55gVqINrNAZOR8ADj8arwpJMQGAAAAAElFTkSuQmCC",
             name: "Sauvojen tuntija",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.3,
+                    melee: 1.0,
+                    slice: 1,
+                    fire: 0.3,
+                    electricity: 0.3,
+                    ice: 0.3,
+                    radioactive: 1,
+                    drill: 0.0,
+                    holy: 0.4
+                },
+                hp: 32.0,
+                faction: "boss_limbs"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Sauvojen tuntija"
         },
@@ -1356,7 +5812,22 @@ const icons = {
             id: "boss_robot",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXUlEQVR4nJVTv0vDQBT+chZqflBKEuIg0a2Dk4ObuyKuJYOTjv4L4ib0X3ASOov/QN3dRJwcutWgYG2kiEntIJHvNCG9Jmg/yOXdvfd9d+/dO23/4CjFL74mMZ7DgbQdbwX1+rK0p9NP+Y+GL7mPMJoOaio5cx7CRfs181q4agBdD0jiWAoxLhlH0NKzi3TvrifJfmsDJ28GNj8mqMK9peN4dJufRKjk4aBfSjR2t+VH8XN3K09JqOQdxy8lF+1MRDctCA4EF/8iqyKGaUK4q2sIxhquoxCLgoUWNNrv1UFJ76ZyjTzxn52KIqpgrThhGqxDlk6xJmUnIQQHNklRpMwuA3li9PSIy2bezQuhixEEr4Lw1ltzAWXXmp2MHSlT4IPgO+jYyZwIA9U0OGfcqQh/OpGLS7o5I6LuXBSin3Eks4PzW6AIX1fHBmADQcOf6Q8WLJC1ShD2HySZjm/uuqa1TQT+mwAAAABJRU5ErkJggg==",
             name: "Kolmisilm\u00e4n silm\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.0,
+                    melee: 0.0,
+                    slice: 0.6,
+                    fire: 0.0,
+                    electricity: 0.8,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 50.0,
+                faction: "robot"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kolmisilm\u00e4n silm\u00e4"
         },
@@ -1364,7 +5835,22 @@ const icons = {
             id: "fish_giga",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAWklEQVR4nGOUlFZgYGBg+M9AHmBkwqf52LxIMMYD/jPh04yNjQ6YCGkmZAgTA4WAiVibcMkxUd0FpAKmYWiAVdJynIqxyTFR3QW4bMLlMpwuQNaAz1uMlGZnAMeEGj+v9k0aAAAAAElFTkSuQmCC",
             name: "Syv\u00e4olento",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.01,
+                    melee: 0.01,
+                    slice: 0.01,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.0,
+                    holy: 1
+                },
+                hp: 300.0,
+                faction: "eel"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Syv\u00e4olento"
         },
@@ -1372,7 +5858,22 @@ const icons = {
             id: "maggot_tiny",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDklEQVR4nGOscIr9z8DAwPDp2xcGZMDu+ZNBUISbgRBgwqaZFMCET/L9m6+EDfiExfYXH9+Q7gI+Lh4whoGHKz4TdAVIjgmmGdkgCX4RDEPQDYLxWXCZDjIE5BWYIfIRvBiGgORYQAxQOMBcgRwmMEOQXYMOWLAFGDaxLz+/g2kedk4UC1is9UzhAncf3kfRDNOETSNGLNxF0oxsKC7NsFhjwqa5eGUfI4gGaYRpBmlE1gwDjCCiN7zo/9FLpxnWXT8M54MMxQaQNYMCHOwCGWlpuGYYHzlAsQUqSDNIHCMvrCzq/R/eV8yIrBFkOIwN0njr+QO4HNgAkAZ0g2AuAtEgL8H8D9IICh8QBqkBABijoLl/nNC9AAAAAElFTkSuQmCC",
             name: "Limatoukka",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.0,
+                    explosion: 0.5,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.5,
+                    electricity: 0.3,
+                    ice: 0.5,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 240.0,
+                faction: "boss_dragon"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Limatoukka"
         },
@@ -1380,7 +5881,22 @@ const icons = {
             id: "parallel_tentacles",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAqUlEQVR4nGNMdwn/z8DAwMDNzgWiGL7+/Mbw6M1zMJuPi5fhwevHDOhAiFsALPfp22cGJi1+ebDmp+9fMVx/epeBGPDu6wc4m+Xhj9dgBsg0EPjw7QtcAbJCXAaxwJxNrCYYgHmNiYFCwESsv3EawAD1N9kGvCPSz3hd8ABLXJNkACWAaZgYoCAqS5ZmkD4mUM4CARhNLICpB+cFAS4eMAYBYtIFTDNIDwCSlkI1fs4PpQAAAABJRU5ErkJggg==",
             name: "Kolmisilm\u00e4n K\u00e4tyri",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.3,
+                    melee: 1.0,
+                    slice: 1,
+                    fire: 0.3,
+                    electricity: 0.3,
+                    ice: 0.3,
+                    radioactive: 1,
+                    drill: 0.0,
+                    holy: 1
+                },
+                hp: 32.0,
+                faction: "boss_limbs"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kolmisilm\u00e4n K\u00e4tyri"
         },
@@ -1388,7 +5904,38 @@ const icons = {
             id: "minipit",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAzklEQVR4nGNgoBAwYhPMcor8/4nhB4oYHwMHw7R9yzHUM+LSeP/FYxSFihKyWA1iRNcM0/jp22cGPi5eOI1sELIhTDAJZM3YAMggmMuQvccEsx2bZpgmdABSC9KD4gJCmtDlYa5gwqsaXRMWw5lgDElBUaJdAQIwLzPBBDjYOcA0cojjAzALmUAELEpgcQ0D2AwDiYHUibELoLqAj4EDp0ZsBmGkg2n7ljOCDIGnODy2I1uGkbZh8YstYaGnQqwGYDMIpAlEL9m3Hqd6sgEAT/NjgCY388YAAAAASUVORK5CYII=",
             name: "Pienk\u00e4tyri",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.4,
+                    melee: 0.3,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 16.0,
+                faction: "slimes",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    },
+                    orb_purple: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABEUlEQVR4nNVUoQ7CMBR8XZBMLEGBwC7BL9sf8BsoJN+CRPEb+4OReRIsAtQSBPiRVzhy65pQBAmcabd3vd7re60RQpEu2yzJ7by+7KQ6bAzHmcff1Rd5r8mq2LbzdtZZWJq9rKtFR1R5OoJbmr0dXR4nC/iSfqdnXHPT8dCOx/OtZ9KXBMA8mPMlzCZD9AYqxuZGk+uTEluTGqudEiAJAMmgVGyOE7b/EhFJJVgvQhm65sTOsRAczlbjI+L7ToI1XROhepF8Gc0p7mz8KSLtCRyrirEwjhocNDDiDfE5BmA9azFC9AbasGWR2z58iMS9S4Kmzorc9o5vM8XrhmqPJY8yMde9JCF6//HMiEf0Vx7qOxjO+m2Lh1BrAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.07,
+                            width: 10,
+                            height: 10,
+                            n: 4
+                        },
+                        projectile: 1.2
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Pienk\u00e4tyri"
         },
@@ -1396,7 +5943,28 @@ const icons = {
             id: "gate_monster_a",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8klEQVR4nGP8//8/AwxMV1dHcPADRhCRefMmAwuy5lkcvETpTvvx+T/MEBZkzdKyCmAFIgJiDF+/fgazubl5GS5ePgWXA4FZjx/ADWFCNx1ZMwiA2CpKmgxPHz/A6homfJqRgb6uGVZDmIjyNNQleF2gr2sGV/T0xSOsirF5hQldEUiztIQchiG4DGXCpplYQzEMkEbSjE0DNsOZYAxQXIPiHF0Dsqvu3LuOkh4wXIANwDSjG47VgDcfXmFV+P33d4zUiNUAbIaA2KCow6YZBGCZiRGUtkFpHASwpThksbQf4PSCyEwgkHnzJiMDidkZpBEA14d0XNhVkVwAAAAASUVORK5CYII=",
             name: "Veska",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 1.2,
+                    melee: 0.1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 80.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Veska"
         },
@@ -1404,7 +5972,28 @@ const icons = {
             id: "gate_monster_b",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAArElEQVR4nGP8//8/AzFguro6WGHmzZuMyOIsxGo+aerM8ObDKwYGdfX/yIYwMVAImIi1/eLlU+QZAAPSsgoMJBswHc32p48fEG+Aob4Jiu0gzdhcwYIukBCTBabTfnyG247L+QS9gGw7SV4wP70Xbjuy07G5hIkBD8DndJwGmCPZTowXWPDZjq4B7KLbl3G7AD3ekf2Oyzs4XYBsOzan4zKAERQG5jiVQ9Qg8wCFJFrM/tzNowAAAABJRU5ErkJggg==",
             name: "Molari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 1.2,
+                    melee: 0.1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 80.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Molari"
         },
@@ -1412,7 +6001,28 @@ const icons = {
             id: "gate_monster_c",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAt0lEQVR4nGP8//8/AzKYrq4OFsi8eZORgQjAgq75pKkzw5sPrxgY1NX/E2MIEzG2kGzA08cPGLaq6sK9Q7IB0rIK5Lvg4uVTJLmCCV1AX9cMrBnZFYb6JsQbgAxgrkj78fl/QkwWAwiT5AVpIsKCCZsXQACkGWQIzBXmp/f+JysdSBNwBRMxXsDnCiZcXoBpJBQWOBMSTBO6K9DTBUpmQvYCsivwAXQDGEFxjlP17csgVzBmIokBAM5yX8+rinAcAAAAAElFTkSuQmCC",
             name: "Mokke",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 1.2,
+                    melee: 0.1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 80.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Mokke"
         },
@@ -1420,7 +6030,28 @@ const icons = {
             id: "gate_monster_d",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/UlEQVR4nKVTsQrCMBC9BP9CBJc2UymC1Q/oaEdHB9f6QXV18Bc6+gGtU+lUXARxEQf/IHKBK0dqIuKDkt7l7t7LXQJaa/B9RRhq3/4IPNgrpaskBVBKA4DIu24QI+FPyG/sTVtDGUToQhW/KWjaGuJoAffb1RkjsBEu9ufrYZLHk6nxry4t5F0nvApm8bxnR1AyqaD9gYLtZmfW5fnUs1MiFSEVVZIaFYdj4e6BfW5XHyQ3ODuyUhJXgRPBOGcPEJRISXYfOKTN7hod2uTnKqRdEdmwCB2Br+TnMFPgt47L5cHcpn+cyOAxcelcgasHRkGWrbHax7vuQxlE4g2Z0M4ACUBzEgAAAABJRU5ErkJggg==",
             name: "Seula",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.1,
+                    explosion: 1.2,
+                    melee: 0.1,
+                    slice: 1,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
+                    radioactive: 0.0,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 80.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.6
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Seula"
         },
@@ -1428,7 +6059,29 @@ const icons = {
             id: "boss_wizard",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNElEQVR4nGNgIALMnL/xf/fExf+xyTExUAgYkTlZeRX/efkEMRQpKWswfPr0ieH+3asMb1+/YFi5fAEjVhfwYtGMDECahUUlUMRYsCn8/Ok90V5gwSZ4/vw5hhcvnmGInzpzhkFCQor0QNQ3tGRQVNbGKseETdDO3pmhRl8Dzr94/jg4AEEgSUWasBdgoEWYh+GSSyA8Fmr07zCc5RVnIMqAWxqmDGpILgCBG0JSDOxo6pgYKAwDFvTow5YWYC748vkTAzsHF24XWJ86ADYElg5A3kB3ASgxYXVBS+r8//cZGBg437xiMLq3nuGomQNYHOQimAtAwIWDkWElkgHgNA3SjGzq+6+vwLQG+w2GPT/+g5MvyGaQ5hs/IdHbu6wcrJcRm2ZBbjE4G2YIsmaYfM3sREYAGHJ2+XahuDgAAAAASUVORK5CYII=",
             name: "Mestarien mestari",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.4,
+                    explosion: 0.1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 0.4,
+                    electricity: 0.2,
+                    ice: 0.1,
+                    radioactive: 1,
+                    drill: 0.7,
+                    holy: 1.2
+                },
+                hp: 60.0,
+                faction: "mage",
+                attacks: {
+                    melee: {
+                        min: 1.5,
+                        max: 2.6
+                    },
+                    debuff_init: {}
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Mestarien mestari"
         },
@@ -1436,7 +6089,22 @@ const icons = {
             id: "boss_centipede",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABEUlEQVR4nJ2SPQvCQAyG03IFlYq1QlVwcHSTrg4O/hB/gj/R0d3BtYgIfgwVUdqig5KTt16vVwcD5T7S90lyiTWdL16k2SXakN8bUJW9Gq18L3SnlVylOD7u5frIUrqcD7m/HfSJspQcv1cGWMk137teh067qBQdsDaRhAiTWI2a3r73bPXmJ332d2v1cgmIqgthfA8IBxJqdDXliT8sCFfx1gixTeLQ4QqJZu5YfiYgyrCRCshIHUJ1b4LY3C4mVdWsQ0oA1+vQv8YzYVc5l/f1zzNMmC75xbleXYROoAOFQSIDhI1BagshliPNb4CZZgecJpAuhk6+QTAKCz/pMPWsigtvAMgzPsqVW6unqwphb+fQeh/vLI8EAAAAAElFTkSuQmCC",
             name: "Kolmisilm\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.3,
+                    explosion: 0.2,
+                    melee: 2.0,
+                    slice: 1.0,
+                    fire: 0.1,
+                    electricity: 0.1,
+                    ice: 0.1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 0.2
+                },
+                hp: 56.5,
+                faction: "slimes"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kolmisilm\u00e4"
         },
@@ -1444,7 +6112,32 @@ const icons = {
             id: "ultimate_killer",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATklEQVR4nGNgGAWjgAAwn5L3H4TxqWHCpxkbmygDzKEafq84zQCjcRnChM95rBGmKDTJBjBAbYe5BBtgxCWB7uSTOZNwqiVoAMmBSAoAAIdfIKjaubsqAAAAAElFTkSuQmCC",
             name: "Kauhuhirvi\u00f6",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 0.0
+                },
+                hp: 5.5,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.1,
+                        max: 0.2
+                    },
+                    ultimate_killer_megabomb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGOw0JH9DwACogGBfJaKZgAAAABJRU5ErkJggg==",
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kauhuhirvi\u00f6"
         },
@@ -1452,7 +6145,32 @@ const icons = {
             id: "friend",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAhUlEQVR4nGM0n5LHwMDA8J+BBPDv0TtGGJuJVM1gTXJC/5ENIAvADGFioACc7lqC3YDfK06DMSFx8yl5/ylyAQgwgkyhxAAmSl3ANOAGsOCTRA5x1ghT0g1gxaEJBk7mTGKkyAumdQnkh8G/V5/AGQpkADxnkaoZBLCFAS4DETlQjA8uCgAv9CX48oM8rAAAAABJRU5ErkJggg==",
             name: "Toveri",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 0.2,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 30.5,
+                faction: "orcs",
+                attacks: {
+                    melee: {
+                        min: 0.1,
+                        max: 0.2
+                    },
+                    ultimate_killer_megabomb: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGOw0JH9DwACogGBfJaKZgAAAABJRU5ErkJggg==",
+                        projectile: 0.0
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Toveri"
         },
@@ -1460,7 +6178,28 @@ const icons = {
             id: "boss_sky",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2klEQVR4nMVTOwvCMBC+C12EKp2qnVwquHaRbv52t+DSVdDFqepUSsAxcuZhHi0IFTwI3OX4HnchKKWEKcEmoX9BkJhkX+/c+7G50CQHfowdZOnCA+vaIw7vmFt0oh8EU16s5t/tIItVYbvJYV0soa5KT8TbAQT2Zql8gwBy4M0lGsXsg4VKdCgUWAUpmxFCh4lbDCjZeAr7AOMEmWY3LoZIqceb3tbM6WEnVOPa3i2Y7NNxCeuqxDEHSFvuxMfy6fzwHLjgiEA7QFpYe1PPZVwRkNTDkfDvv/EFC/lO4L7Pmh8AAAAASUVORK5CYII=",
             name: "Kivi",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.5,
+                    holy: 1
+                },
+                hp: 10.0,
+                faction: "ghost",
+                attacks: {
+                    melee: {
+                        min: 0.2,
+                        max: 0.4
+                    }
+                }
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Kivi"
         },
@@ -1468,7 +6207,22 @@ const icons = {
             id: "meatmaggot",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR4nN2S0Q3DIAxET5mFBdiBYViAJWAk2IEBGMbVVbKVEtLSz/ZJyNi6sxEA/Dc5Z9kWi8hTHGOUs1lzUmuVVYSaGVnkOsNmqlGT5i9QyIkz2nBubCdQZpFzzoSzmXDYYW4ApRT03i0fY9g+hIAVh05mTCnBe4/W2kW4qn31CrJzB+/+wdYr4AO3/+C3eQDQBuUN4zzYdAAAAABJRU5ErkJggg==",
             name: "M\u00e4t\u00e4ry\u00f6mij\u00e4",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 0.5,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1.2,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 0.4,
+                    holy: 1
+                },
+                hp: 3.5,
+                faction: "worm"
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/M\u00e4t\u00e4ry\u00f6mij\u00e4"
         },
@@ -1476,7 +6230,23 @@ const icons = {
             id: "mimic_potion",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAz0lEQVR4nGP8//8/AyWAiSLd1DCABZ/kok89MP8xbp4YwrC6VgG3AQEBASDFjFzZ31EUeJi7DvIwYMIhDvIO2P87Tu4G81kt0v9H7XbHb8CGDRtgmhmWue7EarBV5HScBjBCAxKsGZttICD2fed/mLqAgABUF3h1ZDEy4AHHu68yvOJ0Z0S2jAVZwbaKaQwXv11lYMAfc9i9sAHJ/7icDwLPb+6BqQXTGAkJZgg2oM9lwsAg9xcUBnBvEJUOoFHJcPbVKRCFYgnWvAAKLGIBAPEFTWWw5wVtAAAAAElFTkSuQmCC",
             name: "Henkev\u00e4 potu",
-            description: null,
+            description: {
+                damages: {
+                    projectile: 1,
+                    explosion: 1,
+                    melee: 1,
+                    slice: 1,
+                    fire: 1,
+                    electricity: 1,
+                    ice: 1,
+                    radioactive: 1,
+                    drill: 1,
+                    holy: 1
+                },
+                hp: 1.0,
+                faction: "ghost",
+                attacks: {}
+            },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Henkev\u00e4 potu",
         }
@@ -5977,6 +10747,208 @@ const icons = {
             description: "Either this spell is missing from onlywands or it is modded and onlywands doesn't support this mod yet",
             bgImage: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAk0lEQVR4nO2UQQqEMAxFf8XTNNCLFHobd4IWuvM2ghcptNeJxJU6OEwdERe+VRL4b5HFV8yMK6kutQGo10tLTQ+gO+HxIQ39RujInpYZaMlthXKMyDKqMU0/2xxZvu+He1pqcERIQ7kwHIS+URUnXuGeV/g/9Xox0D4isyNb6vEfwoi8tIaBLjJJLiIvTSOoxzf2DL5QJpt3Q1Y+AAAAAElFTkSuQmCC",
             wiki_url: "https://noita.wiki.gg/wiki/Spells"
+        },
+        {
+            id: "projectile_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAkklEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUysDCgAWQFyICJAQ/YGNOOqbBCvQFFEkT7L6mE8xlBnsFlHUhzx80GBjk1YwbG////M4QULsOpGKRoTX8UI143YngGpAOkE5dpYDeCrIYBkBNggQ8KZJgikAAAl9M+TLo9xLAAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "explosion_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA6UlEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dBfPXBm9laGOYw8AE48AASAFM0bb2dwzBa73BbLBCGAckMU98IZz9/cxxuAFghSAAUgCSkCjwZTi1PgfMBhkA08gEcigIJL2MZ/h45A2DiEYdmM9pYgkXB6v5//8/A8jnpl5F/19fTADj/z/v/X80Vx3MBsmB1LDArJ7tdpjBq9IW6lNPiLvXMjDIqUHkwQrX9EcxhhQy/GdggPgW5AQQkFMzBsuB2IwgY+FhWLgMHvggd8EUgQQAbtJ2FNtq9aoAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "melee_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAArklEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUyMDGgAZACmKJTW3vh4hgKYaBocy+DmXcxdoXFtu/givp8EYpAgAXkUBjoPSzEcKjhN4MdmiKQGqY1/VGMcmrGYIEw7VcMdg2scJNBACQHUoNi9aqrYnCT0QFYIbKpyABmGojN+P8/PFwZQgqXwQMf5C6YIpAAAL+tQ8yeECwTAAAAAElFTkSuQmCC",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "slice_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAvElEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUyMDGgAVdjAYb6dDt0YQYMhSBw7MwlhuRIZ9wKQZIPn7xC4c/tLYQoBDkUWdGrO0cY5i7fi2IaSA3Tmv4oRjk1YxQJF1tdOLtx5iEGkBq41SBT9hy+zCCmYsMgLyMGF0NxI7KpIMUgICEqyQASA8mB+Iz//8PDlSGkcBk88EHugikCCQAAZWlJXkCF/MgAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "fire_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAsklEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUysMB5DAwMG1R3MwTcYsAKmJA5gkZ6cA3oAMVEEDgY/pKBgUGPgeE2mokghyIDTncnMEY2FaSGaU1/FKOcmjFY4P25SxjOAMmB1KC4MeC2K8Oz9gkM33fuY7BfKY5iE+P//5DgCilc9h85SJBNQ1EIUwwLfJC7YIpAAgDyPkRBAaVSewAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "electricity_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA2ElEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUyMIEYChHhDEWbexlgCkJ6o8DsU1t7wXIgwJjRcfg/zESQ4j7fYrgiM28IG24izLR1S0+B2SBFK/5BrIWZyADyjKlX0f/QRSf/L//7HwxANEgMRoPUMPz//x+sGFkSpAmmGSQHUgO2GgRgbgPRq2LNwOwHK1bCfc4IUg0OlsJl/5mMVBiCos3gmuTUjBnW9EeBwxWuEKYYFvigQIYpAgkAAImxguhhj8mZAAAAAElFTkSuQmCC",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "ice_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAwUlEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUysIAYM1e0MVy494sBGay85sgQrsUDZp/acZGBCVnSQIkNqugLWJGBEhvD9KoGsBhYYXpEFYpp7T5CYBpZnAnkULAnoDpBpoAUwEyHeYZpTX8Uo5yaMVwQZoohLzuYBsmB1KC4ESYJAmbexSjOYfz/HxJcIYXL/iMHCbJpKAphimGBD3IXTBFIAACBk0fE1uEnuwAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "radioactive_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAy0lEQVR4nGMMLlj6X1RCjgEGppfbMILozM4j/2Fir188YmABKTp7aD1cYciLR2AFj26dhYsZ2wUysMB5IFMavzBoqXxhyI2+yYAOmJAVHd/4mEFPIJhh8lJ13AofXn/L8Oj6e4b82liGa3cQ1sIVghwKAttWyDNY+EszWPrLMqzsuAS2AWYySA3j////GUIKl/1HdjwIeEU8ZJDXFGbYutSeYU1/FCPcamQFMBum1/PAxcEmgoMFi6lyasZg01AUwhTDAh/kLpgikAAAcYlY89P8pqwAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "drill_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAKMGlDQ1BJQ0MgUHJvZmlsZQAAeJydlndUVNcWh8+9d3qhzTAUKUPvvQ0gvTep0kRhmBlgKAMOMzSxIaICEUVEBBVBgiIGjIYisSKKhYBgwR6QIKDEYBRRUXkzslZ05eW9l5ffH2d9a5+99z1n733WugCQvP25vHRYCoA0noAf4uVKj4yKpmP7AQzwAAPMAGCyMjMCQj3DgEg+Hm70TJET+CIIgDd3xCsAN428g+h08P9JmpXBF4jSBInYgs3JZIm4UMSp2YIMsX1GxNT4FDHDKDHzRQcUsbyYExfZ8LPPIjuLmZ3GY4tYfOYMdhpbzD0i3pol5IgY8RdxURaXky3iWyLWTBWmcUX8VhybxmFmAoAiie0CDitJxKYiJvHDQtxEvBQAHCnxK47/igWcHIH4Um7pGbl8bmKSgK7L0qOb2doy6N6c7FSOQGAUxGSlMPlsult6WgaTlwvA4p0/S0ZcW7qoyNZmttbWRubGZl8V6r9u/k2Je7tIr4I/9wyi9X2x/ZVfej0AjFlRbXZ8scXvBaBjMwDy97/YNA8CICnqW/vAV/ehieclSSDIsDMxyc7ONuZyWMbigv6h/+nwN/TV94zF6f4oD92dk8AUpgro4rqx0lPThXx6ZgaTxaEb/XmI/3HgX5/DMISTwOFzeKKIcNGUcXmJonbz2FwBN51H5/L+UxP/YdiftDjXIlEaPgFqrDGQGqAC5Nc+gKIQARJzQLQD/dE3f3w4EL+8CNWJxbn/LOjfs8Jl4iWTm/g5zi0kjM4S8rMW98TPEqABAUgCKlAAKkAD6AIjYA5sgD1wBh7AFwSCMBAFVgEWSAJpgA+yQT7YCIpACdgBdoNqUAsaQBNoASdABzgNLoDL4Dq4AW6DB2AEjIPnYAa8AfMQBGEhMkSBFCBVSAsygMwhBuQIeUD+UAgUBcVBiRAPEkL50CaoBCqHqqE6qAn6HjoFXYCuQoPQPWgUmoJ+h97DCEyCqbAyrA2bwAzYBfaDw+CVcCK8Gs6DC+HtcBVcDx+D2+EL8HX4NjwCP4dnEYAQERqihhghDMQNCUSikQSEj6xDipFKpB5pQbqQXuQmMoJMI+9QGBQFRUcZoexR3qjlKBZqNWodqhRVjTqCakf1oG6iRlEzqE9oMloJbYC2Q/ugI9GJ6Gx0EboS3YhuQ19C30aPo99gMBgaRgdjg/HGRGGSMWswpZj9mFbMecwgZgwzi8ViFbAGWAdsIJaJFWCLsHuxx7DnsEPYcexbHBGnijPHeeKicTxcAa4SdxR3FjeEm8DN46XwWng7fCCejc/Fl+Eb8F34Afw4fp4gTdAhOBDCCMmEjYQqQgvhEuEh4RWRSFQn2hKDiVziBmIV8TjxCnGU+I4kQ9InuZFiSELSdtJh0nnSPdIrMpmsTXYmR5MF5O3kJvJF8mPyWwmKhLGEjwRbYr1EjUS7xJDEC0m8pJaki+QqyTzJSsmTkgOS01J4KW0pNymm1DqpGqlTUsNSs9IUaTPpQOk06VLpo9JXpSdlsDLaMh4ybJlCmUMyF2XGKAhFg+JGYVE2URoolyjjVAxVh+pDTaaWUL+j9lNnZGVkLWXDZXNka2TPyI7QEJo2zYeWSiujnaDdob2XU5ZzkePIbZNrkRuSm5NfIu8sz5Evlm+Vvy3/XoGu4KGQorBToUPhkSJKUV8xWDFb8YDiJcXpJdQl9ktYS4qXnFhyXwlW0lcKUVqjdEipT2lWWUXZSzlDea/yReVpFZqKs0qySoXKWZUpVYqqoypXtUL1nOozuizdhZ5Kr6L30GfUlNS81YRqdWr9avPqOurL1QvUW9UfaRA0GBoJGhUa3RozmqqaAZr5ms2a97XwWgytJK09Wr1ac9o62hHaW7Q7tCd15HV8dPJ0mnUe6pJ1nXRX69br3tLD6DH0UvT2693Qh/Wt9JP0a/QHDGADawOuwX6DQUO0oa0hz7DecNiIZORilGXUbDRqTDP2Ny4w7jB+YaJpEm2y06TX5JOplWmqaYPpAzMZM1+zArMus9/N9c1Z5jXmtyzIFp4W6y06LV5aGlhyLA9Y3rWiWAVYbbHqtvpobWPNt26xnrLRtImz2WczzKAyghiljCu2aFtX2/W2p23f2VnbCexO2P1mb2SfYn/UfnKpzlLO0oalYw7qDkyHOocRR7pjnONBxxEnNSemU73TE2cNZ7Zzo/OEi55Lsssxlxeupq581zbXOTc7t7Vu590Rdy/3Yvd+DxmP5R7VHo891T0TPZs9Z7ysvNZ4nfdGe/t57/Qe9lH2Yfk0+cz42viu9e3xI/mF+lX7PfHX9+f7dwXAAb4BuwIeLtNaxlvWEQgCfQJ3BT4K0glaHfRjMCY4KLgm+GmIWUh+SG8oJTQ29GjomzDXsLKwB8t1lwuXd4dLhseEN4XPRbhHlEeMRJpEro28HqUYxY3qjMZGh0c3Rs+u8Fixe8V4jFVMUcydlTorc1ZeXaW4KnXVmVjJWGbsyTh0XETc0bgPzEBmPXM23id+X/wMy421h/Wc7cyuYE9xHDjlnIkEh4TyhMlEh8RdiVNJTkmVSdNcN24192Wyd3Jt8lxKYMrhlIXUiNTWNFxaXNopngwvhdeTrpKekz6YYZBRlDGy2m717tUzfD9+YyaUuTKzU0AV/Uz1CXWFm4WjWY5ZNVlvs8OzT+ZI5/By+nL1c7flTuR55n27BrWGtaY7Xy1/Y/7oWpe1deugdfHrutdrrC9cP77Ba8ORjYSNKRt/KjAtKC94vSliU1ehcuGGwrHNXpubiySK+EXDW+y31G5FbeVu7d9msW3vtk/F7OJrJaYllSUfSlml174x+6bqm4XtCdv7y6zLDuzA7ODtuLPTaeeRcunyvPKxXQG72ivoFcUVr3fH7r5aaVlZu4ewR7hnpMq/qnOv5t4dez9UJ1XfrnGtad2ntG/bvrn97P1DB5wPtNQq15bUvj/IPXi3zquuvV67vvIQ5lDWoacN4Q293zK+bWpUbCxp/HiYd3jkSMiRniabpqajSkfLmuFmYfPUsZhjN75z/66zxailrpXWWnIcHBcef/Z93Pd3Tvid6D7JONnyg9YP+9oobcXtUHtu+0xHUsdIZ1Tn4CnfU91d9l1tPxr/ePi02umaM7Jnys4SzhaeXTiXd272fMb56QuJF8a6Y7sfXIy8eKsnuKf/kt+lK5c9L1/sdek9d8XhyumrdldPXWNc67hufb29z6qv7Sern9r6rfvbB2wGOm/Y3ugaXDp4dshp6MJN95uXb/ncun572e3BO8vv3B2OGR65y747eS/13sv7WffnH2x4iH5Y/EjqUeVjpcf1P+v93DpiPXJm1H2070nokwdjrLHnv2T+8mG88Cn5aeWE6kTTpPnk6SnPqRvPVjwbf57xfH666FfpX/e90H3xw2/Ov/XNRM6Mv+S/XPi99JXCq8OvLV93zwbNPn6T9mZ+rvitwtsj7xjvet9HvJ+Yz/6A/VD1Ue9j1ye/Tw8X0hYW/gUDmPP8uaxzGQAAAKZJREFUeJxjDC5Y+l9UQo4BBqaX2zCC6MzOI/9hYq9fPGJgASk6e2g9Q13wM4amtVIMIS8egRU8unUWrtnYLpCBCcbZd/Q2mE7Q3YyiCAbgCp2sVVE0gGxABnCFhDQwgRyKLIGuAeRukBrG////M4QULvsPchtIUPzHBoaXHAFwDXJqxgxr+qMYMaxGVoQMwCaCAMhUdN/CTENRCFMMC3yQu2CKQAIA7ONQ62nz2DEAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "holy_resistance",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAKMGlDQ1BJQ0MgUHJvZmlsZQAAeJydlndUVNcWh8+9d3qhzTAUKUPvvQ0gvTep0kRhmBlgKAMOMzSxIaICEUVEBBVBgiIGjIYisSKKhYBgwR6QIKDEYBRRUXkzslZ05eW9l5ffH2d9a5+99z1n733WugCQvP25vHRYCoA0noAf4uVKj4yKpmP7AQzwAAPMAGCyMjMCQj3DgEg+Hm70TJET+CIIgDd3xCsAN428g+h08P9JmpXBF4jSBInYgs3JZIm4UMSp2YIMsX1GxNT4FDHDKDHzRQcUsbyYExfZ8LPPIjuLmZ3GY4tYfOYMdhpbzD0i3pol5IgY8RdxURaXky3iWyLWTBWmcUX8VhybxmFmAoAiie0CDitJxKYiJvHDQtxEvBQAHCnxK47/igWcHIH4Um7pGbl8bmKSgK7L0qOb2doy6N6c7FSOQGAUxGSlMPlsult6WgaTlwvA4p0/S0ZcW7qoyNZmttbWRubGZl8V6r9u/k2Je7tIr4I/9wyi9X2x/ZVfej0AjFlRbXZ8scXvBaBjMwDy97/YNA8CICnqW/vAV/ehieclSSDIsDMxyc7ONuZyWMbigv6h/+nwN/TV94zF6f4oD92dk8AUpgro4rqx0lPThXx6ZgaTxaEb/XmI/3HgX5/DMISTwOFzeKKIcNGUcXmJonbz2FwBN51H5/L+UxP/YdiftDjXIlEaPgFqrDGQGqAC5Nc+gKIQARJzQLQD/dE3f3w4EL+8CNWJxbn/LOjfs8Jl4iWTm/g5zi0kjM4S8rMW98TPEqABAUgCKlAAKkAD6AIjYA5sgD1wBh7AFwSCMBAFVgEWSAJpgA+yQT7YCIpACdgBdoNqUAsaQBNoASdABzgNLoDL4Dq4AW6DB2AEjIPnYAa8AfMQBGEhMkSBFCBVSAsygMwhBuQIeUD+UAgUBcVBiRAPEkL50CaoBCqHqqE6qAn6HjoFXYCuQoPQPWgUmoJ+h97DCEyCqbAyrA2bwAzYBfaDw+CVcCK8Gs6DC+HtcBVcDx+D2+EL8HX4NjwCP4dnEYAQERqihhghDMQNCUSikQSEj6xDipFKpB5pQbqQXuQmMoJMI+9QGBQFRUcZoexR3qjlKBZqNWodqhRVjTqCakf1oG6iRlEzqE9oMloJbYC2Q/ugI9GJ6Gx0EboS3YhuQ19C30aPo99gMBgaRgdjg/HGRGGSMWswpZj9mFbMecwgZgwzi8ViFbAGWAdsIJaJFWCLsHuxx7DnsEPYcexbHBGnijPHeeKicTxcAa4SdxR3FjeEm8DN46XwWng7fCCejc/Fl+Eb8F34Afw4fp4gTdAhOBDCCMmEjYQqQgvhEuEh4RWRSFQn2hKDiVziBmIV8TjxCnGU+I4kQ9InuZFiSELSdtJh0nnSPdIrMpmsTXYmR5MF5O3kJvJF8mPyWwmKhLGEjwRbYr1EjUS7xJDEC0m8pJaki+QqyTzJSsmTkgOS01J4KW0pNymm1DqpGqlTUsNSs9IUaTPpQOk06VLpo9JXpSdlsDLaMh4ybJlCmUMyF2XGKAhFg+JGYVE2URoolyjjVAxVh+pDTaaWUL+j9lNnZGVkLWXDZXNka2TPyI7QEJo2zYeWSiujnaDdob2XU5ZzkePIbZNrkRuSm5NfIu8sz5Evlm+Vvy3/XoGu4KGQorBToUPhkSJKUV8xWDFb8YDiJcXpJdQl9ktYS4qXnFhyXwlW0lcKUVqjdEipT2lWWUXZSzlDea/yReVpFZqKs0qySoXKWZUpVYqqoypXtUL1nOozuizdhZ5Kr6L30GfUlNS81YRqdWr9avPqOurL1QvUW9UfaRA0GBoJGhUa3RozmqqaAZr5ms2a97XwWgytJK09Wr1ac9o62hHaW7Q7tCd15HV8dPJ0mnUe6pJ1nXRX69br3tLD6DH0UvT2693Qh/Wt9JP0a/QHDGADawOuwX6DQUO0oa0hz7DecNiIZORilGXUbDRqTDP2Ny4w7jB+YaJpEm2y06TX5JOplWmqaYPpAzMZM1+zArMus9/N9c1Z5jXmtyzIFp4W6y06LV5aGlhyLA9Y3rWiWAVYbbHqtvpobWPNt26xnrLRtImz2WczzKAyghiljCu2aFtX2/W2p23f2VnbCexO2P1mb2SfYn/UfnKpzlLO0oalYw7qDkyHOocRR7pjnONBxxEnNSemU73TE2cNZ7Zzo/OEi55Lsssxlxeupq581zbXOTc7t7Vu590Rdy/3Yvd+DxmP5R7VHo891T0TPZs9Z7ysvNZ4nfdGe/t57/Qe9lH2Yfk0+cz42viu9e3xI/mF+lX7PfHX9+f7dwXAAb4BuwIeLtNaxlvWEQgCfQJ3BT4K0glaHfRjMCY4KLgm+GmIWUh+SG8oJTQ29GjomzDXsLKwB8t1lwuXd4dLhseEN4XPRbhHlEeMRJpEro28HqUYxY3qjMZGh0c3Rs+u8Fixe8V4jFVMUcydlTorc1ZeXaW4KnXVmVjJWGbsyTh0XETc0bgPzEBmPXM23id+X/wMy421h/Wc7cyuYE9xHDjlnIkEh4TyhMlEh8RdiVNJTkmVSdNcN24192Wyd3Jt8lxKYMrhlIXUiNTWNFxaXNopngwvhdeTrpKekz6YYZBRlDGy2m717tUzfD9+YyaUuTKzU0AV/Uz1CXWFm4WjWY5ZNVlvs8OzT+ZI5/By+nL1c7flTuR55n27BrWGtaY7Xy1/Y/7oWpe1deugdfHrutdrrC9cP77Ba8ORjYSNKRt/KjAtKC94vSliU1ehcuGGwrHNXpubiySK+EXDW+y31G5FbeVu7d9msW3vtk/F7OJrJaYllSUfSlml174x+6bqm4XtCdv7y6zLDuzA7ODtuLPTaeeRcunyvPKxXQG72ivoFcUVr3fH7r5aaVlZu4ewR7hnpMq/qnOv5t4dez9UJ1XfrnGtad2ntG/bvrn97P1DB5wPtNQq15bUvj/IPXi3zquuvV67vvIQ5lDWoacN4Q293zK+bWpUbCxp/HiYd3jkSMiRniabpqajSkfLmuFmYfPUsZhjN75z/66zxailrpXWWnIcHBcef/Z93Pd3Tvid6D7JONnyg9YP+9oobcXtUHtu+0xHUsdIZ1Tn4CnfU91d9l1tPxr/ePi02umaM7Jnys4SzhaeXTiXd272fMb56QuJF8a6Y7sfXIy8eKsnuKf/kt+lK5c9L1/sdek9d8XhyumrdldPXWNc67hufb29z6qv7Sern9r6rfvbB2wGOm/Y3ugaXDp4dshp6MJN95uXb/ncun572e3BO8vv3B2OGR65y747eS/13sv7WffnH2x4iH5Y/EjqUeVjpcf1P+v93DpiPXJm1H2070nokwdjrLHnv2T+8mG88Cn5aeWE6kTTpPnk6SnPqRvPVjwbf57xfH666FfpX/e90H3xw2/Ov/XNRM6Mv+S/XPi99JXCq8OvLV93zwbNPn6T9mZ+rvitwtsj7xjvet9HvJ+Yz/6A/VD1Ue9j1ye/Tw8X0hYW/gUDmPP8uaxzGQAAAK5JREFUeJxjDC5Y+l9UQo4BBqaX2zCC6MzOI/9hYq9fPGJgASk6e2g9XGHIi0dgBY9unYWLGdsFMrAwoIE1tffBtFksqjgTjHGq7AZUwTswRhZDUWjWpQGXhGuCioEVghx6arEQRNFiIbAkCCOLgdQw/v//nyGkcNl/mOPRTZNTM2ZY0x/FiOlGqInobgSbCA4WqKkwK0EeApsWsJSRwX4rQiFMMSzwQe4CWQmTBACVblpnk16L2AAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "projectile_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR4nGNgoCr4////fxDNBGPgonHqJB8AADz2F+ul/WRbAAAAAElFTkSuQmCC",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "explosion_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAIAAABLMMCEAAAABnRSTlMAAAAAAABupgeRAAAAKElEQVR4nGP4//8/AxigMyAUMsmIppCRESTCCOcjA+xqsZuLYTWYAQCsWSzdO1YMCwAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "melee_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAIAAABLMMCEAAAABnRSTlMAAAAAAABupgeRAAAAMklEQVR4nG2MQQ4AIAzCqP//M0ZZdpj2QMjWIEm2Ry59yXNArlAl1IJtLuW+I8BxW2k2U7IYAANRKKwAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "slice_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAMklEQVR4nGNggIL/UADjgwATMgemCMZmRBdA0YmikpERrBirsegK4SqxmQDXiW4kSBAALMIb/04StjoAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "fire_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAIAAABLMMCEAAAABnRSTlMAAAAAAABupgeRAAAALUlEQVR4nGNgAIP///9DGBDAhMyBy4FEIRxk5Shq4XLootjVIkQZGRnhfAgbAE+BDwR0yfEtAAAAAElFTkSuQmCC",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "electricity_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAIAAABLMMCEAAAABnRSTlMAAAAAAABupgeRAAAAJUlEQVR4nGNgQAL///+HMJgwhVBUIYsyYqpiZAQJYleOQwjTKgCXoR3pvW+irQAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "ice_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAKUlEQVR4nGP8////fwYcgAmXBCMjIyNYEsQgSieyQiZcujB04lSIzdUAdt0IGBc+koYAAAAASUVORK5CYII=",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "healing_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAKElEQVR4nGNkgIL/////h7EZGRkZQTQTTAAbYETWgQ7w6sRvLNkOAgD9PgwIxWe5fwAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "drill_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAK0lEQVR4nGP4////fwYcgAnGwKYILolNEYYksiKckoyMjIwYkiBBrHagAwB38BP/bQJf+wAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "holy_damage",
+            image: "iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAK0lEQVR4nGNggIL/////R6ZRBNEBSJwRmyJGRka4OIZuGB+/Tnx2YnCQBQEalC/bkH5evwAAAABJRU5ErkJggg==",
+            name: null,
+            description: null,
+            bgImage: null,
+            wiki_url: null
+        },
+        {
+            id: "sampo",
+            image: "iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABAElEQVR4nL1TSwrCMBBtiqdQXIonKCjYG7jyEO679AS9g4dw5d5FBYWcQNxV7DUiL+SVaUkTReiDwCSdefPm0yQZC6fGGJyY3yTmUJ7v/2fPjjd7x4EdUtlRVD1eSb6cW4LDdtW+AfbeGEOFfCdU5+ZUSJLr823tzWJmkwAg0/u1ChJRMkm0C0ACSbabqk5s2lfTJykutcGBjTeWJHvWKoIKyGVJsJEdyJ0CEoBM+sGGulQ69RsYQhWK8Y27cKUNfR8EgnzOmSAhcXCzOW70BvWXjsy3EhLKN3o2m40mSEJSuQLezcaoNdS53QHkTmHDfxmMBXoTbew3fz8VQeEo+AAvhfBG8IgpZwAAAABJRU5ErkJggg==",
+            name: {
+                $item_mcguffin_0: "The Salt",
+                $item_mcguffin_1: "Our Matter",
+                $item_mcguffin_2: "Hermes bird",
+                $item_mcguffin_3: "White Eagle",
+                $item_mcguffin_4: "The Green Lion",
+                $item_mcguffin_5: "Red Lion",
+                $item_mcguffin_6: "Celestial Ruby",
+                $item_mcguffin_7: "Magnesia",
+                $item_mcguffin_8: "The Vessel of the Philosophers",
+                $item_mcguffin_9: "Our Blessed Stone",
+                $item_mcguffin_10: "Magnum Opus",
+                $item_mcguffin_11: "Philosopher's Stone",
+                $item_mcguffin_12: "Sampo",
+                $item_mcguffin_13: "True Knowledge",
+                $item_mcguffin_14: "Truest of Knowledge",
+                $item_mcguffin_33: "Amulet of Yendor"
+            },
+            description: {
+                $itemdesc_mcguffin_0: "This has been said to complete the Work",
+                $itemdesc_mcguffin_1: "This has been said to complete the Work",
+                $itemdesc_mcguffin_2: "This has been said to complete the Work",
+                $itemdesc_mcguffin_3: "This has been said to complete the Work",
+                $itemdesc_mcguffin_4: "This has been said to complete the Work",
+                $itemdesc_mcguffin_5: "This has been said to complete the Work",
+                $itemdesc_mcguffin_6: "This has been said to complete the Work",
+                $itemdesc_mcguffin_7: "This has been said to complete the Work",
+                $itemdesc_mcguffin_8: "This has been said to complete the Work",
+                $itemdesc_mcguffin_9: "This has been said to complete the Work",
+                $itemdesc_mcguffin_10: "This has been said to complete the Work",
+                $itemdesc_mcguffin_11: "This has been said to complete the Work",
+                $itemdesc_mcguffin_12: "This has been said to complete the Work",
+                $itemdesc_mcguffin_13: "You have completed the Work",
+                $itemdesc_mcguffin_14: "Was it worth it?",
+                $itemdesc_mcguffin_33: "It is said to possess powers which mere mortals can scarcely comprehend, let alone utilize"
+            },
+            bgImage: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAk0lEQVR4nO2UQQqEMAxFf8XTNNCLFHobd4IWuvM2ghcptNeJxJU6OEwdERe+VRL4b5HFV8yMK6kutQGo10tLTQ+gO+HxIQ39RujInpYZaMlthXKMyDKqMU0/2xxZvu+He1pqcERIQ7kwHIS+URUnXuGeV/g/9Xox0D4isyNb6vEfwoi8tIaBLjJJLiIvTSOoxzf2DL5QJpt3Q1Y+AAAAAElFTkSuQmCC",
+            wiki_url: "https://noita.wiki.gg/wiki/Sampo"
         },
         {
             id: "$perk_respawn_spent",

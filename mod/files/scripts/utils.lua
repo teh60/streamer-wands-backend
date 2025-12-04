@@ -4,6 +4,8 @@ dofile_once("data/scripts/gun/gun_actions.lua")
 dofile_once("mods/streamer_wands/files/scripts/enemyNames.lua")
 dofile_once("mods/streamer_wands/files/scripts/enemyNamesApoth.lua")
 dofile_once("mods/streamer_wands/files/lib/engine_stats.lua")
+enable_streaks()
+
 
 function get_player()
     local player = EntityGetWithTag("player_unit") or nil
@@ -281,8 +283,12 @@ function get_inventory_spells()
             end
         end
         if action_id == nil then
-            action_id = "sampo"
             charges = -1
+            local name = ComponentGetValue2(item_comp, "item_name")
+            local desc = ComponentGetValue2(item_comp, "ui_description")
+            local amt = "$-1"
+            local spr = ComponentGetValue2(item_comp, "ui_sprite")
+            action_id = spr .. name .. desc .. amt
         end
 
         table.insert(inventory, action_id .. "_#" .. charges)
@@ -352,7 +358,7 @@ function get_inventory_items()
     return inventory
 end
 
-function get_run_info(ngpCheck, seedCheck)
+function get_run_info(ngpCheck, seedCheck, orbCheck)
     local versions = {}
     local modList = ModGetActiveModIDs()
     versions["mods"] = modList
@@ -366,8 +372,10 @@ function get_run_info(ngpCheck, seedCheck)
     versions["start"] = GlobalsGetValue("start_time", "")
     versions["playtime"] = tonumber(StatsGetValue("playtime"))
     versions["endStats"] = get_stats()
-    local world_state = get_world_state()
-    versions["orbs"] = ComponentGetValue2(world_state, "orbs_found_thisrun")
+    if orbCheck then
+        local world_state = get_world_state()
+        versions["orbs"] = ComponentGetValue2(world_state, "orbs_found_thisrun")
+    end
     return versions
 end
 
@@ -495,7 +503,8 @@ function serialize_data()
 
     local ngpCheck = ModSettingGet("streamer_wands.ngp")
     local seedCheck = ModSettingGet("streamer_wands.seed")
-    local runInfo = get_run_info(ngpCheck, seedCheck)
+    local orbCheck = ModSettingGet("streamer_wands.orb")
+    local runInfo = get_run_info(ngpCheck, seedCheck, orbCheck)
     data["runInfo"] = runInfo
 
     local apothTimerCheck = ModSettingGet("streamer_wands.apothCreatureTimer")

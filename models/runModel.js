@@ -1,5 +1,11 @@
 const mongoose = require('mongoose')
-const statsSchema = require('./statsModel').schema
+const statsSchema = new mongoose.Schema({
+    workWins: Number,
+    altarWins: Number,
+    deaths: Number,
+    currentStreak: Number,
+    highestStreak: Number,
+})
 const runSchema = new mongoose.Schema({
     mods: [String],
     beta: String,

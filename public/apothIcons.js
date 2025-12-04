@@ -7769,6 +7769,48 @@ const apothIcons = {
             wiki_url: "https://noita.wiki.gg/wiki/Spells"
         },
         {
+            id: "sampo",
+            image: "iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABAElEQVR4nL1TSwrCMBBtiqdQXIonKCjYG7jyEO679AS9g4dw5d5FBYWcQNxV7DUiL+SVaUkTReiDwCSdefPm0yQZC6fGGJyY3yTmUJ7v/2fPjjd7x4EdUtlRVD1eSb6cW4LDdtW+AfbeGEOFfCdU5+ZUSJLr823tzWJmkwAg0/u1ChJRMkm0C0ACSbabqk5s2lfTJykutcGBjTeWJHvWKoIKyGVJsJEdyJ0CEoBM+sGGulQ69RsYQhWK8Y27cKUNfR8EgnzOmSAhcXCzOW70BvWXjsy3EhLKN3o2m40mSEJSuQLezcaoNdS53QHkTmHDfxmMBXoTbew3fz8VQeEo+AAvhfBG8IgpZwAAAABJRU5ErkJggg==",
+            name: {
+                $item_mcguffin_0: "The Salt",
+                $item_mcguffin_1: "Our Matter",
+                $item_mcguffin_2: "Hermes bird",
+                $item_mcguffin_3: "White Eagle",
+                $item_mcguffin_4: "The Green Lion",
+                $item_mcguffin_5: "Red Lion",
+                $item_mcguffin_6: "Celestial Ruby",
+                $item_mcguffin_7: "Magnesia",
+                $item_mcguffin_8: "The Vessel of the Philosophers",
+                $item_mcguffin_9: "Our Blessed Stone",
+                $item_mcguffin_10: "Magnum Opus",
+                $item_mcguffin_11: "Philosopher's Stone",
+                $item_mcguffin_12: "Sampo",
+                $item_mcguffin_13: "True Knowledge",
+                $item_mcguffin_14: "Truest of Knowledge",
+                $item_mcguffin_33: "Amulet of Yendor"
+            },
+            description: {
+                $itemdesc_mcguffin_0: "This has been said to complete the Work",
+                $itemdesc_mcguffin_1: "This has been said to complete the Work",
+                $itemdesc_mcguffin_2: "This has been said to complete the Work",
+                $itemdesc_mcguffin_3: "This has been said to complete the Work",
+                $itemdesc_mcguffin_4: "This has been said to complete the Work",
+                $itemdesc_mcguffin_5: "This has been said to complete the Work",
+                $itemdesc_mcguffin_6: "This has been said to complete the Work",
+                $itemdesc_mcguffin_7: "This has been said to complete the Work",
+                $itemdesc_mcguffin_8: "This has been said to complete the Work",
+                $itemdesc_mcguffin_9: "This has been said to complete the Work",
+                $itemdesc_mcguffin_10: "This has been said to complete the Work",
+                $itemdesc_mcguffin_11: "This has been said to complete the Work",
+                $itemdesc_mcguffin_12: "This has been said to complete the Work",
+                $itemdesc_mcguffin_13: "You have completed the Work",
+                $itemdesc_mcguffin_14: "Was it worth it?",
+                $itemdesc_mcguffin_33: "It is said to possess powers which mere mortals can scarcely comprehend, let alone utilize"
+            },
+            bgImage: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAk0lEQVR4nO2UQQqEMAxFf8XTNNCLFHobd4IWuvM2ghcptNeJxJU6OEwdERe+VRL4b5HFV8yMK6kutQGo10tLTQ+gO+HxIQ39RujInpYZaMlthXKMyDKqMU0/2xxZvu+He1pqcERIQ7kwHIS+URUnXuGeV/g/9Xox0D4isyNb6vEfwoi8tIaBLjJJLiIvTSOoxzf2DL5QJpt3Q1Y+AAAAAElFTkSuQmCC",
+            wiki_url: "https://noita.wiki.gg/wiki/Sampo"
+        },
+        {
             id: "$perk_respawn_spent",
             image: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA50lEQVR4nGP8//8/AyWAiSLdDAwMLMicexoa/0O+fQOz2bjYMRT/+vYTTK/h4mJQunGDEcMFl8XFwZLYNMMMBcmD1GH1QuP9+2DJZQzMWA0AiYPkQeqwGsDGxc7Q/vIZVkNgmkHyyC5kwmbTPIGPKIbANKtu8sIfiCCQPsGYwdzSEMy+7LeNYdnLl3Cb5zFgAiZ0gZkFZxkq45aD2bpQzSAaF2DCJvjy5lcGDvP5cJvxBSwTtnhGDjAQgBkCMhTkRZg6rC5YhqYZBmCG2BdcwO2CNdBEghzPyACWTkDqYIBxwDMTxQYAANJ0ZOB4bQX8AAAAAElFTkSuQmCC",
             name: "Extra Life (One-Off)",

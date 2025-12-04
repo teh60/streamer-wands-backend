@@ -613,7 +613,6 @@ a:visited {
 
 .info-stats {
     display: grid;
-    max-height: 20rem;
     grid-template-areas:
         "map info"
         "chart info";
@@ -629,6 +628,10 @@ a:visited {
 
 .preview-info>p {
     white-space: pre-line;
+}
+
+.preview-disc {
+    max-width: 230px;
 }
 
 .preview-icon {
@@ -1153,8 +1156,12 @@ a:visited {
 
 .prog .header .stats-wrap {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+}
+
+.sort {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .prog .header .stats {
@@ -1176,9 +1183,29 @@ a:visited {
     filter: brightness(2);
 }
 
+.bar {
+    display: flex;
+    width: 100%;
+}
+
 .prog .header .search {
+    background: darkgray;
     width: 100%;
     box-sizing: border-box;
+}
+
+.half {
+    background: darkgray;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.search-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    column-gap: 30px;
+    height: 100%;
 }
 
 .wand-slot {
@@ -1237,6 +1264,7 @@ a:visited {
 .stats-props {
     display: flex;
     flex-flow: column;
+    align-items: start;
 }
 
 .stats .stats-props>p {
@@ -1324,7 +1352,7 @@ a:visited {
     image-rendering: pixelated;
 }
 
-.icon-slot img {
+.icon-slot .icon-image {
     position: absolute;
     /* transform: translate(-50%, -50%); */
     top: 3px;
@@ -1433,9 +1461,126 @@ a:visited {
     margin-top: 5px;
 }
 
+.desc-full-container {
+    display: flex;
+    flex-wrap: wrap;
+    writing-mode: vertical-lr;
+    max-height: 370px;
+    gap: 10px;
+}
+
+.desc-full-container>div {
+    writing-mode: horizontal-tb;
+}
+
+.enemy-image {
+    height: 54px;
+    width: 54px;
+    display: block;
+    margin: auto;
+}
+
+.desc-attack {
+    border: var(--border-color);
+}
+
+.desc-enemy {
+    border: var(--border-color);
+}
+
+.desc-enemy>p {
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.attack-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.attack-image {
+    height: 32px;
+    width: auto;
+}
+
+.enemy-image,
+.attack-image,
+.attack-sprite {
+    padding: 8px 0;
+}
+
+.attack-sprite {
+    height: 32px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes variableBG {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: var(--val);
+    }
+}
+
+@keyframes variableRight {
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: var(--val);
+    }
+}
+
+.info-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-name {
+    width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 24px auto 48px;
+}
+
+.info-row:last-child {
+    border-bottom: var(--border-color);
+}
+
+.info-image {
+    height: 24px;
+    width: 24px;
+    padding: 2px;
+    border-top: var(--border-color);
+    box-sizing: border-box;
+}
+
+.info-key {
+    padding: 2px;
+    border: var(--border-color);
+    border-bottom: none;
+    text-align: center;
+}
+
+.info-value {
+    text-align: center;
+    padding: 2px;
+    border-top: var(--border-color);
+}
+
 .item-slot .tooltip-description,
 .icon-slot .tooltip-description {
-    white-space: nowrap;
     display: block;
     max-width: none;
 }
@@ -1444,7 +1589,7 @@ a:visited {
     margin: auto 0;
 }
 
-.desc-container>img {
+.desc-container>.icon-image {
     display: block;
     position: relative;
     width: 54px;
@@ -1462,6 +1607,16 @@ a:visited {
 
 .bgHide>div:not(.tooltip) {
     opacity: 0.25;
+}
+
+.code span {
+    color: rgb(145, 129, 103);
+}
+
+.code {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    margin-bottom: 8px !important;
 }
 
 .searchHide>div:not(.tooltip) {
@@ -1482,12 +1637,7 @@ a:visited {
     height: 37.3px;
 }
 
-
-.highlight img:not(.bgStyle) {
-    background-color: rgba(26, 167, 49, 0.2);
-}
-
-.highlight {
+.highlight>div:not(.tooltip) img {
     background-color: rgba(26, 167, 49, 0.2);
 }
 
@@ -1506,7 +1656,6 @@ a:visited {
 }
 
 .tooltip-count {
-    margin-bottom: 0.5rem;
     white-space: nowrap;
 }
 
@@ -1517,6 +1666,7 @@ a:visited {
 }
 
 .tooltip-description {
+    white-space: pre;
     max-width: 80%;
     margin-bottom: 0.3rem;
 }
@@ -1609,12 +1759,6 @@ input:checked+.slider:before {
 
 .slider.round:before {
     border-radius: 50%;
-}
-
-.search {
-    /* display: block; */
-    background: darkgray;
-    /* color: black; */
 }
 
 .spells {
