@@ -3,7 +3,9 @@ dofile_once("data/scripts/perks/perk.lua")
 dofile_once("data/scripts/gun/gun_actions.lua")
 dofile_once("mods/streamer_wands/files/scripts/enemyNames.lua")
 dofile_once("mods/streamer_wands/files/scripts/enemyNamesApoth.lua")
-dofile_once("mods/streamer_wands/stats.lua")
+dofile_once("mods/streamer_wands/files/lib/engine_stats.lua")
+enable_streaks()
+
 
 function get_player()
     local player = EntityGetWithTag("player_unit") or nil
@@ -281,8 +283,12 @@ function get_inventory_spells()
             end
         end
         if action_id == nil then
-            action_id = "sampo"
             charges = -1
+            local name = ComponentGetValue2(item_comp, "item_name")
+            local desc = ComponentGetValue2(item_comp, "ui_description")
+            local amt = "$-1"
+            local spr = ComponentGetValue2(item_comp, "ui_sprite")
+            action_id = spr .. name .. desc .. amt
         end
 
         table.insert(inventory, action_id .. "_#" .. charges)
@@ -330,7 +336,10 @@ function get_inventory_items()
                 if mat > 0 then
                     local mat_id = CellFactory_GetName(i)
                     local mat_key = CellFactory_GetUIName(i)
-                    local mat_name = GameTextGetTranslatedOrNot(mat_key)
+                    local mat_name = mat_key
+                    if mat_key:sub(1, 1) == "$" then
+                        mat_name = GameTextGetTranslatedOrNot(mat_key)
+                    end
                     amt = amt .. string.format("@%s (%s)#%s", mat_name, mat_id, mat)
                 end
             end
@@ -349,7 +358,7 @@ function get_inventory_items()
     return inventory
 end
 
-function get_run_info(ngpCheck, seedCheck)
+function get_run_info(ngpCheck, seedCheck, orbCheck)
     local versions = {}
     local modList = ModGetActiveModIDs()
     versions["mods"] = modList
@@ -362,6 +371,11 @@ function get_run_info(ngpCheck, seedCheck)
     end
     versions["start"] = GlobalsGetValue("start_time", "")
     versions["playtime"] = tonumber(StatsGetValue("playtime"))
+    versions["endStats"] = get_stats()
+    if orbCheck then
+        local world_state = get_world_state()
+        versions["orbs"] = ComponentGetValue2(world_state, "orbs_found_thisrun")
+    end
     return versions
 end
 
@@ -373,11 +387,21 @@ function get_spells_progress()
     local spells = {}
     local lock = ModIsEnabled("conga_spell_lock")
     for _, spell in ipairs(actions) do
-        if HasFlagPersistent("action_" .. string.lower(spell.id)) then
-            if lock and not HasFlagPersistent("disabled_" .. string.lower(spell.id)) then
-                table.insert(spells, spell.id)
-            elseif not lock then
-                table.insert(spells, spell.id)
+        local name = "action_" .. string.lower(spell.id)
+        local uses = get_kv_stat(name)
+        if HasFlagPersistent(name) and not lock then
+            if uses ~= nil then
+                spells[name] = uses
+            else
+                spells[name] = 0
+            end
+        else
+            if not HasFlagPersistent("disabled_" .. string.lower(spell.id)) then
+                if uses ~= nil then
+                    spells[name] = uses
+                else
+                    spells[name] = 0
+                end
             end
         end
     end
@@ -401,14 +425,9 @@ function get_enemies_progress()
         currentEnemies = enemyNamesApoth
     end
     for _, enemy in ipairs(currentEnemies) do
-        local flag = "kill_" .. string.lower(enemy)
-        if GameHasFlagRun("new_" .. flag) or (stats[enemy]) then
-            AddFlagPersistent(flag)
-        elseif stats[enemy] ~= nil and stats[enemy] ~= 0 then
-            AddFlagPersistent(flag)
-        end
-        if HasFlagPersistent(flag) then
-            table.insert(enemies, enemy)
+        local kills = get_kv_stat(enemy)
+        if kills ~= nil and kills > 0 then
+            enemies[enemy] = kills
         end
     end
     return enemies
@@ -484,7 +503,8 @@ function serialize_data()
 
     local ngpCheck = ModSettingGet("streamer_wands.ngp")
     local seedCheck = ModSettingGet("streamer_wands.seed")
-    local runInfo = get_run_info(ngpCheck, seedCheck)
+    local orbCheck = ModSettingGet("streamer_wands.orb")
+    local runInfo = get_run_info(ngpCheck, seedCheck, orbCheck)
     data["runInfo"] = runInfo
 
     local apothTimerCheck = ModSettingGet("streamer_wands.apothCreatureTimer")

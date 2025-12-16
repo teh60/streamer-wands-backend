@@ -20,11 +20,6 @@ block content
         may not work correctly but are provided for your convenience. <strong>Do not share this zip file with others!</strong>
         The mod bundle includes credentials that identify which streamer page to update. If another user installs the same
         zip bundle, they will be sending wand updates to <em>your</em> stream page!
-      p.
-        Progress for Spells and Perks is fully tracked by streamer-wands and requires no additional steps by you.
-        Enemy progress cannot be obtained by the mod natively, so the data shown to viewers on the website will only
-        include enemies that have been killed <em>for the first time</em> since you installed the mod. You can optionally
-        upload your stats file below to download a bundle that includes all of your enemy progress.
     div.prose.releases
       h1 Customized mod bundle for #{user.displayName}:
       form(id="download-form" method="post" action="/release" enctype="multipart/form-data")
@@ -34,11 +29,6 @@ block content
             each r, i in releases
               option(value=`${r.path}` selected=(i === 0))=r.version
                 span=(i === 0 ? ' (latest)' : '')
-        div.row
-          label.w-half(for="statsfile") Stats file (optional)
-          input.w-half(id="stats-file" name="statsfile" type="file" accept=".salakieli")
-        small.row The stats file (on Windows, Steam) is located at:
-        small.row <code class="click-to-copy">%USERPROFILE%\AppData\LocalLow\Nolla_Games_Noita\save00\stats\_stats.salakieli</code>
         div.row
           button(type="submit") Download
 

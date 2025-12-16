@@ -1,16 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const multer = require('multer')
-const { convertNoitaStats } = require('../lib/noitastats')
 const modVersion = require('../package.json').modVersion
 
-const storage = multer.memoryStorage({
-    limits: {
-        parts: 5,
-        fieldSize: 128 * 1024,
-    },
-})
-const upload = multer({ storage })
+const upload = multer()
 
 const authController = require('../controllers/authController')
 
@@ -88,12 +81,10 @@ const getJWT = (user) => {
     return JWT.sign(user, process.env.JWT_SECRET)
 }
 
-const emptyStats = 'stats = {}'
-
 router.post(
     '/release',
     authController.isLoggedIn,
-    upload.single('statsfile'),
+    upload.none(),
     async (req, res, next) => {
         try {
             const relpath = req.body.versionfile
@@ -102,7 +93,6 @@ router.post(
             const extrafiles = [
                 ['token.lua', Buffer.from(`return "${jwt}"`)],
                 ['version.lua', Buffer.from(`return "${modVersion}"`)],
-                ['stats.lua', req.file ? await convertNoitaStats(req.file.buffer) : emptyStats],
                 ['files/ws/host.lua', getHostFile()],
             ]
 

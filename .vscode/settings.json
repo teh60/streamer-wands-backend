@@ -34,5 +34,12 @@
         "mod/files/scripts/json.lua",
         "mod/files/scripts/coroutines.lua"
     ],
-    "Lua.diagnostics.ignoredFiles": "Disable"
+    "Lua.diagnostics.ignoredFiles": "Disable",
+    "Lua.diagnostics.disable": [
+        "undefined-global",
+        "lowercase-global",
+        "param-type-mismatch",
+        "cast-local-type",
+        "undefined-doc-name"
+    ]
 }

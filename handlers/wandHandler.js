@@ -62,6 +62,14 @@ exports.validate = (data) => {
         seed: 0,
         start: "",
         playtime: 0,
+        orbs: [],
+        endStats: {
+            workWins: 0,
+            altarWins: 0,
+            deaths: 0,
+            currentStreak: 0,
+            highestStreak: 0,
+        },
         ...data?.runInfo
     }
     const playerInfo = {
@@ -101,11 +109,14 @@ exports.validate = (data) => {
     const validatedSpells = inventory.filter(strFilter)
     const validatedItems = items.filter(strFilter)
 
-    const progressKeys = ["perks", "spells", "enemies", "pillars"]
     const validatedProgress = {}
-    progress.forEach((table, i) => {
-        validatedProgress[progressKeys[i]] = table.filter(strFilter)
-    })
+    // console.log(progress)
+    validatedProgress.perks = progress[0].filter(strFilter)
+    validatedProgress.spells = Object.keys(progress[1]).filter(strFilter)
+    validatedProgress.uses = numbersValidation(Object.values(progress[1]))
+    validatedProgress.enemies = Object.keys(progress[2]).filter(strFilter)
+    validatedProgress.kills = numbersValidation(Object.values(progress[2]))
+    validatedProgress.pillars = progress[3].filter(strFilter)
 
     let validatedRunInfo = {}
     validatedRunInfo.mods = runInfo.mods.filter(strFilter)
@@ -117,6 +128,12 @@ exports.validate = (data) => {
     validatedRunInfo.playtime = numberValidation(runInfo.playtime)
     const rant = (new Date() - validatedRunInfo.start) / 1000 - validatedRunInfo.playtime
     validatedRunInfo.idletime = Math.ceil(rant / 3) * 3
+    validatedRunInfo.orbs = numbersValidation(runInfo.orbs)
+    validatedRunInfo.endStats = {}
+    for (const stat in runInfo.endStats) {
+        validatedRunInfo.endStats[stat] = numberValidation(runInfo.endStats[stat])
+    }
+
     const validatedApothInfo = {}
     validatedApothInfo.shifts = []
     if (apothInfo.csShifts) {

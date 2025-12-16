@@ -42,6 +42,12 @@ mod_settings =
                 scope = MOD_SETTING_SCOPE_RUNTIME
             },
             {
+                id = "orb",
+                ui_name = "Show Detailed Orb Tracker",
+                value_default = true,
+                scope = MOD_SETTING_SCOPE_RUNTIME
+            },
+            {
                 id = "shifts",
                 ui_name = "Show Fungal Shifts",
                 ui_description = [[

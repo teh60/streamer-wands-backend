@@ -55,6 +55,7 @@ const cacheBustFiles = [
     ['pillars', 'pillars.js'],
     ['pillarsApoth', 'pillarsApoth.js'],
     ['itemData', 'itemData.js'],
+    ['orbImages', 'orbs.js'],
     ['apothIcons', 'apothIcons.js'],
     ['main', 'main.js'],
 ]

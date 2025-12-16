@@ -1,4 +1,11 @@
 const mongoose = require('mongoose')
+const statsSchema = new mongoose.Schema({
+    workWins: Number,
+    altarWins: Number,
+    deaths: Number,
+    currentStreak: Number,
+    highestStreak: Number,
+})
 const runSchema = new mongoose.Schema({
     mods: [String],
     beta: String,
@@ -7,6 +14,8 @@ const runSchema = new mongoose.Schema({
     start: Date,
     playtime: Number,
     idletime: Number,
+    orbs: [Number],
+    endStats: statsSchema,
 })
 
 module.exports = mongoose.model('Run Info', runSchema)
