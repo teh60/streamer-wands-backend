@@ -2772,7 +2772,13 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 animation: `variableBG ${info.n * info.wait}s steps(${info.n}, jump-none) infinite`,
                 "--val": `-${scale * info.width * (info.n - 1)}px`,
             }
-        }
+        },
+        getValue(key) {
+            if (this.desc?.immunities?.[key]) {
+                return `<s>${this.desc.damages[key]}</s>Block`
+            }
+            return this.desc.damages[key]
+        },
     },
     // updated() {
     //     // flex column wrap doesn't auto expand so use element style width to fix it
@@ -2801,7 +2807,7 @@ const IconTooltip = Vue.component('icon-tooltip', {
                     <div class="info-row" v-for="type in types.resistances">
                         <img class="info-image" :src="'data:image/png;base64,' + type.image"></img>
                         <p class="info-key">{{ type.short }}</p>
-                        <p class="info-value">{{ desc.damages[type.key] }}</p>
+                        <p class="info-value" v-html="getValue(type.key)"></p>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,11 @@ const icons = {
                     holy: 1.5
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 1.0,
+                    kinetic: true,
+                    suffocation: false
+                },
                 faction: "player"
             },
             bgImage: null,
@@ -41,6 +46,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -65,6 +75,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.3,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -89,6 +104,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.2,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -113,6 +133,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.05,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -137,6 +162,10 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true
+                },
                 faction: "helpless"
             },
             bgImage: null,
@@ -160,6 +189,10 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true
+                },
                 faction: "helpless"
             },
             bgImage: null,
@@ -183,6 +216,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.05,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -207,6 +245,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.6,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "wolf",
                 attacks: {
                     melee: {
@@ -237,6 +281,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.8,
+                immunities: {
+                    burn: 0.05,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -261,6 +310,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 0.05,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "helpless",
                 attacks: {}
             },
@@ -285,6 +339,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true
+                },
                 faction: "eel"
             },
             bgImage: null,
@@ -308,6 +367,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 0.2,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "zombie",
                 attacks: {
                     melee: {
@@ -338,6 +403,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 0.5,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "zombie",
                 attacks: {
                     melee: {
@@ -368,6 +439,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.44,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -402,6 +479,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -436,6 +519,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -468,6 +557,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -502,6 +597,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -535,6 +636,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -569,6 +676,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.36,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -609,6 +722,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.9,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -649,6 +768,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -689,6 +814,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -729,6 +860,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -779,6 +916,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.7,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "healer",
                 attacks: {
                     melee: {
@@ -820,6 +963,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.2,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -860,6 +1009,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.5,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "healer",
                 attacks: {
                     melee: {
@@ -900,6 +1055,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.8,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "healer",
                 attacks: {
                     melee: {
@@ -941,6 +1102,12 @@ const icons = {
                     poison: 0.0
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 1.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -981,6 +1148,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 1.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -1032,6 +1205,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 1.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -1072,6 +1251,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -1104,6 +1289,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.8,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -1144,6 +1335,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -1184,6 +1381,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "healer",
                 attacks: {
                     melee: {
@@ -1213,6 +1416,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -1254,6 +1463,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -1295,6 +1512,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "zombie",
                 attacks: {
                     melee: {
@@ -1337,6 +1560,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "zombie",
                 attacks: {
                     melee: {
@@ -1379,6 +1608,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "zombie",
                 attacks: {
                     melee: {
@@ -1409,6 +1644,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.3,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1449,6 +1690,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.75,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1489,6 +1736,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.4,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1529,6 +1782,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1569,6 +1828,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1609,6 +1874,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1638,6 +1909,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1667,6 +1944,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.35,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1697,6 +1980,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -1727,6 +2016,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ant",
                 attacks: {
                     melee: {
@@ -1759,6 +2054,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.2,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "rat",
                 attacks: {
                     melee: {
@@ -1788,6 +2089,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.5,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "bat",
                 attacks: {
                     melee: {
@@ -1818,6 +2125,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.5,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "bat",
                 attacks: {
                     melee: {
@@ -1858,6 +2171,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.2,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "fly",
                 attacks: {
                     melee: {
@@ -1900,6 +2219,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "fly",
                 attacks: {
                     melee: {
@@ -1942,6 +2267,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "flower",
                 attacks: {
                     melee: {
@@ -2011,6 +2342,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "fly",
                 attacks: {
                     melee: {
@@ -2041,6 +2378,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.3,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2071,6 +2414,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 2.2,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2106,6 +2455,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 10.6,
+                immunities: {
+                    burn: 100.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "player",
                 attacks: {
                     melee: {
@@ -2136,6 +2491,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 7.6,
+                immunities: {
+                    burn: 20.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "fungus",
                 attacks: {
                     melee: {
@@ -2166,6 +2527,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 16.6,
+                immunities: {
+                    burn: 20.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    explosion: true
+                },
                 faction: "fungus",
                 attacks: {
                     melee: {
@@ -2207,6 +2575,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.75,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    melee: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2239,6 +2614,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.5,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2278,6 +2659,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.7,
+                immunities: {
+                    burn: 3.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -2308,6 +2695,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 4.2,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -2349,6 +2742,12 @@ const icons = {
                     freeze: 0.4
                 },
                 hp: 0.75,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2383,6 +2782,12 @@ const icons = {
                     freeze: 0.4
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -2426,6 +2831,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -2466,6 +2877,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "giant",
                 attacks: {
                     melee: {
@@ -2499,6 +2916,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.1,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    melee: true,
+                    glue: true
+                },
                 faction: "giant",
                 attacks: {
                     melee: {
@@ -2529,6 +2954,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.11,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "spider",
                 attacks: {
                     melee: {
@@ -2559,6 +2990,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.5,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "slimes"
             },
             bgImage: null,
@@ -2582,6 +3019,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.5,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "slimes"
             },
             bgImage: null,
@@ -2605,6 +3048,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 8.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "spider"
             },
             bgImage: null,
@@ -2628,6 +3077,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "spider"
             },
             bgImage: null,
@@ -2651,6 +3106,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 24.0,
+                immunities: {
+                    electricity: true,
+                    burn: 0.0,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "spider"
             },
             bgImage: null,
@@ -2674,6 +3136,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "worm"
             },
             bgImage: null,
@@ -2697,6 +3165,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "worm"
             },
             bgImage: null,
@@ -2720,6 +3194,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 140.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "worm"
             },
             bgImage: null,
@@ -2743,6 +3223,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 25.0,
+                immunities: {
+                    ice: true,
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true,
+                    freeze: true
+                },
                 faction: "ghost"
             },
             bgImage: null,
@@ -2766,6 +3254,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 25.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "worm"
             },
             bgImage: null,
@@ -2789,6 +3283,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.4,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -2829,6 +3332,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -2868,6 +3379,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 8.4,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -2908,6 +3427,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 14.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    projectile: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -2948,6 +3476,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 14.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    projectile: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -2990,6 +3527,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 14.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    projectile: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3030,6 +3576,16 @@ const icons = {
                     holy: 1
                 },
                 hp: 20.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    projectile: true,
+                    explosion: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3073,6 +3629,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 0.55,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "healer",
                 attacks: {
                     melee: {
@@ -3114,6 +3679,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3154,6 +3727,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 16.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3195,6 +3776,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 8.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3225,6 +3814,15 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 9.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    explosion: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3259,6 +3857,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -3310,6 +3916,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -3350,6 +3964,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 9.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -3401,6 +4023,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -3441,6 +4071,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -3481,6 +4119,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 7.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3510,6 +4156,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 12.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3549,6 +4203,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 16.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    resurrection: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3588,6 +4251,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 28.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: true,
+                    hm_teleport: true,
+                    ice: true,
+                    resurrection: true,
+                    freeze: true
+                },
                 faction: "robot",
                 attacks: {
                     melee: {
@@ -3627,6 +4299,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.4,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "fire",
                 attacks: {
                     melee: {
@@ -3657,6 +4335,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ice",
                 attacks: {
                     melee: {
@@ -3699,6 +4383,13 @@ const icons = {
                     holy: 0.7
                 },
                 hp: 4.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true
+                },
                 faction: "ice",
                 attacks: {
                     melee: {
@@ -3733,6 +4424,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.2,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3774,6 +4471,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3815,6 +4518,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3856,6 +4565,12 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3897,6 +4612,16 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    ice: true,
+                    touch: true,
+                    freeze: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3938,6 +4663,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -3970,6 +4701,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4010,6 +4747,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4050,6 +4793,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    polymorph: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4090,6 +4840,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage_swapper",
                 attacks: {
                     melee: {
@@ -4130,6 +4886,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    shock: true,
+                    freeze: true,
+                    polymorph: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4170,6 +4935,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 7.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    explosion: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4211,6 +4983,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 12.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4251,6 +5029,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 12.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    freeze: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4291,6 +5076,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 12.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    shock: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4331,6 +5123,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 0.5,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4371,6 +5169,12 @@ const icons = {
                     holy: 0.2
                 },
                 hp: 8.0,
+                immunities: {
+                    burn: 0.01,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4403,6 +5207,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 8.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4432,6 +5242,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.01,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4461,6 +5277,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 14.75,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4490,6 +5312,12 @@ const icons = {
                     holy: 0.3
                 },
                 hp: 18.75,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4519,6 +5347,12 @@ const icons = {
                     holy: 0.1
                 },
                 hp: 14.75,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4547,7 +5381,11 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
-                hp: 0.2
+                hp: 0.2,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true
+                }
             },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Patsas"
@@ -4570,6 +5408,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4599,6 +5445,11 @@ const icons = {
                     holy: 1
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    glue: true
+                },
                 faction: "ghost"
             },
             bgImage: null,
@@ -4622,6 +5473,10 @@ const icons = {
                     holy: 1
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true
+                },
                 faction: "ghost"
             },
             bgImage: null,
@@ -4645,6 +5500,11 @@ const icons = {
                     holy: 0.0
                 },
                 hp: 20.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    glue: true
+                },
                 faction: "ghost"
             },
             bgImage: null,
@@ -4668,6 +5528,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4707,6 +5574,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 15.5,
+                immunities: {
+                    projectile: true,
+                    burn: 0.0,
+                    kinetic: true,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4736,6 +5612,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 10.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "apparition",
                 attacks: {
                     melee: {
@@ -4765,6 +5650,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4804,6 +5698,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4843,6 +5746,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4872,6 +5784,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4901,6 +5822,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4930,6 +5860,15 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    ice: true,
+                    glue: true,
+                    freeze: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -4959,6 +5898,13 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 5.0,
+                immunities: {
+                    burn: 4.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    polymorph: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -4997,6 +5943,12 @@ const icons = {
                     holy: 1.5
                 },
                 hp: 9.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -5037,6 +5989,13 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 10.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    polymorph: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -5078,6 +6037,12 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -5117,6 +6082,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 8.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5156,6 +6128,13 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 4.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5185,6 +6164,13 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 16.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5225,6 +6211,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 20.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5254,6 +6246,12 @@ const icons = {
                     holy: 2.0
                 },
                 hp: 6.0,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5283,6 +6281,12 @@ const icons = {
                     holy: 2.0
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -5317,6 +6321,12 @@ const icons = {
                     holy: 2.0
                 },
                 hp: 2.9,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -5357,6 +6367,12 @@ const icons = {
                     holy: 2.0
                 },
                 hp: 4.8,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -5397,6 +6413,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 20.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5426,6 +6448,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.0,
+                immunities: {
+                    burn: 20.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5455,6 +6483,12 @@ const icons = {
                     holy: 0.3
                 },
                 hp: 24.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -5505,6 +6539,16 @@ const icons = {
                     holy: 0.0
                 },
                 hp: 36.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    ice: true,
+                    polymorph: true,
+                    freeze: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -5555,6 +6599,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 120.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "boss_dragon"
             },
             bgImage: null,
@@ -5578,6 +6630,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 30.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "boss_limbs"
             },
             bgImage: null,
@@ -5601,6 +6661,14 @@ const icons = {
                     holy: 1
                 },
                 hp: 40.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "slimes"
             },
             bgImage: null,
@@ -5624,6 +6692,19 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 40.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    shock: true,
+                    freeze: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    venemous: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -5664,6 +6745,17 @@ const icons = {
                     holy: 1
                 },
                 hp: 40.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    ice: true,
+                    touch: true,
+                    polymorph: true,
+                    freeze: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -5704,6 +6796,21 @@ const icons = {
                     holy: 0.5
                 },
                 hp: 40.5,
+                immunities: {
+                    projectile: true,
+                    shock: true,
+                    ice: true,
+                    burn: 0.0,
+                    kinetic: true,
+                    suffocation: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    venemous: true,
+                    hm_teleport: true,
+                    freeze: true
+                },
                 faction: "ghost_boss",
                 attacks: {
                     boss_ghost_polyp: {
@@ -5740,6 +6847,11 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                immunities: {
+                    hm_teleport: true,
+                    burn: 0.0,
+                    suffocation: true
+                },
                 hp: 1.5
             },
             bgImage: null,
@@ -5763,6 +6875,20 @@ const icons = {
                     holy: 0.0
                 },
                 hp: 40.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    projectile: true,
+                    shock: true,
+                    freeze: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    venemous: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5803,6 +6929,19 @@ const icons = {
                     holy: 0.4
                 },
                 hp: 32.0,
+                immunities: {
+                    shock: true,
+                    freeze: true,
+                    burn: 0.0,
+                    kinetic: true,
+                    suffocation: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    venemous: true,
+                    hm_teleport: true
+                },
                 faction: "boss_limbs"
             },
             bgImage: null,
@@ -5826,6 +6965,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 50.0,
+                immunities: {
+                    projectile: true,
+                    burn: 0.0,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "robot"
             },
             bgImage: null,
@@ -5849,6 +6997,20 @@ const icons = {
                     holy: 1
                 },
                 hp: 300.0,
+                immunities: {
+                    projectile: true,
+                    shock: true,
+                    freeze: true,
+                    burn: 0.0,
+                    kinetic: true,
+                    suffocation: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    venemous: true,
+                    hm_teleport: true
+                },
                 faction: "eel"
             },
             bgImage: null,
@@ -5872,6 +7034,18 @@ const icons = {
                     holy: 1
                 },
                 hp: 240.0,
+                immunities: {
+                    projectile: true,
+                    shock: true,
+                    freeze: true,
+                    burn: 0.0,
+                    suffocation: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "boss_dragon"
             },
             bgImage: null,
@@ -5895,6 +7069,18 @@ const icons = {
                     holy: 1
                 },
                 hp: 32.0,
+                immunities: {
+                    electricity: true,
+                    ice: true,
+                    burn: 0.0,
+                    kinetic: true,
+                    suffocation: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    hm_teleport: true,
+                    freeze: true
+                },
                 faction: "boss_limbs"
             },
             bgImage: null,
@@ -5918,6 +7104,13 @@ const icons = {
                     holy: 1
                 },
                 hp: 16.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "slimes",
                 attacks: {
                     melee: {
@@ -5957,6 +7150,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 80.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -5986,6 +7188,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 80.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -6015,6 +7226,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 80.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -6044,6 +7264,15 @@ const icons = {
                     holy: 1
                 },
                 hp: 80.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    electricity: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -6073,6 +7302,18 @@ const icons = {
                     holy: 1.2
                 },
                 hp: 60.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    shock: true,
+                    freeze: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "mage",
                 attacks: {
                     melee: {
@@ -6103,6 +7344,14 @@ const icons = {
                     holy: 0.2
                 },
                 hp: 56.5,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true,
+                    hm_teleport: true
+                },
                 faction: "slimes"
             },
             bgImage: null,
@@ -6126,6 +7375,12 @@ const icons = {
                     holy: 0.0
                 },
                 hp: 5.5,
+                immunities: {
+                    burn: 5.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -6159,6 +7414,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 30.5,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true
+                },
                 faction: "orcs",
                 attacks: {
                     melee: {
@@ -6192,6 +7453,16 @@ const icons = {
                     holy: 1
                 },
                 hp: 10.0,
+                immunities: {
+                    burn: 0.0,
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    touch: true,
+                    polymorph: true,
+                    glue: true,
+                    resurrection: true
+                },
                 faction: "ghost",
                 attacks: {
                     melee: {
@@ -6221,6 +7492,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 3.5,
+                immunities: {
+                    burn: 0.5,
+                    suffocation: true,
+                    glue: true,
+                    hm_teleport: true
+                },
                 faction: "worm"
             },
             bgImage: null,
@@ -6244,6 +7521,12 @@ const icons = {
                     holy: 1
                 },
                 hp: 1.0,
+                immunities: {
+                    burn: 0.0,
+                    suffocation: true,
+                    hm_teleport: true,
+                    glue: true
+                },
                 faction: "ghost",
                 attacks: {}
             },
