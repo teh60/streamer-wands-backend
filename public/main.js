@@ -2760,7 +2760,6 @@ const IconTooltip = Vue.component('icon-tooltip', {
             })
         },
         getStyle(attack) {
-            // if (!HOP(attack, "spriteInfo")) return {}
             if (!HOP(attack, "spriteInfo")) return {}
             info = attack.spriteInfo
             const scale = 2
@@ -2780,13 +2779,6 @@ const IconTooltip = Vue.component('icon-tooltip', {
             return this.desc.damages[key]
         },
     },
-    // updated() {
-    //     // flex column wrap doesn't auto expand so use element style width to fix it
-    //     if (this.hover && ["col", "col2"].every((x) => this.$refs.hasOwnProperty(x))) {
-    //         const col2 = Math.max(...this.$refs.col2.map((x) => x.offsetWidth))
-    //         this.width = this.$refs.col.offsetWidth + 10 + col2 || this.$refs.col.offsetWidth * 2 + 10
-    //     }
-    // },
     props: ['icon', 'count', 'hover'],
     template: /*html*/`
     <div class="tooltip" v-if="hover || true">
@@ -2797,7 +2789,7 @@ const IconTooltip = Vue.component('icon-tooltip', {
             <p class="tooltip-description">{{ desc }}</p>
             <img class="icon-image" :src="'data:image/png;base64,' + icon.image"/>
         </div>
-        <div v-else class="desc-full-container" :style="{width: width + 'px'}">
+        <div v-else class="desc-full-container">
             <div class="desc-enemy">
                 <p>Health: {{ (desc.hp * 25).toFixed(2).replace(".00","") }}</p>
                 <p>Faction: {{ desc.faction }}</p>

@@ -1429,10 +1429,10 @@ const icons = {
                         max: 0.4
                     },
                     flamethrower: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABn0lEQVR4nMWXO07EQAyGM80KGhDF3oEt6bkBDTVnoIOGO1DCEaCm4QaIlhLusAVaiSJKA3IURx6v7djLzOZvMtrN5PNrPDOpKazN/dXv4uIk+617/e6fx7fPqTTPYncDtxYbePCcw1+JLXFTzcSCDk4fmvbrOjOilOPoJIiza3A3Bq8mV7LD8pcmOgOvL89GB0CL89U4loyE9/EdCgSYJjAi4jQNKudwadyWOB4JtiehFhfZHq4USzpPS6rGxPlJSi4FYWXQdqc5bDnKDfi5e+/Hy5ePLRtoYR3dPGUrQlKUuyRMLdDA5XOjPDr3cPWYphLLmZwb4WPOEkJ4oGmQaaKjIMthrWNIvF1Z3kDTFUuLqgaXLyYtvv/lw/cm2xVPtlRlpR2e0q42tKSwpIK2OlZv2/B/lImt1toCJXm3PYu95awmqX1aBw0NCPLuSSNnYHZvn2PFR7jSXjhVVNw+7cTs5YLtIE+sKU8qLk93yVp0VFIL96r0aVbje06za5Jkb+Apf5+3Bu2Wogm5ac47Wg3u3MxmD/dv5OKYnro58w/GsnYLCE2azQAAAABJRU5ErkJggg==",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -1478,10 +1478,10 @@ const icons = {
                         max: 0.4
                     },
                     icethrower: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABmElEQVR4nO1XPU7DMBSOpQ4dQEIZQSJscIKyQSUOwFJOEa4AA1yhPUVZegAkygYnoFuDBGOFVIYOSEZf8IvcVyd5DqZi6CdVjly/973/OCraYC1Ix5nG2k3iYu8hm+Xr4DRRtKd8lUIhFNlKQiM1PIR184XkdOnmsLlaUsXD6Vz3kq38GWv89KZvj/e8DL4qkXEZ3TNcBcaZDpUU8MXtVjVfAM6z0WTJLyeHQXc61xcH20pJHeif7K/sXz6+Nq4iu4WrDCXcZZ/iquWJJy5Kwk1nV8QHuDgRaHo+2mk75aWJ4HyiDilrOewPoubViaD1tS6cqwI5JeHjySD7oeP6+V2g4ecsBakqEVRQOMtlJIngEI+sUODVhi6zA9YUCNb9+aGiJIAHY5afo+6gAPrYS/pzjCYaSUEH4Qcf4ItP13NAj3hkcRKfEeKDoQki5wIwY+uSgiDxccErnQD7XaNYysd5Xz4WSyOs9r1ogK6dLb7yWKr/ePNJf8lly9fJlt2CJHJl/1OCgLobFuf6s6vkBtEK+LeI6zvkG44rBTlXtzt/AAAAAElFTkSuQmCC",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABvElEQVR4nMWXvU7DMBDHY6lDB5BQRwbCBhsbI63EA7DAOyDxFjwDSDxEFh6gUvoIbHTDCyNCogNb0IWedbmcnXPqNP8lVhv7d1852yZLrIeVrRb5rPFbab/q5/M8N6l5IXa55Q7FBh48x/BXYkvcSUogdxR0mx+48eLjpwIjUjmOTtZrMzbl1lrZalduiLcPf6kdQX+3dgK3Ab5+XTsHQOdHUzeWjIT38R0KbAWXqLCbLMZpGlTO4fJxC7upn7HB1iQ0xEW2hivFks7rTCpj4nwjJZeCYBE0kqrraw0J1nt5+6zHy5uzlg20sJ6uTpzBPsVyl4TpCzRw+dxYHp17d3pofLz7i2PvupLvGj7mzCCEB5oGmSY6FhRy2NcxJF5fljbQ9IulRTUEl39Mvvjuyof1OtsVTzav7CEc7lJfGwpSWFJBhzoWCP+PZWKrDW2BkrTbXojdctYnqX1qDhocCNLuSThG5vv3r6v4GK60F3YVFbfPd2LWcsF2kCbWlIeaTSfZ4+V/K9d0l0aLjpXUwrVKcarUHLx4yysFLk2yNvCU35eb8pbiE3LNmHe0IbhjM7M93L+Ri2N66ubMP26sc36Gnn6mAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -1526,10 +1526,10 @@ const icons = {
                     },
                     dash: 0.25,
                     fireball: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABn0lEQVR4nMWXO07EQAyGM80KGhDF3oEt6bkBDTVnoIOGO1DCEaCm4QaIlhLusAVaiSJKA3IURx6v7djLzOZvMtrN5PNrPDOpKazN/dXv4uIk+617/e6fx7fPqTTPYncDtxYbePCcw1+JLXFTzcSCDk4fmvbrOjOilOPoJIiza3A3Bq8mV7LD8pcmOgOvL89GB0CL89U4loyE9/EdCgSYJjAi4jQNKudwadyWOB4JtiehFhfZHq4USzpPS6rGxPlJSi4FYWXQdqc5bDnKDfi5e+/Hy5ePLRtoYR3dPGUrQlKUuyRMLdDA5XOjPDr3cPWYphLLmZwb4WPOEkJ4oGmQaaKjIMthrWNIvF1Z3kDTFUuLqgaXLyYtvv/lw/cm2xVPtlRlpR2e0q42tKSwpIK2OlZv2/B/lImt1toCJXm3PYu95awmqX1aBw0NCPLuSSNnYHZvn2PFR7jSXjhVVNw+7cTs5YLtIE+sKU8qLk93yVp0VFIL96r0aVbje06za5Jkb+Apf5+3Bu2Wogm5ac47Wg3u3MxmD/dv5OKYnro58w/GsnYLCE2azQAAAABJRU5ErkJggg==",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -1574,10 +1574,10 @@ const icons = {
                     },
                     dash: 0.25,
                     fireball: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABhUlEQVR4nO2XsVLDMAyG7TuuFxa4DrxDM7L3DbJ0bh+BbM1j0K08AswsfQN2xvYdGHphCZfFnJyodWQby8X0GPovybm2PkuyFFeKi86i+nGu4DkqxoexdrPXz9vqReKYjDUKBsGQaSS16p6DOjcvJdNlm8pkXXENN9sHlU3W+j2bCNEUY3WdP0VtGGy41rg2nfWsTqWoxVylSkqYl4b5MbsfcGzGkdUUXWwk14Gb5bM1/rlanHyKzBL2b/Sor13JPrU08bRdcHkgFxMCje+jae5cz0uEzWNViK/k9HglTj6dEDS1VAfnflLnVMni0WSYiUDHQ3LNdSUCDxTMpWs4iaBit6xU0qetGlZZzMn1CYJ19/ouMQnAgUqh85CBAQzJrA60r3lCKEgKVFC76XwAX2KqngpssVsWhcS0kBg1fRApCxT6ZumePc2tduGrCti/qxVzeZTbvm0HLSz8nbJjKf/jzaf+JctcH1rruwVx1vl+xwSBQjcsyvqzq+RFwhK9XLj+h3wDU2oFZyi4WjUAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABn0lEQVR4nMWXO07EQAyGM80KGhDF3oEt6bkBDTVnoIOGO1DCEaCm4QaIlhLusAVaiSJKA3IURx6v7djLzOZvMtrN5PNrPDOpKazN/dXv4uIk+617/e6fx7fPqTTPYncDtxYbePCcw1+JLXFTzcSCDk4fmvbrOjOilOPoJIiza3A3Bq8mV7LD8pcmOgOvL89GB0CL89U4loyE9/EdCgSYJjAi4jQNKudwadyWOB4JtiehFhfZHq4USzpPS6rGxPlJSi4FYWXQdqc5bDnKDfi5e+/Hy5ePLRtoYR3dPGUrQlKUuyRMLdDA5XOjPDr3cPWYphLLmZwb4WPOEkJ4oGmQaaKjIMthrWNIvF1Z3kDTFUuLqgaXLyYtvv/lw/cm2xVPtlRlpR2e0q42tKSwpIK2OlZv2/B/lImt1toCJXm3PYu95awmqX1aBw0NCPLuSSNnYHZvn2PFR7jSXjhVVNw+7cTs5YLtIE+sKU8qLk93yVp0VFIL96r0aVbje06za5Jkb+Apf5+3Bu2Wogm5ac47Wg3u3MxmD/dv5OKYnro58w/GsnYLCE2azQAAAABJRU5ErkJggg==",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -1656,10 +1656,10 @@ const icons = {
                         min: 0.2,
                         max: 0.4
                     },
-                    radioactive_blob_trail: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABHklEQVR4nGNkoDIomhz0vy93HSPDIAHI7gGxhWR/gMVrArYxEqsHRMP0SUjxMKSYrWJE0QxThKzw3WMOBlwBUYSkHl1PVIgAg4nkPEZ8jkHXo2XOAnYUoYBA9gQI4NOD7nGY2y48/oJVLz63GcjywPUxIWsCeQzZUSANIHDmeRJKACGrh2EQH6QeZgnIgjmnwuD6sAUash4YQLcLWT2MDVIPct+1k3/AnkG2B918mL0w/8DcBgIgvS0bvDDUo+tBBy+efWHAGlMgw2AaiMl2LVDLYZ4hJuXA9MA8AwO49CF7EOY2kD6QfdjciS2LwdwG04PsTliOQE7RyG6D6cUbcPQELdAAwVfmIANkj4EArMzBpRa9fMOXvdHLZ3x2AQDTNdoQ8TF3aQAAAABJRU5ErkJggg==",
+                    radioactive_blob: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABWUlEQVR4nK1UIW/CYBR8XRAIxIJiS/gDKMTC/sMUIcvE9CwGjUTXYJfJCbIsU2R/oagp/gDJgloQCMQSyJVc+3p8dBW7pOnX9q7v7vV9jcxhNB3s4+F7pPea7V26bl037Kk3KzxXeH4VzX/wgXMan6lqFtXgrLpMSAJB4s+qbp3bWrruthv2maxt3J9HZS+H5vH+0r5W2/R6/b1N75V9FNZBDejKQvkQBHQ3Vy8nmr+8adN9H855Ay5IQigc3hQENAX4YrE0gQVYhFxqfZN5eI1i8nG31yBeA3/L5Lfg7XnxkL1XfTKPesNHVb5qFNDUdHtimmB6mRwFKPT6tsnWITRdsxEG4Nns1JhvjJ9oALX8dZGfTwDer94QKB7OA7sARz6dIW/sQz7RO0MP6OWoyflZkdAEMRybwpEeVeBTgzD4GKGGK1/rKHTbkQ+ENKH/m9/eqtFcZf/fA2RkIAf5ha1uAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.1,
+                            wait: 0.08,
                             width: 13,
                             height: 5,
                             n: 6
@@ -1703,9 +1703,9 @@ const icons = {
                         max: 0.4
                     },
                     radioactive_blob_trail: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABHklEQVR4nGNkoDIomhz0vy93HSPDIAHI7gGxhWR/gMVrArYxEqsHRMP0SUjxMKSYrWJE0QxThKzw3WMOBlwBUYSkHl1PVIgAg4nkPEZ8jkHXo2XOAnYUoYBA9gQI4NOD7nGY2y48/oJVLz63GcjywPUxIWsCeQzZUSANIHDmeRJKACGrh2EQH6QeZgnIgjmnwuD6sAUash4YQLcLWT2MDVIPct+1k3/AnkG2B918mL0w/8DcBgIgvS0bvDDUo+tBBy+efWHAGlMgw2AaiMl2LVDLYZ4hJuXA9MA8AwO49CF7EOY2kD6QfdjciS2LwdwG04PsTliOQE7RyG6D6cUbcPQELdAAwVfmIANkj4EArMzBpRa9fMOXvdHLZ3x2AQDTNdoQ8TF3aQAAAABJRU5ErkJggg==",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAFCAYAAADrNdqyAAABWUlEQVR4nK1UIW/CYBR8XRAIxIJiS/gDKMTC/sMUIcvE9CwGjUTXYJfJCbIsU2R/oagp/gDJgloQCMQSyJVc+3p8dBW7pOnX9q7v7vV9jcxhNB3s4+F7pPea7V26bl037Kk3KzxXeH4VzX/wgXMan6lqFtXgrLpMSAJB4s+qbp3bWrruthv2maxt3J9HZS+H5vH+0r5W2/R6/b1N75V9FNZBDejKQvkQBHQ3Vy8nmr+8adN9H855Ay5IQigc3hQENAX4YrE0gQVYhFxqfZN5eI1i8nG31yBeA3/L5Lfg7XnxkL1XfTKPesNHVb5qFNDUdHtimmB6mRwFKPT6tsnWITRdsxEG4Nns1JhvjJ9oALX8dZGfTwDer94QKB7OA7sARz6dIW/sQz7RO0MP6OWoyflZkdAEMRybwpEeVeBTgzD4GKGGK1/rKHTbkQ+ENKH/m9/eqtFcZf/fA2RkIAf5ha1uAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.1,
+                            wait: 0.08,
                             width: 13,
                             height: 5,
                             n: 6
@@ -1749,11 +1749,11 @@ const icons = {
                         max: 0.4
                     },
                     acidshot: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuElEQVR4nGNgoCKIrff537LB6z82OZD4medJYIyshglZEUwBLguQDcFmOS5zkOVAwMNcAmwWigNAAjtOvoAbgM3ym+eZGLCpQbcA3WHqhv8wxGGOYIIJgAwHAZgF6AAmjw/kZ4ihmAFzJD6zmbBZgssRMDUgeWxqQGIgeWyOxWU2IzIHFpSLG7egiKPLY1ODHg2gYEd3CCwqQOIweUacXiUDoDsC5EiYGLKDYGyQPFUdQKzDYI4DMQAqD5A/VGe4wQAAAABJRU5ErkJggg==",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABFElEQVR4nKWTzQnCQBCFk2ANkg5y9pQWFvFgA148ebMBQQQb8OY9DXgQSQuC4DkVKCnCyIS8ZTLOZpf4IORnv33zt4mjTqv9oqF7NvvgU7Rb3uJIEbFjOI31eSUcosvkqb2Ol3mbtDTcbqbts+m4x2vdSBaetA6WxLkQr1hWACOovL9tVbLLxsGCg3ii4Kpn4lznXpbCBloIEfGlwsrkfJJHQCpBMF4FAqNSajvvHq/eFxgjHCMadawFhjl/15LKRPWSkT5IVo6Ys7JJPyPW3l3JmTy1a7gXh2vvL+R7KaiWHNfpXNvkiJtogTVRYH6+aHP1rHvdHUpOK8I1Pc71QJd44CG2COBkET5u0FCa/cuG+nHuC34R6x+T/rItAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.02,
-                            width: 8,
-                            height: 8,
+                            wait: 0.1,
+                            width: 10,
+                            height: 10,
                             n: 4
                         },
                         projectile: 0.24,
@@ -1795,11 +1795,11 @@ const icons = {
                         max: 0.4
                     },
                     acidshot: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuElEQVR4nGNgoCKIrff537LB6z82OZD4medJYIyshglZEUwBLguQDcFmOS5zkOVAwMNcAmwWigNAAjtOvoAbgM3ym+eZGLCpQbcA3WHqhv8wxGGOYIIJgAwHAZgF6AAmjw/kZ4ihmAFzJD6zmbBZgssRMDUgeWxqQGIgeWyOxWU2IzIHFpSLG7egiKPLY1ODHg2gYEd3CCwqQOIweUacXiUDoDsC5EiYGLKDYGyQPFUdQKzDYI4DMQAqD5A/VGe4wQAAAABJRU5ErkJggg==",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABFElEQVR4nKWTzQnCQBCFk2ANkg5y9pQWFvFgA148ebMBQQQb8OY9DXgQSQuC4DkVKCnCyIS8ZTLOZpf4IORnv33zt4mjTqv9oqF7NvvgU7Rb3uJIEbFjOI31eSUcosvkqb2Ol3mbtDTcbqbts+m4x2vdSBaetA6WxLkQr1hWACOovL9tVbLLxsGCg3ii4Kpn4lznXpbCBloIEfGlwsrkfJJHQCpBMF4FAqNSajvvHq/eFxgjHCMadawFhjl/15LKRPWSkT5IVo6Ys7JJPyPW3l3JmTy1a7gXh2vvL+R7KaiWHNfpXNvkiJtogTVRYH6+aHP1rHvdHUpOK8I1Pc71QJd44CG2COBkET5u0FCa/cuG+nHuC34R6x+T/rItAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.02,
-                            width: 8,
-                            height: 8,
+                            wait: 0.1,
+                            width: 10,
+                            height: 10,
                             n: 4
                         },
                         projectile: 0.24,
@@ -2708,7 +2708,7 @@ const icons = {
                         max: 0.6
                     },
                     darkflame: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADAAAAALCAYAAAA5vw7pAAAAwklEQVR4nGNgIBEYadj+J0aMXLPIER9aDkQDTLRwIC45dDEjJD6xboCpg9FM+CRBNLoYMZaT6nhkgM0+XG4AASZSQx/ZU+iGE5M0SPGcEQ59yPKM5CafwQJYYIxMySAUienP12EoRlZDqjwh8zMJmI1LDUoewAbO3TjMiM0BxDoeph+f2eh6sNmFy34mbAZgCwGQGEycXAcSq386VB4kB5PH5T6wJK58gGw4uhp8ctSQZyDRDDggVJoQkiNHL6lqkAUAuFW6fzGMIiYAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADAAAAALCAYAAAA5vw7pAAAA70lEQVR4nNVVsRHCMAyUOZbIBtTuKVghO6SgZBLKFOzAChTpU2cDxghnH8opQpIVQhHU2NFLr5dtXQD+yOLhOMKWhcStCPzWoqMBjMF190vyUr7FEZkwGiv50IJE1A9dWCuWckiFEx7fcVpjyGE1Lt6A56Q0zDotrQlw8Gm2x83tdB2bxyWcqzp/N0P3QYYYVHWOVXEAaJ/3yZ9WimUcYHZLUi43KWa6AS7ISqbCSuK9z7ElonktzTdrgDYiNZN8WEQ7IW5UfMqR8nuhQcQThjjNoftFw0pPnRfmb9UzxGDgSzlWGw6c9ZMqDaQ3hjpenCapFTrbl8cAAAAASUVORK5CYII=",
                         spriteInfo: {
                             wait: 0.1,
                             width: 8,
@@ -2844,11 +2844,11 @@ const icons = {
                         max: 0.4
                     },
                     acidshot_slow: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAAZ0lEQVR4nGNggIIzz5P+w9gg0LLB6z+yWGy9D5wPkwNhJpjAjpMv4IaA+DfPg6XgmrGxQXpYQIyagG2MEIkXYAmYZhPJeYwwxeqG/8AaGBiYoPIvGDzMJRjgCvABmIsWN24Bq0d2BQCFOD+e1wFWLQAAAABJRU5ErkJggg==",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAAk0lEQVR4nGNkYGBgaNng9d/DXIIBBkwk5zGCxEBsmDhILLbeByyWnyEG56sb/kNRwwRTtOPkC7iBMMNunmeCi8HUgQwAgTPPk8B8BiQAEmNB1QgxFNkgkEUwPsywiTNegV2JUPsC7EqQWoROqGRNwDZGdDEQWNy4hRHEhvFBhoLEYGpAfBBgggkiA3QxGJ+QWpBjADJeUgw8+3kAAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.02,
-                            width: 4,
-                            height: 4,
+                            wait: 0.1,
+                            width: 5,
+                            height: 5,
                             n: 4
                         },
                         projectile: 0.24,
@@ -4349,9 +4349,9 @@ const icons = {
                     },
                     dash: 0.25,
                     ice: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAFCAYAAADxCTo8AAABHElEQVR4nGNkoBC4LT3xf1e0BSOl5lBiL4gtxc0GFl8QYMRISC2Ihqk3kBRgKDBXYkSRRFbw7OsvBnQPIqtDV1tjr8FgJyOAUz2yWi8VMbDlyGqR9SA7EgSwqUX3EMwN556+Q9GDzw1G0kJw9UwgYle0BSOy5SCFIHDoyQcUj4PUwTDMQJihIAMnnLz3H1egwdTCALrZyHpA6kDu2HbnFdixyOYiuwXZvTA3gABIT8KGc2A9yO5F9hsyuPD8AwMLjLMgwIgRpBlkOdwABuwAZgnMscgxgO5QmFqYY2EAPfXA1MHUgswFqW85eANrYMEiDhnA3ALzD0w9TC3MTHS1IEC3vJ0A9Si2PIwMkB0OArA8jK4GvXzAl42IMRsAVMjILrl3XxAAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAFCAYAAADxCTo8AAABNUlEQVR4nKWUr04DQRjEv20IpqapIAGqGkRlc4YqcAhUfU0fgQeo5AF4gqYGj6qoq6NJ0yARpA5IEKSmBgOZS+Yy9+XrNaGTXHb37nezs3+TmdnN4/PvbNBLJsK7s/pxXu+eNuzusl36HnFV7CEc5FnNvC+rZ1F6PvEDReBj+2O3Fyd5PTtv2ni5tkk/C83Ajq47tnr/ztsvn5uCJe994Qk+Cq0hKfBXrUbJsyoDBG8d364MUA0zNRv0knYOkJ1Daq4CR1My/AcB+CjrNXxaFUGVRY7p21cpw8NiXbBcYeb1GbAY5DzrBfaIjUk/SwiFziEY389fi7pKJ408Sx+UA9UdBsFb2zohYOHnMyCw3wkqn4GTS5aeERue+6GEqroflCPrj0XE7fKNBhndEdH9oMfoP/fZH/vF9JiBW7VqAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.1,
+                            wait: 0.08,
                             width: 11,
                             height: 5,
                             n: 6
@@ -4436,11 +4436,11 @@ const icons = {
                         min: 0.2,
                         max: 0.4
                     },
-                    fireball_ghostly: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                    fireball: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABn0lEQVR4nMWXO07EQAyGM80KGhDF3oEt6bkBDTVnoIOGO1DCEaCm4QaIlhLusAVaiSJKA3IURx6v7djLzOZvMtrN5PNrPDOpKazN/dXv4uIk+617/e6fx7fPqTTPYncDtxYbePCcw1+JLXFTzcSCDk4fmvbrOjOilOPoJIiza3A3Bq8mV7LD8pcmOgOvL89GB0CL89U4loyE9/EdCgSYJjAi4jQNKudwadyWOB4JtiehFhfZHq4USzpPS6rGxPlJSi4FYWXQdqc5bDnKDfi5e+/Hy5ePLRtoYR3dPGUrQlKUuyRMLdDA5XOjPDr3cPWYphLLmZwb4WPOEkJ4oGmQaaKjIMthrWNIvF1Z3kDTFUuLqgaXLyYtvv/lw/cm2xVPtlRlpR2e0q42tKSwpIK2OlZv2/B/lImt1toCJXm3PYu95awmqX1aBw0NCPLuSSNnYHZvn2PFR7jSXjhVVNw+7cTs5YLtIE+sKU8qLk93yVp0VFIL96r0aVbje06za5Jkb+Apf5+3Bu2Wogm5ac47Wg3u3MxmD/dv5OKYnro58w/GsnYLCE2azQAAAABJRU5ErkJggg==",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -4484,10 +4484,10 @@ const icons = {
                         max: 0.4
                     },
                     fireball_ghostly: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABqUlEQVR4nMWXS07DMBCGbcEhkFAquAFLWPUG7HoKuE5OkV25AFnRJTeoFDZcAhnZyUTjyYzjSZ3m38Rq43zzyoxjTWHtu7M7VL/Rb83PXbi2u0dbmpdiNwN3Lbbn+esW/nJsjntbEtjDYmffzLMx1SmsD+7LeSNKOQ5OhmcTNuYGdWd3KTfFu4a/2A5aVJG/g52eG4H3x250IOjpb1xyRob7h3swMMAE1eZkNE7joFIOlcStTe+4NtjThOq4wM7hcrHE+8SkCkzYb9nkIpB/CBiJxTmccpQa0Hzch3X7upvagArrs3oYDZak5baIKQXac+leLQ/vfbcvdi6xlEm5Gj7krK+OY+cmgUZBxonWglIOSx2D4y1l5QYav7G4qNbg0pdJiu+lfP+82XZFk81VWWmH57TUhhoVFlfQqY7lBf9rmdBqUyOQU+7YS7Enzkri2qc0l0rMQjbp3zdjxWu43CycKypqn3RizuUG28lI0p49gJPTXaIWrRXXwnNV4lSZc/CiLa9huDjJuYHH/KXcJeIOWSkB1275jbYGd2umucL3N3BhjU/dlPkPRC9tCxBGHd4AAAAASUVORK5CYII=",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -4531,10 +4531,10 @@ const icons = {
                         max: 0.4
                     },
                     iceball: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABX0lEQVR4nO1XQQ4BQRDcERIXJ17gG06OHkBCsu48iDvJSniAo5NveAEnFwkJKdHS2sxOm10bB5VMljHdNdPd1TtM9EchiCfnK56dXvk5t15e7s/5uGJoznzqFA7hiDvJG/GDh1A0X56cNt8SQVzJ/voCfA/ZnGse/hI2JJfLNgQ+vrw4W91jKgfnoniqsoKNzUbvWR5Ow6uIS7hf969fHMKrVrYLLR9g40Sg6XOzXbXac1V8wpeuJYtzOT8fR8ESHjSMmY10SuvjUBn54IMOruGTa22JoILCWmmjSYREKSoYqDYkAoNUhkNoA+UCDxYpAm1AFhMFScvH1bFd1QyN3eb0VBDOAOBJL+qQZMBW3bJka8nSQtKQPHqp5AIoiWlJQeXKduEKPvZva8VaPsmLJPEW5ioGGx/F0vzizSfOyMXtfbauW5DPDkmAUly/8ZbmA+f62lXyj+gN8nJh+x9yA+rYZA+EmOQ5AAAAAElFTkSuQmCC",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABrElEQVR4nMWXS07DMBCGbSlIbFjBCbgGK5Y9AJVA4gDlPnAAWFSCA2TJqtfgBqzKAqlIQeN0osl0ZjJOnebfJE1tf/PKxI6hsB5fds1iWfWe1e9/6fr2dBZL8yx2vedOxQYeXOfwV2JL3KokkDsKur8MIeyfL5ZNA0aUchydbNeuVG6rXXMs1+Kdwl9qh+1vaydwe6Nu7radA6Dr2/PuXjISxuMYCkwwDkelcf5g06ByDpfGXX/jvLwkexJqcZOcXCmWtDjUpEq/SaKjlFwKgkkQINruNIc5UBOs97z6Sfebj4sDG2hhva6qNN5SLndDmFqggcvn5vLo3IerGIcSy5mcm8PHnEWE8EDTINNE54Ish7WOIfHGsryBpm8sLaopuPxl0uJ7LB/WG2xXPNlSlZV2eEhjbViTwpIK2upYIPw/l4mt1voESrI+e172gbOapPZpbjQUIMiz8ZCS/vX521V8DpcH2lNU3D5tx+zlgu0gT6wpTyouT3fptehcSS3cqxK7Ss/Gi7e8WuDSJHsDT/ljuSVPKZqQG+c8o03BnZsZTnD+Ri7e0103Z/4D90BPq2AX46gAAAAASUVORK5CYII=",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -4949,10 +4949,10 @@ const icons = {
                         max: 0.4
                     },
                     fireball_ghostly: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAGQAAAAJCAYAAADEiInQAAABg0lEQVR4nO1XwW3DMAyk2g7RjwJ3gzzblztBf57CGceZor9OEL/sZzdI4aCAlwgU0I0clqZqynWNPnJAIEgxeSJPpGUDVyyCtNk7HDPb9muvh/tuLFcPxq+ZWKfoEB1RJ3MjPfN4LM03J6fkm4Ny3WkdF65yOSQAkEBuAbauchvzFLXhImAz3HQLOTxeprYGaPZuLlFG+WbiTN8al9nPfj7gIFzZOTdGG8DOohjf8Xz4mHyKaAkHN0qwhVp9arnwvF1o+RASJya6n6yPoj0VPIZPVSFfzhNxvYSpp7MFTNrOuUtwP6ALytYqPi4GFcIHPgbpWUkIf6DwWW6jEYLjBhYGnjZMmE8aVhkGoU1UCDRZviKwUnj/9knS8tHqKF9Wxv/g/bavIIwBgaN/UU8RA23VLYu3lpgWEoPCVV0yORdi7J3VibI+DtpFKPm4f6kVa/k4bycSaWGhwyDx+Vya/3jzSX/JRe3HbEO3II1d6P9eIEEUCZTrz66SV8AA/HIhfYecALyCDZSZb/NWAAAAAElFTkSuQmCC",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAJCAYAAAD5Gui2AAABqUlEQVR4nMWXS07DMBCGbcEhkFAquAFLWPUG7HoKuE5OkV25AFnRJTeoFDZcAhnZyUTjyYzjSZ3m38Rq43zzyoxjTWHtu7M7VL/Rb83PXbi2u0dbmpdiNwN3Lbbn+esW/nJsjntbEtjDYmffzLMx1SmsD+7LeSNKOQ5OhmcTNuYGdWd3KTfFu4a/2A5aVJG/g52eG4H3x250IOjpb1xyRob7h3swMMAE1eZkNE7joFIOlcStTe+4NtjThOq4wM7hcrHE+8SkCkzYb9nkIpB/CBiJxTmccpQa0Hzch3X7upvagArrs3oYDZak5baIKQXac+leLQ/vfbcvdi6xlEm5Gj7krK+OY+cmgUZBxonWglIOSx2D4y1l5QYav7G4qNbg0pdJiu+lfP+82XZFk81VWWmH57TUhhoVFlfQqY7lBf9rmdBqUyOQU+7YS7Enzkri2qc0l0rMQjbp3zdjxWu43CycKypqn3RizuUG28lI0p49gJPTXaIWrRXXwnNV4lSZc/CiLa9huDjJuYHH/KXcJeIOWSkB1275jbYGd2umucL3N3BhjU/dlPkPRC9tCxBGHd4AAAAASUVORK5CYII=",
                         spriteInfo: {
-                            wait: 0.08,
-                            width: 25,
+                            wait: 0.035,
+                            width: 30,
                             height: 9,
                             n: 4
                         },
@@ -5956,11 +5956,11 @@ const icons = {
                         max: 0.4
                     },
                     lavashot: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAzElEQVR4nGNkoCK4psP1X8FBloFryk1GdLlvOer/me2Mwey/h87C1bAgK/q5Kuo/iGYPW4ZhALoh6GpAluMyB1kOBEBmfGNg+A9yBBOy4SCXIRuAbvmDA48ZsKlBtwBbqKADsCNy1P/DHQAyHBY82ABMHh9QrgtAMQPmSHxmM2GzBJcjYGpA8tjUgMRA8tgci8tsRmQOLCi1rnzDmgaQgxpdDXo0gIId3SGwqACJw+QZcXqVDIDuCJAjYWLIDoKxQfJUdQCxDoM5DsQAAMJ3iqjUfOWjAAAAAElFTkSuQmCC",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABJklEQVR4nKWTOwrCQBCG87CytxQCIkKwsxePYO0ZLGxsLTyDZxCxEI8Q7AULESyEQEp7QSRGRjPL+LObjXGaTWa+/PPYievkdurWMzqDQZNdTn1xdh2NEVuF07E2LRchv99TwXS31wq2ZsN3zC9gWZMYZumURRDTnkydx2Fl1HKxAwkijFP2DSxzbFyo5OIoMcallseO8/KqAmWMEqQaFouzGa4AmsfJOqOG6oITPzefTu/rUSanJ7u3JaZ1qGq3cSerScdlvlXi72s4fgqRk8LiUkOMnpUO+aNEWyx/E+TveNWeKTEmQ+O9ifMYn+Hx9vVTyW+pWNw/NBoSN02cdqF1RVFi3X4F4sq5ONseIic1UO8nQRsbluBwwjauUBDF/mXL6knuBZsY7+iE8kAgAAAAAElFTkSuQmCC",
                         spriteInfo: {
-                            wait: 0.02,
-                            width: 8,
-                            height: 8,
+                            wait: 0.1,
+                            width: 10,
+                            height: 10,
                             n: 4
                         },
                         projectile: 1.5,
@@ -6003,11 +6003,11 @@ const icons = {
                         max: 0.4
                     },
                     polyshot: {
-                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAICAYAAACYhf2vAAAAuUlEQVR4nGNgoCI4EnL3/6uZr/9jkwOJf7/2CYyR1TAhK4IpwGUBsiHYLMdlDrIcCPDasoPNQnEASODz4Z9wA7BZfmv3JwZsatAtQHeYmisfhjjMEUwwAZDhIACzAB3A5PEB4yZRFDNgjsRnNhM2S3A5AqYGJI9NDUgMJI/NsbjMZkTmwILSZo0yiji6PDY16NEACnZ0h8CiAiQOk2fE6VUyALojQI6EiSE7CMYGyVPVAcQ6DOY4EAMAwrSs0MdiqEQAAAAASUVORK5CYII=",
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAYAAADGmhxQAAABKklEQVR4nKWTPQ6CQBCFgZBYYWP0AJpwAUtRK2/gHbyFhbfwDHoDK39aWwsTG0uJDRRGG81seJtxMgtEX0IgOx9vfhh8r9BhennTPZ40ceR1Zm3fU0TsL5zGVnkFHKIrGjbsdVumpmhp2F+0zXNUcI9T9pYsPCkOlsQ5YgarbqmXLzuAEZTvn7YrOeXIwYKDeKHgzpvMGedeZoKk3fZuA3VECXKFlcVVSa6AVIBko3HLdoHE6f5lYjR2Pj3efVVirMMvok8d8oPjPLXmVOS1KIRPShaXO2L0DB9zvtGLxTuxp69N4Eosk0lhb85FDPdk3fv6C/m7VKzcPykaEpomLtQSa6LEfL8wlZh98rLitCa0tZF+X6BLPHEZm9TgZBNVXKmhNPuXrevHuQ8yFPTnsy46wAAAAABJRU5ErkJggg==",
                         spriteInfo: {
-                            wait: 0.02,
-                            width: 8,
-                            height: 8,
+                            wait: 0.1,
+                            width: 10,
+                            height: 10,
                             n: 4
                         },
                         projectile: 0.0,

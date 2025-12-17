@@ -1528,16 +1528,6 @@ a:visited {
     }
 }
 
-@keyframes variableRight {
-    from {
-        background-position: 0px;
-    }
-
-    to {
-        background-position: var(--val);
-    }
-}
-
 .info-table {
     display: flex;
     flex-direction: column;
