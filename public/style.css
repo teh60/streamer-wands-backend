@@ -1465,7 +1465,7 @@ a:visited {
     display: flex;
     flex-wrap: wrap;
     writing-mode: vertical-lr;
-    max-height: 370px;
+    max-height: 300px;
     gap: 10px;
 }
 
@@ -1528,9 +1528,58 @@ a:visited {
     }
 }
 
-.info-table {
+.desc-attack>.info-table {
     display: flex;
     flex-direction: column;
+}
+
+.desc-enemy>.info-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.desc-enemy>.info-table>.info-row:nth-child(odd) {
+    border-right: var(--border-color);
+}
+
+.desc-enemy>.info-name {
+    border-top: var(--border-color);
+    text-align: center;
+}
+
+.enemy-header {
+    display: flex;
+    flex-wrap: wrap;
+    writing-mode: vertical-lr;
+    max-height: 150px;
+    /* gap: 10px; */
+}
+
+.desc-immunities {
+    height: 100%;
+    border-left: var(--border-color);
+}
+
+.enemy-header ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.enemy-header li {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.enemy-header p {
+    padding: 2px;
+}
+
+.enemy-header>* {
+    writing-mode: horizontal-tb;
+}
+
+.info-value span {
+    text-decoration: line-through 4px wavy rgba(255, 0, 0, 0.5);
 }
 
 .info-name {
@@ -1544,9 +1593,9 @@ a:visited {
     grid-template-columns: 24px auto 48px;
 }
 
-.info-row:last-child {
+/* .info-row:last-child {
     border-bottom: var(--border-color);
-}
+} */
 
 .info-image {
     height: 24px;

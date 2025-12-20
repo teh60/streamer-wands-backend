@@ -443,7 +443,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -483,7 +484,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -561,7 +563,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -601,7 +604,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -640,7 +644,8 @@ const icons = {
                     burn: 0.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -680,7 +685,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -726,7 +732,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -772,7 +779,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -818,7 +826,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -864,7 +873,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -1106,7 +1116,8 @@ const icons = {
                     burn: 1.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -1152,7 +1163,8 @@ const icons = {
                     burn: 1.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -1209,7 +1221,8 @@ const icons = {
                     burn: 1.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -1293,7 +1306,8 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -1385,13 +1399,25 @@ const icons = {
                     burn: 5.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "healer",
                 attacks: {
                     melee: {
                         min: 0.2,
                         max: 0.4
+                    },
+                    coward_bullet: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAOCAYAAAB6pd+uAAABfklEQVR4nOWWsW3DMBBFSc7g0kUKAUnhIhtEA3iHVJkjzhypsoMHUDZQkUICVKRwqSGMT/CEL+ZIU3IT2AdIosh7/HekSMoaxV4/zcvz02ONctv1zdeb+db8NI7f/wNnI+BdEqu2la8bToOhRD8SQuBQ9CxZ03a9yXAIsI5Yz+CZSnSJno2Tq7bVTut0OA0/WpI0KDsZFGLwSHH4Sg7hdWKFwa3t+kOc5FI9qyS32T8cZ+Dxd4/HGCcZc6gTNjApTpKTID1LNlKwU5Jr9BxqcslRJxv4yCccOD/6sVhURhs47pKXgdfkK2jNfNfqOV6oWnJaGxhZPxJIZmAkkVo4DjQ3oBLoNXouzJ4pNfjyLKbELrQVaUqghX2qbf4TvWVzWIxyFJQYfMFwHS3wP5ZoK9IMPjOtpXqOt+FSEEzgpkA1VuokUOHCOYejYMxwY9hFr9JzKIVZvCgo26/Uc6CxKG/bEihZQ4F4Tb7omJh81+rZuzjo7+JXzUTCt/KzfQZjZaslShCTcgAAAABJRU5ErkJggg==",
+                        spriteInfo: {
+                            wait: 0.05,
+                            width: 14,
+                            height: 14,
+                            n: 4
+                        },
+                        projectile: 0.0,
+                        explosion: 0.0
                     }
                 }
             },
@@ -2279,9 +2305,16 @@ const icons = {
                         min: 0.2,
                         max: 0.4
                     },
-                    dummy: {
-                        projectile: 0.0,
-                        explosion: 0.0
+                    bloomshot: {
+                        sprite: "iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAAk0lEQVR4nGNkYGBgaNng9d/DXIIBBkwk5zGCxEBsmDhILLbeByyWnyEG56sb/kNRwwRTtOPkC7iBMMNunmeCi8HUgQwAgTPPk8B8BiQAEmNB1QgxFNkgkEUwPsywiTNegV2JUPsC7EqQWoROqGRNwDZGdDEQWNy4hRHEhvFBhoLEYGpAfBBgggkiA3QxGJ+QWpBjADJeUgw8+3kAAAAAAElFTkSuQmCC",
+                        spriteInfo: {
+                            wait: 0.1,
+                            width: 5,
+                            height: 5,
+                            n: 4
+                        },
+                        projectile: 0.26,
+                        explosion: 0.2
                     }
                 }
             },
@@ -6285,7 +6318,8 @@ const icons = {
                     burn: 0.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -6325,7 +6359,8 @@ const icons = {
                     burn: 0.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {
@@ -6371,7 +6406,8 @@ const icons = {
                     burn: 0.0,
                     kinetic: false,
                     suffocation: false,
-                    hm_teleport: true
+                    hm_teleport: true,
+                    lethal_radioactive: true
                 },
                 faction: "orcs",
                 attacks: {

@@ -2772,12 +2772,36 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 "--val": `-${scale * info.width * (info.n - 1)}px`,
             }
         },
-        getValue(key) {
+        getResistanceValue(key) {
             if (this.desc?.immunities?.[key]) {
-                return `<s>${this.desc.damages[key]}</s>Block`
+                return `<span>${this.desc.damages[key]}</span>Block`
             }
             return this.desc.damages[key]
         },
+        getImmunity(imm, val) {
+            const immunities = {
+                projectile: "",
+                explosion: "",
+                melee: "",
+                fire: "",
+                electricity: "",
+                shock: "Shock Stun",
+                ice: "",
+                freeze: "Frozen",
+                radioactive: "Toxic",
+                lethal_radioactive: "Toxic is Fatal",
+                touchmagic_immunity: "Touch Of",
+                polymorphable_NOT: "Polymorphine",
+                glue_NOT: "Glue",
+                necrobot_NOT: "Resurrection",
+                curse_NOT: "Venemous Curse",
+                teleportable_NOT: "HM Portal",
+                kinetic: "Physics Type",
+                suffocation: "",
+            }
+            if (imm == "burn") return `Ignite: ${val * 100}%`
+            return `${immunities[imm] ? immunities[imm] : imm.replace(/^(\w)/, (m, m1) => m1.toUpperCase())}`
+        }
     },
     props: ['icon', 'count', 'hover'],
     template: /*html*/`
@@ -2791,15 +2815,23 @@ const IconTooltip = Vue.component('icon-tooltip', {
         </div>
         <div v-else class="desc-full-container">
             <div class="desc-enemy">
-                <p>Health: {{ (desc.hp * 25).toFixed(2).replace(".00","") }}</p>
-                <p>Faction: {{ desc.faction }}</p>
-                <img class="enemy-image" :src="'data:image/png;base64,' + icon.image"/>
+                <div class="enemy-header">
+                    <p>Health: {{ (desc.hp * 25).toFixed(2).replace(".00","") }}</p>
+                    <p>Faction: {{ desc.faction }}</p>
+                    <img class="enemy-image" :src="'data:image/png;base64,' + icon.image"/>
+                    <div v-if="desc.immunities" class="desc-immunities">
+                        <p>Immunities:</p>
+                        <ul>
+                            <li v-for="(val,imm) in desc.immunities">{{ getImmunity(imm,val) }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="info-name">Resistances:</p>
                 <div class="info-table">
-                    <p class="info-name">Resistances:</p>
                     <div class="info-row" v-for="type in types.resistances">
                         <img class="info-image" :src="'data:image/png;base64,' + type.image"></img>
                         <p class="info-key">{{ type.short }}</p>
-                        <p class="info-value" v-html="getValue(type.key)"></p>
+                        <p class="info-value" v-html="getResistanceValue(type.key)"></p>
                     </div>
                 </div>
             </div>
