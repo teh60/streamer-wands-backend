@@ -2657,6 +2657,16 @@ const IconComp = Vue.component('icon-comp', {
 })
 
 const IconTooltip = Vue.component('icon-tooltip', {
+    data() {
+        return {
+            attacks: { maxHeight: "0px" },
+        }
+    },
+    mounted() {
+        if (this.$refs.info) {
+            this.attacks.maxHeight = `${this.$refs.info.offsetHeight}px`
+        }
+    },
     computed: {
         desc() {
             const desc = this.icon.description
@@ -2759,10 +2769,9 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 }
             })
         },
-        getStyle(attack) {
+        getStyle(attack, scale) {
             if (!HOP(attack, "spriteInfo")) return {}
             info = attack.spriteInfo
-            const scale = 2
             return {
                 width: `${scale * info.width}px`,
                 height: `${scale * info.height}px`,
@@ -2773,7 +2782,7 @@ const IconTooltip = Vue.component('icon-tooltip', {
             }
         },
         getResistanceValue(key) {
-            if (this.desc?.immunities?.[key]) {
+            if (this.desc?.immunities?.[key] && this.desc.damages[key] > 0) {
                 return `<span>${this.desc.damages[key]}</span>Block`
             }
             return this.desc.damages[key]
@@ -2790,35 +2799,65 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 freeze: "Frozen",
                 radioactive: "Toxic",
                 lethal_radioactive: "Toxic is Fatal",
-                touchmagic_immunity: "Touch Of",
-                polymorphable_NOT: "Polymorphine",
-                glue_NOT: "Glue",
-                necrobot_NOT: "Resurrection",
-                curse_NOT: "Venemous Curse",
-                teleportable_NOT: "HM Portal",
+                touch: "Touch Of",
+                polymorph: "Polymorphine",
+                glue: "Glue",
+                resurrection: "Resurrection",
+                venemous: "Venemous Curse",
+                hm_teleport: "HM Portal",
                 kinetic: "Physics Type",
                 suffocation: "",
             }
             if (imm == "burn") return `Ignite: ${val * 100}%`
             return `${immunities[imm] ? immunities[imm] : imm.replace(/^(\w)/, (m, m1) => m1.toUpperCase())}`
-        }
+        },
+        getMaterial(desc, type) {
+            if (desc[type] == "None") return "None"
+            return `${desc[type + "UI"]}\n  id: ${desc[type]}`
+        },
+        order(hp) {
+            const out = []
+            out.push(`Base HP: ${(hp.Base * 25).toFixed(2).replace(".00", "")}`)
+            for (const key in hp) {
+                if (key == "Base") continue
+                out.push(`${key}: ${(hp[key] * 25).toFixed(2).replace(".00", "")}`)
+            }
+            return out
+        },
     },
     props: ['icon', 'count', 'hover'],
     template: /*html*/`
     <div class="tooltip" v-if="hover || true">
-        <p class="tooltip-title">{{ icon.name }}</p>
-        <p class="tooltip-wiki">({{ icon.id }})</p>
-        <p v-if="count" class="tooltip-count">Kill{{ icon.id == "player" ? "ed by" : "s" }}: {{ count }}</p>
+        <div class="desc-header">
+            <div class="desc-header-info">
+                <p class="tooltip-title">{{ icon.name }}</p>
+                <p class="tooltip-wiki">({{ icon.id }})</p>
+                <p v-if="count" class="tooltip-count">Kill{{ icon.id == "player" ? "ed by" : "s" }}: {{ count }}</p>
+            </div>
+            <div v-if="desc.sprite?.spriteInfo" class="enemy-sprite">
+                <div :style="getStyle(desc.sprite,4)"></div>
+            </div>
+            <img v-else-if="desc.sprite?.sprite" class="enemy-image" :src="'data:image/png;base64,' + desc.sprite"/>
+            <img class="enemy-image" :src="'data:image/png;base64,' + icon.image"/>
+        </div>
         <div v-if="typeof desc == 'string'" class="desc-container">
             <p class="tooltip-description">{{ desc }}</p>
-            <img class="icon-image" :src="'data:image/png;base64,' + icon.image"/>
         </div>
         <div v-else class="desc-full-container">
-            <div class="desc-enemy">
+            <div class="desc-enemy" ref="info">
                 <div class="enemy-header">
-                    <p>Health: {{ (desc.hp * 25).toFixed(2).replace(".00","") }}</p>
-                    <p>Faction: {{ desc.faction }}</p>
-                    <img class="enemy-image" :src="'data:image/png;base64,' + icon.image"/>
+                    <div class="enemy-info">
+                        <p v-if="typeof desc.hp == 'number'">Health: {{ (desc.hp * 25).toFixed(2).replace(".00","") }}</p>
+                        <template v-else>
+                            <p>Health:</p>
+                            <ul>
+                                <li v-for="hp in order(desc.hp)">{{ hp }}</li>
+                            </ul>
+                        </template>
+                        <p>Faction: {{ desc.faction }}</p>
+                        <p>Bleeds: {{ getMaterial(desc,"blood") }}</p>
+                        <p>Corpse: {{ getMaterial(desc,"corpse") }}</p>
+                    </div>
                     <div v-if="desc.immunities" class="desc-immunities">
                         <p>Immunities:</p>
                         <ul>
@@ -2835,19 +2874,21 @@ const IconTooltip = Vue.component('icon-tooltip', {
                     </div>
                 </div>
             </div>
-            <div class="desc-attack" v-for="(attack,name) in desc.attacks">
-                <div class="attack-header">
-                    <p class="info-name">{{ name }}:</p>
-                    <div v-if="attack.spriteInfo" class="attack-sprite">
-                        <div :style="getStyle(attack)"></div>
+            <div v-if="desc.attacks" class="desc-attacks" ref="attacks" :style="attacks">
+                <div class="desc-attack" v-for="(attack,name) in desc.attacks">
+                    <div class="attack-header">
+                        <p class="info-name">{{ name }}:</p>
+                        <div v-if="attack.spriteInfo" class="attack-sprite">
+                            <div :style="getStyle(attack,2)"></div>
+                        </div>
+                        <img v-else-if="attack.sprite" class="attack-image" :src="'data:image/png;base64,' + attack.sprite"/>
                     </div>
-                    <img v-else-if="attack.sprite" class="attack-image" :src="'data:image/png;base64,' + attack.sprite"/>
-                </div>
-                <div class="info-table" v-if="attack != {}">
-                    <div class="info-row" v-for="data in getInfo(attack)">
-                        <img class="info-image" :src="'data:image/png;base64,' + data.image"></img>
-                        <p class="info-key">{{ data.key }}</p>
-                        <p class="info-value">{{ data.value }}</p>
+                    <div class="info-table" v-if="attack != {}">
+                        <div class="info-row" v-for="data in getInfo(attack)">
+                            <img class="info-image" :src="'data:image/png;base64,' + data.image"></img>
+                            <p class="info-key">{{ data.key }}</p>
+                            <p class="info-value">{{ data.value }}</p>
+                        </div>
                     </div>
                 </div>
             </div>

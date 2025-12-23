@@ -17,7 +17,12 @@ const icons = {
                     drill: 1,
                     holy: 1.5
                 },
+                sprite: {},
                 hp: 4.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 1.0,
                     kinetic: true,
@@ -45,7 +50,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAALCAYAAACAq4ihAAAB20lEQVR4nNVXMU7DQBDcsyjTkUiU+QIifoKlNPRIvAEJiSZPSINAQvkBP6DJA+gchB+AhAsKitClxmhPnrC33Nm5hBCyknXr253ZuT1bZxMpy/O8gl9Vn44v70PGeHBIzKr4Tc1XP7b2X+o3unC/36du95Dm8w8qy5L4HsbzxiQOJhZvi7ZwEBGlaWqwYM6X/rbq/6b+weBkOSf1a7zRxWUhFgFfmxYRi9cceS183QbsWr/kaNMvsQeY4EQAGKxNi+EdBQkKx+A1B5tPrK8Bvrdhl/rlw7OKfom1G+AjkIVB1LSIKHwxcXLy2AbU+Or5rjLHF2bX+oFdR38iwXzBpM/A2ezJJcAViy8mNJ4u7Py4HtsaAPF2YR78Puu3G1AUhbew9JeHiiLgpy8K/1bSaNix7mjYcZ7+lRqg8PuuP2GCLMuM3EF9eOCVsqMi4K+VGPzs6MxyYDFpmpqYBmj8vutPmIB9HmXhXq9nMFqi+nXVBDCNX9xfkg/ffbyl8uXdwWYRDWC8Ob02wG9Lv8bjrND1Y/X/0KCND4bQ/OvN+feP2cNVxVcI5+Q2xBBHDn6kkCNjITwMeb64jmn9Oq+J32fMKzXLH0IdC3E0BzcQ18ZLAQs1+r/FtMX04gsQk0Knv62L/gAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 16,
+                        height: 11,
+                        n: 6
+                    }
+                },
                 hp: 0.1,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: false,
@@ -74,7 +92,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAAQCAYAAADzhpp3AAACiElEQVR4nN2Xv0scQRTHZxbLkMY7ksLAYRWwEj1SpTwIik0aAxZeIQjigXAWFkLYkMJCURCLQIoL+B+IwT/Abi+4jZAieFucoJw2Yu2GN/gmbyezP2Z3/cE8GGZ2Z+Yz3+/bmb09xh4h3MVOCIVZFu4T+OJJnSjm87dm4ri0+UUYZeqxwdfQQwjC+cOvXrLryxtRF4myEuRa4GuobEHAwPmUlSfKSpBrkS9HFYSRR5DKKBJl6LHRl5MmCPrC8E4eXWjTaxOhdG4Sp6wEuRl80ZJ3jcf05cxPrwnI8pePHI/nu5k3ovOs/1vU3e4vNhgMQihXV9daUFYOzKcc00S5GRNkogeLjvXUvlSOMzryVohBASCmVqux2dZ7Oejn91NWqQzLoktUXo7KKitBowX1PBdfqh4HB6M4EBMEgbje7LQFbOnrtByjnjCEFeUgq6wEnVnki+qJfEp6nhcCJCkABKJUIOcOz83x9+T95vo5+3G4wfE1AcmABCFvtbklEoXrR7QQDh9vcRt9ya9ECNw9uIMgaBsAcGwjICx5Of4e2zi6FfehRlMQUwtjkoex2WlLQ2hK7GqFY6uvyAPzfV8rhLYnJyekKV2CYBcacfoBW/vwQjSxRo5Rgvp6jm2+HApqNBqcPnl6ZOn7WdQxgur1OjfhdF9/Eiw0STkmCerGcGzz5VAQ1lRItVrlWAvg/WsiThDlUc7t/grTcSrHOyz4c6FlmCSocrzD+MwWVzkP7Uvl4G9enB5TX/9piovwZDeMu9/bnvv3R/qgHUJJmx+Zk9CnMnAsnBTP8+TatC+No66rG6f2xfmK85C1j2qlXtCfri+NlTooC6SooaToJTyYtIf2HOarYZKrvxUVe5lZqw/UAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 18,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 0.3,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: false,
@@ -103,7 +134,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGYAAAANCAYAAABb7Bv7AAACk0lEQVR4nOWVv2sUQRTH3xwBBU21dxDByPWJAUm2TnUxTcAyYGH+ASEYC3sbC6MBuV7QwlKwOe3EdLuSJSikELJoioPNVabQxpHv5N46uzszd7v5oawPhjezb+Yz7zu/VhAR7X77LuGvX71EQjQEVbDTYJyG7dZFCyeht1Gk/KXKeTHy4+g/1zLBlce9WC7NeDQ3PSmCIJBi2hdrD18oOOL4zpPYTlGeEfaJur09GoeBPojrbRqeWtecVfIYh6kz0AbnPLVMAIAk7i+3VWfU3w+OYe8+D1SnJ89fq/bh4YCaTa8AsTEgbNZvGRkQZUrwJJs7N2Ye99Zu0ZWLP8jEMTHgL0ydrRbrhgGCwlcQdb4xGIw2X2fbta7C0Dm8CEEQSJ3FnllJkjifln9JS57l0pLZJP3qoTMHcKpguDUbN6+puunG8C6D8bO/p05EWYbOYUFLM1469lPwQbHwFGy+/ZqybHnUQUvmHeSnC3Zn/vg91A1JjBJUihF1/zBu3BWVFiTKMuqiJf35481d9BJVb7fbysdxnNYxOAw/0sLCfAFSiRF16VHviB4sX1YehpMOQbPDt5yZvDAQkVmQg1cFRl20NHhQFEUpAAmY6roQToA9/gulGAexSgLGHgxekEUvSU+pPp4XRJ0yA6MuWhoM6XQ6wnY6YLzDyhsS8X1flGGEU6uKw8KYUWZBQgOjLloaDGGvJ9BqtQR7BRteeVMibHnG0ct1MjGa21sUf+kXxpdZkOb2FomVTaEzzlJLnsH/I1MeZbUUcjGZ3Hkmbd/3n95OY/LNhkRxjc30d8T0PnLYD6cfhfvpMRcjP59tHj1m0mLLe9wY8/X8WZMp5uKM7HCS+MjJHbbv2ABX7G+OzVuZtfkNPC3oPABjfvQAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 17,
+                        height: 13,
+                        n: 6
+                    }
+                },
                 hp: 0.2,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: false,
@@ -132,7 +176,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAATUlEQVR4nGNgYGBguLje7v+FQ3P+g9gYYEK1C3YJKGBxNPkFZoBMmb/xO0OiPyeYrx94iBFEgwlkSRANAzDFDEcj7cDWwGiQBhAGSQIABNMjmpth67wAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 8,
+                        height: 5,
+                        n: 1
+                    }
+                },
                 hp: 0.1,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.05,
                     suffocation: false,
@@ -161,7 +218,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAFCAYAAABM6GxJAAAAXUlEQVR4nGP4//8/AwjblXX8j5978T+Mj45xyTMgC5JjCCOIsC/v/C/whIcBGUyz38PgOuMjg1nOBIb7N7cz4JJnggncvr4WjGEAJHnt3D5GgvLoTgI5E58X0MMAABCorTp/w/ekAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.15,
+                        width: 8,
+                        height: 5,
+                        n: 2
+                    }
+                },
                 hp: 0.1,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true
@@ -188,7 +258,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAHCAYAAABp0096AAAA80lEQVR4nGP4//8/Awgfmuf2/+2jVjAG8WEAlzw6BsnDNSHpwyUPB2+RDMRmCTb1uOSxORCZj02eEUQcnu/+X3nrVxTDpNYcYQTR7x63/ReSrQKzkdVx9Hsx/CjcBqaR5bVd7OFmgOSl1x5lBHkMpO+uNzcDTB6mhwWmeO7lh2A6WVeeAWYxwoCDYAOUkRwIkoMZBHMYSP7HVog4OgCZn8wgD5d/188ANp8JZJFt4k7G2puPwRjkSmQLkA0AYZg8NgtgnkCPFpj5yPJw8/+jJRQY+2mw9X8QRk8j6IkLPU5BakD6cCVUmDwMY/UNuQDZgcQCAK3QXFyq4m7jAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.5,
+                        width: 8,
+                        height: 7,
+                        n: 4
+                    }
+                },
                 hp: 0.1,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true
@@ -215,7 +298,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADwAAAALCAYAAAAjg+5nAAABPElEQVR4nGNgwAGCKxz/gzDDEAW43M+ES/Ge6eeoYgG19JCqFpf7mXBpcsk0AtNPNiT9h2FyLKCGHnLMx+V+FnyaXj14x/CY9yGYbVl9j5FYC2BiMgHzGOdNrP2flN/MSIoeStXicz8TyEHoCtd27AdLiikIMZRd5kXxLDb1KBZcPQDGyI4B6enO8PhPjB5SzSfV/SwwTW+vn2YQ1jRlANEgcILhJy57MdV/YGA4IfATagEDw+EVF+EWwNSB8LyJpv+xmY+eekgxn1T3M8EUgBTv27IJLsF59h2DxQd2DA241OMCpTN2MML0EKOeVPNJdT8TsoNA4OLd52CsrywJ5qOHJi71uCxA10NIPanmk+p+RhgDlMeQkwTIIKyux6Ee2QG49MCSHjHqSTWfVPeDAb6qZ7ioZxqMjqKlegDjbGwaL2pU1QAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 12,
+                        height: 11,
+                        n: 5
+                    }
+                },
                 hp: 0.1,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.05,
                     suffocation: false,
@@ -244,7 +340,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAJwAAAANCAYAAABcggerAAAB20lEQVR4nO1ZQU7DQAzcVnBC4hWVQg49wJUvcAjnSryA5/AFznDgC7yAQ1qJV/AB0KZyWcx61157kxIxUtu0ST32zsRxU+dGRndz/TlHrn/wsHQjAgwwhhHmwjE3LEsXGh7NxfqXiayECHk0MSxyScU/NuN1E+jD5VlQO55fXod9nCT79w/Xrs6H1932beHJ/XscIxaHywOx/X74TriNATmU8lC15mJQ+eDje2E9XMRykuhTEl/Cc/iwBrhm4EK6cFqeEmNb19MRAksaAgWqJuuO/cNw/gnaIRQPKFnIx6cHt7m9P2yfnV6SQml4QqTOVA2PpCPUrKcxbAopfbDRwAuWPki2VK3TIeHcJaqEh2tsLU8I7iWoRj1NpCloTYj1gbzxWGHpg6qGK5ltSjA3Y/cV60npQ40Oljwn3GRylwzJsK3hiQGOa1e8oVvCA2bzuFrfDZ2GWyeI6IRohfXE5sLY57m8c1wWPmAZLoQPttt+ux4nYQXMY2lszOOFrWWE3EzcG5+oU+nD5ckaLlxYamHwj40S5HisFi7GE3YiLJ4Fz5hGmEofLg954zd3Tyjc57dLB1gJz74b1eEJoRnGYzwpgVpFPSkjTKEPh2fUv7aOGVYCSXmcUay/gi896DKbIhVXFAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 26,
+                        height: 13,
+                        n: 6
+                    }
+                },
                 hp: 0.6,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -280,7 +389,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAYAAACAl21KAAAAvElEQVR4nGNgIAHsrQ36j40NAoykGPThw5z/Z3u3oYg5N68Dm8FEikECAilgTVmrb8PF1DV0/5PsImxe2nX1L5hmYaAQuGkzM8BdBPI7zNmkuMYZGj4gwIQtAEk1BMVr6ApJBUzYBI2LvUg3SABL2CB71ZhIQ1FchE3TWSzhB4tynAYRE+i7sBiCYRBMIQwjx4xz8zpG9JjCaRCyws51G0lO9QzIUV8e5I+RDPaiJQ1sakjKtPjAqEEMBAEA+dtRD3pySOkAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 18,
+                        height: 20,
+                        n: 1
+                    }
+                },
                 hp: 0.8,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.05,
                     suffocation: false,
@@ -309,7 +431,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABcAAAAdCAYAAABBsffGAAABXElEQVR4nGNkIAN8+DDnP4wtIJDCiCz39Gw9WE7auJGRIoPR+TCD0dlkgw84DAcBJkoM/YDmC2wWDD6Xg8DQdfmEIvv/yGxuZVkUedLTIpqrFzQtRhZiKOg7yEgVlwtAM9D0be/gYuoauv+pYjgMZHoJwdmaKnwMAT7W/yk2fPEMS4yU4aDGAsYUGw4Cwmq/GG58YwJj5PCmKEIXQ1199AIHXGzGjP0o5rGQayjMYGuDHygWYDUcOc3i8j4yQDYY5OKMDEcM/YzEGAwDoHB98eQXQ7DPP7zBAQNMuAy+8Q0zrkEGg1ICyGAQG4TxAbAJB279wavoBtQiWBKDWQJj4zQclnxgBiC7GJbE0Nkwg2E0Xpdv2HIUwwINrn8YitHFCPmYCV0jiAZ5FRZ52CIMW4bBazjMYJgmkMEgH8EMRrYAV+rACZBTTQC04CGkjpBaqpSKuMCo4VgBTQ0HAAdl0srE78xcAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 23,
+                        height: 29,
+                        n: 1
+                    }
+                },
                 hp: 1.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.05,
                     suffocation: false,
@@ -338,7 +473,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 20.0,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -366,7 +506,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAALCAYAAADRP7vCAAABpklEQVR4nNWVv0rEQBCHN8HeygcQbFIJ2opPcHaCFlrYaSEeqHiVhZWigmKhnYUWV9iZ0uq0sUiRXvABrHyCk19wjskws9nEeOhAyF12vuxvv/yLXEDlr+kQ+8+PN7fY6Ua/xfynikIFUIWIyBswf122zBZbjf3r9eH+5sJIwO7eTgEdnVwFT1aH4bInp2bcIL0oyfdx2EL76zDkQMsWa83Y5PHzs0v3mD64w4NtcxIpu4oZl2yeLYSxHPBsExKg31n+7tY2eu7+9tgtdZaLSeZnp9VQTlQVI1nMxWWDh+yn524QgwWhX8rWstVhyIGWLbYAKoC4a2B6desu8gXL2EQWQ5xkEQj9KOsCWSK0O9uXLYThDpBLZis9qtR8evMS8QWh6GUtX9rZNyNlW0wT2RZTJVvLpkmocoBcMltMwZK5leJEEuQnkItJGKPJtqqubB+jyfZl0ySEOuDZSnccQDTRC56ujK8SxmAPpqlsjQthLNm+bCGM1wGC8S8N/yqi6KvDj/cbMsRhwxiNo5///ykzjvWMBgjUwmjgoGUGY5qMtpm21vMFC0SnNsl4a3YAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 11,
+                        n: 6
+                    }
+                },
                 hp: 0.2,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -402,7 +555,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
+                sprite: {},
                 hp: 0.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -438,7 +596,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAAC7UlEQVR4nNWVX0hTURzHf5MRPrqHkEScWNMoVCLUQRBEY/QU+BIECVHMl+qph1FQL0XhQz61l1YRrYgSCsKHEiMTgnSJ6CjIhf2hJnvaoIdGQYvv0bPOPZ4/995w1A9kXj2f/b73c3733ABpKnUpUeW/nzibDujW/S3zv5by5gYP9DMB9zJH2PXhoTv06MmsUcSgD+Zfl23KFlQBsb29juu21s3WJjEfDGRPTi/UZE9O91c3SrZXxpZNKS4c2766+MNP9tlzqJ3ourlR2AdTL9l+GFu2oG5XUBdPp2lHbxvtORght/Xw9lN6u/CZEuf2W9fWS7YfBtmK5WW6O/9OmS0oS1taLlBjeRM1N3Wwv0PCzasT2t1JrXFoAgbrIft4POX6vPKyQbYbUuXzwojDg/vRZWuQpXV2tNDig4+sEaYGkCkUrXEiYytw+MF6FHpAuE0274cbSl94Ri8f5609kI0zWA/Ozf3YsjFxvCCNN0JBhjht/M2pku2G0cnGbto2iEtwI1vOxhnT06AbHl02Jg6jzM8bLgG7861x9ezhAlQHaqcgu/L6h+N/MqOTjV5uN8itbDEbZwa6thqPHfl+VIPA89Umju+KWJGeFrp87Wg109dXjX797vhfWCF7rvCJybYxsjSTbB1jku1mEORSMXisZYbnczyqmbEpwmt7Zm6Jhcov/jH/69Tudc2KGtl+GJ1sE3PsZNxxDHhlIEEULjOYaDHbSHd3bVODIvBqPh/AF21pDrFryAPwfCBEuvddZmyKsH6lWGI8gu2bKZFXhgtnsodzrpjS+zIhX6FSoaTiGNH18cPI2WoTl05OaG6TqOvFCp0ZvuVoUhRk41OU7YdpTb9hsuUyMaFtTfQlsXPdZNuyeWVU2RowYZDGARRs8xrKZgPJXM4hYHz2StUk2w+jk60rTA0mWzxOVG9xmYEEFTM+mjX2k7MForsitUcTz698rfqSaJ0YyL5x/r6WgQhsktwnMRIniNjIbL8BzbzURG+qlgkAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 0.44,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -479,7 +650,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAAC+UlEQVR4nNWXTWgTQRTH35ZEiqA0YP0IYlGMilKL1NZ4EkWieBFPXhTEmnrRc/DioQelBwXBHLStCPFiSvESpRTthxfbxlDSYJFWQytNQmwhgR4MFLryhs5mdjszu7MlRR8s+drfzn9/82Z3o4GgEpNP9GI5S953hKKaaL/NMv9raSIBi+MV8j5XWILfS8vwoveNVETCBfOvy5Zl88jA4bEv8DO7oDTYsAJTle0nsu/euaHXSrYqY5etjgf1PXxLXi+cOwunW1vIZld9LhhW9ofBT/A1lQanJ7T63Q/zI15yQrVg7LKZOi76KEwO2HTxGOBAaHp34y6y7Oyqo+u6MoOyL125SmT7fA3ku9RUxvEJ1XI12GXzWKXNZvNQX94GuYLX2KlUKgsHiK5zuAycMlspG/OpME6bx2OVduSQH6bj87C3vRHmpvNkp/jAEPeaEGU4yIIjZjOykXO6GthsTidIpXlMSxWlEQnrtaPihWe97w0B1y636+8GJzWebMrJGLeyVVeDNZuTCVJtHnJzwFnEjcrDQmClfhVEAmix0nYuV8PZSWPHQdmvnleDISc7odzKjLHFBxLCzqbZkNl+sKzEiLLRfMZdld6q2Qqc9MPjl7f0WFubHsz9Mf3WxJGdyi8Q2XYM3Z+WbIJEjEy2qBF4EmTMTPqXKRubz/Q4EusfhY+f0zCRmiUD0DbFWrvfumGwokC2G0YkW8TgMrp9LyR8rHDCoARWuJU53nLAlK27udmYVA8LjE/NaXigfXt85DPKQ2DkjA8CgoCx/lHA/QvFEuEx2PmJEqgyVDiR3ZlxxJR+lAHz5SsViHAuI6Jx3DDWbEbH9USGBKcJcHSsAA86X5sGKTKy8ZWV7YbZ3/ONyLaWjPEdboDF8IkNnW2XTZXhZavDDkNpFMBC27RuJpNaJJPRrE/iIJHthhHJFhV2DXY2eznBYpcej0EJPCbxNCkdz5pNC54KGEsT16/1M+8gwS1iUDb9K8djUAROknWccHcIUEQts/0FeJw1fPwWSMoAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 1.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -520,7 +704,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAQCAYAAAC4LkmaAAADNElEQVR4nOWVT2gTQRTGX0JTPBSF7iEYG0OphqjgITc1Hgr2oKApSKFgPYjFg4dKsatBRYqIYP/guaLmJEggllwUKVTFWBQhh0JtKZYSUy0eNip4suDKGzOT2cnMbrJJQ8EHm9ls3zfve7+82XpAEbqum5qmkftEIuGB/zB0GwYeJwGGYRgwPj7uCE/fwrBr9ebEwBZcJpNhz2KxmC08vYmwGw3BDYMWO3E8HrcUqyYyXCEsXgtsp3y3GjfenBhUgBsa6DOz2SwEg0GIRqOQy+XIms/nq/EGmw27Hk213qph0CIKjocDsM2/Hd7MfYRQKASFQoGsqVRKamxooM/EtdmwGwnBDQMG7vmtSwTA/OoadHd2gBYJQKvfB0cP74cxxa85VCqC0QzYmwXBDQMvftybuGbu7e8lDw52dhDhlw0vxGIHQCv+sGw+euOEyYzdvAis0I426I0EIOD3kZU/OhZNqRm80BA2ghNDVzvYtWgQAuaL3lCvOtYqBmOTDyvyvQjt5Kke+F78SpIxUICxsrIOoWOHLNBGbz/zoObT8ksGQywk09QDWwVB1LiFgIE9UV88A4y7506boi8vboYxO/WUJaLJXb4/kMstku9PHk+Yj6bOmruD//6bxUoaFWyMK5fPWzRuYdudhqvJtAUCbapWCHxPIgN+eHhf7B33bnXdsmJMJ9MeBID3kTDA0nIrgQilEGGj0f4zI0yDQTVdXTstsBGCDHYk/JvtKZ4GUYP7Yj2xKRkE1DMIyXTFSeA58AyM3CJEo/sAh4DP82azC7An3M02mH4159F85f1wtPlm0Gi2pKFF7s9+IBctKNOoYNPJptPNw67mNIiTLULgvVGNKl/GAHuhOn5wvMMjd1hTNPnBzFsiHOw5QpI+Fwxy0ffDMKcRC6k0drAxxw62SiOD7QYC9adfuC5lIPPFDj8mGRvluvw9jrRsrDVuMrEQ/zdRUw9slUYFu1YI1J+KgeiLveNww/w3A2bmlyqmTxWDDdBgQxQahc3nYzNOGmwIY2yyrF148Rp+FYswzXmzy3fqRzY0ZOJQ0Nbezn55+gyJ88/4yG8Rjew02GnW3v+UgqjV219h1ag8U3clCgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 2.0,
+                blood: "blood",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -558,7 +755,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAADD0lEQVR4nL2WT2gTQRTG35Q99mCN0BK8KLalCXhoiFoPgkiqNl4KvalYW2wv6UEvrXgRRBSi4KFiNVCquSoFMVUsIhEk2EAOBrfYynqxMbnYHArtobjypplkdpzZf9V80Ca7zLfzvd97k4SAIH1gwBTvhRYWiHjPbr2dxzRNczked1wnegghjuuaKSJCyJfLEO3oqN/Da9SlQoGoCnra22u69TCJHq8NcgPcr9wMD5F1lRXFADhB8OvhA/5r2OJku/F4GR6NveGPQmDmPBj4WruuVA2A/oJqL98eFpCHbScMLsJGmDLY4hC48TgND686OBQLhQDi0Wv03i9dh73REIzCQ8fC4h49zYLtBEE1PDnMAwcaC7hsmggNH75NDQB9J3roa2bmhXIzvebLefDsFrZdQbJ8xs1Trj388IzEphvZQtZsmgiNdmYqB7OQgNyHZWqyCwU1nzZVduXZDWwKwaEgWbaAD4/T8FiOqmqcA+EwHeHBM0fM+TdLRApb8Mk8fmF7PQ1iNjcN8jo8LfgPRxn/GDzUx5erMDpxWgmAiYfW9+A7PItEXEETvx1RvE/l0bCgxZ2CnCaUZfPjUWVj+Sg49sHcnkxCTyYD59Jpeq/zcBDuPBk209GoeWxt0/IgQwL73sFtyB7f5+jhoTk1SOWxg60aBBkEO0/q1jtLNj6f5aiOx2LQ3doKXzc24HmpREYS/SbCQ/2eiACMFS2bVaoG9CWT9DOjXdch++gqhc3kxYOw96e+QGltE+aFomSeu6nLsPq5JNbvycNgs0Y5ZtvagsnaWq3+MwCAwrrR1WUiPNTs9FuCk/P+aBt0KgKOS2Cf/LQOXj12DVJ51r9VAfPxBbnZx49HzFY/qq+HxT431J39CdfH5iybVDjYdA0H248HO4qwRdl52g7tgR9XwjsFecjm1SPL1oIThtCYAYW0mS7m82SyWLQAeLV037SD7cejgq0STg1OtnhcsR47D0KQeYzEou1+YjYyFAzWj+btlZW/rmUPGWqSB2HnLjxWehAENknc5+zcICCI/5ntD+C2J+4CVmpDAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 4.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -599,7 +809,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAAC1klEQVR4nNWWTWgTQRiGv9SgJyHVQNGDBzUKihbBSKj0VAxFQqUH76LUkyCYSpGil1pEJIVCezH4gycFMSiLaKCnYIhtobQFISaIeLAE1CZHT5F3dLab2fnbRat+EEo282TeeeabSSMkVGnueVt8Vq4ssr9j4xMR8bOwzP9eUdMALiBIlS2Yf1m2TTafuP6BMxEZqFtMfwhGFUxXf+s0yLJ1yQa2ttfd1+FTMYonvxm/vBWQgWzZ898tOwxjky0q250W1dn7m9k8HerdQyeHEtbBnj16Te+WP9HI9QHjWEjmBdmN5gft+M08DcjG88ST/s9dcfzLsSPolp7YXvYcEu7PFJWTlH5x75tFxmA8ZF9Iz1p3TpANMi1Ili8I420erEeVrUuU1pc6Tl8WdrCJ0DWATJOUK4sdjM1i8OKLwRwQbpLN58OC8hNz9OZFzTgHP5pgMB6czXpM2TruOEjz3gGQwbttOZttT2YybsuXBNk2jEo2dtO0QVyCjWwxG2d0p0HVPKpsTBy/1Lk8FHanuvaWTNXnkX1gS1o7ViUbc9lukK1sbzbODA+e1V474np0jeB2nOxiThzdTbfunmsDcKpVGnccd9KWRPaDwiyTbWJEabpSMTrZto0ATsfgWKuap+OoXh0dpak7k1R4+piFqq183hg4FPfBDYXsMIxKto45fynt+7W0ZfhcXuEig45WZYt6gcpSLTI8eKK9q6ebvYc8ANPfVylBG0JE2Ri/1lhnPIJd3naEgjJcOJPt2DHr9SapZOvmCcOI2dyOy48VSVX7Pm6laxcfSrugslRjz72ywzCnqzuZbLF0TPf+GL08+NXX2aZsQRlZtig6DNI4gIJtXr25nG9XnPkc+1dCJTsM48qe6ZStKn4/Ta+sdlwPWI+WqdLP0yAwztQCZa4krbNFUscS7tEsvJr3vZd9SWqTGMi+d+OJkoEIcZMwZuR2miDiT2b7Ae5U8I/pgh7aAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 1.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -639,7 +862,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADYAAAAUCAYAAADGIc7gAAACnklEQVR4nNWVPWhUQRDHZx+XoJUid6hgESTIBUHPJBYHCqaTXFKoIDYipBJNlyoWKVLkGi0Ch1UQbAW1iJFgY4qAiOaIohhSBOE4FQKClYIfKzO5fc7u7dcdDyEDL/t297f//c/suw0AAMxeuyQXbl2hBwIRw/zPmG1579qoU8DB+djYQoa4BTbexuDikNnY5LM88dgigiOSmfsPxfrpt1K+/CCxtUGfmj9jvERxWWrN+LzPDV+nCfVg3yYSSr4TLiutOY/3BP+8mdypjmptAidrPfSOrSv5GC5LLZ/3ZFTcgKfyLlRvzlOLfVuEku+Ey0pr1ONdHO0blo8K99KBi9sTsPXxteAC+CngQi5YenVCY2K5LLUw+GeqzQ+eKbcdMSZr9lFAPeZ8J1wMozy5mEHDs00jxycHxg7C5/WvcLh0ALZq/6D9R3qgtKpXC3nzZE3OtmEMY56Ar5ADLc+VsYpcqi2lukl99YVQFXhy9TYlhS0XUwyOVSYrEt9R0HUinOk2fDr1CM90K47k9lFnaGpCa3kohgu5wrWZy7TrRHw6IwHPlNjml2240JcnEfUpYp8HMqaQyWRVoBidzYDnhIPFd79JFFtbHN8jNSHbZibTTYFiCh3yTJfH4saauDw9LRvaFACsLKevisH3/rM7Y42yzqjATYpY9dZmat2DapV+3Jj8H14gSyHJNBQ0HR4hz7TReHGo7Rs/dqgAjfKp1EwMw5Pgwed9DI4rNqQzHvCT44N3VpZp4dS58xIrttey0GQWjc2+P37WtoaHi+FJxTAhz5RYM98LzV/fWkMAz/E93wt1JuJieCCjrmNs8dbjazDe/xD0v0wxeNshw/dyMf3GXj7PIq38xpp+EqyP7W5jBB47/1zUraUC4d3I/AUrHwQbjGEAMAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 9,
+                        height: 20,
+                        n: 6
+                    }
+                },
                 hp: 1.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -680,7 +916,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAACKUlEQVR4nL2XMUgCURjH38ltQSQUlQhRSFuDBUGDGIFU4JDREkRbkARBU1NT0BoFQkNBW0OhDYaFEWRD0hKBk0lTeASBLa0Z31fvOA+9e9/n4R/O95Tvd/d///d5npr4V6mYrst57fNdROKbmlBQicl1QlRvlHqftfDk9Bzn/t6geMgemidxUo3BgUF5qF6Hw1C9UerN4EDhsZB5AgBVFSZynLC5G0v1plpvBgdtOTzUh/N09hFBFUWYHGeTqAzVG6Veh5fU3hru3sXljVhamEWDALopxeTAoOwYqF+MT3nOUL1R63UJgEZHAgiqKMXgrAwlbG4Iqt44a9GjM/M4ub/LifJbFUEY3RRlcFaGEzZlY+Faqt5U1pLP5xvuqZr8Cc5t74jgQA9++DW9IkKhv/tJpVIx56BYLObKQE0zgxxOMrAokHVBB8dXjtexMxPhcRxXN3Y1qjejXMDx2xcQyWRS05wgUNdPtQFwu5CUPWwu107YrRi74BzQ2bLzWuVgDRwnVki2q0/vxntJs91xY6TsYXM5ziZRm0HeElRzwDeJuUmEjI+aGOz341h8fnV8yk60YLbWl+syhGahczhO2NRmoGaAjyMSgEI4AYAqMpow+0dnmtfcbeEFD6ew7Z3diqH6UvrnAMpcPzV0oYoyBAbMUQWMdeHWsKF77B0EPqAefNkZr9bjczJLleHCSCNuO98uw/FGZTA42c7277lT4oZHDKgTjNfr+QVNxbgR+pg3GAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 0.36,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -727,7 +976,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAACKklEQVR4nL2XsUtCURTG7yuDIAIbSpPAEI0mRxtaGlKaApempqRAam3oH2hrCHIriaClISEMSp2EoCQIW4oUqyVxSmiMMM6p+3g+9L17jg8/0HuV83v3u989PlUT/8qW9lpy3mjWRCKW0oSCskyuH6J6o9QPGAvPT65x7nEHxFFuU7+IlRoMDgzKh+o6HIbqjVKvBwcKhX36BQBUVYjIccLmHizVm2q9Hhy05cT0CM5vLioIqijB5DiHRGWo3ij1LnhK7a7j6T2evYnwyp9BAO2UYnJgUHYM1M8vC8cZqjdqvUsCoJmAD0HQqBhSMkbhjAwlbG4Iqt44e3H5F2dx8l54Fi+1DwRhtJOfwRkZTtiUg4W1VL2p7CWfz7fdUzX5Ffy0nRZTXje+2VxYFcFgEOfValWfg6LRqC0DNZ0McjjJwKZAxg3tH15armNmvJFxHHc2jjWqt/vXUxzdP3MimUxqmhWE4+BdG2C3kJQ5bC7XS9jdGLPgGtDZsvO65WAMHCdGSLbr1/A33ks6nY4dI2UOm8txDonaDPKWoJoDvogvRRCqNz7FpGcMx9uHiuWv7HgXZm0r1pIhdAqdw3HCpjYDNQP8OSIBKIQLAKiiegcmfZDTnOYKxbIQxbJl2ObO7sZQfSn9cwBlrkptXaiiDIEBc1QBY9y4MWzoHnMHgQ+oB19mxqn9DFiZpapuw0gjdiffK8PxRmUwONnO5s+5VeJ1hxhQPxin9/ML1MXCkAmId+gAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 0.9,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -774,7 +1036,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 1.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAARCAYAAABD/oseAAAC+UlEQVR4nN2WzWsTQRjG3y1tDxKkwVJUbGt1cy4UlGgohECwl+IhJQVB6KFt7ulxL7nkqF68pIqXSsXSCKU9pAZKUdTgfyBJtbGue6kiQQQ/IDKzmTg7mZndnbQr+kI625n8mGeeZ2ayGnDq1nahSZ6XrmU03neOkvufSpOZ8rL8Aq4mY57MUeX+pSC86OwRwblC2dF6rZxPjg2C/t8LSz5+NKpwXnV2GPph/yNuc5mko3UrVS7oILoJ0ItOh6G388lmYsDE5hCDSCsrVe5vBKHKedXZi/6kUimcUkQPQ7VWh4TeGr3UDwAm3BFMosrRQUQGTNjZb3f5CuLc+bN4YWinoXbpybrrfAc+ObTG2EQDvOrEhqIyf30CgDBE9FFszk7lNBdYvrfeXFyY0brhUl0G6GeBTrYB6CTBFxPPGwsDIINlDJ6rtbZhqONnmU6NiLSNAbgZ+oHbvnhWKnC79AhUuMWFGTwn4owbtpNsEFubK5osiLm0HQReHFXTs/e5v7zdcLROVIWH36U624aONN7AqxODePDKt0NIzEeh9HwEnj5bg7GLF+Dd3ls4NTYIlY1dx+JUOTPgIPxyqjo1sq0Pdi3cQcxJX+7DbWgog9sHW3fbprCG0pzREm01ply5IIJQPUmII77QOofjZ2DPmhTqxHcofQQSzHGwGnZLm0LKvl+iNtfqq9bquA0NiTlSSCASiz6In5p8D+PjOW4QLLPytd8O4mTJNQjbGP8c8gUZ6tCpj0JEF+vED5uP59vvYsQQUlmjLDQEceT77L2UX61xDaEverr+BGGfCPqHz2mM/5PEuzvZ+XgBynwR6cQ7lJ6MXaisaI6dsCLYmcViUZtLdwZB2vwqf2cSzu9JQlxsIol3G6vRTa/Ml+lZp5EOQ9de/wRD7zQF9ctKlasqBOHGZQ3+AmmdvP7KhjvnZ3290evxJu/VgfSLSpULOkBWJ3q5l04i4Nh+VzDIsShnXNR/FFyQYz2frUPRGBzXWIVzrFHfcXFBjv0Gzgkf68JHWVUAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 14,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 2.0,
+                    "The Vault": 1.0,
+                    Base: 1.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -821,7 +1100,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 1.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAARCAYAAABzcpo/AAAC9klEQVR4nNWXQWgTQRSGX8IiFRHbQnsQawtubj1IUAn2YClEvYiHJQiKngqlIAj2oJCDuQTsoRHRS8GbKDa0ovRSDYgeFCmllnjSxpKWRtFqkfRQQenKG/OW2dmZ7O4kFv2hmc3ufJv//fNmk0ZAorEn4zYdj5wYisjmNIP5nxWpF8Crwks4muzzDWJMg/nXw/bzFlWBmfGCawyiTAhGDJt/78fRX1BfYZkg3jzBrZY/sjEzlHSN9bSqwWxX2LoL5OfNFVwum7QHWissCAqDRpVyGsx2hq3DBPFm4ItlWWwVYmYbLJaWYcCsXT28AwAqcENyc0uD4cOOtVbgWdlr1q+gfT17WSHYPTiOPJxsGoM19cWrEMQbCw6FAEAbxMxuFgQJ3/O6e/Wcff76PdfDkhhxrsg0skBBC9IJwTW/VksX1OpReDPI2OZCBIoLK7D/QAd0QCe7uPJhjZ3Lpo67ngtWjYlHN6A4ueEw399sMgYlMqKChi3OD7cbgjOiNxTfQKI3gwLghcVjGKgXv1rgmPHDGUnxkEwjYevsBhUjC+HR4h+PfPOg0J/KG9s+u75VXDdLDffCpdFZMLt7oLRcdsal+SIzZUmYg8ndcHvqc12GDxvNUdg4imHjeSqIOCqIFkpUI0xYb4ZYPK3izStH4NaDL+y4ulWFzq52WJr3rlhquNc5vmgBzMyBknm3VnUd4+ddm3rrhAy18aki7L+1G2TexOYRvbGX6YlBpw3Fts7P/oTXj597fjlPTwzaNFfcMtn7JQ/DdykfNt5jZm4nM4VBo4ht1m7wY1AX+hM2zeUzUHmLOD8PFA/pU2fuSP8VynGMGPbldEHKhA2bL4jfDSjcDbKCdELwy0DmzaCuSpvyblMpr8Hw36IiJwtNDIxnTh4CyG+1S7n3e1ogfdb0fAY9PmRMvXpk843E6X5b1ll0XqaEBuNnToeRFeTnTYeRKkhAzWISkmuq840wOt7CMtH1T19VDKiurWsystXGc81mdLyFZX4DSDkZ7w4XQr4AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 2.0,
+                    "The Vault": 1.0,
+                    Base: 1.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -868,7 +1164,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 3.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAARCAYAAABzcpo/AAACzklEQVR4nO2XMWvbQBSAn8MNISHFU0g7ZInlhmDcRXQzJbiDM2Qo+gddGwidXHDpYBKIp5KhdDH9A4EuHprFNSGLBw8liLTFW4cSstuEEHB5h544ne6k09kxLfSBcrb0Pt17n06SkwNFDIfDCX12HCenypkF8y/HQpKAdrsd+a6LoQVDHG3wl0VabTFxFK7rRkaTcDMw85SdlTGpLSZuMBgox6QYWDDzkm17gdJqi4hr7u5O1nyfN24qoWnBzFO2DWNSG8M/nufxq1DZ3ITziwuoBAdrjAH4vvLkngUTk60oNq0hbBxHXD04Oo4zMwZ7enJ7Cya1cXEYCJze3UGtXOYiMFaev4CdD0fwo1icfHn1Bl7vv4y9LU8FplIuw7fVDS0zzQUybchGgphfof6DfnS1LVBho62tcCcC4neKer3Oc72AKRQKEQYl6hgxMC8sEIDLfnhywmW/P/6kfAZRPorADRvCUSchKyPXRqyuttjLAZMP+n24+eXD1e+fgKsGN/yM+6rVqrKxNGYa2XQ3UDNJDdkw8uKhC5q0ePitypcoY3wiTH7LGBfhrgP0Pn8MoRF7AN1uN0cT1QIGt2dLS3B2PU5lZNml1UW4AuCiMUTZ+Xw+1gDJXlE01Gq1wnmyMORgJOSn1cYn2gueOTrLeHJxEk94HmDIq2b58jI8j8jgiHNRPuadjcf84f29/1Urm1Yp5WNDi+slWHv0ONKQf30DKJtLCOY3ZcgBcTVaPJraeFO9RiNcDSSQ4l2no/z3qddoTCiXBFKgGBJGYSubGMpPa0hcCKYSZAdybVSPuHhy9PNAbp5i+/BQKa4pMPclW2ZM7ga5NhMJNg6Y6qFIoSpUPnauYjodJUM/WVRcSyM7iaELJAsXa1vW9JPEqPbLwegtIVtV/YyQj21nYGxlZ2Xm1o/JCWfF1BXHdPunYWxqy8pA8WlJC+mOFf8z8Ae1yk/O/NAN4AAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 6.0,
+                    "The Vault": 7.0,
+                    Base: 3.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -925,7 +1238,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 0.7,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAARCAYAAAB+bOp4AAAC1klEQVR4nOWVT2gTQRTGX8Kih0IQ7KFYEIrZsoQSL8FCMQV7KkhOuQuCBw+9ScmhJws9iPTeQ1DwbKAXQSisYktQyKmERU1iQdBTT0IuoRh5L/uWmdnZP7MhRfHB5CU7v5193zcvsznQRK/XG/N327ZzOmYa/l+KfJzYZrMp/daFKc/38IC/IOLqCRnEUalUpJwUafnLMNSET6onZFCn09HmqDDlZ21olg2Iq0cyaLdWGy90uyQyjeBdQ/4yDDXlk+qx8KNer5PLVceB49NTqPqTm5YF0O2GFjXlQ4ZqCowTgCIxY0dgtm17ah413B6NIKkeMggDYRJdLpNojmq5TPnBm+3xq/vPQ28o5pnjEPmsG5BGgKlgkQ20+vXr6slzMcNSieCXayPoP3bg0Dqn/MRzSex374wy88VikRZgHjn8rvJRhqoRx6JoHChgIcbQtLz6DL6Ph1iPdAahSSgMo7C2KGVdvL24SOSzGqp2tFi8ztAoXhWsawgc3BCYxXryvPjR1w/Q7/dh9fwWib5ZWqKFOf9q/5CEm/Kmhpp2dBSvChbNTNMQZBCfH2e/fwaiH7av0Og2T2iRpfwN4DOFHyDyxYPPNHR8VkPTdrSJYNabth4S8G5nJ2hX9Xxw169Sfr/9OhCLPHPq4fz02heJ5wMRdxIDjcO/25zn0W+8jiKufxxDq9XKiTyzn+YHQeEcuBErj+7C8MU32HImnZWGx03D+pFPUw+9xcS3kCrYhYlgMUQ+dOD6hnLgQ7ZwAwJDncmEf7/rG4qcyB96LnUo9AFWoQib7ckLF4WhAKmja7Uxvo9Ffu5AFizyWPN+eUOuO6Iei1tTJ3ZYKkmdI16P5p/lpjFUFUC858GxP1dYX5QE8HP3Lctfe0Q8Xy/MD7R8VP1qWI1Gg/5e9/b2JGF8XQ1TPouh8QIGU9WTxIcaIk5YQzOXhZ/19VnWD8t3ViJvWNbM/W/8H348SLDQw7EqAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 12,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 2.0,
+                    "The Vault": 0.7,
+                    Base: 0.7
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -972,7 +1302,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 2.2,
+                sprite: {},
+                hp: {
+                    "The Vault": 6.5,
+                    Base: 2.2
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -1018,7 +1356,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAARCAYAAABzcpo/AAADO0lEQVR4nO2XwWvTUBzHfx2luHnYQJhgQDZsJ2yNFgY76B8we7AKFaE4GTiRwWDXskMpo4fdPIiTMTovFgqygdaDBW+CFxHsLAjSlp4iOCc4dlDGIPJ76S99SV7W5LVOBX8Qkry8T/L9fvN76RYAQdVqNZ2OI5FIQDSnF8y/XAFRAPl8nh3v7+6a4482NlzDqEkwxP2tYXfS5hhIp9P62toajE7NsfP4tdvw8vkTqLy672osLcEcZ9h+GS/aHDcpFot6pVI5EuoFc1xhyzBetAV5IDuT1/c/noRYLGa5USqVcn1IVoLBwvnz8/Omob33D+HSWQAjfnFhAG1Dg6Yh6DHjRRsLLplMslZWRodBa+6AAsNH3liW+RNh+2HQU7Q/Dl60mR2HAB8EFZ5j5Z7qeuZmQGhMofBac6nsTDcvyKshmRD4+ab/Ztu7qIIk7KdSA60JEEzMQVAF2CxX4cYVFVbLVRbAp8Znh5lwOMzOv6hXGbPaYjYFjGzYjvm/eTUQh8U3kF1bH38BwyOzauSUZU/gxTsfzF8orMbBG0+MMOzEHKxqI+wY925h21cDbfwzvDLE8Yy1eXaYHtyehaaYRtzbtfXRQ8pfb0G9Xgfl+wMWxPlzZ9gE2ldr3wDT3n58wewGGUYmbN4QGaHQ3VaDGyMKgQ/aa/P08a1ZH8yaQZyuvmAbLju8UXhvWfigOsccljbY5sZ0E7af1eA3BMrAjzYmbj1TMtvWvq4bE4aIwpJiMbKeKek01/6dej0w6WDo44tvHAtDxWV7QouwcxxHUz/eLcLW1lbAztB8bWjRNEKFL4qCRmZ6fJZ1o1eG/CDjVRv7VeU/0vYQlpeUwMyK5viGaBxjD7tQcDL4wOnMrH69+dZ4zviscWHU2KkDRieQMJ4BzehsqKMhXA2X2XU0iobQ6DbHRPvjOoRGLMxhyRoCz5CHhZYWUDprC1JLA1j/DGmPO7tNlvEbtt2QdhAHDFEDg1UnJh2GSMNCqKUNl63WHleH4q6Mm59CLuHQFsR/L/DgXi5huRGNiyotwXQSJ/OCCkt3HYY6acNn+GWE2rwE5HW8EyO65jbeDSOjzS8DY1NRV8jt2th/Bn4BL4Zafm7BEGAAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 1.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -1064,7 +1415,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAARCAYAAABzcpo/AAADQklEQVR4nO2VT0hUQRzHf7tZEKzhlpQF7SYu4lJsZBgRdMhTh43AR5YImYFdikiIfVKXLomKJ8FT0L+LGLwueilID4KXiGhBVtj1oEEskav0h8iwF7/Z/T1nx3nrm9mFIvrBOPvmvY/z/X7fzDwASaXTaRvbsTspW3a/Usw/VWh+bGzMDl2ZtEc+fvcURFqD+dvD9qQNzdLvtnicBXBp9hMLARteV4L5U2F7ZciTZ228SQSGBgft3fFRFgT2lWJGynxBKmErh8B58qLNz1903b5vL/4MwsFQCPpOf4WX/eOsL1VdCsxw4pXz+0JnJ9yIzrHnZzPf4N7Vh7D0OO4rxZi9vWC+qIZT106y6+5bh4peoIxTYVS0seBavjwCwzDsaOw4pJJvAIP4tf8oJNobWI8rSJysRYPRCVvVUDkMevKqjf0DDCBQ3wwYAhYGQYVj4/NheNsfLZrMMAwWSsv5HochHmsrRnwea+jZAgRqw0XGiCF94e0r8H5pCQZmAsxQwjSlIfCevDD88+Sf1ydq85Owum2fGYCGkzvaYGK+hvUIUNH5YBSYSCTihETP4m8ZIxYvkCoca3VdDSorm/Tp7AbiiKUmais64zC85Q9505gu39NE/GGNtTI37YkpJ2xcCViimVJhuzGyEGSLBxstHuxFbX6a5MFcCDKZDHTsm2FB7DnQwB6knia6uXenM6EOoxO2zm5wY2Qh8EF7XTx+fi9P/2h1grjYtMjaYnLKeSv8mRUoTMQzsbXnrLkx5YStshtUQ6AMVLT5LctiF7j/seGk2fVdzrLOTV73YRCvq7sdE5Zl+XCic02rrOFhHzx8xjkbZIxu2Dq7QTUEykBFWxX+4b9w4pcOC4PICWMpjhEPeRmD4gae9tgA9MXKf42DhftPhs/6AEbt5VoM2ypiJuYXmCHITEFHBCDYxGSzrYrnFRqyCoaQCdQ32wA1RUx27R1jcKuKDHlItJP3hi21VdGSlgVA47Kq02BUwxYNpZKrkF0HyBbY3OTdTYZIAzL5OXAHbYyXYkr5EbVVmabJ9njfZUx1o2hcVqYG40WcDiMa8qJNh9lUXgKqFGNK7rmNl8PoaFNloPHEEVfI7V7jfwZ+A366HxQDg72xAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 13,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 1.8,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -1111,7 +1475,23 @@ const icons = {
                     holy: 1,
                     poison: 0.0
                 },
-                hp: 6.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHIAAAAWCAYAAAAcuMgxAAAEEUlEQVR4nO2YTUhVQRTH50oLlRA/skWamilJkWJfBi5yoeIiEXxQK6OgcCFuJEoIWghCi3ATEkEgIQV9KIQuQiUSEkywF5KBPTMVKqKHZooWLW78J89l3nTfdd5983zX6sB47nXm/jznP2fmzpUxG2vtumWiifd24/6bfnOrfQKLsf0LRdHqgRzDTmRn36Dt9d8iWKsHxNepfdiJbKqtsr3erMC2mnVqzNGN9o4rElXqu3jGjEdgTnHZXW9F8XVqbzuRwYX5uAcWznTG1eTBHN1q/8dEdrRXmXXZn63gRL+ZgW1GUXTGWXyd2odMZN/982ZhQS4LTM+FBBePwGJdFEEPiK9TewM/fD4fP7GVH/rGALvxYdZ28EDLkBFJYPA6WCQYYhtZPcqFqs5PZgMzq2y591FEHJ0syhHiv0k8xnak57DA5AgrPFDOrp1rVGLJ2os8sv3fx1jLlUFHngHQcvkS++JfZA1F6exJksmas/IsoGjoowmo7qg07SYDv5dZdoGpsGTBdBZYwAPiE+fsqTT+fDSLiG+tED6zNI2Lu724mMO6MlL4/fOyg5aH1Q+1mBCeALgnj8DsWHh23njBFkrWuFdhwaOvtOGwiSTBQVHUrBksxyyzGu6rBYZ4LYuGRsWJ+BDLy8WHbHnXR+7DPRtOfDLERjxquFcxLKKr/X5rEpGj3FRy5CsSFzPJs3wCID7ZysQE95gcO6PxGAdv3Pwtki4WcWBin5On6kUx9FZ2cA+Wrl1H3MHaTpZa4ssGrgpLV47WYQdBkdFgWOJoKv9Du3/s4Z6ak0EsHaz81byQiZcLA33v7wyHeDSqWLFyde06IgsMkSV6VZauHBN6enqsKqHBsMnLT7nwU++mLb82bPIxqAZ/97hBFSZXGrYJXSwvFkW+JhZpr2MRJYgvWwAxEFtFY30mqyhZsvzU+Csj6YTBILoIwNImLxYFsbC/g3HBl8quXzrCvQorFkXRpkEwylFXgZH20eZoyCc5GLYZ2j7I2wljZ2ARh17gbll4h9ChAhwUBXHJak/fNjY69YosHCxgiGPubpDt21vAhSK/MzuDraR8DSky8V0ET3rpZNE71e59q5KjIX5XkckHAPQBxhRMZIkTKgemwtJZFH0CK9xhB58LKkUh5kgFZpdjpCziuclxG37QfxToWg5Knlgnk1mRPi//XZFRg7orSmeFWbmMrU+EalEEBBZb/5yRBVMRXs6xuSCPs7r7/VGzcM0LjFbl+jf4Rt+jMGuAvL2K9mDsJxt9/MzVR3c0LHlFksmriLlkyfGpsohnx4iXXnzA8boKDgr3APpVA9PJ8qJgXtWLb61OIDemi4Uk2u9NOyYZD5YX9eITufAp6Dhoo/5IxkbKejv22vAii0XRHwvWLy6uUZB3TVpmAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 19,
+                        height: 22,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 12.0,
+                    Base: 6.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 1.0,
                     kinetic: false,
@@ -1158,7 +1538,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 6.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAAWCAYAAAAl33lqAAAERklEQVR4nO1XX0hTURj/ZnvQwshIraitmlIUiIiJ4IO+KL2ID7MSIikKejAJImjgQ0+CvQRSEkERFEXlJogRoS8WCGOFiJVQm+EGkuaSmKFS4Y3v6Hd3dnf/zXvcJvSDee485/zu9/1+3/kzABV4Ht6T8MN/Vxv3H9awHp1zsi2gzQBPBvPSNKxnYEj1eTML5MnCAkpVZ03D2hrrVZ83OqDNgh5BeaWqs+4Kwwp0X2uV0hmQXjwEK/FkSmhROqsaFp2PZCwgLYiKpy2L8lqPzkmG3eqsl5r2zcpB8W06Atpo43syJLQonRMMG3h+USotcUIwFE4ISiugx54zkoiA9HhEGh/NoNBWdOZhwz9ut5sJVlMRAyRCINlEbpU88KD/HXyei8Hhwu1y63AVQmRyjvV39A7a+IB4jl07HRD8NAKlx2og/5XPNA8JhDGNLB5nwjQc2gqDXxdhoc+bMI6MP9v1JOn/qfLoCa2VV9f5S4Y8ZnQ+uhyAqx1DNq287ERy7lQBBEMxeRAjDAXY89KYuZyIC4PA+cQxMQ9QsGc/MysV8AJFc4tZBaJA2OZviUlK4xGdJxskvQJS8nT1ecHIeKO8cJVgQegJbUZn0rq1rlrSysvOv+CObxZKnHkQCk/BBdducLiKWOXTCqivdrEWSVAQDIiE4QO6cjOYwFPrmjLNI9J4twmhUQg940dX8kGE0KMr8bhoO6RVRu24N2KYk42SqshZYIISaIvCl6tBuZVRYqJ4Vo0PQInzAFdAhQnGK7dS7YqOi4PA7yQyxaa1RfPx0FyeixfaDA9uh6sLY315JRnGT3jzNxdq7ctyS9ALSDRPthhfY1FoUQtDJtv2Y1oe8GByRg6M2l17d8CRX79lokfDftWARPFkm/EVFnnQQMzNal45VIXYgZ+yZgd0X4/fWhCX3cUQePnWRmNof+YPZp/Px56pP69cYvN4IK8RDx/skH+SPd8Y/MCSCYWn5LZ/aZmNIcHoDMRWedPkBUYgB757pqAIlLEoQXlZ5SGdreaVcOng9+j2liIAwE8cSIZA0bUCGvcusOf4gYqcS3hiyGeHHg8KhJVIiTPjy4vh9fv4GDS+8fR9W9PagU5QFhDyUPLIhwLRSoe19qdixatdgjCv3rvTlnkQfF7dzVVw+9n3lPJihqGQZc3JhzKBxNcyip9HPMQh3844GPGIMF7Jw3YOcCQIhDsAXsX1BELg+6wWEPGsnULyTfFEJQBU4k6EuYFhXnZ+spbASgO1oORJZa6R8TwnwUwBkUDE097iTHnnwPeOj0UUMYRloc0WENMH53Hfk+PVz4sZhtXB/7hU4kXgD5iBKB4147U49cALpFdARsabzUsUjx7YC6qb6hiJv39Y9YXYr9WnHCeCB2GUmD+NPNmkj3zpMCuAEUTwYOCdT0O6iUEaebJJH2bY/Leo7iCjfrPjUuH5EvhoyyYesNAvkucfL7owzXmZqPYAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 18,
+                        height: 22,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 12.0,
+                    Base: 6.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 1.0,
                     kinetic: false,
@@ -1216,7 +1612,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAAYCAYAAAAf1RgaAAAEYklEQVR4nO1YTUgVURQ+I49K5IUtNAhMIc0WBSX1MIJyY7QoWjw0IQpXUVAEFRS4iBChoISoRUSLSAKp3iJoIbUpN8orLGyTptEzWqgEoQujoolz553rmeud/2s9og+GM3Pn3G/O+c6ZOz8ARWT277az547aEBLoH9b3PxaRVOcy1SEMmZ/Pv1r4jOG84uosC5Z/MmihvXZsn3DUOdM4+sS5WBQfUwJlSkRoUzqn+MGndx/h7O0BsV90tmm8ZlOdHG8/c0teWBdQzaY6m8/PXb3n8qUgiSsoeXW+zgdjXE4ek3kl0dlVsOJJGydxQpyIFsf8imUiINMC5UtEaFM6W17LAgXAA0IbVCwvDgroQe9xEVAYLs5BicQRyBSPyhU3ryQ6awd7e1rthvpauPvyuyRChA0kSUDLJVDmLwttSmd5IpvNyodfZ/saeD9RACTjOHDoTqSClVLh/7bQpnROcZJdTXPF4TWCBMmiggfUUO8E1LmjGNCOjU5ATwYjcXbsXAkN9SukQIioIiflMZGXCZ1dLx1OMLVwo38GJgof4fr5DHx9vQCV28qFRfRdOGwfuXzfChPQjf4fMFGYhpNZgKr5aphNzwgbxMO5khY+WyJCq6D5aNU7zA/yO4yCOX0lL0+OPppy2Z62vTa3friZm5b7C28slw3i4QLhhg2EfO8nCqJxyFLhvWJQebhQfIsCXigSO4roi0UHGHhVLvTm+QTlVcY7MApIbCJe2oXxeEwWXrdyoEC4j3c6Wb/r6/KKI7SqM78xKJ8wN0YZn4Tbpb1b4EhjWljE1OQsjM3OwbPhSZfFTUeclMdU4bMKj6mVI67QHFGWQDUv8QxrKpt3OaG46zdUif0XP1fBnqqiTX2TPii0ClM8XAwqODRuEXxUeJrH53PBRn5BLODcrodPLd0z1hF6OhEP5jX6Zip2XhZ2YsWXz66LtZ3YLDqpvrZOvHyQ/TAyah1taZbd09q8ASgYHc/W1rRY0qLy8MJjwanwU5OzsuC6wjdWrZZ+I7/SYpy4qHEQeF4VhWO5eEzklVIFJuAbIq75/Li7r9JuLF+lDU7Hgx15/XxtZB4uAO6rDQRF+1QpPCblVfhSWDlM5JXK5XIWfQgS6C3oVAeOOQ9lwuMFJyj8duEPWFM8JhtozIBAiAp2Dnkwrou5t5F56BzGQfqczK6FgVcQOq8UikyTSWyyulde/pHJgzHF47wkpMFk4dsSCKTjcea5Vw7k7V+325eHNyBiMccCwPa1+ISTuXrlldJ9yC0ldJDvCv41ZYrHVOGTCkSNqMvrVEe1u4GGxmPxLHlrHBr3zMvSkXkRBf1LNMmjS0yFH4+fQCq6+9wC6Xg4Fz9eDp7Af4kP8j/EQTt2ngdpGJjiQZDIfon54UzXM/FMDcPj9y8ReZoPtthh8jLF44eUSurVFVGg8kTlKsUG4k2A+0n+I5I+1FBRIKs+/Pi5Z3f8Sz69msbRNdif4onqI52CEOT3n6flj/D8BiyAsKdq+8XIAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 18,
+                        height: 24,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 8.0,
+                    "The Vault": 12.0,
+                    Base: 4.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 1.0,
                     kinetic: false,
@@ -1263,7 +1676,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAARCAYAAABpTnqxAAADCElEQVR4nNWVQWgTQRSG34Yg4kElDQFba0VtCKi1h8aCiFQRbC8igoqY9tAKVjRF8CIeShUREbw0HjyYgiY5VIgXQQ8G6qFEij1YiyCWqqWmh7JZ057aU+QNvmUymdmdrQnogyW7j2/f/O+ftxOAGkQmeb2Mly4L/1Nk/jSXeHRZu0EvLPxj4XMDAts3g1uD1JgOS6HD1WvSZJvsaIRVWoPRRA7SqUm41ne6XAu2XqZRbR320sBjQ9TgcxKbTk3CnoGzLGdFDzgW98J6MVgUXAsW+xM1OE5ER1sYviVfsvtS9q2yqC5bb9N0WNUm+2Tg3Pwyu48cCkGs9yi73rz7YPwNy4vwYrCOaRuZYFGDX1awdW8IqMHFggXJZzmpCTzb0LCV5eM3nypNQA55NA0vJ54XPK05aW6skwZDbMwqrbHvjAKfi8VVGLn/oorlAxdwM404DBUrCsb1KWSm6bJuGgzRhGJxlRXljfj46Yf9Al9wo6YRq2pM1zRdlg5HWW+k1z4jLAWoCuLFQCEyobJaI7fPV5jEbwgGasGrvW131bvUHBngxGKIWmkN0uvnxS5yTYjPKJpMoilpbgpIFxVZEsJPj1hfnEqRxZo0acSqNIgs1sS1kOUnhw9/OjVlPzS2bKv41ugAfP1qBpYWVmAq/72CxRALIydjZYKR6+mKlmO9nXZO1ZwonA9Vc+JnKesN10PjjLHx5wz+ubwE5uevEAwGGWCaJrtnv/vDLLcz1AjELkzn4MSxSNXI/9q0T8ryzZHglo6T7Pd9Nqs0jTcYg0yjqZRpIDP5zWiNHJT2NvdlluXY+NxNPGBmkBHD9x6y/NBgP8uPPhkzkBmO3zJEViysYjujW6oE42GJjBeDedPcmjt3NW7XVfVGm2yfrj1d0fKdG2E4fCbjmPPK0qIq04hxM3h9pQBNR45XTJpbc/xmdDfPKvUiY/9r7NoRgOS4CVcunrK/K1nOK4vPse51KMzPMMHYPN5jjmdRdCE/wfIylpj+C30GmoBBLAWaxXL5CTtHdZ30IvMbEiZJCYXT7nMAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 11,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -1301,7 +1727,16 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 1.8,
+                sprite: {},
+                hp: {
+                    "Underground Jungle": 3.6,
+                    "The Vault": 6.2,
+                    Base: 1.8
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -1348,7 +1783,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {},
                 hp: 5.0,
+                blood: "water_swamp",
+                bloodUI: "swamp",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -1394,7 +1834,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 3.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAPCAYAAABHsImTAAADOElEQVR4nOVWz0tUURQ+TyY3M9mMDo6LUCtk1NGUioIkI5CIQnDTr40QFv4HCVltqkURgptWtXFTFLWoKCXbhKLVFOUQOVGKJdHY6Ezq21jx4hzmXO57vXndO2CL+uDynvd9757v+86ZcQzI4WjXcQsceB6PQzAcpvv442ED/iGo+vXxw6XFRUFcW1Ii7itKS+HLwkLBBf4WdPWo+hUB3b9103AWCobD9DI/K6RAoQZWy7Cu3yLni+VVG2zF8gEPwSWL4QJu04Nn8pKBBtygy9fVo+qXJmhvR4dlLi/DgYOHc9tN8CHxGrLpNCzlESQXQK4sLJ8BnQnV5evo0fHrY7I/EIDEs6dUIBIpp5c2NTZB/9leEnOks926MXDPUC0g83UNrKZh2W8qNUd7bn5FQEjGVVlVLciTySQU/5iG0ogfTl7opA5+TGbg/MUz1pOxhODLgZrpn1DfvJnOqG/utJh/uuecoRvoahpmv9ta98DczDQ0bt9BfmujUboyWI/R0tZGBepiDaJjqffjNhGBYDFd/b4IxCfegczHAhOjd/Py3059tjWAA516M0gNYGCgDbFm4Aag4bKysOCzeedEs/7d+9tdDQ/0XXbly3699IgXDh3roonw+zNEXEiZNtM1sfXQ093/myBVvmqgbg2QJ9pp4OGjMdAx7Mb3Ggjxbx5FIPnF6CzU4sPwFtrHED7NzkJNzHZGboxB8DfG9tHfGLIbH8/Gs1B4ZTTkGai8j5Ozkk7CCgAsZ1eEAVxfU/PgBm6AF3/NuiB8/5YFM/3SU0/R6PCw8Wp83MCRzGQzUFFdTeFgAHMz03D92lVjZGjQmE9nbAfw53Vryy7ioxFc+fh4HoY0mTRJDAaKyzRDtOcETg6CDbBJ7i4a6O+7YsiGVfiyX3xH1oNanHrEBGHnURR/1tks5HCpd4DusQBe62INViQaFXyE/IXIfDnQUDBEgfL5CK6xs7XcNjmqEy3rQf0P7twWfNSDPxPcJpr9oiY3v6xHBIQ41X3C8Pol64QKXzdQJ58DdfKdgcp6RoZQT8jyasCf9LMen2oYMgrlqzZAhS9PqIoeXT6DAsIRxO8N+QHuQR78T/xfregGmckiczcAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 12,
+                        height: 15,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 6.0,
+                    "The Vault": 10.0,
+                    Base: 3.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -1441,7 +1898,24 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 2.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAASCAYAAADFavmwAAADVUlEQVR4nOVWzUtUURz9PWuhkgTS10KEqEZQN4VCSj5qIpGmIJiNbnKWUX5A1Cz6A1rkSlJoFbnKzazECBcJFhYoBkojOoXluNSFCBpCvDg3f4/73tz3dWfGiA4M72Pueb/zO+fe+55BEpK3r1mZiWkD56PPHlt8/0F6SNz7X5GM4IuhIsc7Wgoe6mfqvxJEsgidYX2pcA9AwXfv58V5m9lFOMfRD+Cg4Kgk0i3aS6Q8ln++xYrg6eqM4kuBoQAn8XHmreNYioKlaPAwjNH1xTZ0pq/PetHba+Gou1TjhxREMTxdnUAYX4ShT58PWx8aLtC9sTFjvLpSLCkWG4S/FUS5jVH1F8aXo3yykc/TjVsJq+mEQU0dLSJxLpyZmFaSRRBE9KR/0LiffmQXVG3eKqHZnR1qrKkhMz1khFmupeIN//hCYXSiv/F8nnLf1+hX0ymK1wf7UgH3YSZwx2ykuc9Z8as5Vk2pnkSgWDmI+IFAFMSS9JoJuiuiGB7GZ7Y2aam+KrRORhRfDCSHYjAEhFh7JzWcO08r377aRzqYhbLA2vkFWjx9UlyDu11V5+AlbyYKRIKH5+CIIHLZZSEWgDH8SeNnTDE87lHGq9eTSi4mGvpjTuvFP/WY78UTN2EqkgPcxrChOGfg3pWVHIUJosHF0w3CzSu3MfJE8/PFPdHEHgpi9/oeYY9Z3c/S6uyUMIhJwNnaSrHpn2m+Kq7NkRExu5eoSoicm50KxcMetiiZEmuvKzBPFUQhzxlgrL3TUjXYuJITPAA62ZgYHz14Zv+g6I/WSfhCLU6djMybSXv5Q4v9Unq5tSYKDph3hQEwiBPEnnF8b0N8lly6fN0uLAcxMPjQwUPDAO65eXIQR+YXaEIjwG1le4UNMi+qMdzfbn5Z1FsNOWHsJvG2lJcRLw2/DRtvdi7oXoIM1ZICr3v3p2jw0/6m4z8OQhWgisfjGV2tzXaDaJy/QNw6w/J4RdgTRtoqMNHwTFmnLZb/lAGy1x5TqiDazC6H0KAgvHheDTIvqjG6vjgMlRtxX3uh1EHMBXB1ebo6o/pi76F+g4IgC0uF+HZljqrBcvF0dWr54vXwoKL4XzUmFUKsilsunq5OHV8cM1QHOrM61ZOwDpMH6PKi4je0mauhp/XsQwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 14,
+                        height: 18,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 4.0,
+                    "The Vault": 6.0,
+                    Base: 2.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -1488,7 +1962,23 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 2.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAASCAYAAADFavmwAAADVklEQVR4nOVWTUhUURQ+T4LoR4M2I2gwiyATHBEj3CgDBuUixKiR2TmtXAThJtxE4EaZFiIURAttF6kgIhHtbMRw0TikQubCHyooFy6UklYvvjue553nffPuu76Zgj4Y3s/c751zvu/c855FHkg/eWXz+YN73ZbXuv8NaR9dKuSLm7fv2jIp0RkX9ze//LCDBEwf/OgfRpA8g+hSIOjM5KgF8tzsW3E9Pj1LOMcxrIBhG1EqYUx1qVCRW+PXSQ7IxzAChlFgOYQx1cUR9NnSmH3/Tb+NI88GDhRmwDAKLIcwKujoIgQdH3thn89aNNIxZO1NbJKcrB/+hhHlEEZVn44uJ/hka32Dkl23bDtST62ReuE4B56ZHFWSYQRliUZSQ9bjh4+cgFxoMSDBT98+0+WaS9Qb67awfXULPC7v9cAc6eSJ+rYmNmh7ZY1q2pvEej9dKqA+xASa2rspl10Qv7OV5yiZ6vMd9AVGxPMJIiA6yOtzy3RHHIeH9dvP12g3c1o7T0YQXSw4h2AQBISutkaqa2ig1eVl5wgkUj2WnOB89SrVvj8prsGNntkv4MWuNB9JEjw8Rzi/vkGLK8siWQDCoDg/YY7D4xplvBwbVnLRaKiPOU3NLeI+87144iZEhXOAWxgWFOcM3NtptknHiDoXz9QIN6/UwsiNVkwXd6OJGQpi1Z0oYcbkxn8TZT4KgZgEVEVqxYy60XJRXPfGUqK7dzMkkpzKLGjxMMP26NCIaFvjEfFURrh5bgO72hptVYE7NbbgAciTheGjFy8R6xH1Ef0SukS/16l0p6UPWWf7IxfnpfRueEkE7BuICwGEQAcOYmZs/jwl3qLRCxEnsGzEYGd/AQ8Fi+SmZ4/wZCPmq3M09TS4gUT7WgUyL6gwXN/i1918w2T1GsYpEm9LeRvx1ig2sPFm54DuLchQbSnwKg+M2MaOkMBGqAxU8Xg94+q1DqdAFI7OU+Wpy+MdMTiQbxh5VKDR8Ew5TydZ/lMGyF4zJiwjEp35HaEzE4vxvApkXlBhTHUpEFQuxH3thbCNyPlwTXmmeQbVxZmhxRb5QU4sqfHtyhxVgaXimeZppIvXw/2C4n/VmqRGsipuqXimeZroUtChJjDp6mSqzy4nDzDlBcUfaH8ENwS6mKwAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 14,
+                        height: 18,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "The Vault": 6.0,
+                    Base: 2.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -1537,7 +2027,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
-                hp: 4.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAASCAYAAACkctvyAAADa0lEQVR4nO1YPWsUURSdF1YQ/AcWwpJmVYRoFlNZaKdWYmNhoYWFRbTQwk7sLLQwKSwstLCwESu1M4XVBPMBITrNIqTwH/iFwsoZ5wxnbmbevJnZBJFcGJLd7Lnv3HPufe9tXFQT8YfPY309N+y7OsxehGvomgARyxtJNH/1bLAJ/4OBcYca6jScCkly6sxM+iBu3bwULT59O267eChWc+gTtYguOSZRg0/DWgPgVtnvk1h8twzsmqNLDTashj37gYXnb9LEq6OP+Yffv1vPSTx89KLRFuRbPDRYOHiw+KYcJpEjtIYmGvYscG5wOH+9MtqMZg8dzV8jCRL6yKdjnnz6pwzcSQHLsNAQGpyYPlKrofON6+PXL9OfSLCy9TcRQFUGKJ4mAHPy2GCbACEGzmbEiQ81UAVsmkMF1ByhNZRp4NNwypLWReBg6uLWZjQ4OJ3/rUkHA4tcMLPuBhVn5CEA19VgF/r2X+TgFLfJQWxhJwiswWoI8VXDZ3dv57jSWxAXwAPHQQJJKL5PPF0ceIroW3ynDGwr4JV7DxoLqPWz23VK8J5Pw4IBWGi8b5yPG5Jw0eTLKLr/5JX35MfI0TyKwMWB3U0DlzeSXEBEiID8LPHXz1+Mvn3/GdyExFMD4IHT3cNGwQC6xU5BEnQVxPclUbyOPItQA9FlVUbGgQaW4e34KyfgKb5PQHawcrhz7YILqZ14aKfnBfBav8W4KvJIRvEgDDqBiUiIycvw7pcrEFlaW6/E2xHmuhQCWOLq8PbQVax+XsPy1+0LHL7+/pHm0Any4akd+cOUMs7bJoAdx67BV25uBwd6+wvFI6yjigdpFoBQPEhY8aJshPHYSTh9fKYgvg9vt1Biydc3geTP2x85cN26LZh4Gk8edhfgkxoA8jcun3N0HS4r4fQwHvYdfmoHUAQfniQsXgtZkO6xBtI8e3cPEVANhPkUQGuzWOWvAnKqVEDl76tfG0GDDZQLir1ebwjoFB3b9Hon/4QCCe3COnxdxLyCDvuOBYI0Xtu1NShACJ7vl3Gq4g/z7DZiRQzBW26FwJ1Yr3DW5RDxJoFfzO7mIO/bKpri7RdMm9fHn+/bvzetv4pDegboYcnAuHWJNvj5rHuqDqy2eDs9IXnJn1jN0QTPqOKQH8IYH7oUeuho7OGTVvg/ZYWH2eEkCZ4AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 16,
+                        height: 18,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "The Vault": 10.0,
+                    Base: 4.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1585,7 +2091,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAPCAYAAAAbOsq3AAADF0lEQVR4nO1WO2gUURSdCTEIgvYWwpJmVQQ/i6kt1UrsgoUWFhaxMYWNBLGxiM0GtLBICtFKrDSl9Yo/EHWbIFjYK/gXRs4jZzlzfd9dy70w7O7snPvOPefe96aqMmJu954m57lplOs2a2/07z1xoJdb76r7t264e7++fK5Tiabh13BjZdkZEdJwxgIXuvsrXEfnD1SLV64VT8Hg+YcGec5fX20UUzpFcxNO3SR48MfFHCW5qCECGqZytAwgUL/DhJiDVnxisTgXzsWrgTR/HCGBX739oLJNkItl7chR2kTEqn4x/IwdG8azN0MnIifh5t1HxUKggJIYGAO1e0omUDuwFB8SMKeJrIbYgsABOiCPD9+agDuPHzrhcR0/1HUkkKS7dz5JXBcHXrtIu6AkFgVXMoF2mnPxmJiYgKn68bxqwBwxDVsGYLFmR+PEZ5KNlWVHfPhpKzkFg+H7kXkINTCF7XsMzC3eF8iBtYm34vrW58QQf+n02erb95/ZTUg8NQAeuBi2ZQDd4iQgCboK4ucQAPbFx7f/FKEGQoiQGYNMA314O/7KCXg2Uoo/eZPD1Ytn6pzaiYd2xBKv9VtMHSKPZBQPwqATmIiEmNyHr3/XLSJPX70O4u0Ic10KASxxKfyxfQfdb66tWH1ew/LX7Qscvv754XKETPTt/aiB/GGKj7P3LUj3rIVep+Z2sGt2Z6t4hHVU8SDNAhCKBwkrXrU9wrjsJJw4crglfgxvt1BiyTc2geQPwYhHLq6b2kaJp/HkYXcBXs4AkL987lRN1+GyEnaHca9T41M7gCLE8CRh8VpIX7rHGkjz+Bky3iegGgjzKYDWZrHKXwXkVKmAyj9WvzaCBhtoJCj2ejy4dOGku4dO0bF1r3e9zuh5kNAuTOGzX0F7nZoFgjR+27U1KEAOnvd9nEL8YZ7dRqyIOXjLrRVr65uNvsJZl3PE+x/4tfXNhuRjW0UpXrmRXy5/3rf/l9Yf4uDOAD0sGRi3SWIc/NJ294QOrHHxdnpy8pI/sZqjBM8IcRgdwhgfupR76GhM8cOx8H8BR7WDHCZcDFIAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 16,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 6.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1633,7 +2152,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABwAAAALCAYAAABs3u23AAAAuklEQVR4nGNkYGBgOHnm/n8GJGBuosgIY1NbjgldAgQmz98OFqOFHANIEoTZ+PjBGMYGKaCFHBO6S05dvoEuRF25yfO3Y7gK5n1ayDGdfXQVxTWH912AO4QWcowgRkJjz39jOW0GkEJk+j/rf4Zzd68xUFOOCWShkbIWWEBDShnskgX1JYy5iZ6MeTFejDA5kBhMLUgOpo6QnJGyFoqZKF7vmL0eIzlPWrINQwwXgKklRQ/tAbGuoZbvAaKDNNP1gKzxAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 7,
+                        height: 11,
+                        n: 4
+                    }
+                },
                 hp: 4.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -1669,7 +2201,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACwAAAANCAYAAADSdIySAAABJ0lEQVR4nMWUMW/CMBCFLxY/hSV7pS6Z+weywMTUuQMrYWnXDsxMTLAgduYsSF06sWTjhwSZ6knPV9tJIMCTorPx52f70F0ipMO+qDF+fftMJCJmm/hDS9/vxbjO0mHUMwnBsU19sOWxkunH2jnfxiZfwzCM9IGh+S1slg7/8biszxesQQYA28gb2LgLi3kWYLU4sz5faKBfZeer7Y9ILpc4yV/+5p4MxFhcvOyZNfySYr67xOr35EQUTheWs1f0yCZ6A+v9ayPL2ch5+bNZgwFnD2MLsmFb1lb/vVjja0e+akULYtauhyqb2VJdhD/NNvma0AHok9qYWVSzj+UeO6Us6rWuvs6FfYahcdt1CH+peITf23o54p57DRPbJ2q9T/Yh6nJh6AzoD3RJY9rqsgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 11,
+                        height: 13,
+                        n: 4
+                    }
+                },
                 hp: 0.3,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1715,7 +2260,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACwAAAANCAYAAADSdIySAAABJElEQVR4nGNkQAKrTsf+h7HDTBczMuAByGoJqV9FpLkpkx3+u1nI4jWTEZdifJqooXbXiccMc3IPoNgPogmZy4SsGGYQuoW4+JSodbOQxVAPcyw2c2FqmWAhAFMMopE1IBtMiloY3w2HWnSAHLLYzIUBFnRfgfjbVt8Ds0G0V6gSnE+KWpjDd1FZLROyTxbUHgfTry69RKFhGYcUtciht4CKahnRNSCDguKDDBN67VF8PtBqmWAM5NCDsUEKkQ0kVi0o99NKLRO24ghbboUVQchqQfK4cjay2l1oDkHG6GoJmcuCbgFyWgU7Eq3oIVYtchk7B4tcCpnmgkMYHWBYhoVNrDwMwKKUAQuAiRNrFgpALnPJUYNPHwOaPDXV0gWQ4mAYAABjYWvMA7T+yQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 11,
+                        height: 13,
+                        n: 4
+                    }
+                },
                 hp: 0.75,
+                blood: "radioactive_liquid",
+                bloodUI: "toxic sludge",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1761,7 +2319,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAPCAYAAACx+QwLAAABmElEQVR4nM2WsUoDQRCGd4+8geALmMbCOo22dhamE9L5ABYi2FiIpQj6AOkEO1PY2ZrGKqCFTeysBEuxESIT/Jffubn15oKHPxzZncw3Mzt7u0kMSve3R7NgqLd5Ei37b9wibBOup5hYt8jx0zSsr3ZLAc4udmZi93JN83m5yBC+hKMlnbRNDs30cAVAGAWQp791MH8en9/SWMvLofNNOS6+bp0RMDqhHY7PD8PaylKyX9+cpu61ycluYNc9XMFdsXZJJN2BxIdfCw/H8nLYCG+dBQwyeZ2O5g/r8/3jx1x/7+G4MW1wosgHV8Sv0XJ3uwTo3eMD/x+5qA+8XiTbeCxnItcc63azOF1s1a2oF1mnTlFnf+/KXCSSc5Cqq5lvNcyt38YqTtsszqpzXJGP6+xwEDjqzua66uEmDy+hzXyidMlIh7gr+pP9uFAPdzm8ix5O8iySL2CBOgDGDLGdC+VCqjiOrwVOfDSHPDqfVefkOwfnK+Ud7G6kfwx439nGY2vONvCWrNi5mLnYg4x/Vo3BGvxfxtb6AiaqQX0MXNz9AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 14,
+                        height: 15,
+                        n: 4
+                    }
+                },
                 hp: 0.4,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1807,7 +2378,24 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 1.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAPCAYAAACx+QwLAAABfklEQVR4nM2Wv0oDQRDGb488iNZ2tkKwt7ZQ9DUsIgEhaOFrKFpYpxfB1krrJFUeIzLBL35+N7veXPDwgyO7c/ubmZ39c0mVaPx8saocTQ5vk2f/jduG7cJNhEltk5y/flQ7B3sNB+fXRyuzR7mu8aJcYggvMdCTBu2TQzEjXA0QRgPsGZ1drR8Tt1lRDpXvynHybfNMgFEJHXBz/w2jz1uyL85WA6se4WquirdKKhvD2yLCsaIcFiKaZw2DdR5mT+uHtXhf/ujr+wjHhemDMyU+uCbeRqe7xw1AV48P/H/kkh54nSTbuG1nolQc73bzOE02dyvqJNvkaRrcXU7dSSI4O8ldzXyroe99G3Oc2jzOy3Oeicd5DtgJBmplS1WNcHxO+ohn2lwyViGuiv7yOE40wr08vqUIZ3G2iVdhguoAbYbYzolyIjlObzgvERujHOJoPC/PxVcMjteIOzzZ3/xjwH5nG7e9PtvAe/J8l3yWfA8L44vqDLbg/9K36hOuQC6r+0btyQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 14,
+                        height: 15,
+                        n: 4
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 6.0,
+                    "The Vault": 4.0,
+                    Base: 1.0
+                },
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1853,7 +2441,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 6.0,
+                sprite: {},
+                hp: {
+                    "The Vault": 16.0,
+                    Base: 6.0
+                },
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1899,7 +2495,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEwAAAATCAYAAAA6T+sJAAADKUlEQVR4nN2YP2gUQRTGd48rLK3tLMLJgc3hlVYxcBARMbWFFoIhhVgFq1SSKliIgkVSWEdEFA6ilaVyTUBypEiX2tJuwzfkG748Z3Zndk8RHxyzO39+8703b2aHK4uITb9sVaH6k5+/isdr22VsXC4Llsp7vb9ZXb18qfgbrBinTHXuQp+DmStfbH+oFfc/svo26owwoo9y/u2HaxuMh64OoGdPX7q6ycqomixvBcVZlhrrurCYUbAurFwfewqiGAAA+vj2sxuIH+sG42HjaoVY+EEIV64rC890tAsr18dSQRSCwc93NnyUaftfX7n2ycrIC6Vopm6MdXx0Wuy9eef64h2imlgU+ydZuT66DFMHIWZ2uOsHqM0DIK4GUz3GooMwrmaMFXIQbW1Y1GVZCEwbH13ANOoQw20DgTR9nh7MXCpzAq4wgDFWzEKsJ5t3KmXB0CeFxf6qS30ki1sz5KNuezJY9iEMgNv3b7kBo+sPXSMH6EE7GA+dKN0SWCm1GKs4f6ewHNbazXXfXseCgbd07cqFbFUfydKtbH3kwQ8W62h9DMAEjOx0Z8M3YgDF6KA92RJcNT7HWPPIFzOFxeD77Imw7NlWx2KwGBQwGRy7kMrqMSgUg/2L7YQ6TEKofpVoXF0YyjoWDPUQq86nsBAcHtB1LA1+E4vbjIH0gWtg9UPZxIGchINnh7t+QqY+jedQHUszAsHMYaE/5q9jafD1vAqxEGjdluqjnpWW5T65OGRtNDVLeF48eHTPOaYOcmXU4RhLs4+MRbIslyxcB3J8xFnHnWVZ/uJqU5JQZgF+S+eHqR6qeKYo3nliLH2vY8HasGBw1rJyfaSFWD2K0xVC6uGnB71ONhgPfarbuxMnCLHY114jLEsvm11ZKbpSfYQuL2z17o2KqaidNSVhuo1s2i+ahW2E+n9Jl9+SqOBfGigB1m3D92O556D89P57qZPR2rKUQWdzWTDLUh/Rt62u384wTUsIZqlfGxgnjokLscBoYtngk53DatLD9jofGdSYLpeuoXeW+pVZNW0xi/XT9yZGKrNpnhRWrpZOkxcZrEVxF2U5Gs4AUw4H6K1o3RwAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.25,
+                        width: 19,
+                        height: 19,
+                        n: 4
+                    }
+                },
                 hp: 2.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1934,7 +2543,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEwAAAATCAYAAAA6T+sJAAADKUlEQVR4nN2YP2gUQRTGd48DezuxyBV2UYu0B9HiwEKusBEsxEZQElttJFWw0dYThWvEQkhjcVgErlDB9gr/dBaXQuzsrVa+4b7hy2Te7szuKeKDy+zOzvzme2/em11SFoa9/LRXxfq//fxV7F9+XFrzclmwVN7euwfVudOnir/BsjhlqnNq89nCta8evq0V9z+y+mHUGWFEH+3y41f3bDDcdH0APbn7zPWNxtPq1sX9qLiQpca+LixmFKwLK9fHnoIoBgCA3r+Yu4n4sW8w3GzcrRgLPwjhznVl4ZqOdmHl+lgqiEIw+f7zHR9l2uTzxD0fjbe8UIpm6lqsoy8/ioOnb9xY3ENUE4ti/yQr10eXYeogxBx+n/oJassIiLvBVLdYdBDG3bRYMQfxrA2LukIWAtPGRxcwjTrEsGwgkKbX89nCpTIX4A4DaLEsi7FuPrpaKQuGMSksjldd6iNZLM2Yj1r2ZLAtIQyAS3dGDnLl7G0XfV1UD9rlKnO4y+FYi8V7Csth7V7YPfbcYsHA2zh/xmeFxdJSDn3kwR9j9fEHnRw8n+34iGMCBmOylsuBlASF8tpiLdE3nJx4Y6awEBQEyGePwQrPtjoWg4U5ZMLor8XqMSgUg/pFOaEPixCqbyUaFmcg0daxYOiHWHU+hYXg84CuY2nwm1jMLAbSB66B1Y9lUzGeHqtbTj5cpT/fVFwMxnOojqUZgWDmsDAe69exNPh6XsVYCLSWpfqoZ2XIcq9cHLJhNDVLeF5cv3fNOaYOcmfUYYul2UfGOlkhlyx8DuT4iLOOlRWy/IdrmJKEMgvw21gdgHoQ4pqi+M1jsfS+jgVrw4LB2ZCV6yMtxupRnO4QUg8/Peh1scHqraOLqlksjg0/I0KWfmx2ZaXoSvURuryw7RtbFVNRB2tKwrSMwrRfNwtlhP5/SZcvSXTwXxpoAday4f2RfJug/fB6UepitLYsZdDZXBYsZKmPGNtW14kzTNMSgtnq2wbGhS1xMRYYTaww+GTnsJr08Hmdjwyqpcula+yerb5ltoNnllnj9L6JkcpsWieFlaul0+JFBmtd3HVZjobfCHcMKBJXPEcAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.25,
+                        width: 19,
+                        height: 19,
+                        n: 4
+                    }
+                },
                 hp: 5.0,
+                blood: "acid",
+                bloodUI: "acid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -1969,7 +2591,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {},
                 hp: 0.35,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2005,7 +2632,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 1.5,
+                sprite: {},
+                hp: {
+                    "The Vault": 4.5,
+                    Base: 1.5
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2041,7 +2676,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAASCAYAAAC+Tjt8AAACjElEQVR4nOVYvUoDQRC+hCstxMI0ETsDFhbaWdmY2gewOcQH8A0s7H0CsfEB7ITYipVaGi6dIoJWFulPviMTJuts3J2bS4IOhL3kbr79fnb3xEZRFElsZZ3uuOky7zWiAQSsqjj/pVKNwVbmWmMlfyh4vim4rtQKNNYoN6wqhmdGwVucHD6jNSX1RgeWf72Zr+YqhmdGwVvudgsc7jMv1Q4bnu0l7w/9SiIXLXirneYzWsOLfN64/tAdibutzaKz3E4GD/3YuRc++NxwAUlGW/ncDAU53Tksuu3tUhiI4IOSVlMoIYiyqOHZXjI4aKm4WOJY6PrN56DAuID7j+cGwOoiNI/gd2dgtJXP4pHoTrK+tFqOL8PPcoQ4bPXYowzPExYIkVFVDOq9PSWd68k5YjhZ4Gh1aXxO3WZqkgpNEEjNkiCOQxPHEJpl8NkMjbbyuQwMN10C3Gxc0wSnj1clGEZ3IhdHQ6jO4LM5Gm3lc0qrTDKGCmcpJ0pg/LuEE0JoQtCIXF3Bz9Poqj4TXipNStcYAYLjgoiPTWWELvbPCwknhBC/D5y715ukruDX52h0VZ/pt5QmoxEvXyKBwgs5hIiEgyPGR8gXmiQsxKAkIPgYo13cqkZrfObz4xq6mjSZWwCQ7pVgo2b67ej2pCE9CzIghvEHIQ8OCaAR/dysfGTQWNToIybiMVrC8XGT+EzVJex24Kh8FnQ1KUlqwsgBfI0/JhBwphHyVZ3B578YLem0Mlrjs6SrubayM36AX+Nh/JlLYt1CM/8u4RAh4PiEuDjTgqcKWUBHW8ciN45D+kpMT/DTjPbpknC0Pqv/NaUtfg6HEPIFz98NvYAFRM+6RlOv790ZwkejS1uurm/9PxiMSflYFAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 18,
+                        height: 18,
+                        n: 6
+                    }
+                },
                 hp: 5.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2079,7 +2727,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAAGCAYAAABUxhlHAAABLklEQVR4nGNkwAMaMmP+w9ifnj1n6Nu4l5GBSFDk7/yfT0oSYdb0JUTrHUqAkZgAAAUeDNx78Zphw8lLjAHmev9BNC69IBpdP64I2JaY+N9r/nxGfBFAagTiSgAwd+NzPy792PyPMwDQHQ8CILH6aYsZigNcGHo37GFgZGRkBHkeXf+ed48YsOnH5gCYOLI5pOiH6UOOAFwRCAIgdyO7n5QEhM3/eD2ArBHdMydv3mcwV1fEmipglmPTj+4AfI5H9jg2D4BomP3ERACymcjuR08E2PSjByZMP94YRHc8uodAAFcAoovhcgAx+qkZgeh+cBGSQ/E7Pv3Y/I81BVhrKP0/euMeIzobmY8uzkCEfmwBiy0A0PWDAgpbBOIqE2F6kAFMPyjgCbkfnzvR/Q8AcBZDHNwAVtgAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 16,
+                        height: 6,
+                        n: 5
+                    }
+                },
                 hp: 0.2,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2114,7 +2775,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAQCAYAAADpunr5AAACGUlEQVR4nO1YsU7DMBC1vSEYGRgiwQ6fwMCABAN7+gEgYGJgBAkY+g0g8QWZGQCJgYFfQGJg6JCBgRUxBl3Qwenis89NClHVJ1l2Hb/zy7tz0taaKcbl1nUFfbaS1Z/LUWkO7/es6RF6JaZLAzkX0bck2Gk1MJ/Pq431TcP3R2hi/MUJclx0jKBZIxkIY5yP4fHpoWEajmMxuEbg7Vxtm4O7Xc3WnejHGNBu9m/r5uO6kLFSgFgS4Pp/G0iBvDlr63FZ/mrqSv/R8nEFPNQeSiC9vzoBMLG0+L0wFgCPtZQEEMLnUgzMPXFTDJR0AVezTqtf4oOPsQSih41HUGoAKgKz//be3MRnIK0WiuKjsG0MpHzc93Tt3HxWVd1g/Dp68VFNin6qwaeF8kMJdNKNxALEwKuUGyghJ3pSDeT8wcLgZx540LIsm4h+TBz01LvYCXZYNUDEXhOAVhpPIl6TDBw+X1hYUwjV3sZAKSby8GSnPPpCBUB5eE/gjzaBjgtPDUA35qaC2HErMGagZLR0osf5+hjST/3ieqDAtAl0vhuJBcDroQrGNQgUHjOiIDHpmPJC+/Ii4Pv5DPPNh/RLXG0C6frGS1gTYBykVGBBTJQMDAFPATcTergmxZCSI+lvU4DIdV1XsEZ4KobEQM360PtFk0CKrn75SnHcJIVg0lIN7Au60N8qgSerZ5Wvn0GHlL8tJhNgBhPDF+9UTWwaw0PKAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 16,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 0.5,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2150,7 +2824,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 31,
+                        height: 27,
+                        n: 7
+                    }
+                },
                 hp: 3.5,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2196,7 +2883,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 0.2,
+                blood: "lava",
+                bloodUI: "lava",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2244,7 +2936,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 1.0,
+                blood: "lava",
+                bloodUI: "lava",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2292,7 +2989,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAAUCAYAAAAa2LrXAAACuUlEQVR4nM2YP0tcURDFdx8GgkqQLezEJoWpBAtTBpMmvc32Fn6CIPkEQfwEKeytrexCSu2sgmCT1iKKfxZBcOU89izzZmfum6t3MQOP3Xfv3N+dM+fdx7KdTjDO+v1hNDfCKsl7zaj0wOGXtQlhFKtFHxq5EZ7m5vA8TmmDn93Ay5teQ4gHQ87lTa91g9I85lrjkh01I8JK5Va/vq4Pc8He3PHm53rcYubyyGozRQslL2pGymBtiMWsrGKZqIu7eriYyGGAMbi7bdw/l6dZninRo6b1eQZbvDaD6waiWAxYoqVIPYfQ6xhkriw9hnnITT15Vn0yyG4zI8LStXrM8TuQAxBB0anQeQOjSMmM8FIsjusGW4YwUmaUMrjaODrp4svs3HyjcC1agvXcYLSOLIsZ5WmWJTzHEM+MUgZPPIGpDbXwwd1tfaFRqQJzeB4LIedyDNZR0uBKA2WSdzzYOFmEfmKsItt4HkvmlTSkBK/xO1AmyCYhFt4sNjZF3myLYJkf4aUElTakFG/cQA4yUTYIYFxyjtCNRPNkkRGeXDNtQ0rxzGL17yRrcZvQafHAksdInxr9GmrjvpSXhP/Y/2T+DPi+9TvcvGnw/ieDuxGxV//uOwu9t6bo/vaHOu/g55+wGSleTpCpeS81WPNOTy5qfZbW8Rc5ubP3cUgAYIi/59f15/L7d/Un5k9HYK8gMrEmymNEDfF4vI+wInp3vx3XDdSsGb0JRQOkIQRhQ26UCulalBc1xOMxMIZ5j0cWw+OhsZhDjdIU9+8sLoIwTwjmkHMwKg5wXF5+Di/F4n4pHsdlfR4rwsPrQOudaKAsWifhHoDV9cXx0ZHu7YzWeQXk8lIsj4dPyZNPimcIx/XJs3har2R2rXcBuq6BnON7Sh/DjuLwu8XjfJQnmXKNrC2XZ+mV5kT1PgHU9bpRD82YHAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 20,
+                        height: 20,
+                        n: 4
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 8.0,
+                    Base: 4.0
+                },
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2338,7 +3051,23 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
-                hp: 5.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAASCAYAAAD4+JjWAAACJ0lEQVR4nN2VsUoDQRCG94LBPpViqRYa9T0s7OzFRwhKsLC0EFHS2QXxKQTBN7CKRgVNKVqEpAuIkpM5mHNub3dnZ28FceC43ZnZb+ef3UuUstjofDsd7K2lOIcx+NQ/MKqD01SzAcaDJ7V4dp9Met0UHhiDT9qkmI2WCHMxQAfq4jSVGkSTJ72ucexbXKxGQ65NmJQjjdW4pM9+L3skm8Vs9G/lmHSZOMZPDE5nfqdVAMAYfBALKTik0TEPTNeGxmnKG4RXmBaiG/X5fCZVG21ioUkYLm2cJuMNAqs3N7x8kmJ8i6LmK0xiVAenqdQg3MwlbCwoKLTRHCuEYdLGacobpCf4CBsboOiTNNpWnIvly+C0cZryBj3cfRhFuHz6GpPPp9EmDsfyZZhitk/VlJs3aOv6OaHB4e1NaSPqg1xYg/P2xVJ6fLWS6py3y06JQ33IgbXAgMcm1CWMmoshtRoKgwkVB+8haQiMaQybg8JOdl+S0funCuXAWmDAU7UeYFCRIRy0bAICG3N1dbD5mBfX7HxlCavrs/lisH5rJntjLgpDIPhCOPBGRox6kEFjEg4eWqFbNOCyBtnYFP8rHLzZIRxcWzg1HENg/2g5PT0sXjf06bl6UVU5EK8t/PyMSDjT10RhXixOlqCL0+dtSwzXxuRwuVwsJif7F8NOQdeoTcncFqOnEYuDDdNvp4uDt6PgZPbkYkazbaIEOT4MLlfCcK2pyvkGDApATSuWVwAAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 18,
+                        height: 18,
+                        n: 4
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 10.0,
+                    Base: 5.0
+                },
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 faction: "flower",
                 attacks: {
                     orb_tiny: {
@@ -2374,7 +3103,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 1.5,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGYAAAAKCAYAAABG6StDAAACFUlEQVR4nM2Wv0tCURTHzwsjoYaESosaAgdxSWgLGqUUGgNbW+INLm5t/gUtDdLQXBCkEOjgGOQU5CIOQUQRpkERBEXBi++T+zg+rz+u7wZ9Qe4P7/ncc77v3scjYnoo7ln40QBFQ7OWrK8iHYy/1rB+6GC4/fCVzagzsZQ8MtBiLrK13jHHg2qNluHu80RkcboZgzjDMtxS9UMHQ1aHL56rGaKIMpFVv3qxFxf283T38e0A+yX0X4opj5CHm6PqhzjpYIi+Dk+dPw5X5iwEJeLzHQsAvXn7pGxux4ELYf3B7avNEInULy7tmMjajN0KJk8Ee3llRHvcFh0MFT82ds/JK0PmqWMUJpYnxzsWYIzCoNPiI8Wm/ZR7bntqBtv7YyySUSnGK6PQ44DoYKj4wTUqQ+apj59emcQ1hFAU0YR0HU9ExPBEIkSUNU+6ihmVkWPF4H9xWr0yhDnD+lH5mvDMkHnqEx1A+RPmY7RQKrlIMQaFNqd+yFR8uGbQ75lBkmJ0HTIVPyr5lmeGzNOx7YXVLhCUrjYNXEu0eCUc37/bxwDjQYnIxjwRHQwzaDhXXxSjg6Hqhw6GzA/7xgAUKpWkZuELAl8ZfA6gTDhgn05s1EgkrLOn645E0PINBSdFZOlgpKtN+7XF80IdXhmqfuhgyPwgGCIL5pB+YwiMfhweg75ORiYcsERBuhi94t0MPtbB4PoFb6QfwgVF8b8AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 17,
+                        height: 10,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 3.0,
+                    Base: 1.5
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2410,7 +3155,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAHCAYAAAC4NEsKAAAA4klEQVR4nGNgQAJxU+z/I9PYADFqKAGEzKe2/UzIBr+58pPBK8MCTOOy/MICTjhNbQ8QMp8W9jPiU7wo5yBYnhQ1IIcZJHxngNEweVDAiuiww8VB9KUzO/CaT037sclfOrODEWsAROtIgml3hxVEyRPyAMzzuDyAy/ylV57jlSfWflzyIMDCgAZghoPAzgMR/5EtAWUNbB7B5cBFUD66HmwewGY+sgcosR9fADIhGw6SAIU6NgCSz49QwCqHrB8GJq54QLI8svnkyJNjPyNy8oRZAgoEkGKYImzyoNgB6R3q8gBDiTGz8I5h+wAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 8,
+                        height: 7,
+                        n: 8
+                    }
+                },
                 hp: 0.3,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2446,7 +3204,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAJCAYAAACR6WqOAAABYElEQVR4nGNgwALiptj/B2EGBgaGqHqX/yCMTR2paociYEIXgHn2zZWfcPaHl1+waiZF7WAOUHxuYoQxQIIsor9xGrIo5yAjNoOxqf3zmpVhWeMeRnwBKqLDDlYHCtBtM05gqEXXA7If5nBsZpOjB9n96G4SEOcB62HEFjjROpIoBi298hzD04MxQJHdhMvDuNyPzc8gP7CAOPgUwsRAGog1HAym2P9HDiRITGIPUGwBjawe5FGYOhFRdrAcds8izMmPUEAyTQSn+7G6HSq+CGQnskNwKUbWQFTgIKlnIFIPTC029dj0sIhCIoAYtbjcj8+/KIU0KBmCwMQVDxiePcVfyCKrByVjQuqJDdCdByL+41KPy8PoAOQeYjwNA8T4FxxAoDwK8jQoKa8+/AarpmdIYqSqBzmcUCRQQz3IPaSqJ+R+eCENK8hAsQcyINRWhEFKmgeuGGQQCIAKyJGkHgBl7LSPsQBQGgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 12,
+                        height: 9,
+                        n: 6
+                    }
+                },
                 hp: 2.2,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2487,14 +3258,30 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 10.6,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAKgAAAAPCAYAAABwUoTiAAACkUlEQVR4nO2XLUwDQRCF76oxBEVCIAEEaBwBR/D1JwgOEGhSTdAILEHg67EkODQIQDRNUARTXzIk0wzb2Z952x4tdExvb/fbmXm7s3stC8daV/d92T4/2S3dMf/VpDZWXXLYv2opmpShzSktRdRpWAS0ADVtxs22pkBPNNZUTX68OD286c9trQ1N1nt8Leh9yHHOAro8svCoKCk86UK/mjY57Dj0bGXcgGhBWGO16Dl4qJoX/ZW9HW8QtEnJPj7fi9v2WYk6HNViIAxSgD5mFKwvZlTPVsYNiBaEtQCteja4Y2F+cbAJXUAajaPN7Dr0OSU+JBzxml+U8XEUsy9Gek/z0bwyN5lDyKhfcvTM7RCr9eXo2fP4ylmDGBeK1Rqn7Gf9vncpNWjj8ULxr2t0epLJEzRW7bGT13rCoCeaL04tX86TLKSLxnGOMU257eqC6lmBNyCiJ28eyi8W6+X1QekyFj1LWfnsUA6Q5gqCOKQ5kARzFhAtQDdOOU6+0wpX+g2xks8piFNjAca4kJ5oASJ6DgnqBnh8tFFs7zfVb5GcBbQmiBaENEsBxnRJ4VJYyaN6VkAB5hwwSAFqh1tMDzJV2Ie79mCCpdWNYnl9M/ixjC6gNcFRnGiWAszVpQ49K/AGlCyqZ0qsPi5VFxXsvDz1u2/P3xDZuBYCTTDnREPjzNGlLj0rsAAnWU/vBnXfpTidcTNu1FzDt6vZ6Fm2Q87q5HjspHMzPfPibGgQXQkuoO323+K4X+NiRtcRwiH+/oOenTHr8mODMiS/Kch4Ip+hHI+xcpygy2kJan0IR1ePFmeIq1vPLsjl6IlwljiHrng5OPXfLcrJYKwcj5Vc6gIinC/O1FOjDj0LkKtbT0ucX5Yh9bX2AQquAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 14,
+                        height: 15,
+                        n: 12
+                    }
+                },
+                hp: {
+                    "Underground Jungle": 5.2,
+                    Base: 2.6
+                },
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 100.0,
                     kinetic: false,
                     suffocation: false,
                     hm_teleport: true
                 },
-                faction: "player",
+                faction: "fungus",
                 attacks: {
                     melee: {
                         min: 0.2,
@@ -2523,7 +3310,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAOgAAAAVCAYAAABMpaK/AAAEHUlEQVR4nO2Zz4oTQRDGM+oDCAkI6oK3BfWyiBdBBFnI1fPiURDEfRpF8C77DoG8gexNhJxXhcAGfINIBWu3UlZ3V3VX95g/H4RMyKR/1dP1VfVMuoFRP87OlvTz/PdCPO/Ju9POOraFi2xvjqTzTx/W2C2Ye+0F6nLNwRUyKujy+7fB+ONnU1JrmBLfwzwxNnDu3B5eHXuaFQoBjh3S/ZOTfXHYEKXySOOLzsMknua0GBPNgnx6bGVrzBGKAWQ1KnbllkwphhTfswhpeaAWzDnJFS+eNX+ppHztLNtJOlFuDi9jck4ojlhRsPCBm2KG4gDxWGILPXn/dvno2Yu1eZTImsylRSEniUsLX27xy13PXKPmGFPTUDqtUagxPI0pMfkENFwrP8aUZOGDeAxgztHDx/+cH5ov52rikZKLFoWQtMXCksTa2wRNXHMlN7cY8JhK5xlbQ6tvulDSUqUSM8eUKaaWi0lv3c7Gvs8tDKhQHGAWeJeMSrmhOFLi14AXBakA5CiWwNIuoZQ5V3RTas5UkZPWVrrGqZzS7vr4HCyMTmOUnIE1CnWVmlw0CcjKLi0MUiy5MfB4QFIcKUaqa6eqPzVMbJdg7TAWw5xHzClxNQ3IYk46hjRXSdq86TQdhQ5689Xz1fHBweHg8PBp8Y11qqvU4ubEUfPvFQ1fa0ppbO+ubd3Ke/DGgQJEO3aIY1GuOUvHldTFOgofcDr9sgSDoMAos9nX1e9rmGaXufTz8fFrN25p19YWBs/dwTjCsha2EhZvZhZjQoOBdbTGZPoBJMlodO8afPmzaqLuMhePgV+Lq01uS7cu4ZSyJsqigIwHp29W75Zrq2Hg+HTXR2XhmS7CYvFrrbIPh3eb/Gm+a1xeGFpwedeudSuxLbwJMWqo82KhhbXMXcOuJGlbdZQ+mH1x+2DSjl2aUDk8UO15zhhzU9byhmVivArRKu+pPpharpRcm8bkAg6+WnVsymtVcEeEuSl522nBFxezq4cVLe7LUkxQH9xtYAIDx4REOjp6ufY9GJSe04LnwZHMAtcVxJmbspbmACkUgZ6LqWXWYu0KExMJH2C0KAoxHqh1Ds0a5y3IyrtlhUqtunby1tyW7CoT16zVPS8dt4/77NF/kLc5PLVB6Z4aLiq/P6ox2V1gYmeJMb25/P6oBZOz+2bWVCyHqhQFCoRjAEEVpJXQ+0FGayaM1QeTfg4xPbncnC2YyEF2a+b074sy4bjGwzc6R2me7kw6IB4jOPbUahuZ/L02k7K95qphevI0TPxuz8wQDhYCeIOlSUqx8AtQixlieJhUurah8b0WVbN23iZNjV0jeac9MqWx3dczlpTSVpCek5u8UtAhZui8UqblQpYwU904ZFovZqgQ1WLiWCGeZw7NlHnLz2nBtM7zD6riOj/o8NZHAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.18,
+                        width: 29,
+                        height: 21,
+                        n: 8
+                    }
+                },
                 hp: 7.6,
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 20.0,
                     kinetic: false,
@@ -2559,7 +3359,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAAlCAYAAACnMQxpAAAEEElEQVR4nO2bsWtTURTGX6NQhyhYIojEDg2kHVxcXEpcOjdLBiFDtzo7hP4V/Qt0y+aQxQ4dslk6VAVXU6hDUkRoiKAFXSRyQk45ubn3vnPvPS/vBjwgeX2598t3ft+7971GTRJLdX9fjeGPbcz/CitXxgWbkO54UcaWobqBPfkwNgYmWTGG380BtkSxAuv/+ZUcDD5FsTq6AqDygi3BWBsYTAQBWpvFtYUaW6bqe/Tky1gbGExcv3P3xgwe+1Ts4fcXCFuCsTYwmAwiKBQSWmzhH+QIW4KxNjDaEB77Xs2xhb+ZI2wJxqkPHdSIz1YWW/jrOcK2eeIynguseXY286Hq9hFSMYTfzxG2BOO5wHaqD4yDe9cjtnCosazDzwO2BOMCdwKch6bqx8fsKzG28Js5w5ZgXHAV3npiNixpLAtQOznDlmA8Exh+GIqE/L6kGo8h/F7OsCUYzwRWXFubEaCG4LzLNgZaIcayDD8v2BKMtfcw1Qico+fVe4GpOMY4WhLh1yOALcH4JjAYUH50a84MFcFjOk5XqMUxlqYlFX4xAthQoYy1Dx028y4rg2MsTUsy/F7OsKk2h7ExMNgurkej5PLbX5YAjIPxupu0qpVmzKYlFX5TYPeQgA3lwljXyySwH5c/Jz/YQqNCMI7Oo0W1OMZsWlmE3wvYPUJgYy8ujHW9TAI72X+xooamiuI5ChjmqR9GtTjGbFoS4dcFdg8J2NQTl7E6D2oOUu3N2/H98j2rKRNgnQ4+4dGtBo2CsTQtqlO23KOwUVWP9sPVUHtUmaT1hKXzAq9pfHEulMomFZTpwzmVFj5XMzT8mhKaTcPkSwK2yZM61zbP+Ean3XqXJMnuRqWafL04n5xr7B06BRZT+DXGzsH1ptPy6UllPH09auwd1k1zjB/w+fT15IoqPdxKht+/JE+3X3qFZTLmo1cTAJUlbJ+eXDnfNr2BAngcUhuV6i7V8Q3/1erHo+RKWfX7bqte1Zi8rp4fnTh6gVWAsEHDt1w5GwPjCmRhKsvgGxrQti3ItT/f+dwy/vUKNRBixseUTaM0hSOlJzXfV8uVcyHr1aVWaPjDSMKS0nGdz1phoSWpVRIKS+r+HNqj6zzWP9WGpnDfdy2Yl8VqHQZeBBKeJC9ELueF/GcIqRoKAwrRzOpCFLmHQVP4GO1aUjqSgIYZBO9brnzmAhtcvB/rliV8ywHvcY1I6cQafEnAjw+fmcBgoPrbNjUDxxzYUjqddmucFnyn3RovA2idho2PsxF6TI1wTEnpqOMH0/BoSK7Bow69EFyCp3NUP9wHM+rZlc/MCoOEUQDSx2NMHH7+cApfodlLSgfG4NzHlecruGrxGwquzrPt+tz3dOoVDWPSioaq86OO4fTlyucfCEo+RB8fWA0AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.18,
+                        width: 18,
+                        height: 37,
+                        n: 6
+                    }
+                },
                 hp: 16.6,
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 20.0,
                     kinetic: false,
@@ -2607,7 +3420,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAUAAAAAQCAYAAABnaabpAAACKElEQVR4nO2cwW3DMAxFHaMj9NJLJugC3cA7dIJee9QAPubaCbqDN+gCnSCXXjpEoQIMBIKkKFlGa/n/S2LH/OSjAVlR7JwGRc8v4ULv39/m16FCqUetTwsP7uPxAD/4W+as9QF/2JT/pB38+bHcth+fplsQGeUK4R7cx1t0jQeHtXg8ecEPfvDPXfKfPEkpKIo+K22iB4CP9lK8x4PDltQBfvCDfxGP75H/bnCKm8TtmIwXQhBa8VacFuOV5LHWU/MBP/jBH3bP7x4APck9CaUmtIAvUelU3CPwgz++gn/ZFf9IO2MRWiH3D2fTkOJ4rBVHTbB8Y7zk4Yn11kECP/jBHw7HP2oAafLvr6s6iuZGb/LwnASumFfKLTXBqkPz4LHgB39aN/jP3fOPNdNP7xQ6BbCKiF60yFpyJSCVXrnS5oEf/OBfhqPyj57icwVY0mI9TaRYq3ke+JppNPjBD/6rydADvzoAepUbvVstwvIm5Dz49Ln2BOYEfvCDf9ot/0gAFgQ341cPqwk8VipcG8W1NYDSBlprCeAHP/inw/L/zgCjWc1I/hfi8LV1pz7gBz/450Pyr/4KXCpp7WFt8z1XsSg6Zov7oLwCP/jBH/4Nf/ZGaP4IDO3jDeQ/iUtxOQjvozBavDWdrj3p4Ac/rwX8Uzf84rPAmjHfJ4mO0woqORG1sWtzptvgBz/fD/65G37x32Bay9u8lrFrcrYW+MFfWwv4w6b8P7Je1UWrqpbJAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 16,
+                        height: 16,
+                        n: 20
+                    }
+                },
                 hp: 6.75,
+                blood: "material_darkness",
+                bloodUI: "Ominous liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2646,7 +3472,24 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 3.5,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAALYAAAAQCAYAAAC7tYX3AAADZ0lEQVR4nN2avYsTQRTAZ5errYJwVl6wCAgWHoKYTuRaPZQrLKy0sBBBGzvba7SxsNDaQpRYisWBhaKIIhayguS0yYIEi/sHIm8vb30ZZmfeezNZ93ywbGZ25v3mfczL7iaZYcrWjYcz2i4+vqrOX96OMq6OrnAo4+mD60nX/7/L1gHJgyykGBQO1jcWrrn6tAnSBQ72pwpQyKZUHBfT5gzWN5Js3hNnNmcHKQ8ynwFciASYgiNxXoiTMkA0ubpWELQ84CwzD5DRpFPLyV2AJvFB4BockEheKyI5nPmScU0smCvhULslAZJwQICjSYRCEB+bs6w8QE7TtRjOSmhncsSe11vtz3ae33PupFgOChjk+zrncEKO6xKHsqScQhAfDofL/5ecFe5k7rgLa5/MC3NSvUjJuJDjNBzXWAmnawWhEMbH5iwrD5bNyWO+sp2Q3X3I2Yu3K51P7l+bwZGaA9I7cmxhnITD5QPL5qC4OJoAAQM56LcUnIIRH+o3jqTIgzY4jRVbKgB5/OaQMeZ73QeAy7ceJa101Bg0CKqclKVxHHKgzWWFOH/9Zmrf0QSI4XDiQxkxBSHEoXa0wakTW3vfO53MFa8ZMy3H5s6lnvEFRctxMufiSupYDnejJrHH4zf6oKjSPZHFRytd4+Ta3QOO7q326/b2s6nZPPXLfPv5te67e3NY647lgEFoFBh0dbhXHymrQduckN+oxGygbSZHulGledAWZ+F1XwhqV0oqAHn/eVJ9Bhgc2PYtVsqRJEKIkyJAto6Q2ByN3zhSCDmSjRqTB5LnhRhOTifbn7FNnUT7bbly/lylHA9oN+nWckIGcTmxjmviSAMk8VtMIoQ4gjdRUXnQJKnzLfcFydV2LqocV2cIvs+IWA7XcRxOigC5OJoAcf2mLQhTRnwkBaFxnQrOsvItT/V+dvThcA1DofekKTgcg7rC4QZI6jdtQRgFOLautjhaCXEWgPTnyb3fpekfH+4vpBwv3K9h4KuHunJcjaXyo3jnDbqGQ9twmwCCtwYvX+9mMRy7L4Zjrz/Eob7z+Q0YdB6XMxXEB15p2uvzcbR5QDmoI3W+Of8EBT/tHh2cnsEEDBrtw3HYD2e8BmefUVoOGm+LliNxnJQjDRDXb5qCsDOv+JL4+Dgp88AV81T59gegrhMCbdossQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 26,
+                        height: 16,
+                        n: 7
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 13.5,
+                    "The Vault": 8.5,
+                    Base: 3.5
+                },
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2691,7 +3534,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 3.7,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAALCAYAAADoWAqZAAACK0lEQVR4nOWWvS9DURjG3yv9C0w2m/pYBdGwsZVgZTJJmJjUqJYyGfwBrAjd2AhRsYqPjcl/ceQ57cPb45xze7WDxJM0p+25/d3n/Tq3IhlkjDH5wXGjP1PyB9Wuv47Fe3G4borjRfP2dGV/vD1ftgDTEG7yG5MdM+jhweNv/fniDfFyMRAgWO9Pu2W0Z0xWlysy2nNt9wC8PNqQqcVdeX68EbxPE3lrK32yf/Aq78/X9rflhZ2m4PqHCjYZSZIkrQbs8mofd5LVH+WLN8RL0oIFCCodb37tlRd2LJA6vzm35nsHJtviIbEwCMHg9NJeNIEuEwz9Pos/l9dqvF2himpjS+UJ2xUQVg2HZgozUXOt8tBFYEH54dnUEdNMMBCY9oaCtOIP0ryQPx/Pm0AEAhCzjlZG20JYkX0NjAmjnpWXFjB4aQXBHkYRTCQ2dga6Bfb5C/F+JJAPCJjCxbp1Off1syHdIFmd4KFDwNOdklYQ7PNI4LmqPYUK7PMX4nW5BnmOvDycfY0RPsMUD2qq5gFqHq+p3laTdnhu0ByzWEEoHglILB5KWyelhIVgvG6BQ/58vBzNaSO4iZzAePf3Xkl+mCMQHUMgvqMxy2kIDwTyNCeNBxY5VakK15G5dVMvSKUp4PxwPWCMMQ9/cPCXhPcAjwWGmhum4o03xvNKjwuTrFeOQ7FRSQLdbvHx9DjyFeLF/GmGy3Oviwbr8HzxZuV5E+EDSiRp/4H3CQkE/vgNPWT0AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 20,
+                        height: 11,
+                        n: 4
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 13.2,
+                    Base: 3.7
+                },
+                blood: "blood",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 3.0,
                     kinetic: false,
@@ -2727,7 +3586,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 4.2,
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 27,
+                        height: 27,
+                        n: 8
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 14.6,
+                    Base: 4.2
+                },
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2774,7 +3649,24 @@ const icons = {
                     holy: 1,
                     freeze: 0.4
                 },
-                hp: 0.75,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAPCAYAAAB6Iuj1AAAB/klEQVR4nOVVPUvEQBBN1MpSBL1OuD8ggoXtNXLkF8gJgesEq7TWtrER7AIHd6S0UYLNtVfY+AcCdqcglnaizHKzN+5Nkt25u/g1sGSzmTdv5s3uxvcYS8/vPrZ2Nrznx1f1fnR26HN+/81SC138IhAagOG91dmvFDX9JY2Q5Gmri18G2mtcqGc2CitF/Y5GpEsURqrLCgWO8xdFAANAq9vrarQPemoNAtsStieY4eCexXBYfFZhpDhpni66aGXj7kAtdo9vlfL5Q/glaHO3pwJHSWemk4BtNDfVHEiADOz96U3FKto90hMhxUnydNVlzSTFwKcnLU0IdnPNpTglhASzUehdXg0NwlARckbXaYEYC4TjGiHBzZOniy4zgmLQzAt1stDBKqurEXFNwkh10YLClsVkMUCSB3qrFx13V8JFFbhsYaS66J8SHBP4gHcMWtIPNIj7KZkij4GwH+h7yaYRMMAXC7NphCtOmqerLlpQekwwAAwajDtKdTciqkkYqS5KUNjSmAR+pE44N7c/zOnlHxUQgg/FzVNgXcJQX6yT1kvXyk6gvvQxeXON88N5PHnSgkw/HJQD3uGJOBNvxqc+ZTgu37L6uDrNGGWaVJotiPNLLYi5XVsWkyucFlnkU8QpEUck5CIstug2t14lKrdug3HN709Z7FjsTxLnE6Ng9yWBEwXcAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 14,
+                        height: 15,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 4.5,
+                    "The Vault": 3.0,
+                    Base: 0.75
+                },
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -2814,7 +3706,24 @@ const icons = {
                     holy: 1,
                     freeze: 0.4
                 },
-                hp: 5.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAXCAYAAADAxotdAAAESElEQVR4nO2aP2gUURDG785UgTQiaBoRrLSxtkwURJLG8lAQAlcIgiBiYxEsbESEgGARORASrrBVRNBLaWFlZSWITRTEMp1E5uJ3fDs38/7svoUQHAi7t/veb2fmm/fe/km3k2ijR+/29bH+gyvd1P5t8/6bbd1cEWC7X391Fs+eyBKmNC/EPurFMkqMtxvqfPLM8cnvn99+T/ZlCzEG93Y6m0+WkkQpzfOCtAqmf8SE9mL24u1aAAgBgxAshhgLImYlszTP4loFA1usIbKVRGHeHV5vPLPU4TUZIL0UZ9gpNghjnUvlMSPGSykaMJk1ivjB7cbbn2bY8CWVg7bsJzPBe7q2PWkT40jfWLxWvxmBtQmER5uYBdPQHF7ILF5sWrb82w0UC3N1Ei1misiWKHUKMHfAWed6FkwLIY1TksRtSvPqFMwgURgtrjU6ZAu/Y6w2CjBlwGm2+DJXZ0reWH892d6+tZzlYFOeLhqPm3JtT5BQwcj6Fls69LHUGUv68r2CF2tuvt0pGhA9nUAMsWfPx+aU0wbPu/GxghWm/P35sVc5Lmuex+TREZphILJmaUvhrd14k8XUHB4gHC+3mbNutWUrFx9urVSSJPt3Hq5Wfg+3DrYxx0rydBAcsC6Y+YWVKCvErM4we523H2+abbwC1P7VnQF5gIjJHTOzOF5uMzNFQ2QRA1sx7KPzgRjVNvq2HyyPZxm3CQWLxwIOxiuYgUqKJYg3wjbWxzMJhMmI8x51YsVi8VIZMI4Xg0LihYlvFeckaEA9Aa5efNk5dmp+AuRq1s91KSy+6eCCCfH4PK+J2OepffPfcyEnCkzmccFo0zxtmsf9dAHKtVavvZrGK/ljnxfOvzD1gI86Xk8PtBHfomuwZRpmPbTLDQOLYZmc5+nYKwTLL7TFDGH5CMN5a7Qhcfoli2aCx8eZx/EyT7bM1ssPt/FMv7ixfLPElW1FYHYSjfXCroVNtVD7OgVjsXIKpq94VsF4vFghNhHE87GuHjMj2Hutx3B9o+GtQ9pBy8m6BRPqk1Iw2qzk5fLaGCBN9TCnaDj55ftn86LWmpbrIDvZpGCYk5vAfmEemKUGSAk9eiEnz52+MIUyHPspa2ZTBz3fPE5uAvuFeaXjbaqHe5PliScwuVDoK433rfIwFsxhE6S0Hj189UiB5zgUcpB5noMhn0onsN+yICnx5liOHj25iPzlfAqzjAulBE+zSyRwFPCpTUFyrHTeejwNAa4f2mPO4EU5J6AEL9ROeJL85aVLlXM8CkcZ34HBk/65PBR3SrwWzxoc/K24Tv6QQ7PCAePqHe98mCZTJze2FjNP+nAy8XYmxuPk6rdXsi4OLt/f93gwcK3XlHqkpvK4GL14xSR/sXi9L0qeHin5c0cJvmwwgIFiOf/CIjwtyOb7x119PIfHPoBnneuQebODfq/MPOt8iMXt4QvPDjheJ16tB5vF+wuYxlZxXnPNegAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 20,
+                        height: 23,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 17.0,
+                    "The Vault": 15.0,
+                    Base: 5.0
+                },
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2863,7 +3772,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAPCAYAAABQkhlaAAABnElEQVR4nOVVMU4DMRC0LUrKVFyRB/ANHoGoEIIn0KWkyxNAiAqlpkS8gFQUlBQpjBTpmkj0QT6xJ2ez6921cIGYJr5obm9mdm17R+D65nSbfuOqd4+3L979A3gqgBylMP5qYJRuz4VwfnHoHu6/xvXx0R3JLfEofqvQNE0pNXrPXFz1rptOHF7PZwtfKoZ5taFZjEnmSjysJWBSN50Mhd5eP0Zj6Zn6mMTDH08fBg6IoIxhPWdXJ3tmOXPwzvvn5ZabSErLEAQGdBeQ0k1isEDM46AJzWJMa44C1+iQjyAgrZ+flh4CSP9R4wk8eOZGWBNarTGozwVN+aO0BFwsok5hc1QnqQBwd7WhScYs5nDNkpaQF+x+yJJILIKDNTTOWJpK6j3JHKUjP0hzzgEUjApjUAhGXXrHEppkLA8N32y5oXxNbTeuycF6+HXMFqKAJ03DhbVm61gCljTs3BqxonMSTyu4xpwFUt0xiPlsMdwSac3d2zVci2AL97f17hyWgH69cRws3FYBt9Ab8H7s1xvykIKiWm4rwa30fgNDShLF+jlRyQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 11,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -2909,7 +3831,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHIAAAAXCAYAAADX5BuUAAAEdElEQVR4nO2ZP2gUQRTGd2PAys5DDRiEYJHiLCxEEUFIGyGVnWhz1kFBUBDRwnSSyiaVpIvNFVbCgRDEYCFCAinkQDwwkUsvFvHk2+y3vn03O3/uJmFBHxy52Z397XvffDM7e0kTR7QeLg/4fWVpMXX1PyrW/yhH6it8//u3pDE1PfIAxGT9K6ZoBdSY2iC7M53k2Pr5rN3d/pTMzF4caQBissirqylakVihNU7YhH9240Iye+t4Ifz+tS8ZVN7EJ6FYLMnDtfiA1x+BI3n8Pg4nJmuUGocGkp0xe9Y2fyd7nVPF7MFgcABCCovBqrspWpFYo9ZonJEIiL29+qt0DIOBGwAekmAMVp1N0YrEGqfG0kAu3L6XgegqAOguBMCIc3dPeIsWk1VHU7Ry1unuXBSDsW9ojRMmEF1F4eefX/EGSlOEsGxxGAaLueowL7KYVwiLNVIvctH2qbE0kADAQTebE5ngXCLQlk5BgpfnFqzFhbJchdbRFAvKrIiNTrvIK9Rg6EO9qCHaphq1XqWBhNBVwYLxFwm6EovJqqspuvl5KT7bJpYtL9Yo29TQZxINzUiZDJKD2LhYDoB0sk+My6qzKfY9xbfVoGuURvCtcegZyZd2GVtft0ptuFkuR6bAuRCWLaoMxmjk34/aFCHiMz+fGhFVxj8598NYY+numx/fZb8c8GImhx0ZE+G6LZ1oC81iaJZrGbOx5XLpY7BYK4WP+HhmUnxXjS7jy02QZg3NSHSAg5gMC9HPEtyUA28KnJO7NzJoCs2yBVh8VZCmYJH9QIPFWnV88uJxvGe6arRNIm6iqmocGsjdXjdLgIPJDQGCoKcPfibv3762JkYWt+RksUCycBwsmykQJkFNpkC4DBZz1TEZH6xQ4yOgA/R6udzIeBg8cOQgQvuNx5+HWKWBbJw5mz3YOXh8uUWbxQFEUdnfFJIl39WkUEiW51wsmsK0UswLU6BIGyvmqsO8fI3vq5fWnpsxm/bFQMrdGZdFFgYQkoJT0JbF6V0d2rxJf6eXkoVBYGIUCsey++z0Mh6uI48cmTA5UjBpijePPpSEIU+yRhFfsnSNIcbXNfpqj2Xepf2kdgZFzS8oOnIXRxD62RxGjmZxp3eQWNuLR1Z/p4c/g2T1gEFTrOWDKIv0mZVZdKYL8RFPmleHxHfVWOQlXkH+it/2zmsc7cu/td65XwLDuUwO67R+LqK/aVenOTp0YlW8rC0MwaDINMVevr2Xgeskjyx+fFYd2d+UW9XmLqTGWNqXBrKUaP5TFhLhRx5nf/k+h+A/P2U/fDclpvvgb/vVi9TFYS5gYSauLC2mOG7jafHI4nkby1RrFc9WY5VmMbSf1KDmpesDXJi9Q6nZkE3pqekB+5kKsrHyJagIF8uWk3Z635Kb5uT39mJV8fTS66qRYVqyNc+lvYlTzEg4U//EpN3EH4kRfK7Q0TJisXw4Pry24pBlC3le8zTLxtPH5fOYYcrNplcVpxR0n/7uOneYLJ++zUh9fPva6jmMfi7OH4XhwW2ST897AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.25,
+                        width: 19,
+                        height: 23,
+                        n: 6
+                    }
+                },
                 hp: 6.0,
+                blood: "blood_cold",
+                bloodUI: "freezing liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2948,7 +3883,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {},
                 hp: 0.1,
+                blood: "blood_cold",
+                bloodUI: "freezing liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -2986,7 +3926,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADYAAAAKCAYAAAD//a0LAAAA90lEQVR4nGNgQANBhvn/QZhhCIEgLG5mQldQuu8LnE2KQbQChOwKwuFmFI+BQLcTD5iGKSbWIFIdRImjiXEz3GO60rb/kSVhirEBanieEkcT42aUGFt3fiIjTBLEhmkkxiBSPU9IDbF2rcPhZrDHQJzLTw8zgti3X50DK8DlGGp4npAamHvw2aVLjJvRNZDLRuYj5x9S1OBSS6obWBhoBEChCAtRdEuRQxqbGlzg8tPD4FgjRg9GqYgMLI1dGEgBuCyFOQifo2BqiLXTEo86kBzYY8iKkNmzNtXDHYFLDYyd5teI4mh0i0F8bGLofGQ7canB5zaYHAAlcPQL9RsWHQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 9,
+                        height: 10,
+                        n: 6
+                    }
+                },
                 hp: 0.11,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -3022,7 +3975,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAjUlEQVR4nGNkgILaA2X/VYTYGe68+8kAouP1mhlB4kwgIrbV+/+Do1fBCkGSMA0gmhEkqWCtDRYEKXLxNYIZyrBn8zmICTBJkEKQIMiaue1bwXyWh1eegxWAOCBFML59uguYzwLiICsCsZEVg11qF2n0X15HEq7o4Mw9YPah5ecYwQpgAKYQpBMkCRIEAEr2RidAJ9bgAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 8,
+                        height: 8,
+                        n: 1
+                    }
+                },
                 hp: 3.5,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3051,7 +4017,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 6.5,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3080,7 +4051,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 8.0,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3109,7 +4085,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAS0lEQVR4nGNkgILUUL3/D5//YpCXZGOYvfoSIyNI0M1G4z+IBgmCJEGACSQIEgABmCCIz4SsCgZAfBSjkAETiNh15AYjzDgQDeIDAE8pHS9t/OhVAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 6,
+                        height: 6,
+                        n: 1
+                    }
+                },
                 hp: 6.0,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3138,7 +4127,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 24.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     electricity: true,
                     burn: 0.0,
@@ -3168,7 +4162,12 @@ const icons = {
                     drill: 0.4,
                     holy: 1
                 },
+                sprite: {},
                 hp: 3.0,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3197,7 +4196,15 @@ const icons = {
                     drill: 0.4,
                     holy: 1
                 },
-                hp: 20.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 120.0,
+                    Base: 20.0
+                },
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3226,7 +4233,12 @@ const icons = {
                     drill: 0.4,
                     holy: 1
                 },
+                sprite: {},
                 hp: 140.0,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -3255,7 +4267,16 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 25.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 150.0,
+                    Hell: 250.0,
+                    Base: 25.0
+                },
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     ice: true,
                     burn: 0.5,
@@ -3286,7 +4307,15 @@ const icons = {
                     drill: 0.4,
                     holy: 1.2
                 },
-                hp: 25.0,
+                sprite: {},
+                hp: {
+                    Hell: 250.0,
+                    Base: 25.0
+                },
+                blood: "lava",
+                bloodUI: "lava",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -3315,7 +4344,23 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 0.4,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAAHCAYAAACIuForAAAAr0lEQVR4nGNgGAWjYBSMAtqA50GlRIkRAvdbVxAlRi9zqOWv50GlRYTEGIl0SBADA8M6yXXdyOJgMRADJo4L3EcLBMXqCLzitDYHGgh9MD6av2CgSHJddx8Bc8DqOFzNe3/sPlkMUw8yHyYGsgdkPs6ARo9Z9MAkJA8DhALhPpGBRC1zsAUCmjzWwMNiDnJiw4gUpMiEJ0icgJhsRIya+0Rka3qqwZbVyVRDjF1gBgDq5X0BpgR3DAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 18,
+                        height: 7,
+                        n: 5
+                    }
+                },
+                hp: {
+                    "The Vault": 3.6,
+                    Base: 0.4
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3364,7 +4409,23 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 5.5,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAH0AAAATCAYAAAC9fgIPAAACSUlEQVR4nO2YP0vDQBjGr6EO9iM4SNGCX6CbICIpuLg4dVJHF+ni0H6CdnAJLo7q1MnFRUhwcO7sVKE49CPUwaHypj7l7TW59PKvQe+BcOQueX65931z+VMSCrmuOx0MBqJer4uottFolFRehlEvDCN0oNvtTofDYeBYrVYTGGs2m6LX64l2u609GcNYD8PS4Br9EZVVg1RBQQqruDgyjPwZyqRzM76EpCnDyJ9hxamsqDEdGUb+DGXSVZWUViUbRv6MsurTANUDQ7ma6NNAPm/Vt1LDcNfGWEo6Hdjv9yOXDhmgMxnDWC/DCqsoGOsAuI9qzDDWyyjLFUUf92hpGSFDuZ8+/qFqteq3NDYajZQVZhjVQjDmdzp1UBXhYDLCPjfB3x6IoLwlhf0NMoxmIRhLsIfvyfRosikuTm1/37Ztv8IIuHXdEo/HJ3MjSAZHPaeIQS28OMPzvIWLjcug35b8erNieMwLjIO7W8FjmBWDFCcfVlDCSfdPMxAChTfGs5dnv5VfLladBEQceHEGlqekjE6n4x+TNcO2Z4kFAwnnMQxjjA/3hfP5MdVl4LnOYxjGeN/bWeqz5LsPeq18zYMD0Nvllb/x5wYJ+6sEChzy5+fyyVBfEgZ0vlEpjW+cTBmd36TQubj7gmIoMyjh0KqJx7m0gsGfe8oMJFz2L4UlnQImMhA4WfnryJGC0dreTXRNYTEEh/snYevEMIgdmPQiJCQvOSz4aSZdJyFpsBNX6H+VE7HMZhnDJOxCyhSVWFCcBKcVQ2L/AL7Xs5yUQc5pAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 25,
+                        height: 19,
+                        n: 5
+                    }
+                },
+                hp: {
+                    "Power plant": 13.0,
+                    Base: 5.5
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3411,7 +4472,23 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 8.4,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAOCAYAAADkH9gOAAABx0lEQVR4nGNgwAF+N/7/z0ADADIXBGhhPjZz//+nvj20Chtk82Huppr7Y6u6MAyF0SA5bOrxmYXLfGSzYR6hlvnI5tLC/QxYwoYW7kf3B8XmB+ZU/8eVC2BsZDXIbFyAGPXIqZOa5iMnJGqajytsqGU+vpKBXPOZQMSnz1/gAoyMjIys9YyMMIUgNkgOpAYGkNXjMpwY9SC7SFFPrPkgc2FmU9N8bGFDTfORzSZGPTHmY0Teu9cvGSw05MHsEzceMgiJisPl+Hh54BaMqmcYEuoZ3f2C/nt6+8AFBQQEGZDBhw/vIQa9e8dw8vgxMHtU/dBRz5hZVA7O6ubmFgwnT55gmMTfwcBSB1H8p4mBIe9jBZitrq7OcPPmTbhBg1V9wq9QBhNXY7DYmd1nGRawrcarPviNB4O9sgNY7ODdAwxrRXYMKfWE/AvPwSAOSBAU88hASEgIJUWAwKj6oaN+tA5+PfzVMzjH5/8n1CoDqYHxR9VjdiEHg3twqR+QfjDyaA2tzGcgQT0x5qP3rWnlfmz9YUrMp+tIFsxcWo4E0cr9DHQayUIfqKGG+XQfi6aF2dhKHxAYSu5Ht4dWdo0CBtyA1pMN1AQARx2i9+a8br0AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.05,
+                        width: 12,
+                        height: 14,
+                        n: 10
+                    }
+                },
+                hp: {
+                    "Power plant": 16.0,
+                    Base: 8.4
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3459,7 +4536,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 14.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3508,7 +4590,20 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAQCAYAAACIoli7AAACE0lEQVR4nGNgIBOULNj3HxubVvqGDKDEg7HuvnD1vtYO/2mpr+DUz//Y2IMSkBswlOiNJUMfOXronZMYkR27eOdmRphjNx89AJcjBHJtvf+/efCEIUJaB0NO0dIITD/5+JbBa14bI6X6yHEnuX4jRx/FHgRZpMDEzeDyWwCnJdj0kquPXHfSK1ApChjkbCfAwwumP3z5DFfP8+g9mGbRkoOLgRxHrj5y3UnPnAR3JCUeRNYnKSTO8PzdS7D+lL/ScEu7rx1gKNVyYNDrLyZb30BEBKn6WEAMUDJGL+Q15VTgHoTFjKIWwoOLd26GewIkD5IDAZA8KHDA4CMDCgBZCAPk6CPXnTA9D/59ZVjDz4Q7Iq59QrGXHH1MyJKglAFyBAiDHAnyICwlYPMgKCvAxO4fPwemYXrxAXL1ketObOUeKCJgekARAcIg82BuIVcfEyUeBJUrIgoyKB548vEtOBaRYxI5ZVKij94RQY4+Jko8uPzxRcYPXEwMa/g/MRxV5GRY/vQyuOwhVBOSq4/eEUGOPiZKPIhc6IMsWQxlgwAhveToo3dEkKOPidKAgelF1kNsT4YcffSMCHL0MVHqQVwgBdr0YdWSZ1i8eytDpLQuRvuOXH30ighy9LGQ6sFYV2+iAsb/xFKImhMQ/vJ5FwlpoUgfMe5EjwR4RPzFbzYp+ojurw9XsNEiGpyySU0wuPQBAJ6J+mWeM+zEAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 14,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 14.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3559,7 +4654,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 14.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3608,7 +4708,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 20.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3661,7 +4766,24 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 0.55,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAsAAAAECAYAAABY+sXzAAAALklEQVR4nGPcfN/bnoGB4SADKsAqxsTAwLAPKomsEKsYSDHRAKTYCc1KEBurGABrPgskmYUqzgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 11,
+                        height: 4,
+                        n: 1
+                    }
+                },
+                hp: {
+                    "Power plant": 0.75,
+                    "The Vault": 0.75,
+                    Base: 0.55
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3711,7 +4833,23 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 5.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAH4AAAARCAYAAAAbgRgHAAACaElEQVR4nO1Zwa3CMAwtXx2kh7IBG8AIHLj3wggwQViid4agm/TQTfgykivXOImbxqjof0tQ2qQvz3nPhopNwcI594Rj3/dFXdeTMbjWtu2G3/Mfn40cGpUSYCiapnnNmWOAv2wmlzn3XBqVGsDj8Th+vt1uI7iGtA+XYhZFsQozuZWKNAePY/twJxWPISWOgg/DoF44RhQxNUStzeRWLJJGI5r7+XyO3l9SIBT2cDi8TbxcLqJYqUQppoaopZmcUbfLJRLFCWmE/Kqq0gmPTgbArus2Xde9NgMWgmu73W4Eg4T3+/1zKVG4hpgaopZmsuh2OUWi4dMIzIS5b7fbqEZiq8fADbjf78XpdIqSopUQM9Pj8RiJhszEq8vCTL1Rt8slEt1PSSN40dw1UXKSdBCJYtJ8HMigObBSYm2QVhMYis8NYVqYqTHodiGRcK2ULhfSiOYe4wZ5lEhIEgvdhAtgwOKaDYiZKVcsMVNh0O1iuUMRzREpNIdqRHNHjXy5Tx7nrtdrUCQAwmTgyH8U0fuREFTQHDPx71fOycJMwwe7XYpIMM9XnDGNfN2nxAFoFRgoKCWKIlBg+mxLF5AwtUSrqnprw5Zmqg26XW6RpOLUauTLvcQTaVG+CCcYcjfHjBGl36MSnpWZLLpdbpFCucc08hXn2OpxkG+CtCmSONprPqJvGQn3f8JMTomZ0u1SReK5p2rk3QBOSjrXRm5MvhE5MRuyoSmYkvAWmDlz/4E3iz9JcmPSx7m1cW2V3S4V0zL3SeSq+m/AbAw7SU5MHksxXxXvI09/vfLzlFgjZitU5hoxpViC+QuEniTmGnmh2AAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 21,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "The Vault": 13.0,
+                    Base: 5.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3759,7 +4897,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 16.0,
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3808,7 +4951,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 8.0,
+                sprite: {},
+                hp: {
+                    "The Vault": 18.0,
+                    Base: 8.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3846,7 +4997,23 @@ const icons = {
                     drill: 0.1,
                     holy: 0.5
                 },
-                hp: 9.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAMAAAAAfCAYAAACxtML9AAAEQklEQVR4nO1by7HqMAwNTAphwe2AFuggC/Y0ARWEJrJnQSl0AAs64Y3ujBih649sS8kz5MxkMAGObOlIdhLTNAy32+3Jz+F532cpsOafMSMFS37i5+dnwYVI35eK1Jp/TrBpcausgP5JAC5SeD2dTg0csU5IYclvnWDWqE1AtRfQRehDFCfF4XB460yKsTH5gRudhTY0uJHXdb60zz4bPKgafrfkt/S/Nr9zBkA8Ho9oJ4T9HZ2fOwegMcuMMcPUPANb+1+bP5gA1+u12e12r/fQ5qItGYg1v1WCzQKSoYYCGkwAKlI4oA0HOI8eif0ejd8ywWYBxVFDAW1DHx6Px5f49vv9cxiG4rXhmPzcSdAGbLdbFTsSAWkk8Pl8fgvwarVSsXE15qc2sK3pfw3+6BdBmOv1+rd9v98bbZFa81M72tx93z83m82bgABUQIBcAQE/vIINGmBaOErQG/NTWBW4Uv6FxEkgTCuRWvNbJtgsoDj+9wK6kAQYyQFgTGsg1vxjJNi3C6j2AroIOYYKkhpAlAzEmn+sBPt2AdVeQJc+YiACEnQOvGJbQ5iW/ChMdAryoh38vFEA5YS2Fi8NMPePlo3ekN/a/1r8S59TcB1LKzQ1kDsIa/6xEsxSQMBbi4BqL6DLkDhpGw0gec4grPm1Egz3xfjuIVsKlCZVDQKqvYC+JQD8mN/BwDUuHjFSKh4uIGv+kgSjnKGHcCkCTQ0w7X8tAqq9gL49CMMLIX6OBtn1HSrE0D1va37XxQ+9SMX3+B3YPHU4HMSb2FwB8F3Eg42QgPjmORc3vqezDQ1wCr/PxjGD3xePVP+nwoI/+CTYF2RWeX+3A5RMmyF+EKiUX5pgVBzSKpcqUBdCiUwrb26AY4WiREA3QRHKLXChsVBbGvx81dDyYEKgeZC7rlN5sunj19oq6+NH56ANyi9N3ByB4gwDCQzt0LjgN/S2niTAKfwubomANLZ5+7hxloHXki3ZIf4Yr3MG4D+6XC6vyudzZCp8HdPidyUvjCMXUoHyZRUGeBgGkZ1QAsMrjKfrumR+LA6pM/CJ/V8jt8Bx//FVhETwEn7qH+4jF2fLOwQica0bNYA2oINWgue2UPRaCcwDwGdHWiwAKUtD2kdsa/NbzsAhUMHT+GuAip77J+ajVjLFlextkawdNffOoDMsEgz7ScdEE0zLFg8otW1RkADa/grN8KXx1lyhtDmZmDIIa35Jkmk73DdD5iaBlF8DfAnVK/Dz/vMCZO3/Ev429eIP73rkGrTgT02yVKdNza8pIG7rqDD7Tu2fEv7oP8J8t560YM3vSjDfHZ1cfn5fXZPfhdSqLXmwR2Fd4LT9X8IfTYDaMSdwOv+6Iv+U8n98AtSOKQT0TVjmrKW07nhY88+YFr3CBbC1fj56BpgTeFqB+lCFf2Id1HigVDN/jOPb+ftK4vvRM8AnTu+18DeV4B+Y7QdmMEKYHwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 24,
+                        height: 31,
+                        n: 8
+                    }
+                },
+                hp: {
+                    Hell: 50.0,
+                    Base: 9.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3889,7 +5056,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 4.5,
+                sprite: {},
+                hp: {
+                    "The Vault": 13.5,
+                    Base: 4.5
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3948,7 +5123,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 5.0,
+                sprite: {},
+                hp: {
+                    "The Vault": 15.0,
+                    Base: 5.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -3996,7 +5179,16 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 9.5,
+                sprite: {},
+                hp: {
+                    "Power plant": 18.0,
+                    "The Vault": 25.5,
+                    Base: 9.5
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4055,7 +5247,16 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 3.0,
+                sprite: {},
+                hp: {
+                    "Power plant": 9.0,
+                    "The Vault": 9.0,
+                    Base: 3.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4103,7 +5304,16 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 3.0,
+                sprite: {},
+                hp: {
+                    "Power plant": 9.0,
+                    "The Vault": 9.0,
+                    Base: 3.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4151,7 +5361,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 7.0,
+                sprite: {},
+                hp: {
+                    "Power plant": 15.0,
+                    Base: 7.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4188,7 +5406,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                hp: 12.0,
+                sprite: {},
+                hp: {
+                    "The Vault": 22.5,
+                    Base: 12.0
+                },
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4235,7 +5461,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1.2
                 },
+                sprite: {},
                 hp: 16.0,
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4283,7 +5514,12 @@ const icons = {
                     drill: 0.1,
                     holy: 1.2
                 },
+                sprite: {},
                 hp: 28.0,
+                blood: "oil",
+                bloodUI: "oil",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4331,7 +5567,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADwAAAARCAYAAACBzs+aAAACsklEQVR4nMWWv2sUQRTH316aM4cQvMQcBASDKSTElP4o0wjBxCCp0kTir/KEdLaCXUBL/QOuSiM2pomd1iYcKQIGAhFETgLh4jXm5DvkO7ydzOzs6Z4+WN7Mzmfej5n37lakz9LZXur+iz2F7e+ozaFxPwP5W5//NZBe97hMr3F2PP5KfxpU++PnnpxCc08sEc7LU40kFpdv7NtfPh3bhAllJeI7ANdhngOjcx/vBq3fIbbYLfNgQ3EkGqrcmhZqNzh3o+Ywrj5pJr5gtF0IxrDZej3Zdd+7e8D5LkKzPn8hrjzVSEwycD60uCalC7fNwsmPDaMP11dTicBYiNPJQ4riYn51YnniEyTzq/W+6xO8x2GAgS6K41Ok37x5lLJ6FieFE4sJudgPWT/t5c2jxKv++uGR3J+oyPZCzWiUA3RzZTnVr1kcRHNkyGEe4rQ9jFeu3zvD0S8ebU8nS47siZOHveHa9KK8eLMka80jo+GQ8/bOT3E5iOZcAVetz8nq5HmzDoeYhzjay+IYD9bhV3P4rdEc/Fbrc8Ye40MesnV31NQ2NGodz8HmQ1P70JjvPx23fRLj2CtZHHsY3PKVwSDHHo5xTBpsLD4hiBcwikVsgsbc/T+LcTxAcFzXGmv6YLQ9bVf7zYoPay6n1w8ce/Y/FgutV+9MyaAcoJ/fqcnFBzdSHwqt74MCTsvQ5YpUrp6zZUXu2eOGseXjEMTY7LB0Jm6mOJ9fHNDA/IzX3qWXX2wOsIkydrmx2WFb9vZLqzpybHuOvYHg3M8zcuwlcqY/TsV8iIwcp3oOWh/KtbffEozLu59SnM8vkgpxWmCTnMmpfrbHRZ8OS4KPrXkl+j+Uj8vwVvLYo03N6TItmktcmKWGGzvca5tTCzEQcLqsfM55+zEOmp+UPiavX3DQvjx+Ay5VrVqUgYvVAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 10,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 1.4,
+                blood: "gunpowder_unstable",
+                bloodUI: "gunpowder",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4367,7 +5616,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABi0lEQVR4nL2VsU5CMRSG651cdPAJ7uzg4OBwDc9gWLyE2dFE3sCwM/TGB2AzymIYeAFNGBgwYXBiIHG/AzB7zV/9m0NjWww3nKRpb8/X/xzaQ6uUsPbTVKOpGs2npz8WWvb/0Tjg5GPrvAOByaxUF2cnCj3m3IX0yb5zmm5wLgMj59NhfGoxFzlv/RDBR1V9VbJNV8sK8wwSYkxWEUaLnd2ZQVLSgSbHTHxfjFJKhRhoJIuXN26Uyo6OTXtfr+0YR1QHA9tGJ8sLHWJQTgmcmJTWG83tGIGu76+CDC3ETGblVjoxZtAd/tSPPAa0Q5yQU0v7YrK8iDJmp29v+sXrZ2l/4Xi1NGM0+OpiBt1hkOmN5gV2OqaT4NjSZgPbbsDL1oPpuVAe7a5M2mwEY6EUYzpYb+9pFLipF8fGz3f23nT9EOD9i2PFN/8HPp12IBY5XrM+HZM0xQgiOHoGkgwDygRlQr6HQzlx6GM8ychYfJzcWBuW5QUW/LkL9P8y3ueXfuhgHOFCfk1G6nwDqnd4AN6ZDQoAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.13,
+                        width: 9,
+                        height: 12,
+                        n: 5
+                    }
+                },
                 hp: 1.5,
+                blood: "blood_cold",
+                bloodUI: "freezing liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4415,7 +5677,23 @@ const icons = {
                     drill: 0.5,
                     holy: 0.7
                 },
-                hp: 4.5,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABVUlEQVR4nL2VPW7DMAyFJa/9GdMeoj2PPWVvpx4gYw8gL/beqT1PfAg7Y1GvYfGUPINVLClFjBAwZIufHmmKkIxRtv3ZOzxmQYvpiYjT4380LCefb4s3CHSjmKcbazBiLlxInx6ttX+4kIGRi+kwPrWYi56f/BDBh8zbVPkU47PKMKIqezFzTDpl7pqMOSQdNWgU7x87Fsrc28I/+h1btAQDO0enbHqXYtBOh5nA2IcM9PnykGRipplulLN0ckzVDvP9c2fsybZdiymbPsv4SlftUOs/+5a9/rN6KaZqhyTTjVKj0jmdAqXfrFcngfVCbu2lzGa9SsZCK+Z0sH46p9Hgvl8C+3p9nM7N0A8Bnr/YVnwzeExnm4hFjsdsTMcnTTGCCI6RgTTDgDpBnVDs4jBBHPoYTzM6VngohDl5K5seC2arQP+RiV6/9EMH7xku5XdktM4v2E8/XVjlnA0AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.13,
+                        width: 9,
+                        height: 12,
+                        n: 5
+                    }
+                },
+                hp: {
+                    "The Vault": 6.0,
+                    Base: 4.5
+                },
+                blood: "blood_cold",
+                bloodUI: "freezing liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4456,7 +5734,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAWCAYAAAA/45nkAAACxklEQVR4nO1Yv2tUQRDee5dGuE4QUxxiYRWboGCRC4rFNVraWySNYClcClMFC/8CU1xjGxsFRRAJBzFwQsRGO1NointNIIFXKk/mmVn39mbf7uyP+MB8zebyvtn59puZvR9CnCEpiqe3y+RBXkkahIKh3/esprgsNAHwO4Ptlo+oJhTXV3+sos0UANDud0VTDO2cmHMaXZpif+DW+ZlR5Ln55eTXUCpDi8hXBOUPZSgVj/8DP02Y21haKq+fENr9ieitfhHjN8vi5tYxGQD89d1d2ZUgphBpzW/3u+LXuwPn/SuDBu57u+h/e2+t/OvPA9HbekZOKunnfWH0MwMz9yY7AisFmwM+DK/OiIUV+CDmj6BulQBWPQHyQVDKDvKZYK5+PEOdPwhXP8kr6P3Db/Lvc4vPjW9MegJY6wTpBwa+fuCO0kEqH3l1E6nvb+Nz9bv4QxXcxc9MrxoE/ZzsVF0yM6paElMC5OHK6Yh1Zgf5TDBXv82fOk0mPu4tJ2D440gaNXoyP7UhjjVeHS4JqGsmRQf58H30qzG6P1SD1vmp8mc+hmIQrniYRyv51KFiF8y3g1z4lEF1hur6AZe6C6XJH7g+1x5fkdeoChtfFuDihct6rEwKGOfjqWfIVxMgHwrVu/PSuWBFQAe58LmGUg1ng8kfm59VAW5cu1t+/PRaJtv8/KJavx98bUGQ/lx/jTDxbQXrDLZbt1YPvTrIhR/bUPQH9Lv4U+cn+U1YBQRRZqvABCZ+SMG4E+nD5xqq6nfxR49R+VUBRsPzggMuP7Rgm8yJDJlgrqGh/lQFUEdT/ZhmAmeUuYJsCO04H6j6uf7Y+OQV9Gp/31lwEwo2CuD76Of4Y+Nb3wNCE+iI3UExJphraExk1I9sLgjhx+wgCv/SUK4/USYgBTZOsSFS8F0hC7CX51MP9Nc6zvh5FH5jJ0D8J/gNt9V3cSwou6UAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 12,
+                        height: 22,
+                        n: 8
+                    }
+                },
                 hp: 3.2,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4503,7 +5794,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 5.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAWCAYAAAA/45nkAAAC2ElEQVR4nO1Yv2sUQRSeO/wbJBYXc1ha3oFIkP0HtglksUphYZc/QBCrYC1CihRKCstgETiwslgkGGHFSizkMCZFtrSwX3mLb5ide7Mzb37EBfPBsrm778375nvvzd5FiGskRXb+o0ke5JVkQMgY+n33aoobhyYAfrk+HfmIGkJxffXHKtpKAQDFpBZDMbT8a85VdGmK9YHb5+eYIudiI/kxlMrQLPIRQflDGUrF43vgpwk39jY3m/mtB+2L5aQWh/NdkVcL8XtrmwwA/rOTE9mVrZjE5heTWhxdrDmvD/ySsbaL/nfbTxr05221EIdbOTmplJ+ix0+BQZDgrLmU137zsTGZBly4gDObzeSd4sPa6nvAhUsvQmboILhAj2uHwto2Ple/iz8qOPzOEfSteCn/3h3dNz6YqssPAkcLugHuj6p9kgvTghsucMLExkpHlEoHqXzk9U2kvr6Nz9Xv4g9VcBc/x5gERUHQQpy1XaIuDpvTk5gSIA/v+oYBfRuuEvBRi4uhun6bP32aTHxcW07Aq/Nf0qg7xXFnQXww48PHJQH1oErRQT58H/1qjO4P1aB9fqr8la+hGIR33MyL/HVnU7EL5ttBLnzKoD5Ddf2A25O7jckfOD6/5+/lMarCxpcFWLs51WNlUsBpfdr5DPlqAuRDoR7OHzsXLAvoIBc+11Cq4Www+WPzsy3AvVnefPq8kMkOvhy1958XX0cQpH+uv0aY+LaClevT0Zv5c68OcuHHNhT9Af0u/vT5Sf4SVgFBlNkqMIGJH1Iw7kT68LmGqvpd/NFjVH5bgJ3qqeCAyw8t2AFzIkMmmGtoqD9tAdTRVL+mmcAZZa4gG0I7zgeqfq4/Nj55BB0vl86Ch1CwnQC+j36OPza+9RkQmkBH7A6KMcFcQ2NiTP2TzQUh/JgdROFfGsr1J8oEpMDeFTZECr4rZAGquvvTW3+t45pfR+EPdgLEf4I/D2fWNCfvosYAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 12,
+                        height: 22,
+                        n: 8
+                    }
+                },
+                hp: {
+                    "The Vault": 15.0,
+                    Base: 5.0
+                },
+                blood: "lava",
+                bloodUI: "lava",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4550,7 +5857,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAASCAYAAACkctvyAAACOElEQVR4nO1YwUrDQBBNgh/gQfRiFQRR6ElaCoJnES8iXsUevfoF/oEf4DH9AfFS/AChUHrxEBDFYqkXxUP/IGUDEybD7mYmu9VKfVB207zdeftmdpM2DAiSwUeKr+vN9ZByFhmJwZ/4OU3bu2Eo9rN1dJoent+k0FcDGo1G3tIJFYcGwJ/gjyER6Of6I/GzMGizXktNglSGoc8JAHxuwmI0f1WDuHypfo4/Uj8BEb7Y2bsKjtv7WR9aHSbfj9kiPseD7Lpze19oMfoPdyFesGovLk8C3CrA9qUVZOIDqvCl+jn+6AqI42cEQZQoPEi1+HzTBTEFoHzpgicz4IMWjqFUf5k/Jk02Psyd7wAlHg+yQSqobMEuFVSFX0U/HYOhK1Cbn5hfOIIUYBC0cDxcn23kx0RZANcF9wUVxOHrDLIZqoM6zyX+AMr4ESeoDTgA8KUJix0qiMP3aagLdH4uwY1RMg7Xas2M8NLrBKvbW4H6DgapPp4I8wEmPoZa6PLKQZ6wUTIO1UKhb+MDfPKrAPzBhtr8sfmZJcAGjmgIYOK7JAxDaiKXLzVUx+GCjsmOoG7cE00i5esWjAWNiChqHPAhYfS+K59qcd0pEn+yBOCHG35NM0H694RrwjCkBvk2VOpPGV/7EH5/e2ILnoeEdR34VfRL/CnjW9+CfASg8F1BPnaw1FCfiPBPdI54H3yfFaTDbxoq9cfLDpgFWj9YELPgc5En4Ot1WLhBryn++UMv/LndAcGCYArXknyB5V2JOgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 12,
+                        height: 18,
+                        n: 8
+                    }
+                },
                 hp: 5.0,
+                blood: "snow",
+                bloodUI: "snow",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4597,7 +5917,16 @@ const icons = {
                     drill: 0.7,
                     holy: 0.5
                 },
-                hp: 5.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 17.0,
+                    "The Vault": 15.0,
+                    Base: 5.0
+                },
+                blood: "diamond",
+                bloodUI: "diamond",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4644,7 +5973,12 @@ const icons = {
                     drill: 0.7,
                     holy: 0.5
                 },
+                sprite: {},
                 hp: 20.0,
+                blood: "diamond",
+                bloodUI: "diamond",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -4695,7 +6029,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAARCAYAAABdN7utAAADMklEQVR4nN2XT0hUURTGzwsXuZFqMS0MF0VBi5k2kjElQy4ryAQnBWkXSg7VwjY2KMQUQbOoUClaBBFEGmVQW+NhSUIbFTcuWgzWYhYtWrl78V07jzt33p/7JyP64PLek/c759zv3HvnSaRoqFwOMMhQNsz/Iuu5j8++DHjsdMKhf6RBtnWA0/FqF7/MiVQgKYBaXEcuGzZJt9DnlYrnarbtLpR5k9rlXOBYSbwXFUCGb/cX6ebcLN0pXmx4V2ZgVlSCOEbmcC+zSUySXGKY1p5kdpxfXlxSBnQS2zTIpUnM4urKs0xrN/WrKdCxQiE4O3olfH4/PUN4xnXF9z3ThLXVNWFG2oRtJ+rKJ9Wexpt4Jc5o1utHvcH0WEG8iAGTGJQDRgnvQFwoP68tLiZyaAKbhInKMXTO3SReRzCL78Fx3XyNk6lXDUbPbu6mqeUNQgAMNgkgAiVpcnAvnWldDxNnu7vDpOMpPzBJTdIxO46XTYySy8Iy9aqFbwbKA2FRCAAhwGh1RlwnakupiWlzOzE0WvXDYmsaTcq0rgsGkpuUJpiVac+JOpmVzVrxfaOasTvSFpaNV6HRUKnrCNW/rTZ17OqNJ/Tw3mX8OThxbrjp/NJNPP57Zatnn0uT/qZZSYryauHZgtd0dMDk4btP6cu+QTHqtXpsUExAPQ7WPnyig7kLYoCVE9/qP0U9l3qCKFadMHNYkTiKvktNUnPqsjZmyTVHCX4VD2yJESe55tBorOTz16rEZpTybbEB1K8IJLVlXZoUNeEoNu4fCVOzXBZlw48hCysBAaLE217e/nzc2LAlhya57EIX1mZRhkb3jcx7bx+MhS98XX1DugLb+ePF9gTybfT53WNttu7QJJddKLOo14TFfE1rbljR+w8dFkkzHRnxjC3Fh/vE3EeSD3dVU0s/BYsreBO207JJskybJJsFgY2qOYqF1EWZNt8Go2GQbHLl/jKVr3cJME3Mssm6bN/IvMdNwhcEzN545YsVt+f40cQmqTsJ97osxE1FzWBN5ps9fVIYrDvfFvl7lGiL8E2qbmneVqV8b6CuhD/DkhOLLwxqz9nlBSt91u7UfH8BA+WTR9/hT38AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 15,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 14.0,
+                    Base: 4.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4733,7 +6083,16 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 14.0,
+                    "The Vault": 10.0,
+                    Base: 4.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4779,7 +6138,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 14.0,
+                    Base: 4.0
+                },
+                blood: "magic_liquid_teleportation",
+                bloodUI: "teleportatium",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4825,7 +6192,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 4.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 14.0,
+                    Base: 4.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4872,7 +6247,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {},
                 hp: 4.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4918,7 +6298,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 5.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 14.0,
+                    Base: 5.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -4967,7 +6355,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                hp: 7.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAPCAYAAABQkhlaAAACU0lEQVR4nGNkQAJZT///B9EB4hC+GwsjI8MwAYT8xgJjGGx9939VYDGDqLQaw1kReYa7F3cz7Prz/z+uwBgMgUasG4jxGzwgQACkkE9EnuFngDmDMgNuQMtAo6bnSPEbPCDYN5xkePL0FpjNt4GB4dObhwwbXuIODFoEGrU9R4rfWGAOaHYXZIiy2s3wGqoBRB+78J5sg8lxMLU9R4rfwAHBMaOWoW4GA8OyY1MYajN3QCxKCWO44C2ENdZoFWjU9hw+vwkdLEZRx2Thmw3OkyBQF5jD0Dzdg+HirniGLndBBlVzP7icU1nif7jBgTkMy471Mijru4JjT6a+BsVgmFqwg6d7wB0K8hguB5Oilhg3gAA+vz0++BYzRTStn8JQthN7jPJLa/0X1uaDGwxTC8Jd0z0Y/JTFGTZNf8mQ3fQWRS2xsQEKtH1d8xmJjTlkAPbc+ikobiAHgNzAAvJYqLw2g3G0OUTUfR6KIrg4NMCIVUtKoGHEHA7PgRz87ToX0Z77dp34SGYBKTKONmd4cOE6g4KBJobis0tPMqx+eBVcjb2z7/1PrFpQaU9soIEAsQ4mRS0pEYfSjniMlm9gAJulhNQiBzDzRzGsgaY46wi4QCYl0EjxHCmRzAJyCL+0FjhpislgOhgZ0EotrVKlgX3vf2IjDpwixGRUwBxhMVmM2P/49BrjBW8hOJ8ctaQAaqZK9MjAlZ3gASEsJkuUxZSoRc4y6IFGTOqBtWlweQ6XG5Aj7geaW1AiDlR/G2x99x+UT0EYxOaQFwPTIIxs6HBWCwAv/M8cI5RZsAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 15,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 19.0,
+                    Base: 7.0
+                },
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -5015,7 +6419,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACV0lEQVR4nN2WO0sDQRSF72ps1fgAixRGsFJkQRARIgopLJSAhb8gP0BCWi3UzhAEOxHER2UhSCwXlQSCjRBEQbCIhYWgRsXKQlbuxBnvTnbNTDZJ4YEQdvbLzLnnzuzGABedRSI2fptzc1DIZGA6lzPgn8twCyBXKomxpetrOJ+c9Azjv4RmeBXEhaFEurrY9/LNjdGs0FRYznD5YR2F5X6KliX/qJGhqbLUw+burm+2hQ8m74qO4qeyWVEcFkuN0XEqDAEXo2FSEzjOP6vDw+z+ytCQXQtLPdSDZUG8bs/b1sUiHL+8i4Lf1tc9O9yo0HRY2YNflgWR3ipBeuEEaBh8C+G2oSE0MjRV1s2DX9ZYGptybKHE4SxExzdYKImZA9i5LYjnAobCec7FujvEb2kA3AREJwTHO4Ahy6HpsH95qJVlhSUOZwGsfPnujxkexNXbszB2+tkKqqxqaLUETJvn1TiZq9bkAL+ZGgwz2Iw6dqcYpxOpsI6ArTxbnJoY7QvZvFhqmB9RynKhYWyGisosOBsniXoIIJQaDIszLgvPLRoK9ieNV6vXVmbvU7ZqaChVwzqsTuMC9Mbe0weYbrO7LFqVJQEXv9oqWBba2hgE40daoekUp9PkFjSSvCuyp2o1NYqlht2E85j7sfKfJB1WapzX2mJHjHT2sItQe2dF9y8fH4xg/EFc18LqqJ67EpuBR0V48ThOIogQFqWwsC+WHBk5tArDLkLmz+I8PDgaJ3mhHgLs/Q3lV6E8YTo5ADvxgrhuOmvlGRuM/74Sq82LLC9Ox8M3rkbmyqvt0ygAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 12.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -5061,7 +6478,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAARCAYAAABpTnqxAAACtUlEQVR4nN1WTWgTQRR+uwRarRdtitZ4KYgaioKtgj+HaEXPgkFBjyFoLC30VLykpB7UkpOSVmlzVBSUoF4EabFgUdAiFEouggoGlKZ4qy0II++1b52dbpp5LSviB5vJ7nzz5vu+mVkWIACDu4+o4fYuBf8h1vQ23N7ldSKxZ+cx6xD+hdDW0mDrzWXS1dkJB9u5BZc6lFLeAH0SszDyeexGBG/EXC0NEm/LPRq+Lym4XZmCxJZ93oDyj0Xf5GGEFoY5iTe3urRAJNwy55uPUuev8c+gt1iAeWGEFpY5iTc3+/Gtg3/iWxvhxI5N1HnpwkUYf/qCWizCz8MKLSxzEm8U/Zeb18Ep5eHe10++AQgswkXDCi0scxJvtBU7+p7T5OlMDO4ePgeXd7XBq28/aaB5TlOPX6pDB5p9PAbyuTCf9WjDZupj3v1HD0jI9gbHJ0TClWiw9eYyETE6UoEr755QeiffFGBo/1lg8Bb+MLXo43HKXBgFMNd2NaRcGw14b+vNOxrpTAwOHm+ky0RLolvhanFh5r6fmV9VWOdKQ7M1p6OeOVughggay6aLkKuWl5+W8j4SPV/ZshIuh4aBcWi4NbG9lX0NLdG46qlMe1zTnM6F2QlP8NiZPmtzYyuacf4g4MKxhgiSctUybT0+ozoGonEYHE1BZk+Hk5qZV7bckVJe2YYGAsESrmThfB9UQzW2VtCk9bh6wEFcDG06d422PQvuHLhBlwmsw8FLuLqGIKAGfC+hBreYPO3ggzuxTqiHsLgSwRKuZOEi+NPUupdutrW2rVr9ucmCU5wsePfr4UqAgvvXECzh4mI8S3TT+6epRg1GhE2ZqDVovVz9yJihmYKDgJwgrlnXhL5wphZdQwQ/TgAA8APFLHgqGYfiwz9F/zYXW+Ime71tXrdustczJ9HwGy28qh+M/BFrAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 12.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -5108,7 +6538,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACHUlEQVR4nN1WMUvDUBB+KVnbwRZXQbBYEFpoKiIOLkIHcRAXrViFCsXJdnBREAdBHNRJBB3sYCfpIA4FFycpNEIKglBB8Ae42B8QuUdfuKYmfRcTBw8e15d+uXzfd/dIFIYiHh8zIdeqFb6f0KYV9k9ikLaQHbi/U7L+fNGfTLfCsADjhgsyZDnIaLOMGBlNME3L8N+LK/me7KWwF8J+i6Nos4z4eH9lut5keHxE9lLYC2G/xVG0hTAB2QjKNL/FUbSFRAdq3SIHx6esZRiOJII0zW9xFG3ciPvHJjs8u+y5AYB4RKmFqYSDEEfStry6YeIFZxJI3Vydm3PZhT5ydpxYgLdj4RrG4f1vsLIcnLRBtmvjE7G7vcnmZzN8iUimUjyntSnrQVBMYKELeHyvb+s9WFI3iFgRGC84eA0VhOWLZdb5+rQK4hDXhWGyWGEaGCZMA2GQS3tH3DSBT0/O9InDWBxQlyJQcPgpMAcVQB0kwB7hSJRVLk74l1jLMExZbK1aMWVNoxCmYCmNU5lEtBwe6oaVMbhcXGO5whbJNIo4SpNDQCQcifKLg4KKHQgiEAbB7fabQsHKPtuaiKHYMN/ExxN93X/WG0qu0LD2FCx8IPkVXqYSmgFHBX6DeW41uBGxWH+HnW7yisVHxm6anbDbhDmJc+KAG2fngjmo4t2b7L4uccH1pSx7qN9Z+7/GQgYsPmaD6gJWiKNw+AaeQqJtmzfeywAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 12.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -5155,7 +6598,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {},
                 hp: 5.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     kinetic: false,
@@ -5201,7 +6649,15 @@ const icons = {
                     drill: 0.7,
                     holy: 0.2
                 },
-                hp: 8.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 24.0,
+                    Base: 8.0
+                },
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.01,
                     kinetic: false,
@@ -5239,7 +6695,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
-                hp: 8.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAIQAAAAdCAYAAABrLcQsAAAFTklEQVR4nN2aPahURxTHZ592qQJ2BkLE+Aofm8JglJDGQMTCgB+FPrAS01oYv6rwIBDNR5HWxUrYNE8LLUQh6cREbN6yzVOJCNoJqSyTlf/Vs553PDNzzt6ZfWsOXO69s3d+9+z5n5k7d+aGYLD+5VMjrbx38tKIb6Gwce53h88U5/+frR/RDNZaLwkn4PxHH6/ZIJpXOM1xyS+dDLOUaP2KwuV0a8UneCwZJhWOO51KtDbcGL9E8pboKWsK59VtowYZ3L82vqD76cEOzocrdxpo7MZHdhwIS8s/dlLOERdM+Ruxf77+k5ubsxi7rfUiXAqw1e/F4790IBz2GpOOwfXEwqIb9xnsjRqEC4bzv648DyHMh7bJQFw69jicY08j0RYzwnGrLVyMw89zumlxSDotHXz67FH4YPPW8TkFY/XxQ3cLfpNoa40HuG2ivRi8CYYUzuLzINJTprienpIsFwcLl8fBqpvGjN5Ag8IAphtQmbelvWuJVovbRrhaus3lboDK2Ob3/ftWOezBP39b/Mw6zI8RAGxeA5uLxtnffn3aFdwuSwYLF+bheuIwyRhqUt3UhCBnURkVeeX3uqtjB6n86JeHTWMAHgSLw1auZHMOP54kuL2KCVy6wXl0++335Y45IT47timc+PWbDiruWfgq7F/8MNzoP2m6G+zpxij3GLhWhz3mSTQkmSfRZlW4mFl1i8VhLvaMw2j6/MXF8MfwdlOOYzhLSYDA4CZ0ngsyca0OW7nTSLSnhXvKEsJp8UUcrLrFbE320SgahlcrWU4gZC1uTOe4Gb9ec5a4sIVPPg8/nO039XBMv2H0DuetXGLTcxmBQ4CJgWMEBnveuvn/sLCPGrgeJvb4z9Y4eHyl1+KcbpSEkq0mhEwGOpa/wbgDKWe1ujmH+Xt/ilsz0fqXT40s3FiAawkXi4PUTpubgSHJk3FAZTmFijJUpD3K5DU4p21SrlY/x42xeTnvbumcrrdw+4rfMS5nT8KN1fFwZRltWv0cM+kU/enU7zHxanKnmWiDtgGeIrdNQ57joknxqAJ1XTnntEeCdp2Vm+vW5e/oHtGt8u5TXsPPY4k2VB6beGTAsKdHWex/pXyW9yrF5f7KOMjfU7bmLYOmZyWEnmMpqPwzfH1BJoaHm2KvV6LBvIlWWjgyrTF7GrK831uvnXIQgkEUDODc9w6xDNcGNjwpLMvQxJ5Gog0K95Q1hJPG44FroRu9aq7e3KDGWNOrSYjYSHSl98Xo6oU/m+Ol76+PX9tQrl3PR84xJhk5Dy4slxTa20Yq0ba9vyWFSwalW7CnrCVcjO3VTbKjaxlw+t7wWDi4927jKKZmt/93rzlHOXecAqQJpnXv3GFYzmG+tyYamJN8wVWzpywpXMxPj25aQ5uLgekcEMygYcMxNo+1ddhj3gDL426hnnI942DVLdaITcvfmHzh3wCQYZauzWJRSS4tT+9cuBKu3drdlCG4MATDwhwoEzkluBp7VuObXf6GAQoIrc/jGDdrayW5tDwNkdCCZcvAea7VdZUeogQ3xp7F+CaXv8lin4kdOrfL5WAt7iwH+F2Lr/qRLV9BHGf2jjB6/QXTq2/6ljEgCc1rYG6gV5urBUL7PgGBWFq2ehqqccmQTONneKH4UoyL6oZApKacySzXTJPL61E3zkXl8xhWbk/4LLk0l+DlWq+vxfXMqJqcoGu8U7U1uJ5Em4Q7yLC9CWz1w8u1Tp2nuOoYgk+l5hzwTLXW4qLrtcxPaEvwua53uHInyfaKBrP4IZf2rdaWa3rL0AxBosmakjZL3KFBOO/z3WrrFYeXdsotsaB1rIsAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 22,
+                        height: 29,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 16.0,
+                    Base: 8.0
+                },
+                blood: "bone",
+                bloodUI: "bone dust",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5274,7 +6746,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAYCAYAAABUfcv3AAADKklEQVR4nOWYsWsUQRTGdxc7QRsbUdJocxBI4V9gErQWrjDYCWcrWFxjEVLYXBGwdcFOzuLAWki0Fyws5AhRAnLRxkLIH7DyXfLdvZ3M7Lw3lz0EPwhzm5s3773fvDe7e3kWUPn0VcXPk+Nv2c5okGf/mUrBoPfySS3/PGQAWG8/v5teHxwd5tvdfhWDVzqwIQtw+LDaaGUtBJfBwzsPajaXQg5oQFkdHRwd5ovuapsQNOu7DKTOgWMwFpUKR5qEUmxi3eCLTVPRLgPXpvAZ3bxxu3a9tdGtrI7agJ3aDdbYNAyKUAuwnGNlvUzYqTaW2LQMiqbANNDKJcNuA0IKg8I9OxAYRxloU4CTJcBuE0IKA+8Z9/PPfMQC66v3Fna0KGyrzSKxaRjMwOFLTuZ1Z2Wt9r+Yo8nZGhcNu20IMQY+FQwMdyZM4q5igfGPL1m5d3rHGu6PcjfAiXNQw8aF3ZQUE+FaoYRcmxQIkKYQJAMIDHx37Sk4TsQkJi9J83vAw7jd7VeEjetPX+c7gzX4GfNdGx/sq1fmCXGDJPCUbkA1SggYZSGEhDkEiLhcBjVwkiiTvn7r2uwzvpeH885okPMpn5Uq5/sc0QYjAjo5uVwLViYkgS/SDU0QuL4bI0bOlTlhI6RN/Tlub5DDGQx+ff89HUMgXHE+HLG8kTTfP6XwPSuTgfU2+xXAYr60sXaDBkKTyIAiA2/Fufrwcf/c/5qezscObFYCK8xn41b2+t2NmR9pY+0GDYSYXDtf/oXPiK2nVWdlbQYNozYwCTtml9oNtJPra95VmVNI3oojbQ2E3uZpWzGhZ68fqX8SkutrN0qCHr54r/oZSp6fu4/fRN9OoFgeRciRu6shdc5axgqNZyF9bD2/H7UlAG1sUqw6ix1tuEFRcNaAoJREYu0QsktR7DEkZBPKq4jRZitqAhp6diYknqP401Sb688KHNKewVKh+UUsQN7tmjR2Dl+NUmykrMAh+LNULIvGF2dxEcmV4s6lPXxTWofJWCsHMaEbNG8OvvPbcnbXnFoT21XacK6lxTHfEhPmTh+uI0dOyC77V9VLhNduVHH9Bc1lYdIOKBLnAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.07,
+                        width: 13,
+                        height: 24,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.01,
                     kinetic: false,
@@ -5309,7 +6794,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {},
                 hp: 14.75,
+                blood: "plasma_fading_pink",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5344,7 +6834,12 @@ const icons = {
                     drill: 0.5,
                     holy: 0.3
                 },
+                sprite: {},
                 hp: 18.75,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5379,7 +6874,12 @@ const icons = {
                     drill: 0.5,
                     holy: 0.1
                 },
+                sprite: {},
                 hp: 14.75,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5403,21 +6903,46 @@ const icons = {
             name: "Patsas",
             description: {
                 damages: {
-                    projectile: 1,
-                    explosion: 1,
-                    melee: 1,
-                    slice: 1,
-                    fire: 1,
-                    electricity: 1,
-                    ice: 1,
+                    projectile: 0.0,
+                    explosion: 0.0,
+                    melee: 1.0,
+                    slice: 0.0,
+                    fire: 0.0,
+                    electricity: 0.0,
+                    ice: 0.0,
                     radioactive: 1,
-                    drill: 1,
+                    drill: 0.5,
                     holy: 1
                 },
-                hp: 0.2,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACQAAAAQCAYAAAB+690jAAABVElEQVR4nMWVwY2EMAxFQ0QTdMAFeuBEI5yhl3TDiR7ChQ5SRlZGY/bjjTdBu5qxNEJ54/j/mCRUBiLGGPd9NyEEM45jZd4UqHuD3vs4TVNMTfDex3Vd41+FZR2pa/kPcuicU9075350TTOqCafqSN3L0LZtyVXtD42WCmu6NQ66rstOyAmUCmu6l6FhGM5NdRzHrxNyAqXCHG3bnk/WPQ3R+0bI4V/8idFSYY6maW6LuPYQifIkPGkBzDAno9RRzpfCKU7C2oIx3xLs+76iCTK5f/GUgGa0VBjrcFAdy+B2KcE4CJ4zisKy0yisNaJmgE96HRyN4Dmj8k7SOM6n2vSjE1pTMiZQu5dlue6PIDi3XzOKHD8HkvMY68/z/H3sKUGuOsW1BeCJRAEOybkO1id2njIqRjC1sYPCuc1oVHJiGtfq26cdMhD/wWV9y5tNJn+KfwEDYckAzbJHUQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 6,
+                        height: 16,
+                        n: 6
+                    }
+                },
+                hp: 7.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
-                    suffocation: true
+                    kinetic: false,
+                    suffocation: false,
+                    hm_teleport: true,
+                    projectile: true,
+                    explosion: true,
+                    electricity: true
+                },
+                faction: "giant",
+                attacks: {
+                    melee: {
+                        min: 0.4,
+                        max: 0.7
+                    }
                 }
             },
             bgImage: null,
@@ -5440,7 +6965,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 6.0,
+                blood: "plasma_fading_green",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5477,7 +7007,20 @@ const icons = {
                     drill: 1.2,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAbAAAAAYCAYAAACbdqgdAAAIL0lEQVR4nO2dbWwUVRSGz1ZajFRYU8DQIO1aihQTWmxT0aRpJEVQ+YNWKiSiAkEhlsRgJDbQH0gwfhATMFQbPtQfKggSE4gin6WBCCnQNhGwpWwLCBElFFIQCmbNe7t3uDu9s3Rmd9hpOSeZzM7MnefcPfPOnL137sz6iM2TFgqFjM9VqypvL0Sab175UvL5fJ7js907+ln07hwtPzMjnfXTR/XT2nYupuMbL/30UxdycwsFqKHhkM/JCVBeuUaUW7V0jtajyicH5iW+2/GpWlVJ2BfscQXFlNwvhZpO1NOo0XliHhg5ho7W1aC8wfISn/Vz7+hn6kvT77p+dBdQLx1ft/lux6dKOb5hVkTZ8HLC9ZOkbpy16BPy+wfKoBjBwQlQOH4i+f1DjDnWhb+AYY0130c4Us3MxwGQ0+qVS0IWU0Sm9hLf7fhIdmYgh/LzC2lA6iDBvPDXWSote53+u3WTsE0Vr5f4rJ/Exqcv6QcXULMpF1BXju97C2f3Gv20muKjJJyY9IOWkWRjrpvU1lMi9GMkMNjJE80RTu06gI0cnW2uu5bv5AT2Et/t+KBu4JU8O4VaWoK0fu1KMbUGj9PiincobXA6BbIeF98HJ4MH+ayfKHzJZv1Yx0deQHExlhdMmNUF1A7fSQJwyteVDfuMWT8UTubqd5CtJayLRT9oGS1b/hm9MXtBNzbWYZpW9lpC9RPRhYiNjTWRDnBySQfyCyyu2CUqDydDHx5Oq1dSaP6CD+7YbDbxI05g+IC/YMvv4gQ+dHC/egL3qEl+l/muxyd48hhduniB9u7dRW2nz9GX1V9RUVERjcnJoj07N4n6t1/6J0K8HuKzfhIcn96uH1xAzfGRJi+qVzsuI2aO9aMrp0kAjvUjOeYuOFMZR/ohTZ1169Ca/HjF2j6pnyTZJAO8dsvqiI1wsPPXrUI8cFCxeDlVVW8Qn+EAJzP6K1UHyLLnj+8w+juj8B1lYA/x3Y6P6A9GHWHy4NbW1tKx4y1iHbahjCpeL/FZPwmND+vnDsdXfrBKLmoCiIVvNjWh4bMT/Vh16bVqJtW8dHzjwTdaYN+seL9boLEzujaQIVUHmBcXFQgH+AXU3v63KN/RcU3Mg6fOdGPp+HYzsNf4bscHbBgOoMo2m9P6u81n/SQ2Pqwfa35PWw2q2a2/NNnFJy/EavJSL852+NivcPxEER8keCR3NT7z5pbRMyWlIj6HftvRZ/Vj3AObufBDCjz6iJicOpD7qoxofLsZ2Gt8t+MD8WVlBcT+uGhKNj5j3dG6rva40/q7zWf9JDY+rB9rPpi4fyO7IpEAft5ea8yxXd7jcVJ/c4KM1sUnzUvx6S36idoCg4OxuXm0fq21A/UERmYMnlrXjWPFt3sAvMZ3Mz7Yf1xBJzU21IsTCb+yMkakG7/m1HsATurvNt/t+MBYP9Z81k/ij6/dVp7d+K9X7gs+N6mIli+rEHPd9r6qH5HA9v1UTdmjAmJF0dT5dHhGsSMHamZsbgoan3V8JwL1Et/t+Hz06RqfHEQQSB1k8NDvj64B/HLB/QHck5E3aL3EZ/2wfrysHycJwA7f6r5aNLOrz8we+nCqH90DxpKlxiaR+jFaYLJfMRjOlE4c6Po+rfhOM7BX+G7HBzavfKnw8VDaUHEvBl1WGJWGPv/Ghsvi3kBebq4xushLfNZPYuPTF/Rj9wJqt/52E4Bd/Vjd69ItO9UPWYxyVNc5jY/qQ2fwkWj9GPfA1P7F4uKSkHSAEwhAnFiw2w7qhQO/f4hwgH2i9YGa+QgOfsHiuRf1uQKc0JjjBIZP3IDEAfAa3+344Ol5TBgevGXzd4KFgQMbN3wtfvljjiftp79aTl7ks37uPf0gqYCL5XjoB8cAc1yIzZNcLy9wTo6vTBzmrj7z6D2n+pEM3VssYuUb+mnTD9GXPuKhHzUe6twL+hFfLj//6W5Z9vDhA0bmk8NI1dE05leVRGPottXV7fepD4rKDIxftDdvdYpXi+BLQKAzZi7wHN/t+Kj8npiX+awf1k+s8bFoYcSsH7TyrFpisoURi37c4rN+SDAMCMbV41UfGKuPphqy3LCciZbvtZJW+nJZCP2auEmHkSbYH/2T5veBReNHOwC7a5s8z3c7Psxn/TDfPT7rh3otP+JNHHhIDIUp7GRYThdg0w8btE6wDXPAZbMOlWpuqtZWxopv9ZR4b+G7HR/mR+ezfpjv5ePL+nGPbySwcEYLEc0Vy9jhwLZ1Yo7mW2rqAzS2+BVjR2x7rOCF8NI2UTFUECNOdG9jZj7zmc985jM/nvyIl/liAwqILBl2Ipt7L765hAYOSDHKojn3y8Yv6I+6bcY6q8ozn/nMZz7zmb8vznytM/RXYtw+4JOnvWVAZBaE4X1UMFkBXb+nlTGf+cxnPvOZPzlGvi+akykz3o7IgNLQDykdwOxUnvnMZz7zmc/8KXHgR3QhSsOfrGGHrd9+Tv0HP9GVGZtbaeykWXTuz/O058cqyi54XoAx1dcfFP8QOmHCJDHdyZjPfOYzn/nM7x8jX5vA1Gbeg6nJYuhiSkoyNW5fR9eudVJS0n2Uen+yKIcyeXlPWj6tzXzmM5/5zGe+G3xtAsMO8t1VR2o20+m2s+TzdRXNyEwnPD3WfOaK0QNp90swn/nMZz7zmX8kRr7YS/3zMZkZpY3IGC6mGzc6xfJTJaUUChF1tO2h7FGZRjnsc/HipdDu3dtJx2Q+85nPfOYzPzuOfB8++P0Dqb39iuiXlMtmu3r1X+Pz9es3KC3N362MmYFlGPOZz3zmM5/5uXHm/w/wRwaoh7mcbwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.15,
+                        width: 24,
+                        height: 24,
+                        n: 18
+                    }
+                },
                 hp: 20.0,
+                blood: "sand_blue",
+                bloodUI: "blue sand",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -5505,7 +7048,20 @@ const icons = {
                     drill: 1.2,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.13,
+                        width: 24,
+                        height: 24,
+                        n: 18
+                    }
+                },
                 hp: 20.0,
+                blood: "sand_blue",
+                bloodUI: "blue sand",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true
@@ -5532,7 +7088,20 @@ const icons = {
                     drill: 0.0,
                     holy: 0.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAASgAAAAoCAYAAABNcGetAAAFcklEQVR4nO2cPY4UQQyFe0d7CrIJNuMQm5AiEXEGOAIH4AhwBiIkUpI5BBnBZlwD1IsKPB5Xle1yVbm7/aSVRj3Trjeur10/3bPLItT5xcNv6nXpPfy50Hx56ZPgaR86j+6TtcH0h03gY7nj08wjUe3P9tRTuN9Kx6jXpWOtnoKn7enskKdiYAgbBq8GYO9E5fzkLg4LT7VjnLZ7dB7XG37duxgET2VPtWPnA/F04ph5+vXzjhoBOV/AUqsP6CV3DPpJ78HPwe9k4Qm3jWPjtqG/3DkWysUsFYFeCp74noKn/7rLfbl0rPWL4liLoSS+KB/WnnC8nD8IeasfeIHkYrTkSZuj4MnGz9PBeSJN4C/JDcYxSLXHSRQ+NgNyiW+tj5aCkIsnjVXyJ/Vi6SfnKXjaL0/PSzz84dwUVyNtDDzVtoQ8p1pcnBecI6kvqxxDb5RPrXLnc/JEeQuebj0FT0vxe17tQY3qKMmIlcCy9JdbR3OqOgS9tF9hJekIau2lJVbwFDxhSWNdFajeydGImppbxtXKOldWhcA6Ty0KnvgKnoR38XoITmW5X/zIkEtGYZhbS0/Ym3ZPo4eCp/3z9FygRnaYJzC8LmE06nFbWavgafy5e+XphNe+Ixr1MgJr1TtX3NjeZgKrgie5gqe87j127ugkcaa+npY2Sb3vQmly4C1Hq4Kn7fKkfgCrVdzO8TQKjwZd+kzNclBPq4KnbfZdzdPQTfKtC96iDoVaFTzV9W+TfDm4Igd2ilxGDsw3yWes00e2t0fN2NSstRc8bVdnhzyd0hTT01QzJcoTdDO81NocfbeMo+CJp+CJJ5d7UClRoyEvdYzHB/ySPBUDjwqetsuTywLlVbGp+VceL6otKniq83T1JLmnEWaWvHni7Pl49Bw8+fR03hhPNwDNMEeBDH+f5MUT9OXByxaeq/GSr+BpmzzdLPFmTDmpRHic/sKfcYxu19OolsTxFDzlFTxdi/I07UlySqWO8jbSzMoV5ycUy4FnB577z5ufLfB0ml3Na/8eYibktbswywTNvui5noKnuh+o4In2dKISNAqsy7fvi/fnMijIF2fy8JwPbnsGT29fvim+Hzxtj6eh07tUkB5fv3I7FV49Yn/Yz+iOWy+8Lz++Fj15zNMIT1RuPPHE6TsPRerJKU/FjoOmexrEhWvknsYWiqYXPxREXF8jecKFYSRPa7vvPr53zdNFOLjMvO5YMMHjS8dlXqlAUZ6iaNL5GFkIMPDcvuvpDc9aPPCEC1fwxPN6T32oVE3TGl67ls8lq9ZxJS9SD1yPNfWCPAdSDTQqd73/CVnLrKoHT5ziVPOydCpOnz98Kn7u6DxdiOuO/VMXCBH8QSj+k5pak1MDPLVVe69lM5ZKjmZW0GszmFs0S6L6TXqhQR+4OEni9eKpth81gqc1LzBPqTiVlpxH5OmC8kRdd+QMCkvys4XadJBTjFog53jAwhdaa8FM77fuu1AbrJqZZi5PuTg5n3gWoO3LvfOk8dibp4vhysWKJ06eWDv3cFonrZLwHM5zIJw2WnxpALPqPImf2t0pSWwveQqerr2N5OmiWM55yBM5g6I2xzQqVVjYRnrNhanFF+7sXpBL/WiXKlwv0rxJ81R6P3iaz9Njw0zTG09Fk9pzcq8l8bXnlT6PfUG4OW3Ac6x8pZjUXyl2zovGD+WJaqfmiRPbwo8mfvD0sBuemgxxEl6Lb5UoLuRawDWear6kkPf00+LDylPwVNfReBJLMsKNglwKUG2ks/Ak8dUa24snaz9WnoKn4/B0Jc1o0ttHK1C1+NpzWkdhC7mGKXgqKnjakTyALgFotD+Li+xImt1fq4KnUDfNBii0L513wNMfHyFc2ICCeZIAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 37,
+                        height: 40,
+                        n: 8
+                    }
+                },
                 hp: 20.0,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -5560,7 +7129,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 1.5,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5606,7 +7180,20 @@ const icons = {
                     drill: 1,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAIQAAAAmCAYAAAAFkDNCAAAE5klEQVR4nO1cPW/UQBD1RukipUCpjBSaS3c9Ci2pr8mvyE8gJQWBX0BFAwVIiCY1tCB6CqSkBBcIUUSiNppLxjce78fM7trRBj/JycXe84533r6ZnbViqhnFoV4c2E63nq8Y+kdzeSFrOKMoMvgI4IPxEWMmRFlEaPn58/OP69+nZy+rb18+aG9rODG2E+2c4ZdxrzynkmF5eNx9fvbkpFqt1IRouSjMCpGPAK1WnlPJACSgyKESs0IondNsHCuJ4S1z7ECiQ/25+uFkcEFAnPX968WBAbuKVogxZVqazGEMX62OKiFEpPCRweVoboOtjUdN1oTYqgoEDBZzED349Sz9+cigROzqoAdwJjg1hgwA2zV4zqIUgjsGHBKImyqJ1s5UTgh0CncGnIe2zGnrGenoz9mnFFKysvEzJSpERwZBLO0UIwa14nvU2dymCCXJoiIScFuLIUQoptLBxyPT4LauC4q8obMtFqA6+Fx0uelqq703wowxc3ImdVIJdQ02Oq25vDCpBFxaQoHUDotNg5Ah6ZPDFjJjiIc2RSnE7r37tmSul9RlRjdIbPaPOiv5fbhjtDORIzROITIA4Dq3gyabEpD2rYoQmL1f/fnZooRZ0ALzRyBFrz+JdOYkodQZEtzcLxjKpLUGaTsJtiKKMusHsckUHvXioB0rieQDQWv5OeI8R8jhtqKPD3DdY1OQhC7Q9nxJ6rOFhxytQnTOgYHCB+PG55JpLfggaKUzdvZxZ7iQwx4N0OE+W3hxajttuXeSPANTwR/s9Oz6fERNPxt8jh/bLpio0AccqG4uezgZuh9SdXAlObQgQ4scmXb6Ohnl/aPcCcrHalvqm4xfktiBHdhGscHkXWVI+qX9A4Rj4bVHRQhqKGXd9dbrwIBchIBfXd8UOPBIREbIzg74EUuIyuMcmyMUzgguO/F5Q8tOmw3Knc/OFg0hesaGoF33B/pV9Z2DmLWFiFydADjoWEZ3TA6RTS5C8L59NuB5oR0De2KKNT2j0RCaYL54/tS8f/1Kc2tp397dP4dKpBDCWihKzAO89vAVWmiVQ22htilCR09BVasM+iCuAhEYsL//oJoKfPbmWpM3m2ftTZoJktVBf3j4zmlWGD6/qiuV8GUMB8g+1rF5++5NNQV4bEdyIFEfPnqcFLaa62dNNbNnmxBWu0MksJFGi6jSNcjpanXUGc1XFmO8oAL33NndM6GBBZIiUb9+/pTLFiNtSO2Dz5LEkIKMH/SZJQ+jdoxCCCan3TEGESh2dvcGswDVCUgwVe1h6XA6d3xK+EodS04AWmb3kSN6+xuZTI+x8evH90oxa0YnqGRJSOsToHCVHurvuBwuIWgx70O45NRWd4AcZwQyGNseCv5tcwhVMPj89+q3auJI29pCAlUEbh+5NhinoggRClljqULD7kmTaNv+CQ9rU4A6Hfuk6sRtdKFIQrhC1gQ5jLE5mQ6wiwCJqmV8OUwoFPDdTx9Ji3rJ9rZRK6u1uV72hX6Xh8ctLTrZdpppEcr2ArKkaFesQtwGmk3+okHym9++PMW3vR0KVzabZkLEwQiJka0uw0vQSBDpyzDYltpmazOHjATU075s3CrDQZRizYS4+/kLhze5nUNGWTCp3w+p1qwQBaLWvSOi+pcEMyH+g/9P0ShymZkQd1MxDJ7QJrb/ANPQaumQTdbeAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 33,
+                        height: 38,
+                        n: 4
+                    }
+                },
                 hp: 15.5,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     projectile: true,
                     burn: 0.0,
@@ -5644,7 +7231,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 10.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5682,7 +7274,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 3.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAAUCAYAAAAN+ioeAAAB0ElEQVR4nO1XO27DMAxVjJyim4beI0vXHLZrl94jg7ZcI4WDMGBp/mknKBoCgW2FT498pCy5NcX62/uFu39ZwWYhqZjwbAlujfV/UqRQzpwzJ7iGW6tI/cEFivBBY1p6wf1Encf5tMNjWtIcTgtsnE87Om7hJG6vfwRLY9Gwsy/8NL0g5z3ceAPCEwAJzCEF2smYhOMKEYmH+w/nR31oo3BYbv5o589YNjgNKCXkJR4kYG8CVjE4UbmiSmZxZ2LGcZvL9vvzqx2OH/crJs6QtkCCGj7aadmO5PDaHJJe5Y7W/LcuUka0TLHp6sDzeOOeMBkHmkXCV+qDNwWKBXEPtysXfJaX8mvJSn4RbryfaCJTLNjinWYFS8ciHT0UQTydGVkB1mrinj283lgBx26G1c0oEmz0XVfZzKJNohUpq9diN+XAayTZheNVdiVVxYpwW0dDT6yLjSk6QQU7WzbRrQvl4Y5w3TfDTJBVbL8lYflJ/0c6UuK3OK0PIS/XL6Ez58s1sNkCWx8iWbEsXsC3gF2F9nRU5rVgYbcqktceyWu+Ora0UShSZfN+hu3pgHQy8H4UZLF/yaxTlEvoZ9kIFgmPZz4oMmJVbFqD4IVtpv0ArCLIU7nfNiAAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 15,
+                        height: 20,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 12.0,
+                    Base: 3.0
+                },
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5730,7 +7338,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 3.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAARCAYAAABD/oseAAABN0lEQVR4nO1XuxHCMAxVckxBAy7YgAFoaBmWliZ7ULhjDbgUzjlgff1J7sJrfHEsWXrPkpMOAMDtT29QwL+enWb9ljAj5pvY4f6Ay+06jd9EbkEIp8yxK0HMFoRwwhzRRMPC+PlwPhYlximFyIE11sVP6FBZiKVElOZIBlq7dJ1SCGrvWrGaTqjEUKJcCyGWEFGToyhQqpe1FGKtbSZeOx3rcTJlWIPM0kJI/ZSsJiy+PpCJBYQ5DHaWm9hlCIG9GwmJR2ls4WSX+qroqZfWDTwjkFWIYE8RM5Z6yjfX0jCb1DxWzTNCtaWUa5cCRzJXTVSbwIih9gu2oEDPObX0Vk7F0kJI0Go/suRrwBuFsF6crbGLH1I3nKTfWe3WjiAglh9LaGt4hRDxnPZHwUJMVslbHf/t4AcfCDK+45rRApcAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 14,
+                        height: 17,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 12.0,
+                    Base: 3.0
+                },
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5778,7 +7402,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAABlElEQVR4nL1XO7LCMAwMGa7BRV5DS5nj0HnScRxKWhoukou8MTPOUxStvHKStzP8zMpaKbItnzqB6f3IH2NnI12u987gQ2j+f8DTBPTDePPbiSE/X59uuP1kB0nys8Pp/UAOvk6kKCHesvnODfiWzYIf1cPG2yNCfknk38V5EY7ECNv5/xKA88QW44pv2azGWD26yrx4ZYK8zFsYaw40Igk9ImCk34NZQbm8mDEWupxrAUT5jQ+YirdnjIZKcvZO6Fa06EHxwgRZS8TDkQndM+BovGd1KoyS/BRGhpMVPxJAK5fhk3qoeGEFSdLwN/nqKA5gbhGkIGt/0SD58/w1IP1WvL0ySrXkHJlQ2Wcx/go/ErCwXfxG3LlRrDRPyRLS2HmPpRGr+SjHfIDfpMfilrndJba1TY/uIUYlpCAfgV5+eu6eyeYlcAdDZb8loTvwQ8tccuVdzL3rVALVa1vy3bsRsClfqQfm6IryV3r0Mc9mPOkBh58YIQbg3kCiqSq1psUmfQQmsBy95IAKcpNq+SF9uNxfdnA+yfVgIboAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 12,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5816,7 +7453,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAABnUlEQVR4nMVX242DQAwk6Fo5XQn5yic1UM6KcqiBz3ylhOiaOYEAGeOxZ61cMlIewHh3xut9cGkEptt1/hkaG2X+6u4PzYeQ3HfB06T1MH4vJHlBd38sQRt/7nC6Xb2YAhI6JAZgiPhrDKWH9dtaD8bnr3lvWjvfhAdiDgKEIBRzuL8NgBNz4rN6dJV5fmWCBhQ0Gg1IPuogAW36pYa9vpBfs4L6n+/lg6415me6A8nX5RwZsPg6xjMc6anxayYog151EIGoUNheZDijBwEmKDlFKNRW6Max/r8KyO+X2hUGSR5FkCHqxJeITDBVkOWTeii/7hTrV5Jo3NxaSexHBCnIWl80SP7efgSk3/LbqqASJecTCY3OZTWGRezhGnH3g2JweCqZkyjig+liHRT3KUDyU3os7tY2vYt1iWM6AlpLjEoolXwEevrptlsmm52dHNRwqtoqtGf4dDJn/ZIr38XYd50GvRcBfpgUZwCoAXN01fJPnvU2z2a86BsOvzBCDMC1gUSqKrWmwyL9H5jAdPSSAyrITarVD9mHy/0DiGpDOO0OOVkAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 12,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5854,7 +7504,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAABl0lEQVR4nL1YQY6DMAwsaN/DN7j2uq+J8pq99ppv9ENduSqVcTxmnC47Ei0NE2fGOCR0uiist4d81YuPIh/tOlk+hOb+FyJNVg/jdyLJT7Tr9Oyksd4eUZ8CEloHbkCN+MKVc1YP63dGF+/tpzvfBpfgryMcQAvYDASidu2G7/Xp2lg9XpUhvzpB1SMLlvW7a7MCvQEsMgk9wzAaK/LrVpAQ5NCwvzUkmL5uE+qVc2Qgy/cMR3oyfuEUy2BxkvdJQj2+jX1kOKMnAvUM+mtkDWQregTI75dZFaom31UnR1DHzxiwVcQYYPmkHspvOMWWF0kF75biBN5bBC1oOyKQ/G4LgoD0e35n06kcJefMhJp9VmH5GcOq7+434u4iB5unMrITRXwwXbyN4nsKkPwhPR53i02vYm1gm46AniVOJZQkH4Gefjb2zGSz+clBgYeqLaF9hJ+a5pqr38XCd50Do3Zua/5hUoIbQN2wQFeW33m2yzyb8WIbAn5hhDiAzwYSQ1VpNZ3+f8QKpmOUHFBBYVK9ccgxQu4vzeJE++Ya8pQAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 12,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5892,7 +7555,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAABl0lEQVR4nL1X242DMBAk6DpJJSeaSAk0cN8W39dASkgTKJWkl5Mj4Jb1znrWBzdSggyz9syyfnDpBObbK1+mzkbKf8PjqvkQkvtf8DRpPYzfC0l+Y3hc30ES8+3lxaSAqNoLmGr8iB7Wb289uD+/zfa8DJ47X37uAFKAMItiivuLmQnE7O5F9Ogq8/z2Ojg/HD+/NtJdtS2BaACNaEKPNmzF1vwWFbQ+zFerrcEkVJdzzUCU3/iCTX+6bU4xnYwRJIcZQCNq4GjDUb9mglYhLM5M6NGGo34/1K6wlakOGstBCj4ryjLtIcon9VB+YQVJ0vjbubm1ktiOCFLQ+vNA8osjCALSb/ntVVCqJefMhKpzVmL5EcMidtdG3O2gGD3EMSdRxAdriHVQ3O1MBL9Jj8Vd+3an2F+P6QhoDTEqIQX5CPT00333TDYHOzmo46ZqC2hv4YemueTKbzH2W6dD30WAX02K8wKoF+boivILz3qbZzOe9A2HnxghBuDaQKKpKrWm3SJ9BmYwHb3kgApyk2qNQ47hcn8A6b6Lk2VdNcMAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 12,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -5930,7 +7606,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 5.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAJAAAAAbCAYAAACTMQajAAAFN0lEQVR4nO1bQWgUZxSeHUtBiYLVoHYPbTARLLlYRGhARNpLKelBkIKHXnrxkJOwxxqwR6EnD549BIrgxYMXi4igIFIvQqCxpBfrSpoWEjEgaMr3m2948/b9M/9k59/ZLT4Ydueff7733ve9/82/m02SGHbx+582k0DrzM4Fz31vw2F16ptagxv/vsg5wXseANSgVYvofYE2y0+d+raKgtq590BQMLDLN6+YWD58YF+69qO7Ryaj8RhLFXzgETsklirYg8DvROanTn0/sAYBzBvLrMpcHZi10pgUr/WDHSLAdkSOjR+bnzr19SYlg3+6dD8bn5ya6ZmL6+39h4NXAbARVMgKgGFuUyusCfyLkfmhjzr0NfdA+ubF7p/ZQWckhtdvP/k1OHisXEkOMHhY9uzvPyo960OJrzp3UPiXIvNTp77mI0waKg8HguQ5wHHe3jrn+OPlxW0nIA2rgCtQJlhFgCorjAKEruLY+LH5qVPfwgJiFbrVAMD9h3NBM5nJbe6D6kigaQGeDrnAsfU1C2j+mx82X20F6UD2HsitLAeqVhrnDjqBpgu0PeQCx9Y3tcDXX77MzhHozXsLSXu8/W4zNd7uOa8qLnyQ5CyJqZlsv4D3syfP5ZLou0C3RMR7YCEvvOLceuw0iT8fkZ+69e0pIIDvHhtL3qytZKsHdvf+defs6o3L7hyvbtP1+2+VxP0/FOgoCRxb31QHr518Nf2lu3Zq5qx7f/5Mx53j9ejBT5PJI5/nAimzUS/QURM4tr49HQjA3ddr2Xs4+fazGReoa88rz9zqwitWWD8J7Hq7MXIFOmoCx9bXfIQd/HBPziHG4Ki1+u57AnkAnPPPffF16XcRwJOGIgpNoAw/doGOosBl+nIsRF/LWro1I3jeQLGX/vkrN8Z50p6vryaHdu9LFh7caoW2f+JzDOfwpQ2+6a8Mn3i6UF+lO80v9biXoYXgI8apjz5OpK8Q/CJs4ksuiE8r4yeEe+or+elHX9eBLpz6bhMguAkTZQIyQJkIxugU9xzbN+HOgVWWgMan4TqE0RXPuIrwJYZ87XeFDapDzyt+JD7Hyvjx4Vv6Sn5C9bUsBbhVvVanwDw5rpOg6UTKEpAk+RJA9fvwB1GgGl/G3w0U2GcxBfbpa/FTpC/j0PykEhwTpFA+k48ITQxbJB35ErCsLAELfxAFGrNDX4gs8M93f8lwpb5WgyjS19cgUkvYx6vLPU7gHGBytel2y3k+cnSBavyiBHz4SCZmgcbu0F0PP3UJDAvhBjhF+ko/kp/sUxgH6AwB8vnOgJmcBL7z5GHLGtfkaLPwfQmU4ccs0NgdeiFA3H4ElrnQn9Ug0CF9PMN4TfOT+xgvb6SwegXIQJm8JIkYunh0Aha+r0BD8GMWaMwOnXj4qUtgnU8RP5a+bBAyN4mXWmQxmLFPpt1BJ7jOa1JULTIIsL770AFofCuBUPzYBRqrQ9clsL5fn2t9LX58+so9ouYn+xivVxqEpe3YM55txjAPgAg8F+2WIwh7fOJEblw/ChCMxud1K4EyfIuwugs0doeG9SNw1Q7t48fSt4ifVO/U5Y+mrJ9jnp4+sWkVD8Y4rn84BXydjMR/tPwwS9ZXoBpf+hhEgcbu0F3jsVSHwLTQBlFkFj89f8qQ3Qgi6T8EWsVjme/Xdxa+xPQVaJHJAuUnEBYoDlmg3IxWLdCYHTqmwJZhn+RrELCqDaLQqv7Wtun/49IbRxRk3T5YpJ3ZOfe/VFX8hfDDHCz8pvVqWt++bdgKtBM5nmErCD3/Py1L3UqToxRbAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 24,
+                        height: 27,
+                        n: 6
+                    }
+                },
+                hp: {
+                    "Temple of the Art": 17.0,
+                    Base: 5.0
+                },
+                blood: "bone",
+                bloodUI: "bone dust",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 4.0,
                     kinetic: false,
@@ -5975,7 +7667,23 @@ const icons = {
                     drill: 0.5,
                     holy: 1.5
                 },
-                hp: 9.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFgAAAAdCAYAAAAuAKvrAAAEEElEQVR4nM2Zv07cQBDGbctSEl0BCleBdKKgIKFLfV1egDdInToVT5CKmjpvkBdIdzUdoaFASIeuCBEIoeSkSETj+HO+G8+u/6z3YCRin737m29nZ3ZtJ00cdnhw8CjHyeZm7d7V7W11/vXsLHUx1skFu4nblR2qN+0K1XBpI+dtRB8+I66Yjw1mKDezwD6gdipQOZd+LOq5c8Vc3DYT1pab+sRyCejrPx4eVhyNR6PqXGfGoREEnnnLn2VN3HXoFQ731VxmCzf3DYjT/nQ+rzoK9FPyZ6XtcemInfNs8gzDrAzxBWK6u/s4u7xMY+tljqWLzzUXbOEKK+8DFuj77ckq9foqOU7yoo2wdFZMHJsEZ4QvEDoY69DLWQtOoSnJ3Vywy3HVMrgNeP91vSwKR6VoDkKimH0D4duAhtILY62mtrKfxa38/dwoznNdxm3ALhPweLlt3psEBuLLaKN3INrqRRysdZW1/e9352Sj2la8DwG2OFcDBCJZblTlHFsv9MFE29FyO/mcnBe/T169TZLlbXH8+Ot7svPyjZOb61kLBWNN9WVDn0C4du8YemtLlVQQeOUGiqoEm000gJsKGD8+PNytgL+VpYkNCuB3OzvF0QLrpWA8GtU2LwmEXP/84roKBJ4yrEDMf59XbZgbS6/oYg3iH22FyUsb2K4Xj6IuEQS9BqI0IbYCz+cFGDPKYH4yGFNwQzNCMlFzY+k9Sv5VgZ5oaVtb2uhxkAMLbi7/YBaOlqNgMEqXuftlpoYEwuLG0ivGE42lRvrwWKoN2MGsXpVlkCgrgUlJoCzRkbNFwFzyGoyXgdOSKxkoPG0cCDClDzLAejmJodfiyn3hyR8qzHrThB9hWcwMs8qQIcCaezLgxMXWi3uYZCwdehxYm9Ffb8SiN8UrqNUAguQaNiAYwNwGR7wVTUsuBwyDwHXe2JDlvAtjYOAK0zWgEL282evJ1T6s7x+aKSbcKhAQHQqWIzJtWnI5Q/QgOcj8pKDZYpobW6/vw07TdXCrkmM4O9Cmr1vtuJSnZRb7AoFguIKrAxFb75DcTDvhGcCjC65xYLidSyzMte7hnpje0fVRc2Pp1X1DubUP7vrrFv74NwMX9/crR22z0tHQ3Fh6sX8Mxc1cwbDMEnVxc1NlgOtb7awHl/m+b8B9ubH0am4tgzWEYQhmU6B9tvBkkOWr7UDactetN2s7s22F+2zm4EKcbwL7cH2+unJZm2b4Ap01CbME+Ry4bFG26TLALlxLm564EG4bs/o4l4gugehjFwPzmecKTqjPpuSz+FkboVwWvrW5q9AFMSxfXc2qklC90ta3PDbp9f6vchvnIW0vGvoPkeV9GX30dra9ra3HNteG4A7Bj8Xt6/PJbO8JRD1VIP4CrJxJQ5z+0X0AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 22,
+                        height: 29,
+                        n: 4
+                    }
+                },
+                hp: {
+                    Hell: 60.0,
+                    Base: 9.0
+                },
+                blood: "lava",
+                bloodUI: "lava",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6021,7 +7729,23 @@ const icons = {
                     drill: 0.5,
                     holy: 0.5
                 },
-                hp: 10.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFgAAAAdCAYAAAAuAKvrAAAESklEQVR4nOWZsU8bMRTGnSioQ1kYkIChqqIylQVlrTJlaaYuZWRB7Vj+hfwLdGzFwtgpE12YskddYAJVFUOoxMACQ8SQ6rvcO7179+yzfZeA1CdCLhf758+fn33nS8NYondwMMP71vZ24bvJ5WV2fHZ83LAxlskldhk3lF1VbyMUKuEog2Mf0b1nxEW42MSsym1qYBdQNgoojlGPi3ruXISN6zNgvtyGSyyfAvL83c1NrqG1zc3sWGZGTzGBj7zWnhZl3GXoBYfXlVzOBrfl6hBP+4vRKKsI6OGrw1zZo+ujgnA+mnyEKbQMcRnR6fdn49PTxqL1co6mix9LLrHBBasVAwb046d3eer3ORhlwJJZsWW5SPCMcBkhzViGXp61xOGaVC5jQ28hg33A7fWNAjNpKAVzE4xgxhrhugDVpZeCa1W1pfU0btbe9fy4JaexD9gWAK895qdcXUacPP4ofFe3XvJBW1e5Nlc/5WzLZXAdYI0zqcEIM5nX5dm7KL2kjwLaBpOvZjD8knz+9vJn9v55+N50Pryxclty1CT49+1fY4bGG0xrqisbYoywXb2rGqHpLSxV6QyCF2evfyUXUJqVxOYBDcRNMpg+7K/sqeD9270CmBvPwW+73cItzZ24eMUMnMa16Q0xQuPKpYpmEALMbGkbHSX1we792U3aJBZxE4PJhHbHH2y68/MAI2iN5HcGa8zcqgPHDSjTS0wfIzS9AzOfBXKgobmwtI3mdwtmZTe7FcU7cVv4h8apIxoY4QKjYQLT1OXc9nr1gdO4Nr3QYdN7Yi4N/lx6ETzjaYahTvthQ70Aax5kW2V0ku5TkUHj4VXyIjBGnJsEMJ/yEkybgYuUCyPAk8EzgpioQ9lFomVwvdAo9SZGBOjVuPgePPhBM0zbaVI7YGnMJl04CIJOhYCxnrq2ohcpI9QILSP4Lo5rAw+vKkZwvfQdykEHLR2yH3jR8kVl+IUYepu0g+EQEhgD5vtwwz7bMoK4iaDhldUIuaWVevGK1csHjtZiymTZPu8HJQqV42wq36A9PkF41shOJU+3xEVCgvFOgjspVzOI83E3AGMhWN4zc9Mkd9F6XQ92ys4TNxs5DpcZwgNTWD4fkOV4RnT6/ZmvEXy35jIiRK8876O3Tm7uAQeZoU1L+VDG1rB82tVh2VYnd1F6seGQ5atwS80oi+n9vXmxupq924ww/yk394sGnbRBUVnG+WiUCbQ9qx1HcDnf9Qw4lrsovZJb+MlIQjiMzCwz2hVThasJ9+Hxjvhyl6236TuyvsJdMbZwSZxrAGO4rrZCuVybZLiMbpYJ0wS5GrDFNC0T0sEQrqZNDlwVrk9odaxLRIgRMXFeM5/zbOZUbbMs+TR+00conxautTlU6JQxtLZCQ5slVfWirGt5LNPr/FXZp/EqZc9L6teR5bGMGL3BsdPtznzO1cGtg78obmybTxY7TyDqqYz4B/bOJCosasqpAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 22,
+                        height: 29,
+                        n: 4
+                    }
+                },
+                hp: {
+                    Hell: 60.0,
+                    Base: 10.0
+                },
+                blood: "magic_liquid_random_polymorph",
+                bloodUI: "chaotic polymorphine",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6069,7 +7793,23 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
-                hp: 6.0,
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAIQAAAAWCAYAAAAB6jTvAAAEuklEQVR4nO1Zy2oUQRQth+gYhkQX0UGDSNRVEAQ3QfyDbONC3ITBTb4g62zNF2QThtlINtnmDyS4Edxk5QOREaIufBBiEknk1uRMbt++9eju6hDFC033VFWfunXOqaruHmMiojM9cxTTJqZdmagL93/k45wkvrv1MlPG62QZ2vruC0Xo3irYVfo9i1E0Z9dE4rrx3xQ5cNkIv7d3fpp2a8wsP943i2sX1A5CiWntqhgtZODURutE3OMba+ieIsKl1I2PK9gBAVEQGMBdiYeSR8d0lri9p82g0TRBXCLVaTRTAVe7h84ubnnbmHyLbq8SewhCCW182MqAkmituQe24c765lC8pdGvZurJpFnoHdq68eZFe+YYMlFeFou7/va1FyuF0UKG6iZcKTV8GRpu0ZyBE5rICNQT5gjvbPbm9BFupEbGNFUAEo0EXTGbVrwfe7/M7u+DjBmAS5jSaK6QuFwE38rAzQCjLRsy2piZXyWj9TNGi4muMMIJwWM2Hzr7ghtKCugTzoWLSQvhUE780pnrRpNA8qBNOAquG/VhDYGgCt7B4toAkOL9877Z3p2w1/Ore6ZnNm2ZMdds2ejIeXUgwOQJU4IxuC6jAUcjuIrROhErpY9gFy4mRirheL58Mp/g70fxIHUbrhA8CJCSghvhXGMmMvUkXrs1Zcab7mXOZTSKWNyF3ukZrVvTSol8gV1VOJkv568IDyvzjZxuOcedkGCsgwkEQc69u/7I7vso58Th2rW/lcF14SGk0Xj+nCjeZmC0w8wzSgh3+XhpJzKXjgnGWKjs2cFgpaTw4XIe8CwSwoVwoQddOc4QD5pumb2I36QFBjCYxXpbmgmuPdOF7cLFtc8cKYzmevjdLkgwVsrTEM6nWywPst+hIUAIZkWVkG8ZGIjPaGVw8bCWwmiaGUzilTK1cDzXELexE5nOGSI0Q7z5/sU8vH4rB0LALz69s3WcPG3/1HD7O9/M/as3VNxXnz/aOh9uzIoWE2Vw2yVWytTCyZxT8duQjbkRuOvxG2cyA4Jfh574KVGOi984U7IIfq0RwwfLceRvnHHteifvTM/YV2RNCJk3n9kuXPmmEcNHDK4MXl+WX+jW4C5D0iS6FBod8HJaHWQbvpTLhCGWFBq4KCf3yjYxf57F4mrYyN3UZGDOQxVcyQHXrQq/iAafGSi8c+mKPSA6tg0YBdsEb486be/0zQ5+1gjgmBLHNXOK4GoPlG2BW9bAdQqn5TrZumwP3IttA/1hm+DtUYfcMlsGhTSGXD7xPCHrYCBJCseTCcskZRlPWOJqBJcJaYZZD25RA3NTpBZOhuRZ6obnCVmHPBDWEPKpVc4QiK8ZRBoBJMiZlyph4NZltI2EuNprbSoetD6kbsDQ+tF4za0QVEhf2+iIeZjhgYGiY+1VLkXCEjc1wXXghiZcGR7q0i1jCALElzYaBN6pXZ9i6aBPqqh3/YmVKmEXGakI7v5FwtWlW0MOQH525e+p/HANWvsDhhImXJ6w1hZlNBiZsIZbl9E6NQpXlQfkx3OtQzfn9wPf18u52/fUOi3h08alMz+K4M4quRXFpTqJ62p3lvjN/dv5r4Q261LcuxGJiy+VvMz3p9dZiT/Ib1o8s+F8fgAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 22,
+                        height: 22,
+                        n: 6
+                    }
+                },
+                hp: {
+                    Hell: 60.0,
+                    Base: 6.0
+                },
+                blood: "endslime_blood",
+                bloodUI: "hell slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6114,7 +7854,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                hp: 8.0,
+                sprite: {},
+                hp: {
+                    "Temple of the Art": 24.0,
+                    Base: 8.0
+                },
+                blood: "plasma_fading_pink",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6160,7 +7908,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1.2
                 },
-                hp: 4.0,
+                sprite: {},
+                hp: {
+                    Hell: 40.0,
+                    Base: 4.0
+                },
+                blood: "plasma_fading_pink",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6196,7 +7952,15 @@ const icons = {
                     drill: 0.5,
                     holy: 0.5
                 },
-                hp: 16.0,
+                sprite: {},
+                hp: {
+                    Hell: 60.0,
+                    Base: 16.0
+                },
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6243,7 +8007,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABIAAAANCAYAAACkTj4ZAAAA30lEQVR4nGP48WrJ/////zNQgn+8WvKfhYGBgaE0OeY/AwWgpcOTAWzQ/SfPGCgFLD9fTGZQlFGhyJCfLyYzMIL89/1kK0PKZAmGObkvwBIgNj4wB0kdiM1pXs3A+PGS+f/mCSoM1YHnGFrXG5HkkmqontqCOwyM7zdrggOaSZ6P4d/DTyg0LvAPSR0MgAM7uJWbgYHhLwMDAzrNwLC2+isDQg0MIKuDqGEBKTDSUsfjgXNgEp+a4NabEK8RClwGAgAU4IxOFib/8buIMDh3jdouggkI8vGSZMD7T5/hHAAX9ZAun7VRHwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 18,
+                        height: 13,
+                        n: 1
+                    }
+                },
                 hp: 3.0,
+                blood: "None",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 20.0,
                     kinetic: false,
@@ -6278,7 +8055,19 @@ const icons = {
                     drill: 1,
                     holy: 2.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABIAAAANCAYAAACkTj4ZAAAA30lEQVR4nGP48WrJ/////zNQgn+8WvKfhYGBgaE0OeY/AwWgpcOTAWzQ/SfPGCgFLD9fTGZQlFGhyJCfLyYzMIL89/1kK0PKZAmGObkvwBIgNj4wB0kdiM1pXs3A+PGS+f/mCSoM1YHnGFrXG5HkkmqontqCOwyM7zdrggOaSZ6P4d/DTyg0LvAPSR0MgAM7uJWbgYHhLwMDAzrNwLC2+isDQg0MIKuDqGEBKTDSUsfjgXNgEp+a4NabEK8RClwGAgAU4IxOFib/8buIMDh3jdouggkI8vGSZMD7T5/hHAAX9ZAun7VRHwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 18,
+                        height: 13,
+                        n: 1
+                    }
+                },
                 hp: 6.0,
+                blood: "None",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -6313,7 +8102,20 @@ const icons = {
                     drill: 0.7,
                     holy: 2.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAAC8ElEQVR4nNWXTWgTQRiGv00Tqh6KkhZJPDXWCJYcNFSCoCB4UETRa8BjD7UeBJEg9ChKEMGDwYN4ykl6UPxBDwVL/YuWtJWoSJSgkm6oJrTUYCNSV76hs8xMdmZnVwz6wTLZdp/MO8/8JDFAUoWTI1bz00fy+sD9B4bsuT9l/tcyZAJuzL2GmZUlcr9r/Ua4/uyxUkTBB/Ovy1ZlC8ggFHDm7Dnyev+pEa2OZjwyVHbGrJJreM9eS6cf5CYOHyKXVjAfjFs2R3HZSpG0ly9d5FpVZX0wnZLtd4JU2ThxuQvDFl6ZWJLcU4i2qsr4YDol2w/jls3etygM23LFhCO1X3Bzsal1XuXWuO1Pq9oMuxJGnz8hA8Jg2KbTaSVz/OBu6/PCCve34mxJymC+ialXoMvQ8SSrQVBlC4jS4rEo3I0EYLA3TAavI61cMbUZyuGFBy8+S2fz0dVrMsTmdFc27QOzeWHoeNyycVsVpSFEa8OOHk4AzrZTJ/FYVIsROS8TRCXoyBaz+WHcsgXossSLysN6U2/A97fLwAq49fBl28DijOxQqo/7n8g4ycZ+vEwQDghLZ2XTbF52Azsep2w0n73i6PcVtrCzK0ePWfmhISs1z58RSQfZc/feEdluDLtCsVQTJGNUsmULwUmCiil1feWysfm4rZofnwQ8SF8Uy6QD7IxWd//Wts6aEtl+GJlsGdP/JaT8WqHDoARWuMgkVvu4bNlEwp7UIAsUZt8b+EaRzZvIPcpDYCq0DgYlAfPjk4DP1xYWCY/B9v1sgVeGCieySyUtpt7zAzCf2WpBxuEYkfXjhxGz2StuzPwgGSbAwLclOH3nNtdJk5GNLSvbDxOuzRPZYqmY3uVuaES2tK1st2xeGadsQVxhKI0CWGib1onpaUP2G25MItsPY8vW+H2LhasGcGXXG9zxIH6KtzFrEkQmt9qA0a6wdjYjtXObvTVx/4r3Tm+S6hCDsuk3eCcGRYiThM+cjw4Aivib2X4Du2EJ9HBXXW4AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.15,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 3.0,
+                blood: "liquid_fire",
+                bloodUI: "fire",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6354,7 +8156,20 @@ const icons = {
                     drill: 0.7,
                     holy: 2.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAE4AAAAPCAYAAABKrvnUAAACXklEQVR4nL2XsUsbcRTH34VQAg5WQdQgSEuwqIugdCrqEsjqWkq3DvkDCk4ODsXFoRSHgoM4iIOQxUIgDm0cFFFUaCxqMIiQKEqsgyQ4mPKe/sLvjtz9fu+Z+h1yv7u8z9339/29u1wceNTq1ixcTaVqOD6vVGDy144DFloVcs8hrjdOff2LmbHh2s+rClxWqzAS7YRXoTurEGYEnCRsCcP1xqkP6Tu97a203S5eQOH+hcmXmPv9eam2fFaGb8dFqkfD/4OReLOtrweHyWLCHZEIcDQp5CSLxGW43jj1YfyY+/KJVu/opAjjcA6F+1Y4Ld8Y4TkhhwaxY04jEbotbCfFYbjeuPVhBaD6XkfhCAAw7zfQDuncgfFCHE5nOGFLQ7D1JplLuCX7hwa3o/1kjMCTIpjUIuB0RhI2Z2HxWrbebOaSyWRcz1RnIfGODlxWrqGn6yUd/Dv+AWKxGI3z+Xx9jIrH40YGaxoZlHCKwUmh9Al9nf8ReB0vUz0s0/b7+obD9bYyPUXbofcfIZlMOk4QhNpbWnQBpgspecOWck8J24/xCs+Bna06zy8HPXAa6JBq18ONAv2KNVodE6PkDVvKSRaJ2wzqkWCbA+1MJN4SVLq4hu7ONtpu7h4HvmBO+DCJwYGaCqFR6BJOEja3GbgZ0OuIArAQT4CgjUoNmHTuwGk2t5bdr3Pd2bsHPucO29vZfgzXl59c/xxQqfSWqwttlGIwaI4rZPQO0MPG7vF2EPrAevTlZZo1n1CQWa5KBkYZMT0GnspIvHGZkH5fe+/zoMRLTWJQz8E0ez7/AMTR+XRPbVDEAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 13,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 2.9,
+                blood: "liquid_fire",
+                bloodUI: "fire",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6401,7 +8216,12 @@ const icons = {
                     drill: 0.7,
                     holy: 2.0
                 },
+                sprite: {},
                 hp: 4.8,
+                blood: "liquid_fire",
+                bloodUI: "fire",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6448,7 +8268,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAAC5UlEQVR4nOWWUWhSURjH//ciDDfXy4oezI1GoAYjxjAqiIgRREiMwo3RqKdo60miPTgoYoE+2INPzegtVtKk4YMPwQjxbSQRMZgOxkZbvizyYc1ECG98R87Z1anzXi9C9cHF6+Gc3/3d73z3nCNBQ6Tn7iuOyyfZfSaxCefUc0nL+H+dAyUTVERkgoouyF/GkfVC/5cw8ZvZSU9F5h6Ho1J1+VUHz3Z1Wd67MSxYLxY/6ObUinb7iOTQgN2l66zE6OIJU9TlVy9UZUnjOIeYXE4rh7P4pZZvp4+JAJ4zx2A99Q3vE2b8ziZhsnbhkfcs40BDEMt7syg47gkZXtg1cziLe3XbLjIGr+p2+khqyOC6Aqssw+x0IlpcxYCth3WqKEX7w/Lv2jPRRKUY/fId+zJ51j7e78LPC5+QXT/RNIc+jYOTlse47xKehj6C2tvpI9YgglhlC7svpNPwOE8jspyCq9CJQjLH2s1Phiqz65iW6q1hI0UL43RjCCvFVcbvS+ZY8jHWWZfDgyfHvSHB7HQhEkjCOyEjPr8Fx87xcqcGnMN8qBgKTfjI2Z2cyGi2VBKdCDZStLCKaibUHHUQh5JDLP6/WRafeRpDsx+fL4kXbcWHgr/XYSwTrerDjqMKlXDgwSI8FlvdpGQSm3CgXIJiha/cHRTvFTtg60FseUskhf9SxPsVDDTgqFlh/1Xm5D3SV54w7HMiGykMJnp1+VBVNusjei7MjCmemQACo7dqJinWsccWudC7DnEEqBW0SwSnutjsfVZJcRmqisFzvQgtrYkttxEr/Oolc6IkaXUxwkdkYdT/Vor6ffAtvEZ0b7vic4tpEKKHTM/l2RpCD6axepLDWZO37zKn0O5XzS5G+BxorK6klPmXJqFaM7ey/UNzcqpZ9LnRQq3HxWgftgPQIcl/7Tw7ZFXvCFqk6HD25o674pCml9WKi9E+AjbbgpCa05KMimUEwygfGAIxkGNUaPH5A+y+X4HyVExeAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 18,
+                        height: 16,
+                        n: 4
+                    }
+                },
                 hp: 3.0,
+                blood: "None",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 20.0,
                     kinetic: false,
@@ -6483,7 +8316,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAASCAYAAAD4+JjWAAADMklEQVR4nL2YT2jTUBzHf03dRrBCV/aHBgtKa8XBDk4GyrCC68WhDC9FhuJAZTsJ4sGBzDKm6E3wNlCYMgbuIiLqxQmbiF6ct4l1RUdtZd3UVjvCOkrll/XFl2fSl3/44NE0Tb79/D7v5SUEgNPiyb4R7OCwnU4OVbG7kXPhwZXq/+IR6v0YT/aNtIqhS9idSEIQMewH7E4k4bm+waNwY2AUnEiywiPw5Pgkfxt2u5KOnT9Z3XW8E9r3haCnPwG4bUcSkVNOz8Gd95O2JVnlEXhyvIe7FBg7khDmwFAvbG4PQq64CEupNxCJHrIsiZYT2tsE0T1eW5Ls8Ag8OWVqxKxIomFWc7NqYVYl0XJa/B51v1VJdnkEnpwWv0cDY0YSC8MWZlYSK0dsb9T8blaSEx6BJ0esQZmVRGByxXUVRq8wniQip/JqQTfDrCSnPIKeHCOoKEcSDQOwzC3MCIqW09xRMszgSXKDx6MnB6GwibWw8I6oJiz1qQIX9w/C1elxKOUK+VU5c7sh23RzZywKFSmgwtAZejkkC6FeP54BOV1Q9vHk6OWwXF/nU+AGzzbFklf4BQBtBwMRmErfh+aO3crB8kpZ+UxDSg3AfWvFKlzLPN0qSNT+Qaw7roSDv6TJYHNIyxU3YDMbVL9/z+YhHojAvDSHZJrz6+WQLJXLJR7hxdizW/nS8j2cCRg0PToDC08+6wLIKKdQhcbwEShNvoSKCMrswYzndx95cNRwmuLzxc9Fn24GnZX5uAGtUi80rH9Tipoam/BgzsPL1yHWfc6QwyiLcJEcN3iUNQgLxEJREk5PVpK8Uq4rhxyHUO8mZrlQJIvA4DkIQ+fwBovNouW4yfP3fscs1rjgDYwnoOvE1uXGk0M3sjiSa5msaaSxMFiIXg4uuCwHvY7Uk+MWzz+BrKSzw2cgeCpoWg4PyqycepJQkFk5Tnl0Q2lJPf0JePtjyZIcI6iK9NuSHFYSDlbnsKQWZlaOEx7DYFqSnC5YlqMH9SH7xbIcWhIOFi7g9Iw2K8cuT93weE0SbtuRQ0PhMwk2cnewk0MkkRltN8ctHsDm1gszhMLuRo4bL97M8vwBY2+H44B0uSIAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 18,
+                        height: 18,
+                        n: 4
+                    }
+                },
                 hp: 3.0,
+                blood: "None",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 20.0,
                     kinetic: false,
@@ -6518,7 +8364,12 @@ const icons = {
                     drill: 0.5,
                     holy: 0.3
                 },
+                sprite: {},
                 hp: 24.0,
+                blood: "bone",
+                bloodUI: "bone dust",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6574,7 +8425,12 @@ const icons = {
                     drill: 0.5,
                     holy: 0.0
                 },
+                sprite: {},
                 hp: 36.0,
+                blood: "bone",
+                bloodUI: "bone dust",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6634,7 +8490,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 120.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -6665,7 +8526,12 @@ const icons = {
                     drill: 0.0,
                     holy: 1
                 },
+                sprite: {},
                 hp: 30.0,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -6696,7 +8562,20 @@ const icons = {
                     drill: 0.9,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACsAAAAsCAYAAAD8WEF4AAAE8UlEQVR4nK1ZO2ojQRDViDmCA4WbDsjaRIFTHcKRI8OCI4MP4Gx9BCeKHHkTw15hUwVObAnmAg4UGHwBgZZqz2vePFX1yMs+EBr1TFe9qV9Xt6rRP+Dx7Ix/7oeev1itqmPkXaxWRTlFISXBTLLd7dJ3U9fFue1uN7p7fnZ1vlxejjZtWyRcfYXktGl4KJE1BSCraALyLOf7w0PFhGl8mKy4WBUcuNzIGowwyE37L5Wfs3E8HxEG6UGypViE8NnV1eh1ucxK9T5jdnWVr22OeuLn/X0eV8LGRUOiUqJsQY/QsZacDRA1nJ+e9gzAhL2kG+PCBiNXmwL7PK3X+Te+mSgIzoSovrTBXhTj9ozNebm83DMf+7C3awnsXtKYQP42/Nlu8+TJyUm+Too7C76SJfEyKpOBuTBGhGxZtSRbwH5v39/TBwSvF4vsRg4RWGvTkWPXR9WBvXY7n/c8y9blGNlDafSGpkwTjYlxDG8c1w8Zho3D9Rhkx1G5MiuyABDhOGOirHgzQBQ5AD2sC+Nq4UyWAUXm7sht7OoSEQWPG0GLf9MDXfoBUBHqkkC1GLupXa97ycLWmXRxreQSunucnF4JtDCbLpd7LmeVrvWasR4JRnS/ocTkeyAW1WnOBbuuzs4SWeOZyba73Z4FqRIlxoiItI5HkKSl5Vdh1r2dz/uW9WLNq7VqTbaQWePXzY1brtiaHrSK8Es9rddVngnhXDsNPNkUYVFQawJwYX4pJzYN7qIjJdBKqPEBhxrZZmZmohw77F4Q5YTRstY6ieUlnXry99vb5ziNbTrZd8/Pn4uCLQhwoVpHCWjceknFiJ5vadkGmsnkYCyN13XabVS8cjEoVg6UMkFPaYkAnudxDgdOcOjBanYQ7dp8GHiiKfsggpE1GPpCmKPhZUi629aVm8maBaPMZaLHkFPoHNXTS0anlD123ykMuMzkVSuwRoShGqyIFg3cM5CHP8MAEz5sCVWBQjAi5GHSVYxwDlWUhcY1wkJ6j/QKqZkI3KMEPJSW5AnVY+20tFnCIqDbnU3b7lM1+PHt297ejGMk2il4y6m3rAKaqJrpuvR64A3qWC0BwVGysVAoM0vYx3ar9nuq3VP3m2NU9eFa20/UfJMx5tXH2xAaTAE31iDpdUu8WTTAKl5Y8ZiWTN6RYCw1MtZxgZSFRNQ8l9wcLSobIurF9lBjA1l5p6AuRwJ42RxtYfh7012bp0pEMaYyebdBYZK7rqqp6z138UgCJhw1I7x7YGydstWzKJG2Mqldmm6bej7wGhHusNQ6EMZt4zENeisv6zX4bBh4Pm8ZOqTuq1RumEwU31tRqDVVy6A3V1+SwyAPGOGUgbTVlkmZtDbiwPVi0Zt73v1GxZjSs1OnDY08lBJMT+u4n03KTk/drMU22mD3UW9nUr4iuXgO3mQdLBsR0DuYY2vwNY95S25pa1M6Z+BdLAhrn8BnCJksxW2lQksHF7ivpJ66snXsKQ0I2wfkuu8K2xr3YA7Co+ThZlxfCKtgU9cHdZRlM3n2BEgzUXg9PG3GWZP2nR609CyoSnjVQ88QAmP1iB6QVXiHYyCgC0fUPhr0Oe3iOhyQU4RkvWMlhUfSI9IGJzPgMPT/FxDGrL4QZyWuOXOZXMPbo46Y3u/kHk00ExmC9y+OdxTkNeqjAZ3/nSwQ/Ec29HdoUcdXyP4FJK+ooQ+uJsMAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 43,
+                        height: 44,
+                        n: 1
+                    }
+                },
                 hp: 40.0,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -6727,7 +8606,20 @@ const icons = {
                     drill: 0.7,
                     holy: 0.5
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 41,
+                        height: 70,
+                        n: 8
+                    }
+                },
                 hp: 40.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6780,7 +8672,20 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 41,
+                        height: 70,
+                        n: 8
+                    }
+                },
                 hp: 40.0,
+                blood: "slime",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6831,7 +8736,12 @@ const icons = {
                     drill: 1,
                     holy: 0.5
                 },
+                sprite: {},
                 hp: 40.5,
+                blood: "plasma_fading",
+                bloodUI: "magical liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     projectile: true,
                     shock: true,
@@ -6883,12 +8793,17 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 immunities: {
                     hm_teleport: true,
                     burn: 0.0,
                     suffocation: true
                 },
-                hp: 1.5
+                hp: 1.5,
+                blood: "acid",
+                bloodUI: "acid",
+                corpse: "meat",
+                corpseUI: "meat"
             },
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/H\u00e4ive"
@@ -6910,7 +8825,20 @@ const icons = {
                     drill: 0.7,
                     holy: 0.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABcAAAAdCAYAAABBsffGAAABYUlEQVR4nGNkIAMU3v3/H8buV2ZkRJZL3/wTLDfTl52RIoPR+TCD0dlkg0IchoMAEyWGFqL5ApsFg8/lIDB0Xe4x6dR/ZDaXFhuKPOlpEc3V17eeRhZi2JFnxkgVl/dDM1BZrClcbN97RDBR5HL0oAGBe1eugulbsxIZKXJ59rIXGClDSUcbjEGAIsNBQFlEjuH1s0dgjBzeIMDCQKGrT1w6giKObAELJUFx4tIRBgs9GwwLMAxHjxhs3kcGyAaf7QhhNK5Yg6GfkRiDYQAUrp/ffWZwdfBEcS3IcAYsgAmXwa+fPcIQAxkMSgkgg0FsEMYHmJDTJi7wGmoRLInBLIGxcRoOi12YAcguhiUxdDbMYBiN1+Wg3IRugagUagSCALoYIR8zoWsE0SCvwiIPW4RhyzB4DYcZDNMEMhjkI5jByBbgSh04AXKqUUubjzNpoqcufGopLlvwgVHDsQKaGg4AgTXhT9dSq0UAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 23,
+                        height: 29,
+                        n: 1
+                    }
+                },
                 hp: 40.0,
+                blood: "spark_blue",
+                bloodUI: "spark",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -6964,7 +8892,20 @@ const icons = {
                     drill: 0.0,
                     holy: 0.4
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAAET0lEQVR4nO2cy2oUQRSGe5pJSEzGkBHGES8EQXAnWZqFojvBpbjUN/BhfIO4du9O0UW2wZ0ghBAjjgEnxFzRReTv5G/O1NSte3qc6lA/NDXpVFd/XXP6nFOXpJGU0IMXr0515z+9ed1IJqDIMzmexqgQUn/7vWSq3f0vHRV5wuBJq4bxrT+KIk84PGnVMEWuK6PIExaP1XX5NqoDUlWF24484fGkVcDs7vzISptGfeMiT5g8WgO6//R5IRgI5f63r9a6ZTsp8oTLM2RAuAjuzWWhpt/vfFnPysbRXnZAAC2bsEWesHkG4pxa2RQrcaOfWxvJYudaZsnH+2c3bnevJ8eHB9nn2bn5vH7r5p2h6z++XXXG2MgTPk/TBCOhoOmZ2az8c3Kcu8GTw/0cBur3vp/BtBayEnBXb91OkqO95PTS2TlfRZ568DiH8bBowPz+tZNZsY8kJK5T1e9tJw+fvSwV7yNPWDxN6aak1dEdMi7S1Ukrljc2gcE14kFQzsy1svPt7g3nQ0WeevBkHgjWZYOBG0TjOOj2XJL1smsPD7I2ZYw2WXXkqQ9P7oEIArkmmaCV9tLQubX+phWM4sPzgU2qM4+OKaT+0bGU4RnKgRA/ZUVdHCXM4/l7+aGDpJCkySxfgrmGiXXlWWkvDfDgCKl/yDgqT0q3pFoXh36MozoYKdOXRhh1aCi1/OhJDlWUR71/qDwm1b1/UlgVDsRNWDNKgDAb1yVeps7x7TQpTFoBlh1TlIdvel14Vixv/iR4WKcsTwrLRSwljJxoonwTMQkthYRMzoTiMw/dpNVF51FVZ54mkzCY0+7WxgCMa9jnBYOhYWshc6uccjclfbTqyNOtDU9qyq5tVvz+4HNhKFq1aaodohuuiofn1RHHOHnW+ptB8ZRREZ5UQmGthNPaJvHhdZ1k6iDKZ7hZFY+PkY+Dx6RJ8dCgx/V9Ndc/vGtI15icr5tgoc32liGv0EHpYGwPKd8msKC8CDwmXbT+SdX1D51VA87nxuo5XMe20K7cfyK3D+D+kqEKHvw8SR5VofGQaVSefIleDhOZgXMVF/MCiIlFkjTOJ+A6wNAdAurylc5AXd1WgchTD55UPQkrYwaOhiAsqhWJ/6zH62QsBQxWd22rv5FnuzY8A2thUgBDQx3R2OJ5abJsuUEJkiAydmJ1l1DNqWmvh4w8YfI0dNPUqsuC5OovtkHqoCRQ5+7yEIhOrp13kWc1aJ4hD4TMWgeFhk3ulG4QLhAHLdkFY2sv8iS14DFat4Si+4IrY9LGhE1KjZ82IMBwWOqjyBMmjzEHIghintyRxliL+EqoIiA2GJciT3g8TkjX3lw0LhfYxtU5kSdMHqsHYgO6JE2qSOwcpXMiT3g8Xv+dw5SMwWW6YKvsnMgTHo/TA8mG5c0B4/rrAcJU1TGRJzwer4rcwsghI8+r1qxa/jg6JvKExeNtQGrjEmxUiKKKPEkwPP8Ahz7iHRvAhJEAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 36,
+                        height: 36,
+                        n: 4
+                    }
+                },
                 hp: 32.0,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     shock: true,
                     freeze: true,
@@ -7000,7 +8941,20 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 37,
+                        height: 37,
+                        n: 6
+                    }
+                },
                 hp: 50.0,
+                blood: "liquid_fire",
+                bloodUI: "fire",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     projectile: true,
                     burn: 0.0,
@@ -7032,7 +8986,12 @@ const icons = {
                     drill: 0.0,
                     holy: 1
                 },
+                sprite: {},
                 hp: 300.0,
+                blood: "blood",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     projectile: true,
                     shock: true,
@@ -7069,7 +9028,12 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 240.0,
+                blood: "material_darkness",
+                bloodUI: "Ominous liquid",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     projectile: true,
                     shock: true,
@@ -7104,7 +9068,20 @@ const icons = {
                     drill: 0.0,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAADx0lEQVR4nO2cy2oUQRSGq5vByERNFEcIUUfMSn0BydqFkKWLrF25FFzkIVwIPkHWLlwG8gQhL6CuIo5mCGRE4yWDrpS/8DRnquvStzFVcH5oOnSqqr8qTp9z6pJkqoFePtr6Y3v+9PXzTJ2BhOfseLK2EFxvv43U3aXhfxko4YmDJ+8apmr5NhKeeHjyrmHq1Gsi4YmLx+u6qjZqAzLVhdsWnvh48i5gPn4+0nef2n5xwhMnj9WAnjzYrAUD4b539MZbtukgCU+8PCUDQiW4t5CFun6/e7Cv76NfE31BAG2asAlP3Dwzcc4s7IqVeNG78YG6eXVFW/KX0xP9/Nbghvo+/aF/vtS/WJRfX7lXqv9iZzsYY4Unfp6eC4ZDQYsLfX0//T0t3ODJ9GcBA32YfNL3K4vL+g64O6trGmB4fqDqSHjS4AlO42HRgBl/PdZWXEUcEvVMvZ8cqmcbjxvFe+GJi6fwQKbVkTukuEiujlsxf7ELDK4RHRn3j9Vy/4J+fntwPdgp4UmDR3sgWJcPBm4QjeMitxcSL4d66BDa5DHaZdXCkw5P4YEIBAotMtWRrQPUeeqwS8IziZ6nlAMhfvKCVeOoT0jSeJbPwULTROHZiponJ7dkWhdN/SiOtoUxp4Zcm+sbBZTwpMWTw6pwIW7CmnHXSdS/bDyUeLUVFq0ASwMjPGnx9GC5HIYWmrgLq5qIuYSEjC9y8VVR26KV8IyS4dFJNBXcHe/PWHAX1ow24Ba1W13y7wSTVQvPMBme3JVdt7ViE8q0ai56P7lh4UmHJ+dQ2CuhZe15qMp0U3jS4slf7e1ktgrYaOtKvk7yrwkswpMWT27uf9isuikc6lFbaJefP+HHB/B+ziA8Khmewpr5NJGybtrFRYaPmFgnSaP1BNQDDH0tgFq9fG2mrO2ogPCkwZObD2FlyMDRABqCsKlWJ95SOarHXS1gsLvr2/0VnsNkeGb2wrgAZm6mkVyWzQ8oQbwuj53Y3SWohd65cA+FJ1qezLZMbbosiO/+4hikDYoDPVy7XwKxKXTyTni2o+YpeSBk1jYoNOxyp+QG4QJxkSWHYHztCY9Kgsdp3RyK3BdcGSVtlLBxmfHTBwQYPiUNSXji5HHmQASCmMdPpFGshQiqDogPJiThiY8nCBk6m4vG+QbbvAZHeOLk8XogasCWpHHViZ1tBkd44uOp9N85XMkYXGYItsvBEZ74eIIeiDfMXw6Y0F8PEExXAyM88fFUKkhHGGnKSM9NazYtfx4DIzxx8VQ2ILNxDtYWoq6ER0XD8xf68oRfWCLdFAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 36,
+                        height: 36,
+                        n: 4
+                    }
+                },
                 hp: 32.0,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     electricity: true,
                     ice: true,
@@ -7139,7 +9116,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 16.0,
+                blood: "blood_fungi",
+                bloodUI: "fungus blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7185,7 +9167,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 80.0,
+                blood: "spark_red",
+                bloodUI: "spark",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7223,7 +9210,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 80.0,
+                blood: "spark_red",
+                bloodUI: "spark",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7261,7 +9253,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 80.0,
+                blood: "spark_red",
+                bloodUI: "spark",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7299,7 +9296,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 80.0,
+                blood: "spark_red",
+                bloodUI: "spark",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7337,7 +9339,12 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
+                sprite: {},
                 hp: 60.0,
+                blood: "blood",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7355,8 +9362,7 @@ const icons = {
                     melee: {
                         min: 1.5,
                         max: 2.6
-                    },
-                    debuff_init: {}
+                    }
                 }
             },
             bgImage: null,
@@ -7379,7 +9385,20 @@ const icons = {
                     drill: 1,
                     holy: 0.2
                 },
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 75,
+                        height: 80,
+                        n: 4
+                    }
+                },
                 hp: 56.5,
+                blood: "slime_green",
+                bloodUI: "slime",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,
@@ -7410,7 +9429,20 @@ const icons = {
                     drill: 0.5,
                     holy: 0.0
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAICAYAAADN5B7xAAAAW0lEQVR4nGNggALzKXn/QZiBAGCCKUbWiKzAHM0gJhjn94rTDDAaJobNIEZCzgAZwBphCqdRNMBsAUngAozY3H0yZxJOg8CehikCYWQ+jA1SCMIgMbgGXADdIADkOD2Ulmj2gQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 6,
+                        height: 8,
+                        n: 2
+                    }
+                },
                 hp: 5.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 5.0,
                     kinetic: false,
@@ -7449,7 +9481,20 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACQAAAAXCAYAAABj7u2bAAABIElEQVR4nGM0n5LHgA5O5kxiMJ+S9x9DAiLHiEsPDGCTxweQ9WIzHKtDsABGBgKAHI+hCxLrGDD49+gd3FFMckIM1PAYCxkGwAGTnNB/ZEeRaRaKGUxkGIDhKFQR8jwGZyMnKHLB6a4lZDsG3VFMuBIdCPxecRqMCYmDzKCWx2BRRjEwp5LHkBM1BmCNMCVJnBoAlO3JjndaAKpF2bB1EAsxin4jJTxK0g8x5oBLSErT0UlIvUSVtAgqhyg2xLQuAewoSs0BmQFOQ5QY9u/VJ1goU8VjTEiGMZLrGCRAscfwJWpchiMqQjE+XPr+k+sxonIZMQBXixFXckDOBKebFgzecogRT4uRYJTRQg2+ECImHRCrhpA6RLqkkoXUAGBzAGWhj0BntauFAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 18,
+                        height: 23,
+                        n: 2
+                    }
+                },
                 hp: 30.5,
+                blood: "blood_fading",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7488,7 +9533,12 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
+                sprite: {},
                 hp: 10.0,
+                blood: "None",
+                bloodUI: "blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     kinetic: false,
@@ -7527,7 +9577,12 @@ const icons = {
                     drill: 0.4,
                     holy: 1
                 },
+                sprite: {},
                 hp: 3.5,
+                blood: "blood_worm",
+                bloodUI: "worm blood",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.5,
                     suffocation: true,
@@ -7556,7 +9611,11 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
+                sprite: {},
                 hp: 1.0,
+                blood: "None",
+                corpse: "meat",
+                corpseUI: "meat",
                 immunities: {
                     burn: 0.0,
                     suffocation: true,

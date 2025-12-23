@@ -1462,14 +1462,20 @@ a:visited {
 }
 
 .desc-full-container {
-    display: flex;
-    flex-wrap: wrap;
-    writing-mode: vertical-lr;
-    max-height: 300px;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 10px;
 }
 
-.desc-full-container>div {
+.desc-attacks {
+    display: flex;
+    flex-wrap: wrap;
+    writing-mode: vertical-lr;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.desc-attacks>div {
     writing-mode: horizontal-tb;
 }
 
@@ -1477,7 +1483,6 @@ a:visited {
     height: 54px;
     width: 54px;
     display: block;
-    margin: auto;
 }
 
 .desc-attack {
@@ -1506,16 +1511,21 @@ a:visited {
 
 .enemy-image,
 .attack-image,
-.attack-sprite {
+.attack-sprite,
+.enemy-sprite {
     padding: 8px 0;
+}
+
+.enemy-sprite,
+.attack-sprite {
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .attack-sprite {
     height: 32px;
     width: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @keyframes variableBG {
@@ -1548,12 +1558,16 @@ a:visited {
     text-align: center;
 }
 
-.enemy-header {
+.desc-header {
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
     display: flex;
-    flex-wrap: wrap;
-    writing-mode: vertical-lr;
-    max-height: 150px;
-    /* gap: 10px; */
+    justify-content: space-between;
+}
+
+.enemy-header {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .desc-immunities {
@@ -1568,18 +1582,17 @@ a:visited {
 
 .enemy-header li {
     color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    padding-right: 2px;
 }
 
 .enemy-header p {
     padding: 2px;
-}
-
-.enemy-header>* {
-    writing-mode: horizontal-tb;
+    white-space: pre;
 }
 
 .info-value span {
-    text-decoration: line-through 4px wavy rgba(255, 0, 0, 0.5);
+    text-decoration: line-through 6px wavy rgba(255, 0, 0, 0.3);
 }
 
 .info-name {
@@ -1590,12 +1603,8 @@ a:visited {
 
 .info-row {
     display: grid;
-    grid-template-columns: 24px auto 48px;
+    grid-template-columns: 24px auto 60px;
 }
-
-/* .info-row:last-child {
-    border-bottom: var(--border-color);
-} */
 
 .info-image {
     height: 24px;
