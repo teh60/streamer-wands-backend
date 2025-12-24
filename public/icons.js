@@ -555,7 +555,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1.2
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAALCAYAAAD/eppQAAAB40lEQVR4nGNkIAI8eLT7P4h++f4yg5l+EQeIzcjA8JPWeocTYCQmoBh//GJg+vQFzH/98TqDoXODAAMDww9CAUaJ3qEaSbjczIRLw/zdwf9zm4zBmhh//mKQMQlnePf4HCigQEJgA4gB5Op9AI0k5lfvGKR+SzOc39vwA6T3PwMDO7H6Qfjkxb7/ID3E6iNHLyys8LmZCZsmEEYW+8/OxvDkzEqGdYe3gTSDhH7gsxQ5kkjRO1CRhOxmUvRiCytcbkYJaGRN544/YChK62XoXVDB8OL7TYa/YkIMyi4qDL9F+BiwZX1slhKrlxqRhK6XmEjC5mZS9KKHFT43M+HSCAMgA5ZsXMrw/Ot1hjiv9Yz/2Fgwykl0xyJbTEgvpZGEK7AIRRI+N5OiFzmsQP7E5WaUFA3TNLnuLLyS7JtVDKYtNfMYkWl0ANOLHkmE9M6nIJJw6SU2krC5GV9gEQqrZasX4nQzE8zBDrq5DEaWChgGIBuEDaDrxRZJhAC5kYRPL75IwudmfIGFTS+2sMLpZpDm+y8OgDGIDyvnjl+fhMLHBqihdz5S2QqiQWL49FFLL139C9MI46MrxGcApXrnIzkapAbZ0ch8ausdCP/CFSDHECkG0Erv8euT/uMLNFrppZV/AYmiUVY8ImnGAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 15,
+                        height: 11,
+                        n: 6
+                    }
+                },
                 hp: 0.5,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -1302,7 +1310,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAJAAAAARCAYAAAAyqiXFAAADk0lEQVR4nO2Yz0uUQRjH51061S3CQyRLpCfJoB8HQeiktVuxIVh0KhFEKCox8GCYhR2EQgshkcQ6hFQQRaXmOfBQHSw6VYQYQftPvPEdfbZ535133mfed1zeygdeZnd23s8+z/c7M+/sekITq7+W/R+rP+XrloMFTzdmM7ITrvxKwqkatPR+3r92+06gb3F2wfvbCtvIyFJdS478SsqpGtB+5qg/ON0f6Du8tU0LKnSe8+efPvDSJuSK8z8YltQvk8Y2nDDL04ncfXkgsjDcXJdvlK87jhTEszfzsi217fdsEnLFiSosqWGuhC7UiGPyi6txHMfE2oKOs1du+uWVL/JDrNDr/ZcqEHWlEoQA+frtsp9aNabHR0V3dzAh1xxdYXX5Rl8nEiZP2LDF2QUrBreujeaE/epob63c29t11eNq7MJ3OYEIMjRwWix/+iD27T2gLYzGTk6tjR+7/0i+R8stzCUnTiSVMzXepzXMRmjo83ruZWrDhlJyuH6ZNLbhmFg5GjA10SdbQAC7MfpYvp+cGfFpDG2lodUh26iE6FLDFedPYXcrBakiqRwyjC51ezYx6HNVH8SLua/ytapPrTgcv+I0duW7R88/CKwziAykLQ1jO7rOi3dzb7XPayREB1XcC4FoIqi7hysOrViI3NtzMfCc53JMDI4+vRnlmDR25buHwyUGf1/5Jnbn94hjxRNScMxECE0AjENLM1R3sOMkRJGWw5nQLoTm6LO0rs2u+p0iSxyTxq58zyFZrEpAEICgj7Y2CgBxYWXQVhZOCGYhISQGhvrFMIsYLjgYh6vnwpjYsa0hESeOQWbG6dOyXlPWOFEaczkcVg4zPRyAoQhdYFuls0WShFxx4gpzJbSNPnUZ40RpbMsxsXK0TWKlIiAyLmxjz189CQymZ7NuS7RJyBXHVJgroW30KWeIY9LYNh8TS/6MR2ClAjZxb7zy4cnjp8THz37gjyxTYYXOBp8Sora5yatKyBWHCnt4a9BLyjEx1IjSZ3R4JlMc+BWnMZfD8V1OIAwsFUd82u7p0ImzAxWFllsYhcohRlpOOOJE4nA4QqusqLrKNeLE+cXV2IXvcgINDHfJgerPY/X/BAJxEmpuWmMhKUqEVj9FGo7NRORwOEJj10LgTEVtqRg85NaSE+eX6V4bDtf3wJ9GnH5TQuF7dH1pOCiKLhccTj6u9Jn8RzniULHVt+nf5GxyxHr8BpKuILSx3sr7AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 18,
+                        height: 17,
+                        n: 8
+                    }
+                },
                 hp: {
                     "The Vault": 6.5,
                     Base: 2.2
@@ -2441,7 +2457,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAADgAAAAPCAYAAACx+QwLAAABd0lEQVR4nM2VsU4CQRCGdzfGd7C0o6CiIzG8gC9gTHwECyKlJaXEwpaOxPgCvAAxgYrKgs5o4zvQnJnN/ZthbtjbPQFvqmNmv3/+nVturRHxsHgpjBKTwb3V8nVcHXtobiIYq0GbxVIV7Qz6FYHr8W1B+Vyuab9cznIIwNPdUAVHs+dK01NyGGYO5wCiuA9CjU8tl8Pkm3KyluLT8tcdg3hMv1bhue2cww/8j1KCv8W2c04T0c50SvM2ci4GIPiR2HyvaxtpXIrBY3AOsP86leZj8V5swzHJ4WjNf3Bu/vhquXkqaAI8T41Oxfk1f+h3FgrldAi+sucqTLWKYAs5zoYN+gmNjb9IuTDOPo4JXZ69m34hOb9WfOVgBlwoCM4IJqcfBb/8+Tq6b/0Gfz4+Q4EE+UWs5ddvyx2zxFOO6rKRNCgDhknjonu5w+FZ9uMbMOVQwFMe/fi+fHAjgHlOGtWMI6cNKaYd04xp9yLro9EYTOCPqS3jF4Uaz4vksNA2AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.23,
+                        width: 14,
+                        height: 15,
+                        n: 4
+                    }
+                },
                 hp: {
                     "The Vault": 16.0,
                     Base: 6.0
@@ -2591,7 +2615,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAACQAAAAFCAYAAAAt8E4LAAAAoElEQVR4nGNkYGBgKG2J+M+ABLprVjCii3dDxZDFkcVg4sh6scnjMgsmzggTSEjiYVgw7wsDOkhAEgdpAKkHiYEANvXEAmSzkM1hjEp1QQmd6kYFsIKnD9+gGCAtLwKmkcVhYjBxkF5kADMHpA5kcWv9A7j5yPqQ7cVwEC5QjcWhMAeALKIqcPMzhTsKFxvkcJjjYeLIYjBxmBg5ekGGAAB6QX/7gEgtmAAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 6,
+                        height: 5,
+                        n: 6
+                    }
+                },
                 hp: 0.35,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -2632,7 +2664,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAJCAYAAACR6WqOAAABL0lEQVR4nK2UMQrCUAyG2+JYcBE8iTcQR2dxKgWP4Obo1iMI4iTOjuINPIWDg9BFcK+8Yh7hmT9Na38oPF++JH/SYhwJWm8XFZ2LzSmWmD54C9tVbXpo/mMEchWgSR+8NkBbHuX90yPRQKcsT8WYxktCfJf7NjHkH/UIeb8gpMP+rRqWeCvLDVlz6AWEPMpH/q18om0SycJzRuPJUFN9kpXX/EtCvP+CHvcSGsny9Ceu8ZKa+Kb6fADJTyjNv7RQxCccdpf84cnl81WfLTxvYOVRfe5B86MtmPNhvGnehP61wwJS8mw+qSx8aAjx4fBSfWkAyY/ESv7RC0D8gH5czreYLukcfbVcTes7F7PyFNN44igu8ZzhA4W8W+hoPPTx4+7qPXH/tFB3drzL0+b9AO5jthSCyuk+AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.16,
+                        width: 12,
+                        height: 9,
+                        n: 6
+                    }
+                },
                 hp: {
                     "The Vault": 4.5,
                     Base: 1.5
@@ -2883,7 +2923,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAIIAAAAICAYAAAA1KCdDAAAA6klEQVR4nGNkoDM4GD/9P4xtvzCTEcYHsYeiPcMFMKIHGnJg4Qs8cvUohlnA+fdXnWA4evUMmG2tbTIk7WEYJnoY0QMNFnAggCvwyNGD7kCYfnyRNJjtOTjM9MBTCavySwYZY38MzSCNv4WvwcXqdx4nWw8IXHtnZc/AwHDgdWEsRiQNNXsODiM9jMiBtjoSpTRhuPLiDYOOhAhD6HJGBpgciK0ldIxxVM+xYaWHCV0RMg0DyIZhM3hUz5shrwecELSEjh1kYGBwQNe4+uJtRlhRg06P6mEYdnrgIFRf9T8yTUh8VA/DsNEDAJcmCX7uwIt8AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.05,
+                        width: 13,
+                        height: 8,
+                        n: 10
+                    }
+                },
                 hp: 0.2,
                 blood: "lava",
                 bloodUI: "lava",
@@ -2936,7 +2984,15 @@ const icons = {
                     drill: 0.5,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAKoAAAAKCAYAAAAkasVsAAABSklEQVR4nGNkgIKD8dP/MyAB+4WZjDAxEJuBTmA4uWPUDOqZAZYEKVYMswAL3F91ggHEBtFHr54Bi1lrmzAQYxi6Q5D1E+OZ4eSOUTOoawYjNgNgAMQnNqKRzUHXDwMgc3CZMZzcMWoG9c2Al6gwAWwGwgybcqGPQUdCBMWA+p3HcSZ2UswYTu4YNYP6ZqCk3PfvrOIvFcYuYMACsBkAAw4ScXC2oOldhvenlRlINQPmoeHgjlEzqG8GigEMDAwL0hxfgxVfefEGRROIDwIgsbzljAyTIiEZBMQWFDoGNmfUjFEzdGhkBkkGwAzBlmNGzRg1g5ZmMDEQCWCaQQbCinLkIn3UjFEzaGkGOKEKCh1byMDAkDBrvyhKykYuikHs1RdvM6LLwehRM0bNWE1jM+Cgr0wXZfwxVF/1PzobWQwbGDVj1AwGGpgBAISfeg4+u7rgAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.05,
+                        width: 17,
+                        height: 10,
+                        n: 10
+                    }
+                },
                 hp: 1.0,
                 blood: "lava",
                 bloodUI: "lava",
@@ -4051,7 +4107,15 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVR4nIVTPUsDQRCdPRbs7awUSecHckUa0cpOQhoLBYOFTWrBKwyp/CT5AzYWEsHGRiSpLFSwETlFFBQsYmUh2FudvIG3TC5BH+ztzO58vJnZc5JD/SrJCsNDQX///pHu7Yu0am0nA+D+crZBcD4omKdQ2V3MrDFxMLej+9L5pp4XSjHUjEEiOo/NTvRkxIJz+rgld9VMzsrNcL9QikPCiM6ghgVwB04qDfHVWghMMKHD5/iprtGO9tsyOjmilyzDloDA9u7yIhUHBqBkO26N8s2092vT2y6yNaPO+0anj67VP54/gw7mngdw3Jjysrw+LsVyUynnJ8JGXotoqV1OgVhtJSKvbyrDEXRRJ9lhGpjKV+dBJ4FSopvTVBuJjPHMnhQPncoAjLA4FUwDU7H98FBYBjtNA9LXkSWiCawdHpMj/fmVOENdFvZxAfZ9ICnYhx7QmWzoYB8XA9IZck8T7U9CGcZw5o7zPNM+8J3/d4b7X0uR75BqeoDxAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 16,
+                        height: 16,
+                        n: 1
+                    }
+                },
                 hp: 8.0,
                 blood: "slime_green",
                 bloodUI: "slime",
@@ -4127,7 +4191,15 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHQAAAAdCAYAAAB7YUi1AAAFVUlEQVR4nO2bz2tdRRTH73206wiNSZ8NblwIEXHVRUFdtIItLhWhyypYLIIrV6H0SejKlVBaWtAuC6UuJQqahQouCpYSDFjoRjRpQgrmL4h8p+87fN958+P+eiWL+4XLe3dy3/nMmTn3zNy5k7JooQvvXzrA5+7+ri/7/qd7ZRubPbMds2wDm59bdOdziy+5z/2dLfe5+fdG5w73zK1KzGxl3nvng4Pll1+fMj56vF7cPXas2HzhDV9OEf7Vt1caOdsz1xszyzowNbr838Piw6dPi9Erp3156Lo6Udwzi9bMMgW0Rh4/euBTwd7+jvsOo7gW5xDKNNpQjnEg52zPfNAJ80gMqNIf0zAOlC3MLTgwhWuWx9+ROjTKck72zKI1swwBcctDyOEKoy5+8qn7vHnrhi/b3vnHfx8uLrnKMKJSKakqk/ZHl6969vNiDheXvN+j1ZWZMdU+mXXbdqBAfDJ/44AAhEE9CNUybWyca0UBtpFZhQkH1T4Fvi3rirk9Phi0tG07cxZM2Nc2tPWowvQdavXZ/GtFWyECOStTxw4j86JpOCvbmV0w63Lc38cdHmNOdCh6GqmAQNzKLnLGRlJgXKNlNpJiijHJsOyQw7HMUIdpWSF2SF34GZNtU56nmBMdyhkUB2bN5da53b0n7jhz8lyyUjaSrFJMK7DIVSe7Yo5skK6ueJ4yUQ/XuMJuwlQb2o7kXfr846n65PwcxJ6LOLvSMVNhqhDc/00iCYM5lWOqEzEmy6yjuy2ZGjyWifKf7689u4O1XRow1QZsppghhZj+DtXnIp0q51LQnbXbE41gU6C1r+NLjKkcdUZZ0PWvv5kKpO0WTOWCdf7chaC/ttGbMkO2rVAHMrWOMWZpH3Q5DbY/YuOGoApGI9up/amT707ZzjE5XsAR2o5xEd2qYUMmZTsspIX544eS6e5QrkRYaUQAGItaiA2udwyAdhrP8xjTs8edqbarRO+wBZN+5uSC9vJVnz1a+WkyQ9W6xZhHdGlJpWMngeisWOPmxDXKX8rjRYpZR8wIro6BB/L9BkwGbMpPBi3Yb519c2KBpSqTbaqBmxLrZbORZU4t/YXUBGojiA/V944O/Cyvqr0qjYt0NGzJRCPHJnfB61dXGjNzz5ux4M217UAH6di0G6kllmotFBGrKYTLU1wdgXJMpiFUvkpGQN108jTXlLm6MjVOWTEj2OuaMCnYgt1cG9uJaYjpJ0WQpoeHj/6YMlh34EYjc0Jw4q+1Z8teR19054edeT4xEbMTv7ZMdNKvP/yWnStU8XPARV3cttf2/izePnjiUoUuKOQGbUaWjVpEqH/TPl4lAS/HTDGswNQ6bnbARIflMoO2SRsm7aR4yHrW/xjTP4eiEEJP89UNV08YjWg8a5jOszzU+QTf/u76xFuIGFPtkAmnKAaOZ5qH/KbMqsEaG/+aMmOpXts6NBkKMQfczoAe5zojIwlSMFdJAOeBynCwZuVCnWofqFNMu4bpxuWx03Qcn1xdiWmzBnMiIxmWjpssi3VqXabaoX3w1M/curIyB3YpCS9NGVHM/3TWd1omBWMaz5kY83zsTX6Iyd/HpHzWCdcPWzDVT1XszpglM8XOMadecOvL09Dqht49scrYLRbYXmHTUB2mdYivu/T5b5bMkbxUn7WfMVZVZlkXbMVruf8Fsvtlfr//Y3KvTc/c6IyZ3CSmBkLrk/psxa0V/746OabhmirbHHvmRifMZAW++OjLAwvWCNEthxSehXQVo+6e1Z7ZjllWAWv0QBpB2H0GcWMwxBTRdANyz9xqzKxckdA+GX2RO4v/++iZRW3m/6ih6+Ia4HcgAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.04,
+                        width: 29,
+                        height: 29,
+                        n: 4
+                    }
+                },
                 hp: 24.0,
                 blood: "slime",
                 bloodUI: "slime",
@@ -4536,7 +4608,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFQAAAAQCAYAAACIoli7AAACR0lEQVR4nGNgoABsPJn5H8YOzaiCswkBZLXIZgwbgOwpUj2IHDihZAYqsfoocSfdAbkBAwIuAQn/kTEDDfXRMyLI0ceIzEH31J4NC1DksQGzwJL/H6T8scrZ6Muh8OelyTNSqo9cd4ICf/WMNkZ0NrX1UeRBfHrw6SVX30BEBKn6yA6YayvyGf7xqzAg6xN4tpHh3rN3KOoMJP+h8L98+kCWPpAnBiIiSNXHaOEU8J+SgAEBkN53Z+YzCJkkYliqL8XAwCsKsfjz60cMj/f2UqSPnhFBjj54gJLjQRDg4RPAatGF50w4I4JcffSMCHJzEjhAyfEgrBwB6QfpXSv7gCHltxXDHNZjDMGPFRgeSSdj9eDqaluy9FESgfTMSfCygpyAETFP+g+yBJbsH22rZxCUkGJ4/+IZij5kQIk+ekcEOfrAjiTHgw/PQJI/LNaQ9YIASB+2QAGVS+ToA9H0jAhy9TGBPAiz/MjFR2BazqsR7EgYwOZIUKAoSQnBxUCGfX79CFwUfGIUAZc3oECHYZgDydVHrjthEfFOsxisvlB3IVgPKHDQAcwtMECOPnD2A3kQVvjCHAVLTeiaT63vYURvn8FSyR6kchVZz4l9G1DabZWdPijy7eVbGPGJwzxHjjvJzRHk6mOkJGCQ9aI3di2gerHpQQ485EDDJw4C/ct9UdxTGLmZEZ84JRFBrj5GSgOG3mAjtE/tbz6dkRhxmN9MLd+A2aePi6AkGEWl12Dx+/dEMfxISUIb9sAFxwAMKHDQA4gSfQADctwAmimUFwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 14,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 14.5,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -4654,7 +4734,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFoAAAAOCAYAAACvtwvjAAACRUlEQVR4nGNgoABs31fyHxubGPD1ZwHZeociYAF50tOphxHEQWYTAyZMewlnt3TcBNPWbr7//1qngNmW2ooo6j++fMIwL9sLbH5Q9Fuy9VLi5oECjO4hsf93rlnMCPPo0V2bGYn1MAgg65d1ivwvbR+Boh6ffncy9VLiZuSIAeUqbvYJREcSJRFMkYdher98+sDAJKLA8FvdBasllngCjBK99I4kSvQywQRBGmyjcjEcDALHr95H4fOLyzAkTd0GLldBAQUC/948YOC/vAaMmY/OAWN0cG1FNwqfEr3kuhkUUKAAA4mBAgoUSbCAIuRXSvQyUephkIXoauTUNRl4+ARQ9F9b0c2gFVGKop8SvQMRSZToZaLUwyDw6A8PAyhmQXIg/O75cwYhSUmwflAAXIPqAwEQ/XT/cor1DlQkkauXiVIPg2IWPTZh+kHgo24IikdBtLRjJMV6ByqSyNXLRKmHH7x4w6AgIYJSAYAwKOZhsQ8CMP0wj1Oqd6AiiVy9TJR6+PG+5Yxcvz6ALVB8cxRsKKimxRbzWkj6YHpt9O8zOHLMBmPxL9OI1jtQkUSuXiZKAwsEYE0ekGUwNghg0//x5RMUfnv5FkZsbEJ6QW4O8n3AEK42B4x1habTJZLI1YviKFjTBTmwQMCiceN/5DYizMPIHRd8wKJx438tEVY4n1h9xOjdeDIT7GZ/8+kkuRnkVyPT92Cxc6cF4X6GtYsJtadBNKi4QE5c+PRSzcODEVgQcDMlCYtUvYM+sBgGCFA7FwIAZSlmi9hloEkAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 15,
+                        height: 14,
+                        n: 6
+                    }
+                },
                 hp: 14.5,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -4708,7 +4796,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGYAAAARCAYAAAAv+NkbAAAC20lEQVR4nO2YwWsTQRTG39ilIKkVBUEDYpAmiLUqgkgP6sVcYluLF83FQ8CDXqQn9S9oeype6iHgwUv1UqrVXuKleihSEKm2iK3SIsbC0gohOVgoK2/X2Z193W6SnYddxA+WHd7u/DLvezM7uwFglDW0YgW1ozIKAzciMf4pcZhKzYxqbEGTofbRySU24jAV1Zu/bKnHTjAKmrlwr/5mGYIGqAmTYy+33BOm3M2s1d7dGngtleiwz/uT+9zYevknDF17ILgZHLlgQR+NPBa0/TcYrIbQ/vPPF6GzL+1rI0dlUA4HI07FjcowZKOeIdDnJSSFid17esfChC7mLvh+PMhQVW9GZ+3z+dtn3RgHgyMXlZPo9t0G17OOyc2s/iiMXVENkaZQVWY2GuqPZuIRxKloMLhyCSqu2l6uLW3pI4vLwTCoId/MlYYMke3Ofm/m1b7/gva9eyC1Ow21khPDdjPiYOjmEofVb3AZMj31WsgBIWezbQMOth2C1eoPqJVaIZH17lVnObZx+XIx4lJcXYbBZYi6bM+klWf+OIBZXfMNBPvIgaiGcjCmY1RcHYYIM+TT+FcwV9fcZOhmJROZe7UA2B9nRxAHk0cG3XClcLOTY9BhAEMu6uYdVNyWqldc+XZIi8vBMKgh7xZn3YSOXT0K5qgzU1VD1JklTYUQ4aAqMwBzsODGtnuV1WHkGHJROTu5+g0OQ6aKJdFlZqzDB47Yz1A8rye8QTYiDkZcisvBMLgM+TDxWaTyact+hlYB5ieW3A8p+oZi7wPFYEbPcMY61ZFxAstfYPDuC5txf7jHx7DjxXgWl4Mh6n2dBpoaIsmhX7eSU6+/WoTBP0WpF6caGev1jXkgPynC4lRd/U5x8W0KzycvHXev4X5KpZr6pODkrcsQ3KbGRc/e3rLHfOXcQ9FInAq9OHHaueXje8s3UZPJTTteLreEesI12f8L/Nrun200lprLzfgNqqxuYtGvKqIAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 17,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: 20.5,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -4897,7 +4993,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGwAAAATCAYAAAB1EujZAAACW0lEQVR4nO1XsU4CQRTcI9T2mKsJpYXyBZTCZ2igNLZUtMYSEj5DLPkCpaA01gR6f0Azm7zL8ri9fQsPXZObZN0c3s7NzO6+vTNP2+9vU+Ps0Mq5sb0fJCUoNTwp+dLKuYk/8+HQivrYbEwnz/duwG/Pi0X2W4IQ0ONllqXCs1XypZVzkw8Elv2p6V4Z87Y2Jp8NzEO/bx8UIkxp4reJBa2Vs91hHCC5mIxMdzw1F3luRQEg9JGlNvGpBa2Vc+NuNsu4KQj5Gk9tD3zudkU7StDVvnEyGBMQ9Cz702J8FYcmj5YvrZwbROY+uLcYWUHo8YB2q1W0cwvSCii1oLVyzngJwUD3wRiM7Xl7fW1Nva5WonLGQdudUFU+SAeZc0tQbzEyL+/vxb1VerR4tHxp5HwwYVwICXCJ+H1cpFRQFY9WQPNEgj4mZ9FLBxfEgfKBcoCtjL4zGZUekljVaFyQlAflQxIQUDXxMTwShHxJEcrZ56vpE0Q3ETDjZM6WFKc/VpCE59SJjwk6VDlOCTo2Z5+vRpkg1HY0CHNXIMjwENR/gA5Ln6DBzY1t7iFKW13KQ3qqDvW39X5fhhAPBQTYgPK89GXE9YXGfUl5Qjn7fDX5qnBnnkoKyIhE+v3CV6LLgb7danm/NWJWYgf/Fy6gc1QO7guTU8Ujzdnn6+CQp9dYfh370ctBgmi3HXvI8wO56iMzhofrlr4E8aClPKGcgTJfxSAaUHYdg5CgWJ5TJ34u5AlxnRq0as7clM9kzfP3PAcvHTX+CVJaRTWPcIehDruvl/xaiprHnI3nB2ZB7e0iLdMcAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 18,
+                        height: 19,
+                        n: 6
+                    }
+                },
                 hp: 16.0,
                 blood: "oil",
                 bloodUI: "oil",
@@ -4951,7 +5055,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEgAAAAQCAYAAAC1MDndAAAB40lEQVR4nMWWsUoDQRCG5468gAYU0t+R4gotLXyDSLASESyUq60unZVgYSrrgJ1YSh5BUgSsLK4Q0wcinD5CZCRzbCY7u7eXDfnhyLH5Z+bbnd1NAlhTj3e9Ob3nnxNI2hHc3D4EvvzbZmr4KDBv7sJ3swnx9SXMRmPoT/ODrJV8+PLXWVRfTIEERAE7x0fwOxrj56FUgCYwiyO4P0utu6GO34XHJ1OoM2N3guIH9r8m/zAYgDD9aV52kpRenJZje0Vh4zD6dfldeXwyYf7QRwHa+jgJVdIEJL/UWRcefhzVGjoek3/lDkIQPN9opICkHYnJyU+y3QsmP+bPWslSvLowVXnwk+YweH618kh+4mno4KsUSNlicqkT5iBVpOb3zVPFTwrJTMUxgAf1F91SJ0x+LEIP77jqNfl18KrfJw+XjWflDnItYDsunc4JmPxYI357B5N88tj8nCeUJsHvk2xRYPjyVHaLC8erTFj149M9v1rK58JDeZDLhUdXQ8dT7iBddwaGAqpfPQK8AL1LfkmuPKpMPDa/FYj/rEriHlvMOv5t8oS6rUydAgdJ21ySdDf5kmt+I7/uC9MCDYVELuOmxfTB45pfGtf+k66zIzatTe84SeIC1VHXchnW9W6axRTzB4/KLN860sYcAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 12,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: {
                     "The Vault": 18.0,
                     Base: 8.0
@@ -5461,7 +5573,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1.2
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAAC3ElEQVR4nO1Zv2sUURB+e/gvWFgYJGKVTokQi2ClhXBWVndgI9xVa5E+IfbXpDJgI9hZKVhoJRYeKJZWQghapMgfcWGWfMvsZN6PfW/vjic7cOzuu/fNfG/evNmZO2MsUu7PFiZjWYxGWfAfhDg9ZjNSNrCMxHLcy9t3s+Df2ICjV3vFcDytwKcnf6oxeqbxFMMhhMoONn+d/G0nLuokksHjD/PGB2M+LBwgryEyTMDmyr+ODCJIUXNr847ZuvegMenN7KC+f7F3aCZPd5wRRbqkjt+/vld6l4UtM+V/ZWB795G6az9uXjf3/51X9z+/fSm6dEDZofNy468SSXFCrANSsbnyL1ZxBEMdUCY6L0f+TjJ4iXx89zqoiljnO+B/5F8pS62HY/HD8XQRWwV1YX9V/L1HCbtH1zb1dAoegsXH4Lrm3zp6A/kPXMa5aGM2oyl4EtTswKCON4GyDP4hPYSLf/BPEYgWCDpKPqYJGp5YfJcBEGMf6WZZ/G2bUMgJdNTongyitgUJuteOFDcagtd0kHAHQN+n92/Nk2fPg1KITB2afU0H1g4ng0MoPoV/YXOgnEiKQIKEK+PzXXi+ATYdk4gA0PAu+xwv1y7X48On8q9SkFY2yWdZyvGcrM3X8CACm8eXpLX8Tt9T5OBKArycL5999vl8LV341u+z34b/QDNIO0Rj+GDH+CK4A+l7ihDo8eGhY3IZcakBIPE2+xpey+02vLb2VP71INWsPMdRW31jY9PYGhkiAAdq5ZYPL8lsiTTAHcz1giefr+Ft9jW8XLuPP197Kv9agXaMVtnIDMfTxlxygKuZkXla4n32efpz/Q+wbP5qZHKQ68XpItMGX4oTBLzEtsXnwP/K0eKdI13529/XUfb4eWt8owykyWd/TwzlPrruPHxcfTf/+rkeo1/0SGRr3uPnUfhrUKBVA3hRkALXvB5vovFqR8uPEW8i5JteSo+ftcZfADT5Ss8ksgGNAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 16,
+                        height: 24,
+                        n: 6
+                    }
+                },
                 hp: 16.0,
                 blood: "oil",
                 bloodUI: "oil",
@@ -5514,7 +5634,15 @@ const icons = {
                     drill: 0.1,
                     holy: 1.2
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAADgUlEQVR4nO1ZPWgUQRSejQF/CistFBJCRFBEOAgqSSGCkCvEs7FQLqQStLoU11hIQElhc8VZmTIhoqCNkRQXEOSKO6IEAiIJCkHuICm0slALYeUb9i3vZmd2Z3dvhZV7sMzs2/ne+957M3Oze0JopDJfc0sz91y0IodSma+5brmcP/6csKlvaydpASspsVF9G0HxwAFtEg6pJi/AutbWeVQ/C2wW/HnybTiYxlsXkYPqt266jccLPRfpskxAqU/JyxN/RwVf/fNdnCkUAgN3trZ8ffH+Ax/HE/DkUVXqEaxqg/D9xuadv6MauXB5OlC19yPH/f7F7jfxobnu9DMBpZTJyzP/YepQBWdOHg0YWWdGFs6fFcUmNL0yNn5a2thHAvaagQRMHzgoxMdtmYB+YvPOXzubkm4DJizHQ0w26imweeUfSoaW1urK08igs0zAjiX2v+APA7hoX6XTBddniefJi3MCyZp/XLHlH7mUqHpo5168sppJafB1L3iMpeCxv3J9lv7D8Db+TfxN44fCnHPR6aLIJ8HPeQHizH7tyC9x6nNb9vmzKMmKv41/E3/TCuwpACp26HbVrzZks9OVLdfpBE7S4Ps5AZL4By5r/roC+gqaZfihQB8O4XxidMQngT5ENcSd2uB1NiBIwLmJKfH7ec1P+LPVN6Jcum61hRB+bPutMPnX2aDY134elveYuXHwafg7pgSqA2GISEC4MT4+DM8LYLJRTDABdPgw/xyvxq7GE4Xn/lFA7Pdx+MstSHdsUu+XWxuBWR82XocnIuSz4QWq2xvxHDOHWgjh1fHqfZR/Pt50bg+L3+QfKycu/yGdQ1QIOrqoYjwInkA8xwzhJ4UwPNkoejMu7QRQ8Sb/OrxubzfhdbGn5S8/RcBBafiYi28ZJCt7P8SJ0fEAORhabm2IRqHgUgJ1R8QwvNcKTpAHATt1IfwAeQHxhRdLWSbB46DiTf5N+NlOV+ps8Grsafn71dBtA2leROLiZ6cu9XDAR7Wwlxl1n1bxUf759md6QfsX/LW/6ByED01cwl4qkuLrygoivIqNi88D/56bxddt99NmS+AoRe3ayyXfEOlNQQzw7dh4h4MxeL+zK/c+tJNXivJZ+13D192pPpS6uzcmA8Ub4Jdi4/3/A1AZVVAxMhA2boAXifGO7k2OL6Ovu1/kMywjMqhWf4AXifF/ATxf2qJq/GwDAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.2,
+                        width: 16,
+                        height: 24,
+                        n: 6
+                    }
+                },
                 hp: 28.0,
                 blood: "oil",
                 bloodUI: "oil",
@@ -5917,7 +6045,15 @@ const icons = {
                     drill: 0.7,
                     holy: 0.5
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAGgAAAAWCAYAAAAsNNkQAAADC0lEQVR4nO1XPWgUURB+K2gjtmJzSGohzUFCQIz2IgiCP0ggASsL65DKKrWFjcIFf8AIgiJ2FiZyECNYuJAUNhoObC3ExhQnszjL7Oyb9zP7XoJ4Hyxvb+998/PNvLk9YyZQ4X75a+z6LD2T9tC9Xl6I4QmaGP3c9xYshm8Fr6LLictgSDcdaMcFIDafGD63YbMXVCBtUNQ43Ic4O5COi7StzQfsc07s/qgCoYGQLqXGuWMfzxeDcdgISShmIqTIh55uX3zox6Z1C/NL98Y3H76rLtjY7/crEq42MnB4cF5Hh9VxJu6ExuQj6abR2hkUEjF5eqUMjouQpeOUE0GTj6SbxEFeKOcIf7C8PqzveyeOFnDxZPF+tFVW66WpY+bVxofqfmntvRjY5uBOgSK8/vrbDBbPVcLDyv3wZJbXhwY5AFxdHBSbcrBQt6ePF5yjyUfSje6TCkA5HKhzK8je3HR1Pzc7Y7a2P5qnty4UlEATo/tXr50Vg6PPkIP7paRsca0m4Lh4mnx8umFhoLkk7Vycxgn69vZBfSqAwAGdxTsI92OHQ9fSZAT9snVcl4mgzYfyuG7gjxcnRGvggN6tEVcF8peIKwAcXL+x0trrcgROtCIgV+JQ4YEDycT4wbc6LpxLbFs+gNO9M2NJN8CzlbtGgo0DRQUOrI0CnTo51TKAzgH733db3yOHOkIOJH/l/OWo7unacV0mgk9sbFIemw8u3Wy+Kacu0Gz/4nj705vacfnoSbXujXYKIPLvbRyEi+MrKuDx4lV1x5mOE6Gr2Kgb5BOqm0tr64jjAKJNaA505OJ0LarmdGs5GrFpPqG6cR7l1AV6sfEyxk41h2M5qYpaKk5314mgEVsC6Bb6R7suEB0P9P1eAowI12uuhIW15yYl9hJ0aRfQfEJ0w99L1M7HEUdcORxEJRAaXO6OSzURtPmE6MZfMlycoN+gXMHl6LiUE0Ejdmo0CgT/bmM7pysndcdJ0HByIlS3pCcoJ+YPoXlyckLRKNCPL5+N67MNE47JyvlnTpD5T/EHIYLy3g2cub4AAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 13,
+                        height: 22,
+                        n: 8
+                    }
+                },
                 hp: {
                     "Temple of the Art": 17.0,
                     "The Vault": 15.0,
@@ -5973,7 +6109,15 @@ const icons = {
                     drill: 0.7,
                     holy: 0.5
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAIoAAAAgCAYAAADNAODsAAAI1ElEQVR4nO1bXWxURRSebosJqRQxUlritgjSYDFVRCEakARjYtCWF/XB4AsafagGUxNbTXgwviwmNiWmL0IwxmgI4Mu2EpFEozRia5CwSWtTBGlXu6U1/LRURGzXfNOZy9nZmXvnzm3Djz3Jcrt37/3umfN958zcmYExR2tNjde63jtr18eicBazBaPn8XdvX18yzINnhXV9zcSZEy+46fUDx7OtqfFG9Xzjl71ZVSwOuLNiCbCZjJGG10ZbXgoMYAnGWFN9TfEOAVJNzzk6WVtfU9zmcu//xVpT47UD6XSyIh6vm+5YUV4ZYz1hOS0IAG1mjDXI85nMECsvL4vcCCkaVcnTGRyJfTOJs3XK5yQhc1r8J3zqzIrPAh8C4TCL3x5j6UuT3hHA8nqXRpCsac5khhrKy8voz84VSxcYIWwedNeA6yph6wwInFbuynlTQ8f+sal4R8EHbiYzlEScwaE0wWVzfU3xmzY4BepgZ0VVFQLLzg6PJBaVLvTABTCTVWYgnWYuJRLPOTs8kgQ2TIPvZRPMAZ+LRIcbVoRKTHrE6epMZiiBwINQQWYkgVMyYdL3WAEXS2Sh06SXhriE6SHUitI4kE4nKuLxHIepkQc4BcfkuMSWhmdc/fdqKDHC/2XzCxP/TGSNPtOg24ybTGU7np+dzpmvipuaEIszPtpYOS+WnMwNCcW2ws3xDMSDGJHVWkMWuYpEWLUftnh2HZQeUiQQYJ5IYCBgzfLFTBDOXxFtX/FFO5sgNIqn8dvJpN8BlzVH6H6qhdCMv9uA5LRw1bPvZY92diV7+/oSaoZLEw/1ugaH8QnH1mWPMJ7x8sOm35ok9oqqKish1tcU7xDVyM9vJxPPNyYm4j2QTjeEfW0Gl3j1lSJUuSTfEzbYOa0+fmB7QfehDnb+/AU4pwJGMinCOUVzjNcEKN8q4CinOhPncyphSCH2sGk2xGTLrm+zpsSUXWZFPM7FHQYbXHbsbWe9fX1GLsX4J3zX4zl4NMX+GMzkPUAcQzstHS+6dAXdFvMLim0pNAUcYtNhu1ZCiX20syuJePhU2dB++yWmPEbs5lnq4PdaLoVZD5JjOudHR0c9sUhF4gE47mvZHdSfGgdsjzyxnqU6fspzWlaB8vKyZpAdtszqAk4rixCgs8C7D3Xwv2XAabDl33gTcp1VVRNTGmIVRSSUy78uX/bOd50clFzylwob01aUc517vQZIRUIwX3+8n505/FFoh8XAkc8Cdn1zhP34xaEcAR7p6eff97XsbrAdN+iMihuYtxUW8M/IqXSkgEtsVSxEjM2iUjpVFZqYNCnH52TZhq07vdG5ixCBj+OfvWf4d+BeHBvlXH63Z5uho863vAsr4yu5Y0uefIV/X7y0gnV/1cYWVD3A0CCIqD/dbf0A2sj3n16TpNiwmk2P80qArHXFpt1ESUkJiz9aw78vWHAHPwIfRIQJjC02DMn0/BsvNyEZXIVOBUFjIokmczqh8MEn4g0eK1bdx3raD7LRK4WhuYzpRAIDEMDvWrGErXyqlp3vO6G9ztakSFT7ruVDL1tdseV9tBLig2DLgLtUQmrnDNgYMAIbFctVJGqbaUzkb/ItzQUXXA6eHmADx3/hIqFcRup6pMoAjpKFo5/JeQnbh8JxaahUQY4H4ZvElfrkU18RSswg3ys1+Co2jIrENh6UTJuYhN3eQU3Ho21ixsKAo/RKEa1d/UyWzCqiWiTVZWzVGdxrU+oINgTSiOltOVEWdG9QwKk4sObUmhr/wA9brbImbHqdnH12EaDfdWHmfoKwwaXOTD7HKDllpfeEGiOoU8+mkT9w8QlynD77pe27skIgCTGrqh0shhHhvWvXMyLoarFU0SBmVn0Hov0Rxk5BZsI2kTkd2NIkLzIpTQIPNc0oMwrgdz+4mlGR4KisBOdUh85j7QW2DQP2Q8+9wKfdKb5uFjGMCH/tPMJ+3v85w3oQFj2BiY9YB8nDpiJkAdi0rRDdsvmF/Bh1IxJtHyGyMQg3KC60OiIpgYuYmJImRyiCfKOa5Tlb0nW4No5v3PZWHV1bMa2puIjwwuDv7IeTQ+zhpYu883gdPTs8kne9jQhVE0GXa07Y6mAk1oZM2TaJKxNG4FqJ0MQl4nH/ps08KYGLmJiSxos8bnjt3be9PgojeXz+PnGYf+ZeHuZHHZkINJlZzTEV189xaeiDMSOJiSE6uaWb4ncR4eTERODShK0IRwW2GnRaZSvnxbzFSBO+X0zQxvJ1G73zpHr7dpcyNiYu4Q/F9bMi/IMbqu8sZD3nJrwf6FwHBm0YvHE71s4PYoNTU/rSJJ+pJVsPckb+Kq50HCazaS5jOSIU+NiGWbpsfmHDqYsTWnwQs+XVF0G+t13ARoTwG+TJpfcpYhdqA90p2huELfaU5C0a4jvZs9JmwveLCcQNoVFssZEMma+dhqex2deyW8/l1Gx4ns8i1vlCkcFTl7uRLXLCZ0PVtQkhhUwm9rDkrUmYcINECBPZB5HwPSRwfLpECDyQh+4GG6hwfGx5GTt1cQIZ2mYS4ZkAbPgo94/QjVMi8DnrTCq+X0xoUmpw1bZpY2PikvcC5WU8Buh6gKsmpCcUQnqOOmkG4UG6jNLdZ/O7hQgRHOOrYBQRwsQOPS5CiEWIhGcofteJcEkwmXX9Y5N8BxyCH7bSBsSE+wUiMVbT4frFRsel9BnnFpUurBa9g3YRskh9AHdy684sdRo2MfQbYyXXSpbuPpPpfrcUYRCuUaRyun5V2dTUu4UIcY7ufssTYRC2uJfjyHNqJZTX6fADYlItxNXUPzaZV2FNscHCn4lLZYdfTvutDELB2oZ6XncurOmwa9ZtzdK1jhsFmw4+N8yA3xI/CFvMceT9f6soXG5+5zO+scn2zck4j0IVONOW6tjDV1BvNOyg7EpF9NsPn2KL6+pcV8B1XA70nWZh1qa0Qpkp0iT2TInwVsaud9x64cdl5K2mpnUC15XdWexbENsPICr4LPbNi53X9fhNKYedzp7FZrcM9n9Eq+W7H2hgxwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.09,
+                        width: 23,
+                        height: 32,
+                        n: 6
+                    }
+                },
                 hp: 20.0,
                 blood: "diamond",
                 bloodUI: "diamond",
@@ -6083,7 +6227,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACDElEQVR4nN1WTUsCURS9M7gUZBgMSaQWCUWuijARc9NezEioZcvIVbhr1c6t+BMKCqo/4KIPZhHRJhSCWhhupJDoDzRxn83jNR/Nu+pEdGBmeHLufeec996MAF+ormya8E8h4031KijO5TyL/0JoVA1+3ngQj69dXrAwmTSf33sjNR5G8LjNUbzxIJLRBHs2n259BQQVGoVL0SDjjQfRlAiA0ngYweM2Z0GGw4I4Le6Y9e2Ko8BrqwYV2rjN2b2tzix5emNBXMIdHLcOAQsQWDAViY3UmCqYwqVoEL1ZfDdvaqW4zIvFgr31Deio945JZBpbXIrgIMzJemNB4K2c2oI8LLLLjux8wrReWtjY4vZaD47GIpcamqw5EX7mZIEaVDRWPavBTf+NXY4g9Bw/uxQuJTTKrhS5fuYoixxCkVk9x97YlgkRRv8aamtVyB7sKmldM2W5xn7dxNCQjyi4hCYCBaMWN6DgiY9pMtdaOBkN3/5Zdjy2ltukflwxYDcuhpbWNahdHSlB7UpRgxtQQyGfYRrU0nlDwR9e1A74ISguRTCFS1m4EN7i0QgbxLSwY/WNdlcx2g0+HoZLwUBwxlMwhYuLgUcF930cIp7HiQcR08JSE4/CFY+MPTS7YDcg5ydzXhrEhbNrETWE8PsNSEzNOhqWtTycQIuPf5uLT+SWLgYhyPRFrmWOouETT69KowLm7mkAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: {
                     "Temple of the Art": 14.0,
                     "The Vault": 10.0,
@@ -6138,7 +6290,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACBklEQVR4nGNggILyONv/DMMUEOM3JlwaAh00cWoeDIFGqhsI+Q0eELcevYFrAGE1ORGKDCbHwdT2HCl+gweEGlSyY+EhFJpcg8lxMClqSXEDMX6DB8TuU3fAdEW8HQpNrsHkOJjaniPFb+CAWDcj4P+k7lS4BpijcCVVWgUatT1Hit/AAbH42nOG3t07GdA1UGIwqQ6mhedI8RtTYJ45XDOyhuLiUIaTP9/BFcIsIcZgmFpSHEwLzxHrN3BAgIhiV3eGWC1JMEYH2tay/2GFFshgmNpXTy9hGIysltRAIyVVEus5YgHIDUwgj6V3zGc4eewtGKMDH2UFeN4lRS0pgUZKqkRWS8hzpEQyC8iRPsoK4GSIrZTecvcBw8yKRAYb3yZGcyvh/8SqPbK57j8o0EDqQcA3FDPQkAHIwSC3YAMgB6ux8pCsFhZxxLgBpWV5EkfSwmYpIbXIAYxNLSjQzK2EGToXHWakVapEdgM2AHKDb6gj2A1MQRkbGEECt35/YSAEaKWWFAeTopaUiGMBEaIyfGCOoDgPRuxfPfqYMejoYzifHLWkAJCDffE4mBS1oMgAZRWwWxj4cGYneEAIivMQZTElapGzDHqgoTsYGwCpwec5XG5Ajjh0tyC7gQVUfzMwMDCISethGJjnqMpwYOVVOJ/eakE0SC0sEIgxF6QW5jlS3AAAvSZ58YnfoEcAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: {
                     "Temple of the Art": 14.0,
                     Base: 4.0
@@ -6192,7 +6352,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAARCAYAAABpTnqxAAACN0lEQVR4nN1WPUsDQRCdO+4H+NmIHwQFRQVBUliIoESxsBBjiPjV2diYWrFTQRCxEtFGYhTERPwBASFoE0JEULGwUtHCWrA7mcVZl/WS7Khn4YPNcnfvZt97s3cXAA1zXTEX/imKebN1UrA2WPImk8J/BY7OYt5snUTQj1X4HdpvmeN4s9WTe6MJV531BfwO7bfNcbzZU8lJS72ImDya8CzmV2h+meN4s+mG+MWuJCYi+2LGInjtO4U5gv0yx/EmkN/IuC+XT25/Y8hFAgJnfUGCzqNZ51ENGipP53O4HA0sb1tDwy4O9Qbswo8LMwT7Zc7Um4Mk+EBqYRYOjuMwPjIt5rXZMUmkrZRNr0M2DZIHEYDcY+7L9kYuCq7rbZI82ppe4HBNNFAIJt5EEPgTXt6Eh9M7z0WHW1rdhrIBWZi4OPTCKtdUMCdgHaXMmQI1OGhsJhqCcPu8OIldUUHnKTBTLic0zq58fUsam0OuaZMdJIXb5wumn7pagZ3DNFR31Fj57oxrysVn0jQ0cWwomMPlNE7+xUZcPW+DF7wWLcVVA/biYmht3fXi80aCr8/uxdCBdSh4DlfV4AXUMLjYJzQ4nbEeC1PEC82VVVAMfnH92pXIpfPYjEHo81xbviybP4QGyiu+dP/k9sY6ifXI4+9wOSglmMPVm1HocZJBBMorjBb+CVd9ZPTQTHYPcoqZK6RBbZyuRdXg4PcblBeJWjAaWYLV888O/zUXZ+RSCCZ1kUvmOBreAZ98JQCU4zi6AAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 17,
+                        n: 6
+                    }
+                },
                 hp: {
                     "Temple of the Art": 14.0,
                     Base: 4.0
@@ -6247,7 +6415,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAPCAYAAABQkhlaAAACcklEQVR4nLVXMYgTQRT9EwK2aUxYSSEeNmJro4UW13nXSY7ALSgEvc6DyxVXKBZiCi9oeYVgsUIQ7LS8QgttbMUrBLEycDbXWo38n/2bv7MzyfyYfFhmd/Lmz3vv/50lxloL2y8/w5vdGzSa4yNr13cMP/MoA+fccDFuyDWzsIvgQnhXA2oDAJN9yCrYukhicbTrOzTkQONLzJvKxO7vsYJCouS8XD+Pgy9C2mSuWn5jZxFzn/PE2DmYHBOX1vsMSDdSm26ks8gWo8RyRQPiKhw8BZipjaOWj+bn6/0CKDYn9yTJZZmmEecxTMMhqK1iRNo8s2/fjQAXhM6FmMRa01YhTnKYp03iyIgvn97Dq8MByAXm+MhLepmmabCx4tyI1WYe339QqkSvfwBbd7q08Mn+Lvy91ecDkw6ltZPMStyle88pcX4QlbBI+Mq1qwXOIVw6iDXYSA4FLkLbpCN6/QO4fnOTLjfGoz2bn8yUmLHfv34rXH724imc+3hYwiqqYbVdySHxzGHBsHUUdnd7C5LukGYGDgLnWZkGy6ahYWyarMav8dheOH+Zqigrx+KcyhWE106yaHHMGff3BRaOOdQQlHSHQffHoz0Y3G7jrdFg2bTstEEX+EybtDJoulKD1XDgzydFqLV8js7DStN8WDQtbZ6pTdNgNYWrZacNgxO///yAebEq7Kq6UlM46oiLSUJXu9WqVD/pDg2K4udFsJpYZle6xQidFcV/jXarFbXx/2DlKzM1DSRheq9DxrHBLtbN6wbn83GRHOr4/YbmJuA33E3Y6fSAgRgrxT58VMHiOMFOuyyEneZtFOII2+lFcfgHnPXTIxAiD/kAAAAASUVORK5CYII=",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 15,
+                        n: 6
+                    }
+                },
                 hp: 4.0,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -6298,7 +6474,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACkUlEQVR4nGNgwALcI0L+Y2MPB4DLb0zIigKT4/+DMEwRMYEwGAKNGDcQ8htKQCCDnFmrwRgXoHWgUcNzpPiNBUR05Kb9f/j8BcMLYkzBYTAITEkLxSoPc+y3r18JBgApaolxA7F+YwEprJg8i1FRS+O/mp4OAxc3N14NpAaaubPjf1ICjRi1xLqBFL+xgAws6Ov9ryYnx9BdV8sA0oDLobQMNFp4jhS/sUxfs4nR6xfv/1sM5xhKm5rBGuRUlMGSP75+Yzi5dz8jOQaT4mBaeY4UvzF6+UWjJF2fuACwBpDGJZPmMhw7tIMRlnfXz10IVw9Th81gkFqJj+8Z2K3sGdAdjAx2rlgDVp8Z4vefWLUgQIwbkNUR8hu81vCJC2BQczACY3SgrmX4H5bPQQbD1N569Ahs4KM7dxnC4xIYmH+zo6gFxcatA+cYtizaAFZ369IVhh/fvoPxh9dv4R4DBRqxatEBTD2yG8gBIDcwgTw2sa6N4eHVS2CMDrQs9RikFOTgIUqsWlICDTnm8HkO5GD0WMbnOVIimQXkSC1LPYZnDx7BPYEMrh2/xJDfVMWQFRLKKK+t959YtdPWrP4PCjSQehAAJXv0QEMGIAeD3IINgBwsIClAslpYxBHjBpQG1cvbL7Eajs1SQmqRAxibWlCgyWvrMYDKHVqlSmQ3YAMgN7h6+oDdwDShqJgRJPDh+QcGQoBWaklxMClqSYk4cMtSWEQczBEQEMaI/ZvXzjPeLDoP55OjlhQAdrAnbgeTohYUGaCsAnMLruwEDwgBAWGiLKZELXKWQQ80dAdjAyA1+DyHyw3IEYfuFmQ3sIAaJwxIBQmygWYBrqC6Fs6nt1oQDVILCwRizAWphXmOFDcAAEe3qUIe3u8OAAAAAElFTkSuQmCC",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: {
                     "Temple of the Art": 14.0,
                     Base: 5.0
@@ -6598,7 +6782,15 @@ const icons = {
                     drill: 0.7,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEIAAAAQCAYAAACiEqkUAAACeklEQVR4nNWWwUtbQRDG98k7CFo89BSFnoR6EUEoIuTUQDGCoJUqFgM2Qjy0iN6EHooHoQdBCXgRKgWDRYp4EPKC4KUESi9ePBV6Kqhn8Q945Vsyy2TcZ3ZTY+vAY7LrL7vffDv7YqBYvF99GysRax+2Ajnnyz6ECGRh2cyMejX3Wn39vGdyOp0OkkzY2T0ybD43ZjXjfzCtkQbzoVqtxtHJF12YjMtfv+tEE0umUdy3aa6syyG3Efxpd125BrHcBNuYNueZGBrfZhoYZFvBtrmkebm3zHVGVE5OdYZLPOQY0d3do/61aZzlptlYWodqkdkYsbg9G+8cbuiF0PIcojEPuj53bRrt5WJa0ulKVtaGK8lzXfRlnsV4orODONX7JEZ7vVkY11kKwMKcQ8Y7g8aSp3li6MG4WZZrIJbnpmojsK/2VGpfwBd7h/oNTF90WZg++5jmw7oWJ2uLEmozV2Njc0W9mH6qH9spYRNamNjo+6Gilpt6l1P75W91LOJ4/6daXvpoOLQj3hn8F4PEu7AyOE8amgloaENh+Yll9eiySz8yIITuuQ/rYxpYl+IgmLONivM55BAi87kxdXFxbn2xQRCEZfsng8XUVezKov1gGnhbyHkIhhZbQPBIZtCbpYNz0WB+PhFJrWXbtBHLDbaxMO06daXbvlVdyTXYAhrSL59rDWGxUArgIv7Q8fjmwjxaxbaqK/ECpnkcBoq27Y0IudCws12Vxenj3+tioWTGnI0cWZ9oJNiHlYeRdJ2MEWFnu9PGf8PyKyNNc+keMLcVl6SBH5zUwjWE1D7Z4YkbC47OD6jijzMzvm8WWbM1E5zWLZRMcT4a/gCkOuA7awvm9QAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.05,
+                        width: 11,
+                        height: 16,
+                        n: 6
+                    }
+                },
                 hp: 5.0,
                 blood: "blood_fading",
                 bloodUI: "blood",
@@ -6649,7 +6841,15 @@ const icons = {
                     drill: 0.7,
                     holy: 0.2
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.14,
+                        width: 28,
+                        height: 35,
+                        n: 6
+                    }
+                },
                 hp: {
                     "Temple of the Art": 24.0,
                     Base: 8.0
@@ -8364,7 +8564,15 @@ const icons = {
                     drill: 0.5,
                     holy: 0.3
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAbCAYAAAC3BEsmAAAELUlEQVR4nO2awWsTQRTGJ0ulXtSjFJQctWq1Fop4EPRQtFSlF0krRaH06MmLFu9WEPwHqj2Ja5HSgxQPXgSRIj2IbTUKXgpC8aBoragIibxxX3iZzOzOzryko/aFZTa72V/em+97k2RbIZQoX1zYLxiDm7cZ+SJSxdjd8W6ZSxRu3v8YZc+5iyjo08cny+2lfgEjguM4rlaSB+znSUzH8431S8vWOdhEyCuWrkGc9ADA+tW4+uvF59oGz2cnZySIhg3UxIPjroZJuJIFY57rsvLkXLFUnk+DPDt9U9YLI527vHoYgZhYsViUG+5vRILQuXWGSTqZcwJFIIKYGuT7+2/OetSB1WIpDEZXno9hdB3MPYGzzCuWjyBphnHVQ4xM7GtYrlAU+nDleSeofAZzrzCVJq1YXA3iq4c4dn5X7cUPSqNV2Lq7u6ujB3ulk3F04XEZhj7nnsA4MEFog3DoUZtASAIvRhBs8AbWMEWQUA1TbtKKxVmvjx5t9MnK0pocxw4dEbdfPhczQ2PyeX9nlxwflZfkm0WFqGCTIPLgGmD2jV8WV0SfeDxxS27APTc8bMWCKHZtF0+TfSyu53CP6KlskWxgwmgbK0trovNe7ytuHne9LHpgt+EyNdC+TePlP98sbVxIuxfcBteiq3HD4610dCtWLM56ufSQMCwUE5m/dr22T8/ZAFGMv8EwowEKAvVy6iGB+MK0BPF8qxNslmHiQAVBs7DoAS+gQDyGCU6ePCtHei4PL1TDVAIVBM7ThvPSA12q/gTBc/AAIEJoEVm80A0ThygIqZdDj7pbcyoMisYE6evTgCZeyIYJSRBTw7nqUQelx6ijaYJ5kgzdMKKJPO56ffQQOhhNDjc1ERNUdyx0w1QCEsTUcFl66Hjy78EXbhyoO7hzz145Hu3oEKYYTn6wT9+fbkhU5UFyIvnBfufUoDyGI7IgQfjBbkoU3w/jzNYd4uGPL/IGAE6KyqpoJp7m7cJLmwc1suptnFV9vTh/WXrocozoHSddzK+upuUhSkMloYJVHjWMiYcF6Xg+hplODGgSOi/P1HVcgujqxfmz0UNtuAhvianJDR4/IWFTiwsycdhXlwUJSG6TUQdTnimyeNjNXIaJCI9jxUozoI8gar1petAvghhqg0Tw5eDu+OsCwuZ+ftXe10Rw1gSoPFOCNoFMNAyyXAxDebYrVtoEmgyo1puVn27FsmkQmEedIdWGq/unOxQXLlbd4hLAQ6ZarK3Q1DDA8jEMBjVMWoekTaDJgGqDIM+Up7pi0XohgOeiB+ZWJzCND2/fNCTpKnRWkXmC2zBzGl6eXFWeT4OoXyRNemDYcNuoWzBMS7XuTdQw8TgNAyzTR4lLTC0uFGA59s2LQxCbwDxt9NiwSPs8bSZvRHODgy7VNHSfwbY8nxw3owUx8I+I8RuHEb5sZBB8HQAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 20,
+                        height: 27,
+                        n: 6
+                    }
+                },
                 hp: 24.0,
                 blood: "bone",
                 bloodUI: "bone dust",
@@ -8425,7 +8633,15 @@ const icons = {
                     drill: 0.5,
                     holy: 0.0
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "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",
+                    spriteInfo: {
+                        wait: 0.1,
+                        width: 34,
+                        height: 40,
+                        n: 8
+                    }
+                },
                 hp: 36.0,
                 blood: "bone",
                 bloodUI: "bone dust",
@@ -8793,7 +9009,15 @@ const icons = {
                     drill: 1,
                     holy: 1
                 },
-                sprite: {},
+                sprite: {
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAFAAAAAQCAYAAACBSfjBAAABgUlEQVR4nOWYX2oCMRDGN4v3EG/QegWfxdP42tK+7mlKn3MF6w2kJ6l8hVlinCTfzMqKOLCwyeY3/5hMjF1HSPz6/mPW3ZKdYnNOHb3XmLY+kjpq6+TbZrcNHhuMbus3eh3jMMYlJZHkLQ7m4+Hj05QElrfElOoYKxByOP5cAHjHXD5GdWjGDiRfk9p6zy5hean4lv949u9vY/xBy+765fUqGMxhnMKaPBsfSkp+T6eLueVq9a+kVH3Pyvdaz8lhCOZa229OvtazWPulnmnxv0dG06bYCjLvEV0mLF9KAMPXeinLI2apJmv86bPAJPa17H22SuQwiUkwVj4Vi32tF3l5+CJF5OHHUxgTDJwr2Oy2Ae9eXqrBwmvJ8/JShV7edIi0TrB78FJB97If2C0mRztzisUH4LXEe+z3JTjNNt4B5j+UNZmDl20/hW8lr+X/VRwlpyz30cHAlxKQz1tvH1N4xn+sMfmkKbXcJ4fK3bWlw8reQofl7u1WOgcbH+TvrDNBY+TFQQrIBwAAAABJRU5ErkJggg==",
+                    spriteInfo: {
+                        wait: 0.12,
+                        width: 16,
+                        height: 16,
+                        n: 5
+                    }
+                },
                 immunities: {
                     hm_teleport: true,
                     burn: 0.0,
