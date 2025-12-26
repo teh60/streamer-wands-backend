@@ -2769,9 +2769,12 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 }
             })
         },
-        getStyle(attack, scale) {
+        getStyle(attack, scale, h) {
             if (!HOP(attack, "spriteInfo")) return {}
             info = attack.spriteInfo
+            if (h) {
+                scale = Math.ceil(scale / info.height)
+            }
             return {
                 width: `${scale * info.width}px`,
                 height: `${scale * info.height}px`,
@@ -2835,9 +2838,9 @@ const IconTooltip = Vue.component('icon-tooltip', {
                 <p v-if="count" class="tooltip-count">Kill{{ icon.id == "player" ? "ed by" : "s" }}: {{ count }}</p>
             </div>
             <div v-if="desc.sprite?.spriteInfo" class="enemy-sprite">
-                <div :style="getStyle(desc.sprite,4)"></div>
+                <div :style="getStyle(desc.sprite,64,1)"></div>
             </div>
-            <img v-else-if="desc.sprite?.sprite" class="enemy-image" :src="'data:image/png;base64,' + desc.sprite"/>
+            <img v-else-if="desc.sprite?.sprite" class="enemy-image" :src="'data:image/png;base64,' + desc.sprite.sprite"/>
             <img class="enemy-image" :src="'data:image/png;base64,' + icon.image"/>
         </div>
         <div v-if="typeof desc == 'string'" class="desc-container">
@@ -2879,7 +2882,7 @@ const IconTooltip = Vue.component('icon-tooltip', {
                     <div class="attack-header">
                         <p class="info-name">{{ name }}:</p>
                         <div v-if="attack.spriteInfo" class="attack-sprite">
-                            <div :style="getStyle(attack,2)"></div>
+                            <div :style="getStyle(attack,2,0)"></div>
                         </div>
                         <img v-else-if="attack.sprite" class="attack-image" :src="'data:image/png;base64,' + attack.sprite"/>
                     </div>

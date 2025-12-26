@@ -1481,7 +1481,7 @@ a:visited {
 
 .enemy-image {
     height: 54px;
-    width: 54px;
+    width: auto;
     display: block;
 }
 
@@ -1559,10 +1559,9 @@ a:visited {
 }
 
 .desc-header {
-    /* display: grid;
-    grid-template-columns: auto auto auto; */
     display: flex;
     justify-content: space-between;
+    gap: 10px
 }
 
 .enemy-header {
