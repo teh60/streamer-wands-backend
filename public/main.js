@@ -2773,7 +2773,8 @@ const IconTooltip = Vue.component('icon-tooltip', {
             if (!HOP(attack, "spriteInfo")) return {}
             info = attack.spriteInfo
             if (h) {
-                scale = Math.ceil(scale / info.height)
+                div = scale / info.height
+                scale = div > 1 ? Math.ceil(div) : div
             }
             return {
                 width: `${scale * info.width}px`,
