@@ -7127,11 +7127,11 @@ const icons = {
                     holy: 1.2
                 },
                 sprite: {
-                    sprite: "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",
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAUCAYAAABGUvnzAAACs0lEQVR4nO2YsWvbUBDGTyL/QAQloXHIlE7FgS7pYtDWKdljvKWhUPCYTJlCpnYsFErazSRbhnjKphAyZAkl2epJOIFAIYvn4nDCJ56f35N0T0+xoe9bJMv2T3f33Ts924McfdnYGL5eW4OllZXk9UMcQ+vw0Mv7nuPNBs/nwFB43tnfH9oIzvGq52mdP9nZGf5bWEgA3zodeFOrjb3/5/4eTi8uCnei49WmwtPeoFGvDw/a7Ynr51EEH8KQPWocbzo8TzcKunEMr+bn02tlOtDxYGq8ORVweXERII6h3WppO+ZtHCOwSHyON0We0mASLnvVzEcodgxXjvfyPK3B74MAfpydwafNzYnOwRtd3d1BMwx/HkfRxyLBFeFx5HjF/PBVuzU8vltdTaEIEGF4bTkIktfNMMzc8nN4GGAWy/ECth+eCrZ1dOTROer79fXYTT+vryfHbq/3CwC2j6NIuVmoiidr1nhbM1S/dEQToP/4CATF3dvfwSAF4Hu/BwO46fXg6wjSqNe3sWvkIOXiFeEV6Whi4XGWeCeW87XlhyfD9rrdMaPww0uj8wcAkI3E32c4HnQGy0xTHjE5vMaIhaqaZztfVWwmvHQFq2C6woi6vL31ECp2TVbD5PF00o3TLN7lKDYypYhMeLbz1ZlrwvMpuOS3VkmJD3hdgHnCIvafnrSbNxMmp2FMZZqvTugHjuSynHQXTbOeK+poNAVVVcOUifElTMF8bTcNV+J0odr59ADHh7dJx9C8p5Vnu2FsNU1TMRG4puSNe27OWTzyxMQLsXY+BYW7MC5Q90yoomHKFLAvcUyZOhbmixxuzrrNpOniINZE7XZz/qzgSEywLBcNwiOtMuRxCtgU7k8sksjk8lTTgOIyyVmOzaYflch2gDaapiEV0aYhZeJyqqiAu/+JIc8Bol0HKsoMZwAAAABJRU5ErkJggg==",
                     spriteInfo: {
                         wait: 0.23,
-                        width: 24,
-                        height: 28,
+                        width: 20,
+                        height: 20,
                         n: 6
                     }
                 },
@@ -7175,11 +7175,11 @@ const icons = {
                     holy: 0.3
                 },
                 sprite: {
-                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAERUlEQVR4nO1bPYgTQRR+M0llESIpEgLGn0IbTzgr4eCwEA8sz84gVoIYBUsb5UDQKy0MFocgiNedjSAIFufhgY1ecYeFheiqIUFOwhZ2ITLrTHi+zOzMJtm73dv7IOzs7GZ2vm/evPlnEDPqWz0a1bT8pYFvnp/MQZxgO0CaEm5b/l4xCRKHGCwG0k1C1B8z6QIRpjFJMdguEPcsSdZ2Ugg2YeK+A9GOJemygzCFSQmRh/HQNJS4F5G06d0ySbOm+VaTOs5YLaD+r+R1xL0Qwq0R81cl91iQmqZqNKJaAnN98fHbjX6pVArC29vb8K506hZ6bCKvI961fKpoEUIngsBxeY0kAotCfmX5GXz7+B4Onz4DZ+cuCBHmLaS7ExKgaBEDW0MkS2BRyF+8dHkQL+6lCDMO5G2kTSjGLQIPe1idmRsiL8IC4n719StMvCWJ6n6jwpSe+p6yvo6shp70SZ+Fn9L0Qt0FOP/gSV+Fhdkr8iKsRJDxKiOK6LikTcDpdh2ca9tFhLzpQeXIMdiSYVHnVamvyCuKp5mKG67fUVVCiGCsDtyWivD4AXFk+tgHJBy+bQDGaIQymdzmWv/No8UgfOf+IuhageWbV6C2vBHLgCoCiuRaRc4RO8Z7IkAtgZk6OrnNtesiQEVQViHJH9xB0x9FAJAiGFsGFtLL83Obaw/VMyWEwrkbt4Nrb2p2ty1AJ4TJCoZEyIel2Juanf/18umL3z+9AeH21y/w48M6fFpfhRPX7iaFPEVLitCxjDCBmUofdW87GwtX1w9UDgU3f9rfYXphKanElQVQKzBWhbwmgaFx/PTC0tFdaO7GQdcwmPLpjBNHYTzCU+g49O2TBpzHlmZkGnSQ/hOgPtxb8iKO4ZMO1VUeQHHOozha9zHi6t7Gha5hZIknVQLYeoJqgJNWqIGTERx5/3Fnb9MEXw2UuOGFNDq/qM4wgHUwtNfBIePgpP2nzV/avD8FzT9uDoP+wL4FQMbBIePgkHFwyDg4ZBwcMg4ul5bVJEGNLD6q2ZW0guYfzxEGM0P7FgAZBzfEl8l8WhqrAV1N1m694XJ2tIF2WmQBBTUzzC0vVlNa+gp4elwLjsIVqYxuESFtrYEpv3htIEAggGbpmDaHaQdu/gBz5igO9wfS7Axtzi9o/9UN1yRQ2AO+wFT3h7hxFUCtgYsvSKIYYXkzLpFzS6LYF4R604RBtzyuBaMRYavE8qrbFJXaDRLckCjeexuqYMKB867dT5ynEUqh+lZPKFaRe+5cROgmsOQHW2hH2SXWkNc0d5FV3o27yVnYvzX+ABLgE1xL3mnLLA/7EmkaTahqMhZHM1kMIa+D035h5vJlR0tI5WZp5pqTCYgQFpfc7fIGEUC2Dtk4MIGR2SMzEYQY99AURtlycmxk4pM6NdYgO7F9lFHPQCSWY3OjgsGYyOzBSYrMHp3VIZOHp8GApB+f/wuY9rJGSgWYjgAAAABJRU5ErkJggg==",
+                    sprite: "iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAYAAABbayygAAAA4UlEQVR4nGNkQAPTD57/LywsDGa/ffuWIdPekBHEZsSmaO2yxQwPz51gkDeyYHBw9wIrZsSmKDgqFq557bLFYMVMII6UtTuGIhAbBED8Azu3MTC5tc/9D9MNsg6mCMSGKQaxWSQUlBiuQBWC3AQzZS2UhomDrYb5EKwAyUpkNzLGLd//f8+UDrBgbVsHAzZfL8uNhygEKUJXDLMFpOjwpUuQ4IEpRtYAAy45FWAaHo4g3797+ohBy9oBzH/x4B7Dk7NHGbgkZBnOTGlEBDgIaIUk/QdJgMC3F48Zrq2ZB5cHABDtdOrCqlX+AAAAAElFTkSuQmCC",
                     spriteInfo: {
-                        wait: false,
-                        width: 64,
-                        height: 64,
+                        wait: 0.23,
+                        width: 10,
+                        height: 12,
                         n: 1
                     }
                 },
@@ -14832,7 +14832,7 @@ const icons = {
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Curse_of_Greed",
             ui_name: "greed_curse",
-            ui_img: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA50lEQVR4nGP8//8/AyWAiSLdDAwMLMicexoa/0O+fQOz2bjYMRT/+vYTTK/h4mJQunGDEcMFl8XFwZLYNMMMBcmD1GH1QuP9+2DJZQzMWA0AiYPkQeqwGsDGxc7Q/vIZVkNgmkHyyC5kwmbTPIGPKIbANKtu8sIfiCCQPsGYwdzSEMy+7LeNYdnLl3Cb5zFgAiZ0gZkFZxkq45aD2bpQzSAaF2DCJvjy5lcGDvP5cJvxBSwTtnhGDjAQgBkCMhTkRZg6rC5YhqYZBmCG2BdcwO2CNdBEghzPyACWTkDqYIBxwDMTxQYAANJ0ZOB4bQX8AAAAAElFTkSuQmCC"
+            ui_img: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUklEQVR4nGNgYGBg+L/P8///R2n/QewjyYZgGhuAyYHUgvSA2IwgBqPTdkaYQQwqshDVsjNRdT9Oh9B3HjMgq2eBaQBxji59wTD9wC2GJ1++MDAwbMRwgQwPD0OmAx9YLdgQFVkGRmTN1VueMRADWn2kGKyjJcAuYQL7S0WWYfqBTwzEArBaFVlwmDDZzD0PdgXE2ahg9+l0hgMvXmCIw9SC9DJhDTAGBoY5hRxwNjZDYHqYsDkxL/AXA6euNMOry3sYfj+ux20ILgNA4MzJmwwwADLk8hw1BmyABZvgnieSDMLvQenkJgPDyZsMSrJCDLk1n/AY8BiaSKDg2um3DFqmwgxnbooxHD7wjoGBAYtmqB4WWPIEJRLkmAAZgguA1IIAIhrvPAanMGIBWO2dx+BoZAFlDEa5WeA80QpNJNjSBMxmkGZYKgTrpTQzgcUoyc4A7oa/bDnJsoYAAAAASUVORK5CYII="
         }
     ]
 }
