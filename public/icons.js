@@ -14832,7 +14832,7 @@ const icons = {
             bgImage: null,
             wiki_url: "https://noita.wiki.gg/wiki/Curse_of_Greed",
             ui_name: "greed_curse",
-            ui_img: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABUklEQVR4nGNgYGBg+L/P8///R2n/QewjyYZgGhuAyYHUgvSA2IwgBqPTdkaYQQwqshDVsjNRdT9Oh9B3HjMgq2eBaQBxji59wTD9wC2GJ1++MDAwbMRwgQwPD0OmAx9YLdgQFVkGRmTN1VueMRADWn2kGKyjJcAuYQL7S0WWYfqBTwzEArBaFVlwmDDZzD0PdgXE2ahg9+l0hgMvXmCIw9SC9DJhDTAGBoY5hRxwNjZDYHqYsDkxL/AXA6euNMOry3sYfj+ux20ILgNA4MzJmwwwADLk8hw1BmyABZvgnieSDMLvQenkJgPDyZsMSrJCDLk1n/AY8BiaSKDg2um3DFqmwgxnbooxHD7wjoGBAYtmqB4WWPIEJRLkmAAZgguA1IIAIhrvPAanMGIBWO2dx+BoZAFlDEa5WeA80QpNJNjSBMxmkGZYKgTrpTQzgcUoyc4A7oa/bDnJsoYAAAAASUVORK5CYII="
+            ui_img: "iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAA00lEQVR4nGNgIBEwYhPsm7v+P4g20teCizmYqIPVMmFTfP7CJYY5MyaB+VmZGQxzF65gOHDm5n+sGkDg7IkDGPxzF6+B2SzYNBhbODAYGuiBTU/JyGMA2QgDKDb8elQHdg5IMUwjCID4yJrA4HaH/H+QBhCAeRqdZoDZsDZD8D+nrjTDq8t7GH4/rgebBtIIMxXZdHBQgTQwizExmJirM4jpuoAlbuxczqCXehsj2MGe3vNEkkH4PcjWmwwMJ28yKMkKYVWMAjJ9tP7XhGvC3Uo1AADFNGC17A9VowAAAABJRU5ErkJggg=="
         }
     ]
 }
