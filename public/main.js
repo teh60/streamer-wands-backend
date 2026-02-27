@@ -807,7 +807,10 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                 [-4, -3, 11],
             ]
             const links = [0, 1, 2, 3].map((n) => {
-                const src = this.mapData["regular-main-branch"][0].url.replace(/\.dzi/, '_files/')
+                let src = this.mapData["regular-main-branch"][0].url.replace(/\.dzi/, '_files/')
+                if (this.info.ngp > 0) {
+                    src = this.mapData["new-game-plus-main-branch"][0].url.replace(/\.dzi/, '_files/')
+                }
                 const [x, y] = indexToXY(n, 2, 1)
                 return `${src}12/${x}_${y + 1}.webp?v=1712752623`
             })
@@ -818,7 +821,11 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             // const [x, y] = [0, 0].map((n) => n * 512)
 
             // shift to main PW, then clamp player coords to image collage border
-            const xMain = mod(x, 70 * 512)
+            let xMain = mod(x, 70 * 512)
+            // fix NG+ different PW width
+            if (this.info.ngp > 0) {
+                xMain = mod(x, 64 * 512)
+            }
             const xClamp = Math.min(Math.max(xMain, -25.5 * 512), 29.5 * 512)
             const yClamp = Math.min(Math.max(y, -4 * 512), 34 * 512)
 
@@ -971,7 +978,11 @@ const mapComp = Vue.component('map-comp', {
             const apothNames = ["$curse_apotheosis_everything_name", "$curse_apotheosis_downunder_name"]
 
             // determine gamemode/map type
-            let mapName = this.info.ngp > 0 ? "new-game-plus-main-branch" : "regular-main-branch"
+            let mapName = "regular-main-branch"
+            if (this.info.ngp > 0) {
+                mapName = "new-game-plus-main-branch"
+                widthPW = 64
+            }
             const mapModes = this.info.mods.map((x) => x.toLowerCase())
             if (mapModes.includes("nightmare")) {
                 mapName = "nightmare-main-branch"
@@ -1008,10 +1019,17 @@ const mapComp = Vue.component('map-comp', {
             let xStar = -7 + ((x + (map.x0 - widthPW * PW) * 512) - (xMap * 4096)) * 192 / 4096
             let tileSelector = PW
             if (widthPW > tileWidth) {
+                // fix apotheosis different PW width
                 const tile = Math.sign(x) * Math.floor((Math.abs(x / 512) + tileWidth / 2) / tileWidth)
                 xMap = Math.floor(((x / 512) + map.x0 - tileWidth * tile) / zoom)
                 xStar = -7 + ((x + (map.x0 - tileWidth * tile) * 512) - (xMap * 4096)) * 192 / 4096
                 tileSelector = tile
+            } else if (widthPW < tileWidth) {
+                // fix NG+ different PW width
+                ngpOffset = (Math.abs(PW) > 0) ? 6 : 0
+                const tile = Math.sign(x) * Math.floor((Math.abs(x / 512) - ngpOffset + widthPW / 2) / widthPW)
+                xMap = Math.floor(((x / 512) + map.x0 - ngpOffset - widthPW * tile) / zoom)
+                xStar = -7 + ((x + (map.x0 - ngpOffset - widthPW * tile) * 512) - (xMap * 4096)) * 192 / 4096
             }
 
             let src = map.urls[0]
