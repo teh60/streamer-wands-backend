@@ -3,6 +3,7 @@ const featureSchema = new mongoose.Schema({
     seed: Boolean,
     pos: Boolean,
     ngp: Boolean,
+    orb: Boolean,
     shifts: Boolean,
     timer: Boolean,
     apothCreatureShifts: Boolean,

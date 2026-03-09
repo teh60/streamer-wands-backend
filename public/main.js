@@ -647,6 +647,7 @@ const worldComp = Vue.component('world-comp', {
                 "Seed": features.seed,
                 "Position": features.pos,
                 "New Game Plus": features.ngp,
+                "Detailed Orbs": features.orb,
                 "Fungal Shifts": features.shifts,
                 "Fungal Timer": features.timer,
                 "Creature Shifts": features.apothCreatureShifts,
@@ -692,7 +693,7 @@ const worldComp = Vue.component('world-comp', {
             </div>
             </div>
             <map-comp v-if="state.map" :player="player" :info="info" :features="features"></map-comp>
-            <info-stats-comp v-if="state.runStats" :info="info" :player="player"></info-stats-comp>
+            <info-stats-comp v-if="state.runStats" :info="info" :player="player" :features="features"></info-stats-comp>
         </div>
     </div>`
 })
@@ -785,30 +786,62 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             }
         },
         orbMap() {
-            const [imgWidth, imgHeight] = [54, 38].map((n) => n * 512)
-            const [x0, y0] = [-25, -6].map((n) => n * 512)
-            const game2img = (x, y) => [
-                -2 + (x - x0) * 322 / imgWidth,
-                -11 + (y - y0) * 228 / imgHeight
-            ]
-
+            const ngp = this.info.ngp > 0
+            const game2img = (x, y) => {
+                if (ngp) {
+                    return [
+                        -3 + (x / 512 + 35) * 322 / 64,
+                        -11 + (y / 512 + 15) * 228 / 46
+                    ]
+                }
+                return [
+                    -2 + (x / 512 + 25) * 322 / 54,
+                    -11 + (y / 512 + 7) * 228 / 38
+                ]
+            }
             const orbChunkCoords = [
-                [19, -3, 1],
-                [1, -3, 0],
-                [-20, 5, 2],
-                [6, 3, 3],
-                [19, 5, 4],
-                [-9, 7, 5],
-                [-8, 19, 6],
-                [8, 1, 7],
-                [-1, 31, 8],
-                [-18, 28, 9],
-                [20, 31, 10],
-                [-4, -3, 11],
+                [19, -3, 1],//pyramid - earthquake
+                [1, -3, 0],//altar - sea of lava
+                [-20, 5, 2],//frozen vault - tentacle
+                [6, 3, 3],//lava lake - nuke
+                [19, 5, 4],//sandcave - necromancy
+                [-9, 7, 5],//magical temple - holy bomb
+                [-8, 19, 6],//lukki lair - spiral shot
+                [8, 1, 7],//lava lake bridge boss
+                [-1, 31, 8],//hell - fireworks
+                [-18, 28, 9],//snowy chasm - deercoy
+                [20, 31, 10],//wizards den - cement
+                [-4, -3, 11],//GTC
             ]
+            let orbs = orbChunkCoords.map(([x, y, n]) => [...game2img(x * 512, y * 512), n])
+            if (ngp) {
+                orbChunkBounds = [
+                    [19, -3, 1],//pyramid - earthquake
+                    [1, -3, 0],//altar - sea of lava
+                    [-22, -17, 4, 6, 2],//frozen vault - tentacle
+                    [17, 22, 3, 6, 4],//sandcave - necromancy
+                    [-5, 4, 30, 32, 8],//hell - fireworks
+                    [-20, -14, 26, 29, 9],//snowy chasm - deercoy
+                    [19, 23, 27, 32, 10],//wizards den - cement
+                    [26, 31, 20, 25, 7],//lava lake - nuke
+                    [8, 17, 7, 18, 5],//magical temple - holy bomb
+                    [-15, -8, 7, 15, 6],//lukki lair - spiral shot
+                    [-31, -24, 10, 19, 7],//lava lake bridge boss - thundercloud
+                    [-4, -3, 11],//GTC
+                ]
+                orbs = orbChunkBounds.map((all) => {
+                    pairs = all.slice(0, -1).map((x) => x * 512)
+                    console.log(pairs)
+                    if (all.length > 3) {
+
+                        return [game2img(pairs[0], pairs[2]), game2img(pairs[1], pairs[3]), all[4]]
+                    }
+                    return [...game2img(pairs[0], pairs[1]), all[2]]
+                })
+            }
             const links = [0, 1, 2, 3].map((n) => {
                 let src = this.mapData["regular-main-branch"][0].url.replace(/\.dzi/, '_files/')
-                if (this.info.ngp > 0) {
+                if (ngp) {
                     src = this.mapData["new-game-plus-main-branch"][0].url.replace(/\.dzi/, '_files/')
                 }
                 const [x, y] = indexToXY(n, 2, 1)
@@ -821,29 +854,43 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             // const [x, y] = [0, 0].map((n) => n * 512)
 
             // shift to main PW, then clamp player coords to image collage border
-            let xMain = mod(x, 70 * 512)
-            // fix NG+ different PW width
-            if (this.info.ngp > 0) {
-                xMain = mod(x, 64 * 512)
+            const halfWidth = ngp ? 32 : 35
+            let xMain = mod(x, 2 * halfWidth * 512)
+            if (xMain > halfWidth * 512) {
+                xMain = xMain - 2 * halfWidth * 512
+            } else if (xMain < halfWidth * -512) {
+                xMain = xMain + 2 * halfWidth * 512
             }
-            const xClamp = Math.min(Math.max(xMain, -25.5 * 512), 29.5 * 512)
-            const yClamp = Math.min(Math.max(y, -4 * 512), 34 * 512)
+            [x0, x1, y0, y1] = ngp ? [-35, 29.5, -12, 34] : [-25.5, 29.5, -4, 34]
+            let xClamp = Math.min(Math.max(xMain, x0 * 512), x1 * 512)
+            let yClamp = Math.min(Math.max(y, y0 * 512), y1 * 512)
 
             const [xStar, yStar] = game2img(xClamp, yClamp)
-            const orbs = orbChunkCoords.map(([x, y, n]) => [...game2img(x * 512, y * 512), n])
             return {
-                starX: xStar + 'px',
-                starY: yStar + 'px',
-                orbs: orbs.map(([x, y, n]) => {
+                starX: `${xStar + 6}px`,
+                starY: `${yStar - 4}px`,
+                orbs: orbs.map(([c1, c2, n]) => {
+                    if (typeof c1 == "object") {
+                        return {
+                            style: {
+                                left: `${c1[0] + 0}px`,
+                                top: `${c1[1] + 0}px`,
+                                width: `${c2[0] - c1[0] + 0}px`,
+                                height: `${c2[1] - c1[1] + 0}px`,
+                            },
+                            n,
+                        }
+                    }
                     return {
                         style: {
-                            left: `${x + 11.5}px`,
-                            top: `${y - 2}px`,
+                            left: `${c1 + 11.5}px`,
+                            top: `${c2 - 2}px`,
                         },
                         n,
                     }
                 }),
                 links,
+                ngp,
             }
         }
     },
@@ -861,7 +908,7 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             }
             orb = orb < 0 ? orb + 12 : orb % 12
             const descriptions = [
-                "Spell(s) Unlocked: Sea of Lava Within the floating island containing the Mountain Altar, above the mine entrance in the Forest.\n",
+                "Spell(s) Unlocked:\nSea of Lava\nLocated: Within the floating island containing the Mountain Altar, above the mine entrance in the Forest.\n",
                 "Spell(s) Unlocked: Earthquake\nLocated: Atop the Pyramid\n",
                 "Spell(s) Unlocked: Summon Tentacle and Summon Tentacle With Timer\nLocated: Under the Frozen Vault, which is located under the Snowy Wasteland to the left of Giant Tree.\n",
                 "Spell(s) Unlocked: Nuke\nLocated: Under the Lava Lake right from entrance. Can be reached if you dig through the extremely dense rock on the west side of the chasm down to Snowy Depths with Black Holes or by freezing the lava and drilling through.\n",
@@ -877,32 +924,30 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             return descriptions[orb]
         }
     },
-    props: ["info", "player"],
+    props: ["info", "player", "features"],
     template: /* html */`
     <div class="preview info-stats" v-if="loaded">
-        <div class="preview-icon-wrapper">
-            <p class="preview-icon" :style="{ left: orbMap.starX, top: orbMap.starY }"><b>&#9733;</b></p>
-        </div>
-        <div v-for="orb in orbMap.orbs" class="preview-icon-wrapper">
-            <div class="preview-icon" :style="orb.style">
-                <img v-if="orbs.found.includes(orb.n - 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
-                <img v-if="orbs.found.includes(orb.n)" :src="'data:image/png;base64,' + orbImages[0]"/>
-                <img v-if="orbs.found.includes(orb.n + 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
+        <template v-if="features.orb">
+            <div class="preview-icon-wrapper">
+                <p class="preview-icon" :style="{ left: orbMap.starX, top: orbMap.starY }"><b>&#9733;</b></p>
             </div>
-        </div>
-
-        <div class="orbs-map">
-            <img v-for="link in orbMap.links" :src="link"/>
-        </div>
-        <div class="orbs">
-            <div><p>World</p></div>
-            <div v-for="icon in orbs.icons" class="orb-image">
-                <img :src="'data:image/png;base64,' + icon"/>
+            <div class="preview-icon-wrapper">
+                <map-orb v-for="(orb,i) in orbMap.orbs" :key="i" :orb="orb" :found="orbs.found" :tip="orbTip(orb.n).split('\\nLocated')[0]"></map-orb>
             </div>
-            <template v-for="orb in orbs.all">
-                <info-tooltip :cls="{found:orbs.found.includes(orb)}" :main="orbText(orb)" :tip="orbTip(orb)" side="top" :gap="2"></info-tooltip>
-            </template>
-        </div>
+            <div class="orbs-map" :class="{ngp: orbMap.ngp}">
+                <img v-for="link in orbMap.links" :src="link"/>
+            </div>
+            <div class="orbs">
+                <div><p>World</p></div>
+                <div v-for="icon in orbs.icons" class="orb-image">
+                    <img :src="'data:image/png;base64,' + icon"/>
+                </div>
+                <template v-for="orb in orbs.all">
+                    <info-tooltip :cls="{found:orbs.found.includes(orb)}" :main="orbText(orb)" :tip="orbTip(orb)" side="top" :gap="4"></info-tooltip>
+                </template>
+            </div>
+        </template>
+        <p v-else class="orb-hidden"><i>Detailed Orb Tracker Hidden</i></p>
         <div class="preview-info">
             <p>Playtime: {{ start.playtime }}</p>
             <info-tooltip v-if="!start.over100" :main="start.mainTime" :tip="start.tipTime"></info-tooltip>
@@ -910,6 +955,47 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             <p>{{ stats.deaths }}</p>
             <p>{{ stats.streaks }}</p>
             <p class="preview-disc">\nNote: The method used to re-enable streaks while mods are active makes daily runs count towards or against streaks</p>
+        </div>
+    </div>`
+})
+
+const mapOrb = Vue.component('map-orb', {
+    data() {
+        return {
+            tooltip: null,
+        }
+    },
+    mounted() {
+        if (this.$refs.tooltip) {
+            this.tooltip = Popper.createPopper(this.$refs.slot, this.$refs.tooltip, {
+                placement: "bottom",
+                modifiers: [{ name: 'offset', options: { offset: [0, 5] } }],
+            })
+        }
+    },
+    beforeDestroy() {
+        if (this.tooltip) {
+            this.tooltip.destroy()
+            this.tooltip = null
+        }
+    },
+    methods: {
+        updateTip() {
+            if (this.tooltip) {
+                this.tooltip.update()
+            }
+        },
+    },
+    props: ["orb", "found", "tip"],
+    template: /* html */`
+    <div class="shifts-tip" @mouseenter="updateTip">
+        <div class="preview-icon" :style="orb.style" ref="slot">
+            <img v-if="found.includes(orb.n - 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
+            <img v-if="found.includes(orb.n)" :src="'data:image/png;base64,' + orbImages[0]"/>
+            <img v-if="found.includes(orb.n + 12)" :src="'data:image/png;base64,' + orbImages[1]"/>
+        </div>
+        <div class="tooltip" ref="tooltip">
+            <p class="map-tip">{{ tip }}</p>
         </div>
     </div>`
 })
@@ -1905,7 +1991,7 @@ const containerComp = Vue.component('wands-container', {
             newData: null,
             switches: {
                 progressTable: {
-                    state: true,
+                    state: false,
                     label: 'Show Progress Table',
                     className: 'progress-table',
                 },
@@ -1934,7 +2020,7 @@ const containerComp = Vue.component('wands-container', {
                     className: 'apoth-content',
                 },
             },
-            progTables: true,
+            progTables: false,
         }
     },
     created() {

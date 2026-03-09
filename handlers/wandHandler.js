@@ -49,6 +49,7 @@ exports.validate = (data) => {
         seed: false,
         pos: false,
         ngp: false,
+        orb: false,
         shifts: false,
         timer: false,
         apothCreatureTimer: false,
