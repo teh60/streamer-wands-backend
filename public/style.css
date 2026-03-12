@@ -632,6 +632,12 @@ a:visited {
     white-space: pre-line;
 }
 
+.seed-tools {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .preview-disc {
     max-width: 230px;
 }
@@ -1413,7 +1419,7 @@ a:visited {
     border: var(--border-color);
 
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -1754,6 +1760,10 @@ a:visited {
     white-space: pre;
     max-width: 80%;
     margin-bottom: 0.3rem;
+}
+
+.tooltip-description.spell {
+    white-space: pre-wrap;
 }
 
 .tooltip-wiki {

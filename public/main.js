@@ -327,11 +327,8 @@ const SpellSlot = Vue.component('spell-slot', {
             let [id, uses] = spell.split('_#')
             const ac = this.$parent.$options.name == 'wand-ac'
             if (id.includes("item_mcguffin")) {
-                let [path, sampoID, desc, mats] = id.split('$')
+                let [path, sampoID, desc,] = id.split('$')
                 path = path.replace(new RegExp('mods/apotheosis/files', 'ig'), 'data')
-                let materials = {}
-                let m = []
-                let color = ''
                 const sampoData = icons.pseuds.find((x) => x.id == "sampo")
                 sampoData.sprite = sampoData.image
                 return {
@@ -339,8 +336,8 @@ const SpellSlot = Vue.component('spell-slot', {
                     name: sampoData.name["$" + sampoID],
                     desc: sampoData.description["$" + desc],
                     sprite: sampoData.image,
-                    mats: m,
-                    color: color,
+                    mats: [],
+                    color: '',
                     path: path,
                     // set text to green if item is a tablet/book/etc that the game makes green
                     book: sampoID.indexOf('book') > -1,
@@ -1006,7 +1003,10 @@ const mapComp = Vue.component('map-comp', {
             mapData: {},
             loaded: false,
             // input: "0,0",
-            tipSeed: `Seed was incremented by ${this.info.ngp}.\n(to display correct NG+ noitool shifts)`,
+            tipSeed: {
+                noitool: `Made by TwoAbove, Seed was incremented by ${this.info.ngp}.\n(to display correct NG+ noitool shifts)`,
+                telescope: "Made By Lymm",
+            },
         }
     },
     mounted() {
@@ -1022,7 +1022,10 @@ const mapComp = Vue.component('map-comp', {
         seedInfo() {
             // if (!this.seed) return null
             let seedNumber = this.info.seed + this.info.ngp
-            let url = `https://noitool.com/info?seed=${seedNumber}`
+            let url = {
+                noitool: `https://noitool.com/info?seed=${seedNumber}`,
+                telescope: `https://lymm37.github.io/noita-telescope/?seed=${this.info.seed}`
+            }
             // uncomment when noita starts receiving beta pushes again
             // if (this.switches.betaContent.state) {
             //     url = `https://dev.noitool.com/info?${seed}`
@@ -1039,7 +1042,6 @@ const mapComp = Vue.component('map-comp', {
             const yHell = 34
             const yHeaven = -14
             const yLoop = 48
-            let widthPW = 70
             let tileWidth = 70
             // from game coord input
             const x = this.player.x || 0
@@ -1063,6 +1065,7 @@ const mapComp = Vue.component('map-comp', {
             }
             const apothNames = ["$curse_apotheosis_everything_name", "$curse_apotheosis_downunder_name"]
 
+            let widthPW = 70
             // determine gamemode/map type
             let mapName = "regular-main-branch"
             if (this.info.ngp > 0) {
@@ -1141,11 +1144,16 @@ const mapComp = Vue.component('map-comp', {
             }
             const yMap = Math.floor(((y / 512) + map.y0 - HH * yLoop) / zoom)
             const yStar = -6 + ((y + (map.y0 - yLoop * HH) * 512) - (yMap * 4096)) * 192 / 4096
-
+            const xMain = Math.floor(mod(x, widthPW * 512))
+            const yMain = Math.floor(y - HH * yLoop * 512)
+            let url = `https://noitamap.com/?map=${mapName}&x=${xMain}&y=${yMain}&zoom=1200`
+            if (mapName == "regular-main-branch") {
+                url = `https://dynamic-map.noitamap.com/?x=${xMain}&y=${yMain}&z=1200&m=dy&se=${this.info.seed}`
+            }
             return {
                 img: `${src}14/${xMap}_${yMap}.webp?v=1712752623`,
                 name: mapLabels[mapName],
-                url: `https://noitamap.com/?map=${mapName}&x=${x}&y=${y}&zoom=1200`,
+                url,
                 x: x.toLocaleString('en-US', { maximumFractionDigits: 2 }),
                 y: y.toLocaleString('en-US', { maximumFractionDigits: 2 }),
                 pw: (PW != 0) ? `${pwName} ${Math.abs(PW)}` : pwName,
@@ -1170,9 +1178,17 @@ const mapComp = Vue.component('map-comp', {
             <!--<input v-model="input"/>-->
             <p v-if="!features.seed"><i>Seed Hidden</i></p>
             <p v-else-if="!seedInfo">No current run</p>
-            <a v-else-if="seedInfo.url" :href="seedInfo.url" tabindex="1" target="_blank" rel="noopener noreferrer">
-                <info-tooltip :main="'Map ' + seedInfo.seed" :tip="tipSeed"></info-tooltip>
-            </a>
+            <template v-else-if="seedInfo.url">
+                <p>Map {{seedInfo.seed}}</p>
+                <div class="seed-tools">
+                    <a :href="seedInfo.url.noitool" tabindex="1" target="_blank" rel="noopener noreferrer">
+                        <info-tooltip main="Noitool" :tip="tipSeed.noitool" side="left"></info-tooltip>
+                    </a>
+                    <a :href="seedInfo.url.telescope" tabindex="1" target="_blank" rel="noopener noreferrer">
+                        <info-tooltip main="Telescope" :tip="tipSeed.telescope"></info-tooltip>
+                    </a>
+                </div>
+            </template>
             <p v-else>Map {{ seedInfo.seed }}</p>
             <template v-if="features.pos">
                 <p>x: {{ osd.x }}</p>
@@ -2374,6 +2390,7 @@ const Progress = Vue.component('prog-comp', {
                     kills: /*html*/`<span>&gt;100</span> will search for all enemies with over 100 kills, works for <span>&gt;,&lt;,=,&gt;=,&lt;=</span>`,
                     compare: /*html*/`<span>fire</span> in the left searchbox and<span>&gt;100</span> in the second searchbox will search for all spells that deal over 100 fire damage, works for all spell properties and for <span>&gt;,&lt;,=,&gt;=,&lt;=</span>`,
                     props: /*html*/`search for all spells with a given property, regardless of the value`,
+                    type: /*html*/`spell type can be a comma seperated list`
                 },
                 order: [
                     "name",
@@ -2394,6 +2411,7 @@ const Progress = Vue.component('prog-comp', {
                     'Search by enemy name or ID, all icons try to link to wiki, but not all pages exist (or are name-matched)',
             },
             sortOption: "Noita",
+            sortReverse: false,
         }
     },
     mounted() {
@@ -2473,15 +2491,22 @@ const Progress = Vue.component('prog-comp', {
         sortedIcons() {
             const data = [...this.tableIcons]
             const prop = this.sortOption
-            if (prop == "Noita") return data
-            if (prop == "casts" || prop == "kills") {
-                return data.sort((a, b) => this.counts[b.id] - this.counts[a.id])
+            out = []
+            if (prop == "Noita") {
+                out = data
+            } else if (prop == "casts" || prop == "kills") {
+                out = data.sort((a, b) => this.counts[b.id] - this.counts[a.id])
+            } else {
+                out = data.sort((a, b) => {
+                    if (!a[prop]) return 1
+                    if (!b[prop]) return -1
+                    return a[prop].toLowerCase() >= b[prop].toLowerCase() ? 1 : -1
+                })
             }
-            return data.sort((a, b) => {
-                if (!a[prop]) return 1
-                if (!b[prop]) return -1
-                return a[prop].toLowerCase() >= b[prop].toLowerCase() ? 1 : -1
-            })
+            if (this.sortReverse) {
+                out = out.reverse()
+            }
+            return out
         }
     },
     watch: {
@@ -2568,8 +2593,11 @@ const Progress = Vue.component('prog-comp', {
                     }
                     if (filters.type) {
                         const spellMeta = this.spellVersion[icon.id].meta
-                        const type = types.findIndex((x) => x.includes(text))
-                        found ||= spellMeta.action_type == type
+                        const multi = text.split(",")
+                        for (const term of multi) {
+                            const type = types.findIndex((x) => x.includes(term))
+                            found ||= spellMeta.action_type == type
+                        }
                     }
                     if (filters.compare && /^(?:[<>]=?|=)\d+\.?\d*$/.test(text2)) {
                         const spellMeta = this.spellVersion[icon.id].meta
@@ -2659,13 +2687,12 @@ const Progress = Vue.component('prog-comp', {
                             <option>{{ option }}</option>
                         </template>
                     </select>
-                    <label for="sortDir">Sort:</label>
-                    <select name="sortOption" v-model="sortOption">
-                        <option>Noita</option>
-                        <template v-for="option in sortOptions">
-                            <option>{{ option }}</option>
-                        </template>
-                    </select>
+                    <input
+                            type="checkbox"
+                            id="reverse"
+                            v-model="sortReverse"
+                        />
+                    <label for="reverse">Reverse</label>
                 </div>
             </div>
         </div>
@@ -2703,6 +2730,14 @@ const IconComp = Vue.component('icon-comp', {
         }
     },
     mounted() {
+        if (this.$refs.tooltip) {
+            this.tooltip = Popper.createPopper(this.$refs.slot, this.$refs.tooltip.$el, {
+                placement: 'bottom',
+                modifiers: [{ name: 'offset', options: { offset: [0, 35] } }],
+            })
+        }
+    },
+    updated() {
         if (this.$refs.tooltip) {
             this.tooltip = Popper.createPopper(this.$refs.slot, this.$refs.tooltip.$el, {
                 placement: 'bottom',
@@ -3278,9 +3313,10 @@ const SpellTooltip = Vue.component('spell-tooltip', {
         },
     },
     template: /*html*/`
-    <div class="tooltip" v-if="hover">
+    <div class="tooltip" v-if="hover || true">
         <p class="tooltip-title">{{name}}</p>
-        <p class="tooltip-description">{{spell.data.description}}</p>
+        <p class="tooltip-wiki">({{ spell.id }})</p>
+        <p class="tooltip-description spell">{{spell.data.description}}</p>
         <p v-if="count > -1" class="tooltip-count">Casts: {{ count }}</p>
         <template v-for="(stat, index) in stats">
             <p v-if="typeof meta[stat.key] != 'undefined'" :key="stat.key" :class="stat.classes">
