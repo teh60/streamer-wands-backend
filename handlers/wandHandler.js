@@ -70,6 +70,7 @@ exports.validate = (data) => {
             deaths: 0,
             currentStreak: 0,
             highestStreak: 0,
+            lowestStreak: 0,
         },
         ...data?.runInfo
     }

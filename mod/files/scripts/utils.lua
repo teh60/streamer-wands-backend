@@ -372,6 +372,10 @@ function get_run_info(ngpCheck, seedCheck, orbCheck)
     versions["start"] = GlobalsGetValue("start_time", "")
     versions["playtime"] = tonumber(StatsGetValue("playtime"))
     versions["endStats"] = get_stats()
+    if ModIsEnabled("negative-streak") then
+        versions["endStats"]["currentStreak"] = tonumber(ModSettingGet("negative-streak.streak"))
+        versions["endStats"]["worstStreak"] = tonumber(ModSettingGet("negative-streak.worst"))
+    end
     if orbCheck then
         local world_state = get_world_state()
         versions["orbs"] = ComponentGetValue2(world_state, "orbs_found_thisrun")

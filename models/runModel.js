@@ -5,6 +5,7 @@ const statsSchema = new mongoose.Schema({
     deaths: Number,
     currentStreak: Number,
     highestStreak: Number,
+    lowestStreak: Number,
 })
 const runSchema = new mongoose.Schema({
     mods: [String],
