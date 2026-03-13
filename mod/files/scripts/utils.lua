@@ -563,6 +563,7 @@ function serialize_data()
         seed = seedCheck,
         pos = posCheck,
         ngp = ngpCheck,
+        orb = orbCheck,
         shifts = shiftsCheck,
         timer = timerCheck,
         apothCreatureTimer = apothTimerCheck,
