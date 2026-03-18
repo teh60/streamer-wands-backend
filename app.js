@@ -8,6 +8,7 @@ const MongoStore = require('connect-mongo')
 const passport = require('passport')
 
 const streamerRoutes = require('./routes/streamer')
+const mapRoutes = require('./routes/mapOut')
 const authRoutes = require('./routes/auth')
 const indexRoutes = require('./routes/index')
 const errorHandlers = require('./handlers/errorHandlers')
@@ -72,6 +73,7 @@ app.locals = {
 
 // Main Routes
 app.use('/streamer', streamerRoutes)
+app.use('/mapOut', mapRoutes)
 app.use('/auth', authRoutes)
 app.use('/', indexRoutes)
 
