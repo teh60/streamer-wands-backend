@@ -373,8 +373,7 @@ function get_run_info(ngpCheck, seedCheck, orbCheck)
     versions["playtime"] = tonumber(StatsGetValue("playtime"))
     versions["endStats"] = get_stats()
     if ModIsEnabled("negative-streak") then
-        versions["endStats"]["currentStreak"] = tonumber(ModSettingGet("negative-streak.streak"))
-        versions["endStats"]["worstStreak"] = tonumber(ModSettingGet("negative-streak.worst"))
+        versions["endStats"]["lowestStreak"] = -1 * tonumber(ModSettingGet("negative-streak.worst"))
     end
     if orbCheck then
         local world_state = get_world_state()

@@ -700,6 +700,8 @@ const infoStatsComp = Vue.component('info-stats-comp', {
         return {
             mapData: {},
             loaded: false,
+            aX: 63,
+            bX: 32,
         }
     },
     mounted() {
@@ -732,10 +734,11 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             const stats = this.info.endStats
             // const highest = stats.currentStreak > -1 ? Math.max(stats.highestStreak, stats.currentStreak) : Math.min(stats.highestStreak, stats.currentStreak)
             const highest = Math.max(stats.highestStreak, stats.currentStreak)
+            const lowest = Math.min(stats.lowestStreak, 0)
             return {
                 wins: `\nTotal Wins: ${stats.workWins + stats.altarWins}\n- The Work (End): ${stats.workWins}\n- Mountain Altar: ${stats.altarWins}`,
                 deaths: `Deaths: ${stats.deaths}`,
-                streaks: `\nCurrent Streak: ${stats.currentStreak}\nHighest Streak: ${highest}`,
+                streaks: `\nCurrent Streak: ${stats.currentStreak}\nHighest Streak: ${highest}\nLowest Streak: ${lowest}`,
             }
         },
         orbs() {
@@ -783,17 +786,17 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             }
         },
         orbMap() {
-            const ngp = this.info.ngp > 0
+            const ngp = this.info.ngp > 0 || true
             const game2img = (x, y) => {
                 if (ngp) {
                     return [
-                        -3 + (x / 512 + 35) * 322 / 64,
-                        -11 + (y / 512 + 15) * 228 / 46
+                        (x / 512 + this.bX) * 322 / this.aX,
+                        (y / 512 + 14) * 228 / 45
                     ]
                 }
                 return [
-                    -2 + (x / 512 + 25) * 322 / 54,
-                    -11 + (y / 512 + 7) * 228 / 38
+                    -7 + (x / 512 + 25) * 322 / 54,
+                    1.5 + (y / 512 + 7) * 228 / 38
                 ]
             }
             const orbChunkCoords = [
@@ -815,33 +818,32 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                 orbChunkBounds = [
                     [19, -3, 1],//pyramid - earthquake
                     [1, -3, 0],//altar - sea of lava
-                    [-22, -17, 4, 6, 2],//frozen vault - tentacle
-                    [17, 22, 3, 6, 4],//sandcave - necromancy
-                    [-5, 4, 30, 32, 8],//hell - fireworks
-                    [-20, -14, 26, 29, 9],//snowy chasm - deercoy
-                    [19, 23, 27, 32, 10],//wizards den - cement
-                    [26, 31, 20, 25, 7],//lava lake - nuke
-                    [8, 17, 7, 18, 5],//magical temple - holy bomb
-                    [-15, -8, 7, 15, 6],//lukki lair - spiral shot
-                    [-31, -24, 10, 19, 7],//lava lake bridge boss - thundercloud
+                    [-22, -16, 4, 6, 2],//frozen vault - tentacle
+                    [17, 23, 3, 6, 4],//sandcave - necromancy
+                    [-5, 5, 30, 33, 8],//hell - fireworks
+                    [-20, -13, 26, 29, 9],//snowy chasm - deercoy
+                    [19, 24, 27, 32, 10],//wizards den - cement
+                    [26, 32, 20, 25, 7],//lava lake - nuke
+                    [8, 18, 7, 18, 5],//magical temple - holy bomb
+                    [-15, -7, 7, 15, 6],//lukki lair - spiral shot
+                    [-32, -23, 10, 19, 7],//lava lake bridge boss - thundercloud
                     [-4, -3, 11],//GTC
                 ]
                 orbs = orbChunkBounds.map((all) => {
                     pairs = all.slice(0, -1).map((x) => x * 512)
-                    console.log(pairs)
                     if (all.length > 3) {
-
                         return [game2img(pairs[0], pairs[2]), game2img(pairs[1], pairs[3]), all[4]]
                     }
                     return [...game2img(pairs[0], pairs[1]), all[2]]
                 })
             }
-            const links = [0, 1, 2, 3].map((n) => {
+            const mapTiles = ngp ? [0, 1, 2, 3, 4, 5] : [0, 1, 2, 3]
+            const links = mapTiles.map((n) => {
                 let src = this.mapData["regular-main-branch"][0].url.replace(/\.dzi/, '_files/')
                 if (ngp) {
                     src = this.mapData["new-game-plus-main-branch"][0].url.replace(/\.dzi/, '_files/')
                 }
-                const [x, y] = indexToXY(n, 2, 1)
+                const [x, y] = indexToXY(n, mapTiles.length / 2, 1)
                 return `${src}12/${x}_${y + 1}.webp?v=1712752623`
             })
 
@@ -861,27 +863,28 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             [x0, x1, y0, y1] = ngp ? [-35, 29.5, -12, 34] : [-25.5, 29.5, -4, 34]
             let xClamp = Math.min(Math.max(xMain, x0 * 512), x1 * 512)
             let yClamp = Math.min(Math.max(y, y0 * 512), y1 * 512)
-
             const [xStar, yStar] = game2img(xClamp, yClamp)
             return {
-                starX: `${xStar + 6}px`,
-                starY: `${yStar - 4}px`,
+                starX: `${xStar + 4}px`,
+                starY: `${yStar - 15}px`,
                 orbs: orbs.map(([c1, c2, n]) => {
                     if (typeof c1 == "object") {
                         return {
                             style: {
-                                left: `${c1[0] + 0}px`,
-                                top: `${c1[1] + 0}px`,
+                                // left: `${c1[0] + 1.6}px`,
+                                left: `${c1[0] + 5}px`,
+                                top: `${c1[1] - 9.2}px`,
+                                // width: `${c2[0] - c1[0] + 9}px`,
                                 width: `${c2[0] - c1[0] + 0}px`,
-                                height: `${c2[1] - c1[1] + 0}px`,
+                                height: `${c2[1] - c1[1] + 5}px`,
                             },
                             n,
                         }
                     }
                     return {
                         style: {
-                            left: `${c1 + 11.5}px`,
-                            top: `${c2 - 2}px`,
+                            left: `${c1 + 2.5}px`,
+                            top: `${c2 - 4}px`,
                         },
                         n,
                     }
@@ -931,7 +934,7 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             <div class="preview-icon-wrapper">
                 <map-orb v-for="(orb,i) in orbMap.orbs" :key="i" :orb="orb" :found="orbs.found" :tip="orbTip(orb.n).split('\\nLocated')[0]"></map-orb>
             </div>
-            <div class="orbs-map" :class="{ngp: orbMap.ngp}">
+            <div :class="[orbMap.ngp ? 'orbs-ngp' : 'orbs-map']">
                 <img v-for="link in orbMap.links" :src="link"/>
             </div>
             <div class="orbs">

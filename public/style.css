@@ -605,6 +605,7 @@ a:visited {
     padding: 5px;
     margin: 5px;
     border: var(--border-color);
+    align-items: start;
 }
 
 .preview:not(.info-stats) {
@@ -701,7 +702,8 @@ a:visited {
     max-height: 10rem;
 }
 
-.orbs-map {
+.orbs-map,
+.orbs-ngp {
     display: grid;
     grid-template-columns: auto auto;
     align-content: start;
@@ -709,13 +711,13 @@ a:visited {
     width: 326px;
     margin: 17px;
     box-sizing: border-box;
-    align-self: flex-end;
     height: 232px;
     grid-area: map;
     border: var(--border-color);
 }
 
-.orbs-map img {
+.orbs-map img,
+.orbs-ngp img {
     border: none;
     padding: unset;
     margin: unset;
@@ -734,18 +736,27 @@ a:visited {
     z-index: 0;
 }
 
-.ngp img {
+.orbs-ngp {
+    grid-template-columns: auto auto auto;
+}
+
+.orbs-ngp img {
     bottom: 96.4px;
-    right: 1.8px;
+    right: 15px;
     max-height: 163px;
 }
 
-.ngp img:nth-child(n+3) {
+.orbs-ngp img:nth-child(n+4) {
     bottom: 97.8px;
+    z-index: 1;
 }
 
-.ngp img:nth-child(even) {
-    right: 3.3px;
+.orbs-ngp img:nth-child(3n+2) {
+    right: 16px;
+}
+
+.orbs-ngp img:nth-child(3n+3) {
+    right: 17px;
 }
 
 .found {
