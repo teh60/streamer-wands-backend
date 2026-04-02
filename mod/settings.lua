@@ -48,6 +48,12 @@ mod_settings =
                 scope = MOD_SETTING_SCOPE_RUNTIME
             },
             {
+                id = "boss",
+                ui_name = "Show Bosses Killed",
+                value_default = true,
+                scope = MOD_SETTING_SCOPE_RUNTIME
+            },
+            {
                 id = "shifts",
                 ui_name = "Show Fungal Shifts",
                 ui_description = [[

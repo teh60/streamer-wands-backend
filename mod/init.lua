@@ -1,4 +1,34 @@
 dofile_once("mods/streamer_wands/files/scripts/materials.lua")
+--   "maggot_tiny", miniboss_maggot
+--   "Boss_dragon", miniboss_dragon
+ModLuaFileAppend("data/scripts/animals/boss_dragon_death.lua", "mods/streamer_wands/files/appends/death_dragon.lua")
+--   "Boss_limbs", miniboss_limbs
+ModLuaFileAppend("data/entities/animals/boss_limbs/boss_limbs_death.lua", "mods/streamer_wands/files/appends/death_limbs.lua")
+--   "boss_pit", miniboss_pit
+ModLuaFileAppend("data/entities/animals/boss_pit/boss_pit_death.lua", "mods/streamer_wands/files/appends/death_pit.lua")
+--   "fish_giga", miniboss_fish
+--   "gate_monster_a", $animal_gate_monster_a_killed
+--   "gate_monster_b", $animal_gate_monster_b_killed
+--   "gate_monster_c", $animal_gate_monster_c_killed
+--   "gate_monster_d", $animal_gate_monster_d_killed
+--   "boss_sky", miniboss_sky
+ModLuaFileAppend("data/entities/animals/boss_sky/boss_sky.lua", "mods/streamer_wands/files/appends/death_sky.lua")
+--   "islandspirit", miniboss_islandspirit
+ModLuaFileAppend("data/entities/animals/boss_spirit/islandspirit.lua", "mods/streamer_wands/files/appends/death_islandspirit.lua")
+--   "boss_ghost", miniboss_ghost
+ModLuaFileAppend("data/entities/animals/boss_ghost/death.lua", "mods/streamer_wands/files/appends/death_ghost.lua")
+--   "boss_wizard", miniboss_wizard
+ModLuaFileAppend("data/entities/animals/boss_wizard/death.lua", "mods/streamer_wands/files/appends/death_wizard.lua")
+--   "boss_alchemist", miniboss_alchemist
+ModLuaFileAppend("data/entities/animals/boss_alchemist/death.lua", "mods/streamer_wands/files/appends/death_alchemist.lua")
+--   "friend", miniboss_friend
+ModLuaFileAppend("data/scripts/animals/friend_death.lua", "mods/streamer_wands/files/appends/death_friend.lua")
+--   "boss_robot", miniboss_robot
+ModLuaFileAppend("data/entities/animals/boss_robot/death.lua", "mods/streamer_wands/files/appends/death_robot.lua")
+--   "Boss_centipede", miniboss_centipede
+ModLuaFileAppend("data/entities/animals/boss_centipede/death_check.lua", "mods/streamer_wands/files/appends/death_centipede.lua")
+--   "boss_meat", miniboss_meat
+ModLuaFileAppend("data/entities/animals/boss_meat/death.lua", "mods/streamer_wands/files/appends/death_meat.lua")
 function is_valid_entity(entity_id)
     return entity_id ~= nil and entity_id ~= 0
 end

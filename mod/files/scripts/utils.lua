@@ -358,7 +358,7 @@ function get_inventory_items()
     return inventory
 end
 
-function get_run_info(ngpCheck, seedCheck, orbCheck)
+function get_run_info(ngpCheck, seedCheck, orbCheck, bossCheck)
     local versions = {}
     local modList = ModGetActiveModIDs()
     versions["mods"] = modList
@@ -378,6 +378,37 @@ function get_run_info(ngpCheck, seedCheck, orbCheck)
     if orbCheck then
         local world_state = get_world_state()
         versions["orbs"] = ComponentGetValue2(world_state, "orbs_found_thisrun")
+    end
+    if bossCheck then
+        local boss_flags = {
+            "miniboss_maggot",
+            "miniboss_dragon",
+            "miniboss_limbs",
+            "miniboss_pit",
+            "miniboss_fish",
+            "miniboss_sky",
+            "miniboss_islandspirit",
+            "miniboss_ghost",
+            "miniboss_wizard",
+            "miniboss_alchemist",
+            "miniboss_friend",
+            "miniboss_robot",
+            "miniboss_centipede",
+            "miniboss_meat",
+        }
+        local bosses = {}
+        for _, flag in ipairs(boss_flags) do
+            if GameHasFlagRun(flag) then
+                table.insert(bosses, flag)
+            end
+        end
+        if GameHasFlagRun("$animal_gate_monster_a_killed")
+            and GameHasFlagRun("$animal_gate_monster_b_killed")
+            and GameHasFlagRun("$animal_gate_monster_c_killed")
+            and GameHasFlagRun("$animal_gate_monster_d_killed") then
+            table.insert(bosses, "miniboss_gate")
+        end
+        versions["bosses"] = bosses
     end
     return versions
 end
@@ -507,7 +538,8 @@ function serialize_data()
     local ngpCheck = ModSettingGet("streamer_wands.ngp")
     local seedCheck = ModSettingGet("streamer_wands.seed")
     local orbCheck = ModSettingGet("streamer_wands.orb")
-    local runInfo = get_run_info(ngpCheck, seedCheck, orbCheck)
+    local bossCheck = ModSettingGet("streamer_wands.boss")
+    local runInfo = get_run_info(ngpCheck, seedCheck, orbCheck, bossCheck)
     data["runInfo"] = runInfo
 
     local apothTimerCheck = ModSettingGet("streamer_wands.apothCreatureTimer")

@@ -64,6 +64,7 @@ exports.validate = (data) => {
         start: "",
         playtime: 0,
         orbs: [],
+        bosses: [],
         endStats: {
             workWins: 0,
             altarWins: 0,
@@ -131,6 +132,7 @@ exports.validate = (data) => {
     const rant = (new Date() - validatedRunInfo.start) / 1000 - validatedRunInfo.playtime
     validatedRunInfo.idletime = Math.ceil(rant / 3) * 3
     validatedRunInfo.orbs = numbersValidation(runInfo.orbs)
+    validatedRunInfo.bosses = runInfo.orbs.filter(strFilter)
     validatedRunInfo.endStats = {}
     for (const stat in runInfo.endStats) {
         validatedRunInfo.endStats[stat] = numberValidation(runInfo.endStats[stat])

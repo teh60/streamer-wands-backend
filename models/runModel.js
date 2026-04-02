@@ -16,6 +16,7 @@ const runSchema = new mongoose.Schema({
     playtime: Number,
     idletime: Number,
     orbs: [Number],
+    bosses: [String],
     endStats: statsSchema,
 })
 

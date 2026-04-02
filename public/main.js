@@ -615,6 +615,7 @@ const worldComp = Vue.component('world-comp', {
                 map: false,
                 userDisabled: false,
                 runStats: false,
+                orbBoss: false,
             },
             // debugMods: "",
             // debugNG: "0",
@@ -666,7 +667,8 @@ const worldComp = Vue.component('world-comp', {
             <v-switch v-model="state.mods" :title="'Show Mods [' + info.mods.length + ']'"></v-switch>
             <v-switch v-model="state.userDisabled" title="Show Feature Status"></v-switch>
             <v-switch v-model="state.map" title="Show Map and Position"></v-switch>
-            <v-switch v-model="state.runStats" title="Show Orb, Run, and Save Info"></v-switch>
+            <v-switch v-model="state.orbBoss" title="Show Orb and Boss Info"></v-switch>
+            <v-switch v-model="state.runStats" title="Show Run, Save, and Extra Info"></v-switch>
         </div>
         <div class="world-body">
             <fungal-comp v-if="state.shifts" :shifts="info.shifts" :timer="info.timer" :number="info.count" :features="features"></fungal-comp>
@@ -690,29 +692,13 @@ const worldComp = Vue.component('world-comp', {
             </div>
             </div>
             <map-comp v-if="state.map" :player="player" :info="info" :features="features"></map-comp>
+            <orb-boss-comp v-if="state.orbBoss" :info="info" :player="player" :features="features"></orb-boss-comp>
             <info-stats-comp v-if="state.runStats" :info="info" :player="player" :features="features"></info-stats-comp>
         </div>
     </div>`
 })
 
 const infoStatsComp = Vue.component('info-stats-comp', {
-    data() {
-        return {
-            mapData: {},
-            loaded: false,
-            aX: 63,
-            bX: 32,
-        }
-    },
-    mounted() {
-        fetch("https://noitamap.com/js/tilesources.json")
-            .then(res => (res.ok ? res.json() : Promise.reject(`HTTP ${res.status}: ${res.statusText}`)))
-            .then(data => {
-                this.mapData = data
-                this.loaded = true
-            })
-            .catch(err => console.log(`map data fetch failed with error: ${err}`))
-    },
     computed: {
         start() {
             const date = new Date(this.info.start)
@@ -735,12 +721,46 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             // const highest = stats.currentStreak > -1 ? Math.max(stats.highestStreak, stats.currentStreak) : Math.min(stats.highestStreak, stats.currentStreak)
             const highest = Math.max(stats.highestStreak, stats.currentStreak)
             const lowest = Math.min(stats.lowestStreak, 0)
+            const negativeStreak = this.info.mods.some(mod => /negative-streak/i.test(mod)) ? `\nHighest Streak: ${highest}\nLowest Streak: ${lowest}` : ""
             return {
                 wins: `\nTotal Wins: ${stats.workWins + stats.altarWins}\n- The Work (End): ${stats.workWins}\n- Mountain Altar: ${stats.altarWins}`,
                 deaths: `Deaths: ${stats.deaths}`,
-                streaks: `\nCurrent Streak: ${stats.currentStreak}\nHighest Streak: ${highest}\nLowest Streak: ${lowest}`,
+                streaks: `\nCurrent Streak: ${stats.currentStreak}${negativeStreak}`,
             }
         },
+    },
+    props: ["info", "player", "features"],
+    template: /* html */`
+    <div class="preview info-stats">
+        <div class="preview-info">
+            <p>Playtime: {{ start.playtime }}</p>
+            <info-tooltip v-if="!start.over100" :main="start.mainTime" :tip="start.tipTime"></info-tooltip>
+            <p>{{ stats.wins }}</p>
+            <p>{{ stats.deaths }}</p>
+            <p>{{ stats.streaks }}</p>
+            <p class="preview-disc">\nNote: The method used to re-enable streaks while mods are active makes daily runs count towards or against streaks</p>
+        </div>
+    </div>`
+})
+
+
+const orbBossComp = Vue.component('orb-boss-comp', {
+    data() {
+        return {
+            mapData: {},
+            loaded: false,
+        }
+    },
+    mounted() {
+        fetch("https://noitamap.com/js/tilesources.json")
+            .then(res => (res.ok ? res.json() : Promise.reject(`HTTP ${res.status}: ${res.statusText}`)))
+            .then(data => {
+                this.mapData = data
+                this.loaded = true
+            })
+            .catch(err => console.log(`map data fetch failed with error: ${err}`))
+    },
+    computed: {
         orbs() {
             const orbs = this.info.orbs
             const all = [...Array(36).keys()].map(x => x - 12)
@@ -786,11 +806,11 @@ const infoStatsComp = Vue.component('info-stats-comp', {
             }
         },
         orbMap() {
-            const ngp = this.info.ngp > 0 || true
+            const ngp = this.info.ngp > 0
             const game2img = (x, y) => {
                 if (ngp) {
                     return [
-                        (x / 512 + this.bX) * 322 / this.aX,
+                        (x / 512 + 32) * 322 / 63.2,
                         (y / 512 + 14) * 228 / 45
                     ]
                 }
@@ -871,10 +891,8 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                     if (typeof c1 == "object") {
                         return {
                             style: {
-                                // left: `${c1[0] + 1.6}px`,
                                 left: `${c1[0] + 5}px`,
                                 top: `${c1[1] - 9.2}px`,
-                                // width: `${c2[0] - c1[0] + 9}px`,
                                 width: `${c2[0] - c1[0] + 0}px`,
                                 height: `${c2[1] - c1[1] + 5}px`,
                             },
@@ -883,8 +901,8 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                     }
                     return {
                         style: {
-                            left: `${c1 + 2.5}px`,
-                            top: `${c2 - 4}px`,
+                            left: `${c1 - 1}px`,
+                            top: `${c2 - 13}px`,
                         },
                         n,
                     }
@@ -892,7 +910,29 @@ const infoStatsComp = Vue.component('info-stats-comp', {
                 links,
                 ngp,
             }
-        }
+        },
+        bosses() {
+            return {
+                miniboss_maggot: "Tiny",
+                miniboss_dragon: "Dragon",
+                miniboss_limbs: "Pyramid Boss",
+                miniboss_pit: "Bridge Boss",
+                miniboss_fish: "Leviathan",
+                // animal_gate_monster_a_killed: "",
+                // animal_gate_monster_b_killed: "",
+                // animal_gate_monster_c_killed: "",
+                // animal_gate_monster_d_killed: "",
+                miniboss_sky: "Kivi Rock",
+                miniboss_islandspirit: "Deer Boss",
+                miniboss_ghost: "Forgotten",
+                miniboss_wizard: "Master of Masters",
+                miniboss_alchemist: "Alchemist",
+                miniboss_friend: "Friend Boss",
+                miniboss_robot: "Mecha-Kolmi",
+                miniboss_centipede: "Kolmi",
+                miniboss_meat: "Meat Boss",
+            }
+        },
     },
     methods: {
         orbText(orb) {
@@ -949,12 +989,7 @@ const infoStatsComp = Vue.component('info-stats-comp', {
         </template>
         <p v-else class="orb-hidden"><i>Detailed Orb Tracker Hidden</i></p>
         <div class="preview-info">
-            <p>Playtime: {{ start.playtime }}</p>
-            <info-tooltip v-if="!start.over100" :main="start.mainTime" :tip="start.tipTime"></info-tooltip>
-            <p>{{ stats.wins }}</p>
-            <p>{{ stats.deaths }}</p>
-            <p>{{ stats.streaks }}</p>
-            <p class="preview-disc">\nNote: The method used to re-enable streaks while mods are active makes daily runs count towards or against streaks</p>
+            <p v-for="(name, key) in bosses">{{ name }}</p>
         </div>
     </div>`
 })
